@@ -1,0 +1,213 @@
+\ProvidesPackage{monografia_defs}
+
+\sloppy
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% configura\c{c}\~{a}o das tabelas da disserta\c{c}\~{a}o
+
+%%% espessura das linhas da tabela
+\setlength{\arrayrulewidth}{2.5\arrayrulewidth}
+
+%%% espa\c{c}o entre linhas da tabela
+\renewcommand{\arraystretch}{1.3}
+
+\newcolumntype{U}{>{$}l<{$}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% configura\c{c}\~{a}o das captions da disserta\c{c}\~{a}o
+%%% formata\c{c}\~{a}o das fontes dos captions
+\renewcommand{\captionfont}{\mdseries\small}
+%%% espa\c{c}amento do caption das figuras
+\setlength{\abovecaptionskip}{5pt}
+%%% espa\c{c}amento do caption das tabelas
+\setlength{\belowcaptionskip}{5pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% utiliza\c{c}\~{a}o do pacote algorithm e algorithmic em portugu\^{e}s
+\renewcommand{\algorithmicrequire}{\textbf{Entrada:}}
+\renewcommand{\algorithmicensure}{\textbf{Sa\'{\i}da:}}
+\renewcommand{\algorithmicend}{\textbf{fim}}
+\renewcommand{\algorithmicif}{\textbf{se}}
+\renewcommand{\algorithmicthen}{\textbf{ent\~{a}o}}
+\renewcommand{\algorithmicelse}{\textbf{sen\~{a}o}}
+%\renewcommand{\algorithmicelsif}{\algorithmicelse \newline \algorithmicif}
+\renewcommand{\algorithmicelsif}{\algorithmicelse \, \algorithmicif}
+\renewcommand{\algorithmicendif}{\algorithmicend \, \algorithmicif}
+\renewcommand{\algorithmicfor}{\textbf{para}}
+\renewcommand{\algorithmicforall}{\textbf{para todo}}
+\renewcommand{\algorithmicdo}{\textbf{fazer}}
+\renewcommand{\algorithmicendfor}{\algorithmicend \, \algorithmicfor}
+\renewcommand{\algorithmicwhile}{\textbf{enquanto}}
+\renewcommand{\algorithmicendwhile}{\algorithmicend \, \algorithmicwhile}
+\renewcommand{\algorithmicloop}{\textbf{la\c{c}o}}
+\renewcommand{\algorithmicendloop}{\algorithmicend \, \algorithmicloop}
+\renewcommand{\algorithmicrepeat}{\textbf{repetir}}
+\renewcommand{\algorithmicuntil}{\textbf{at\'{e}}}
+\renewcommand{\algorithmiccomment}[1]{\{#1\}}
+\renewcommand{\listalgorithmname}{Lista de Algoritmos}
+\floatname{algorithm}{Algoritmo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% defini\c{c}\~{o}es dos estilos de p\'{a}ginas utilizando o pacote fancyhdr
+%%% defini\c{c}\~{a}o de cabe\c{c}alhos e rodap\'{e}s
+
+\fancypagestyle{capitulo}{%
+\fancyhf{}%
+\newcommand{\capfont}{%
+%\fontseries{n}\fontsize{10}{8}\selectfont
+\mdseries\scriptsize
+}%
+\newcommand{\cappg}{%
+\bfseries\small
+}%
+\fancyhead[LE,RO]{\cappg{\thepage}}
+\fancyhead[LO]{\capfont{\nouppercase{\rightmark}}}%
+\fancyhead[RE]{\capfont{\nouppercase{\leftmark}}}%
+\renewcommand{\headrulewidth}{.5pt}%
+\renewcommand{\footrulewidth}{0pt}%
+}%
+
+\fancypagestyle{roman}{%
+\fancyhf{}%
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0pt}%
+\renewcommand{\footrulewidth}{0pt}%
+}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% modifica\c{c}\~{a}o do cabe\c{c}alho dos cap\'{\i}tulos utilizando o pacote fncychap
+\makeatletter
+\ChNameVar{\fontsize{14}{16}\bfseries}
+%\ChNumVar{\fontsize{70}{72}\rm}
+\ChTitleVar{\Huge\bfseries}
+\ChRuleWidth{1pt}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% defini\c{c}\~{o}es dos estilos de p\'{a}ginas utilizando o pacote titlesec e titletoc
+\titleformat{\section}
+{%\titlerule%
+%\titlerule*[.25pc]{\Huge.}%
+%\titleline{\rule{.05\linewidth}{3pt}}%
+%\titlerule%
+\vspace{.10ex}%
+\large\bfseries}%
+{\thesection}{.5em}{}%
+%[\vspace{.05ex}{\titlerule[.25pt]\vspace{2pt}\titlerule[.25pt]}]
+%[\vspace{.05ex}{\titlerule[.25pt]}]
+%[{\titlerule*[1pc]{.}}]
+%[\titlerule]
+[\titlerule\titleline{\rule{.05\linewidth}{5pt}}]
+
+\titleformat{\subsection}[hang]
+{%\titlerule*[.5pc]{.}%
+%\titleline{\rule{.35\linewidth}{2pt}}%
+%\titlerule%
+%\vspace{.10ex}%
+\normalfont\bfseries}%
+%{\rule{.35\linewidth}{.8pt}{\thesubsection}}{.5em}{}%
+{\thesubsection}{.5em}{}%
+%[\vspace{.05ex}{\titlerule[.1pt]}]
+
+%\titlelabel{\thesubsection.\quad}
+
+%define espa\c{c}amento entre linhas
+\renewcommand{\baselinestretch}{1.3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Definition for Big letter at the beginning of a paragraph (extending for 2 lines)
+%%
+\def\PARstart#1#2{\begingroup\def\par{\endgraf\endgroup\lineskiplimit=0pt}
+    \setbox2=\hbox{\uppercase{#2} }\newdimen\tmpht \tmpht \ht2
+    \advance\tmpht by \baselineskip\font\hhuge=cmr10 at \tmpht
+    \setbox1=\hbox{{\hhuge #1}}
+    \count7=\tmpht \count8=\ht1\divide\count8 by 1000 \divide\count7 by\count8
+    \tmpht=.001\tmpht\multiply\tmpht by \count7\font\hhuge=cmr10 at \tmpht
+    \setbox1=\hbox{{\hhuge #1}} \noindent \hangindent1.05\wd1
+    \hangafter=-2 {\hskip-\hangindent \lower1\ht1\hbox{\raise1.0\ht2\copy1}%
+    \kern-0\wd1}\copy2\lineskiplimit=-1000pt}
+
+\def\PARstartOne#1#2{\begingroup\def\par{\endgraf\endgroup\lineskiplimit=0pt}
+    \setbox2=\hbox{#2\hspace{0.4em}}\newdimen\tmpht \tmpht \ht2
+    \advance\tmpht by \baselineskip\font\hhuge=cmr10 at \tmpht
+    \setbox1=\hbox{{\hhuge #1}}
+    \count7=\tmpht \count8=\ht1\divide\count8 by 1000 \divide\count7 by\count8
+    \tmpht=.001\tmpht\multiply\tmpht by \count7\font\hhuge=cmr10 at \tmpht
+    \setbox1=\hbox{{\hhuge #1}} \noindent \hangindent1.05\wd1
+    \hangafter=-2 {\hskip-\hangindent \lower1\ht1\hbox{\raise1.0\ht2\copy1}%
+    \kern-0\wd1}\copy2\lineskiplimit=-1000pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\renewcommand{\footnotesize}{\tiny}
+
+%\fontfamily{cmss}
+%\selectfont
+
+% altera\c{c}\~{a}o da indexa\c{c}\~{a}o das listas de \'{\i}tens
+\renewcommand\labelitemi{\normalsize    $\blacktriangleright$}
+\renewcommand\labelitemii{\normalsize $\bullet$}
+\renewcommand\labelitemiii{\normalsize $-$}
+
+% altera\c{c}\~{a}o da indexa\c{c}\~{a}o das listas enumeradas
+\renewcommand\theenumi{\roman{enumi}}
+\renewcommand\labelenumi{{\bfseries\theenumi.}}
+
+
+\makeatletter
+  \renewcommand\appendix{\par
+    \setcounter{section}{0}%
+    \setcounter{subsection}{0}%
+    \renewcommand\thesection{Appendix~\@Alph\c@section}}
+\makeatother
+
+\def\sidecaption{\@ifnextchar[\sidec@ption{\sidec@ption[b]}}
+%\def\sidec@ption[#1]#2\caption{%
+%\setbox\@tempboxa=\hbox{\ignorespaces#2\unskip}%
+%\if@twocolumn
+% \ifdim\hsize<\textwidth\else
+%   \ifdim\wd\@tempboxa<\columnwidth
+%      \typeout{Double column float fits into single column -
+%            ^^Jyou'd better switch the environment. }%
+%   \fi
+% \fi
+%\fi
+%  \instindent=\ht\@tempboxa
+%  \advance\instindent by\dp\@tempboxa
+%\if t#1
+%\else
+%  \instindent=-\instindent
+%\fi
+%\@tempdima=\hsize
+%\advance\@tempdima by-\figgap
+%\advance\@tempdima by-\wd\@tempboxa
+%\ifdim\@tempdima<3cm
+%   \ClassWarning{SVMult}{\string\sidecaption: No sufficient room for the legend;
+%             ^^Jusing normal \string\caption}%
+%   \unhbox\@tempboxa
+%   \let\@capcommand=\@caption
+%\else
+%   \ifdim\@tempdima<4.5cm
+%      \ClassWarning{SVMult}{\string\sidecaption: Room for the legend very narrow;
+%               ^^Jusing \string\raggedright}%
+%      \toks@\expandafter{\captionstyle\sloppy
+%                         \rightskip=\z@\@plus6mm\relax}%
+%      \def\captionstyle{\the\toks@}%
+%   \fi
+%   \let\@capcommand=\@sidecaption
+%   \leavevmode
+%   \unhbox\@tempboxa
+%   \hfill
+%\fi
+%\refstepcounter\@captype
+%\@dblarg{\@capcommand\@captype}}
+%\long\def\@sidecaption#1[#2]#3{\addcontentsline{\csname
+%  ext@#1\endcsname}{#1}{\protect\numberline{\csname
+%  the#1\endcsname}{\ignorespaces #2}}\begingroup
+%    \@parboxrestore
+%    \@makesidecaption{\csname fnum@#1\endcsname}{\ignorespaces #3}\par
+%  \endgroup}

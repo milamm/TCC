@@ -1,0 +1,87 @@
+\section{Implementação do MDiag}
+\label{SEC:DES}
+
+Para o desenvolvimento de um diagnóstico que atua sobre um sistema operacional, alguns cuidados precisam ser tomados para garantir a eficácia dos testes. Como visto na Seção \ref{SEC:LINUXMM}, cada acesso à memória passa por uma série de abstrações até chegar ao \emph{hardware}. Isto pode acarretar falsos resultados ou ineficiências no diagnóstico.
+
+Por exemplo, durante o teste o \emph{kernel} pode guardar parte da memória alocada no \emph{swap}, enquanto o restante é testado. Depois, essas páginas podem ser recuperadas e a parte testada pode ser armazenada. A porção resgatada pode estar em qualquer lugar do espaço físico destinado ao processo, até mesmo no lugar da porção que já foi testada, causando uma dupla checagem nestas células e deixando de testar outras.
+
+Por isso o MDiag executa a série de procedimentos, mostrados na figura \ref{FIG:FLUXO}, antes de executar os algoritmos de teste. O conjunto de operações desde a limpeza do \emph{cache} até a alocação, de fato, da memória é chamado de política de alocação de memória do MDiag.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = 0.9 \linewidth]{figs/fluxo.pdf}
+\caption[Fluxo de execução do MDiag]{Fluxo de execução do MDiag.} \label{FIG:FLUXO}
+\end{figure}
+
+\subsection{Política de alocação de memória}
+
+É virtualmente impossível que um diagnóstico que executa sobre um \ac{SO} possa testar toda a memória instalada. Certa quantidade, chamada de área do sistema, é reservada para o próprio \ac{SO} guardar suas estruturas de dados, executar e gerenciar as aplicações. Muitas outras aplicações executando em paralelo consomem outras porções da área restante. No entanto, quanto mais memória for testada, mais efetivo o diagnóstico será, possibilitando detectar mais falhas. Por isso a política de alocação foi tratada com bastante critério durante este projeto.
+
+O Linux possui, simplificadamente, três estados de memória: alocada, em \emph{cache} e livre. O mecanismo de \emph{cache} foi explicado na seção \ref{SEC:LINUXMM}. Como foi dito, após algum tempo em operação a tendência é que apenas uma pequena parte da memória permaneça realmente livre, a maior parte estará sendo utilizada como \emph{cache} ou alocada para algum processo. O MDiag aloca apenas a porção livre da memória, para evitar que o sistema sofra de \ac{OOM}. Por isso o primeiro passo é a limpeza do \emph{cache}, liberando qualquer parte dispensável da memória e, consequentemente, aumentando a área testada.
+
+Em seguida há o tratamento de uma limitação de sistemas 32 bits. Nestes sistemas o endereçamento máximo acessível por um processo é de 4 GB. O Linux possui um mecanismo chamado \emph{HighMemory} que permite que um \emph{kernel} 32 bits acesse mais de 4 GB de memória física em um \emph{hardware} 64 bits. No entanto, isto permite apenas que mais processos sejam alocados por vez, mas cada um deles ainda terá acesso a, no máximo, 4 GB de memória. Além disto, dentro deste espaço há uma área reservada para que o \emph{kernel} controle aquele processo, além de áreas utilizadas como memória de código e pilha. Assim, o máximo que uma aplicação consegue alocar para uso próprio varia tipicamente em torno de 3 GB.
+
+Para contornar esta limitação, o MDiag verifica se o sistema é 32 bits e se a memória livre é maior que 2 GB. Neste caso, o programa se duplica em dois processos idênticos, mas totalmente independentes (\emph{fork}). Isto faz com que dois testes com os mesmos parâmetros sejam executados simultaneamente, cada um fazendo sua própria tentativa de alocação e ampliando a memória total testada. É claro que ainda assim pode acontecer de nem toda a memória livre ser alocada, mas o limite é dobrado para aproximadamente $6 GB$.
+
+A alocação de memória no MDiag é um processo de duas etapas. Primeiramente há a alocação em si (\emph{malloc}), isto é, solicitar ao \emph{kernel} uma porção de memória de tamanho fixo para ser utilizada pela aplicação. Uma vez concedida, esta região deve ser travada (\emph{mlock}). Isto significa que o processo indica ao \emph{kernel} que aquela região de memória não pode ser armazenada em \emph{swap}, garantindo que tudo o que foi alocado esteja realmente na memória física da máquina. Se uma das etapas receber resposta negativa do \emph{kernel}, o processo de alocação falhou. Neste caso, é feita uma nova tentativa de alocação   com 99\% da quantidade pretendida anteriormente. Este processo se repete até que se obtenha sucesso ou até que a quantidade pretendida se torne abaixo de 10 MB.
+
+Outra medida tomada, na política de alocação, para evitar \ac{OOM} é de não alocar toda a memória virtual do sistema. Isto é feito assegurando-se de que há espaço suficiente no \emph{swap} para armazenar toda a memória atualmente em uso, se necessário. Caso contrário, apenas 80\% da memória livre é alocada. Este número foi alcançado de forma empírica com testes em diversas máquinas reais com diferentes distribuições Linux, diferentes tamanhos de memória e diferentes perfis de uso (muitos processos ou poucos processos). É o maior percentual em que se notou um baixíssimo risco de \ac{OOM}.
+
+Após passar por toda a política de alocação, finalmente os testes podem ser aplicados sequencialmente à região de memória alocada.
+
+\subsection{Algorítmos Implementados}
+
+Neste trabalho foram utilizados seis algoritmos, permitindo realizar testes mais rápidos ou testes com maior cobertura de falhas. Foram escolhidos os algoritmos de maior reconhecimento na literatura, citados em praticamente todos os artigos e livros da área, com uso consagrado na indústria e com resultados comprovados em análises comparativas de testes de memória \cite{RIEDEL:1995} \cite{RAGHURAMAN:2005}.
+
+\subsubsection{March C-}
+
+O March C- é um teste ainda muito utilizado por possuir duas características bastante fortes: entre os testes do tipo marchante, é um dos que possui maior cobertura de falhas; é um teste rápido, com complexidade de apenas $10 N$ operações.
+
+No MDiag foi implementada também a variação proposta por \cite{ADAMS:2003}, chamada de Enhanced March C- e descrita na tabela \ref{TAB:EMARCHC-}. Esta forma melhorada do March C- é mais lenta, com $8N$ operações a mais, mas possui uma cobertura de falhas um pouco maior.
+
+As descrições destes testes já foram apresentadas na seção \ref{SEC:TESTES}, especialmente nas tabelas \ref{TAB:MARCHC-} e \ref{TAB:EMARCHC-}.
+
+\subsubsection{March G}
+
+Da série de testes March, o que obteve melhores resultados até hoje foi proposto por \cite{VANDEGOOR:1998}. O March G (tabela \ref{TAB:MARCHG}) introduz um novo tipo de elemento além das escritas e leitura convencionais. É uma pausa entre as sequências, que possibilita a detecção de falha de retenção (\emph{data retention fault}).
+
+\begin{table}[!ht]
+\caption{\emph{March G pattern.}}
+\centering
+\label{TAB:MARCHG}
+\begin{tabular}{| c | l r |}
+\hline
+1 & W0 & $\Updownarrow$ \\
+2 & R0, W1, R1, W0, R0, W1 & $\Uparrow$ \\
+3 & R1, W0, W1 & $\Uparrow$ \\
+4 & R1, W0, W1, W0 & $\Downarrow$ \\
+5 & R0, W1, W0 & $\Downarrow$ \\
+6 & pausa & \\
+7 & R0, W1, R1 & $\Updownarrow$ \\
+8 & pausa & \\
+9 & R1, W0, R0 & $\Updownarrow$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Papachristou}
+
+Para um teste mais completo, o algoritmo adotado foi o proposto por \cite{PAPACHRISTOU:1985}. É um teste longo, que demanda $38N+24N\log_2(N)$ operações, o equivalente a $16,9$ minutos para testar 1 GB ou mais de uma hora para testar 4 GB de memória nas condições da tabela \ref{TAB:TEMPOS}. Apesar de ser um padrão antigo, sua abrangência na detecção de falhas vem sendo confirmada por trabalhos mais recentes \cite{RIEDEL:1995} \cite{PETRU:2002}.
+
+No MDiag, foram implementados os algoritmos parcial e completo de Papachristou. Ambas as variações foram apresentados na seção \ref{SEC:TESTES}.
+
+Todos os algoritmos até aqui foram implementados tomando como células os bytes da memória, portanto cada célula possui 8 bits de tamanho. Os estados 0 e 1 em que a célula pode estar representam um padrão qualquer de $00_h$ a $FF_h$ e seu inverso (complemento bit-a-bit), permitindo que os testes detectem erros mais variados. Por exemplo, o March C- é capaz de detectar \emph{idempotent} \ac{CF} se utilizado o estado 0 como o valor $00_h$ e, por consequência, estado 1 como o valor $FF_h $, mas não é capaz de detectar \emph{inversion} \ac{CF}. Já com a utilização do padrão $55_h$ como o estado 0 e seu inverso $AA_h$ como estado 1, ocorre exatamente o oposto.
+
+\subsubsection{MT}
+
+O mais recente dentre os algoritmos implementados é o MT (tabela \ref{TAB:MT}). É um teste que possui uma cobertura tão boa quanto Papachristou, mas de complexidade $O(N)$.
+
+Como visto em sua descrição na seção \ref{SEC:TESTES}, este teste trabalha com base na disposição matricial das células da memória. Desta forma, sua implementação foi um pouco diferente dos demais. Primeiramente, para manter a estrutura matricial pressuposta pelo algoritmo, as células foram tomadas como sendo os \emph{bits} e não mais o \emph{bytes} da memória. Assim, tem-se uma matriz $8 \times N$ de células, podendo-se aplicar os padrões de fundo da tabela $I_1$ a $I_6$ da \ref{TAB:MTBACKGROUNDS}. Da mesma forma, devido a utilização de padrões já bem definidos no algoritmo, este teste não permite escolher o que os estados 0 e 1 significam, mesmo porque as células agora são apenas bits, que só assumem os valores 0 e 1.
+
+\subsection{Desalocação da Memória}
+
+O próximo passo, consiste na desalocação de toda a memória. Da mesma forma que a alocação, este também é um processo de duas etapas. Primeiro a memória é destravada, para então ser desassociada do processo.
+
+É importante garantir que a memória seja devidamente desalocada, mesmo no caso do programa ter sua execução interrompida, seja pelo usuário ou pelo \emph{kernel}. Isto porque a quantidade de memória reservada para o diagnóstico representa uma porção significativa do total disponível, além da região estar travada, não podendo nem mesmo ser despejada para \emph{swap}.
+
+O MDiag utiliza um manipulador de sinal (\emph{signal handler}) que nada mais é que uma função a ser executada sempre que o \emph{kernel} enviar certo sinal. Este manipulador monitora um sinal do \emph{kernel} que é disparado sempre que há uma tentativa de interrupção ao processo. O manipulador deve ser rápido, pois o \emph{kernel} envia este sinal como aviso de que o programa será fechado, e caso o processamento não cesse, o \emph{kernel} poderá matar o processo abruptamente. 

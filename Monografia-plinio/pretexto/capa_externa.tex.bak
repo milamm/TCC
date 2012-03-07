@@ -1,0 +1,23 @@
+\thispagestyle{empty}%
+
+\begin{center}
+    \includegraphics[width=2.5cm,bb=0 0 382 465]{figs/ufc.jpg} \\%
+    \textsc{
+    Universidade Federal do Cear\'{a} \\%
+    Departamento de Engenharia de Teleinform\'{a}tica \\%
+    Curso de Gradua\c{c}\~{a}o em Engenharia de Teleinform\'{a}tica\\
+    }
+    \vspace{2.5 cm}%
+    {       \textbf{\autor}
+    }\\%
+
+    \null\vfill%%
+    \vspace{.2cm}%
+    {\Large         \textbf{\titulo}\\}
+
+
+    \null\vfill%%
+    \vspace{1 cm}%
+    {\normalsize    \textsc{Fortaleza -- Cear\'{a} \\%
+                            \monthname~2010 }}
+\end{center}

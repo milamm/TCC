@@ -1,0 +1,185 @@
+\chapter{Padrões de Testes de Memória} \label{CHP:APX:MARCHES}
+
+MATS:
+
+\begin{table}[!ht]
+\caption{\emph{MATS.}}
+\centering
+\label{TAB:MATS}
+\begin{tabular}{| c | l r |}
+\hline
+1 & W0 & $\Updownarrow$ \\
+2 & R0, W1 & $\Updownarrow$ \\
+3 & R1 & $\Updownarrow$ \\
+\hline
+\end{tabular}
+\end{table}
+
+MATS+:
+
+\begin{table}[!ht]
+\caption{\emph{MATS+.}}
+\centering
+\label{TAB:MATS+}
+\begin{tabular}{| c | l r |}
+\hline
+1 & W0 & $\Updownarrow$ \\
+2 & R0, W1 & $\Uparrow$ \\
+3 & R1, W0 & $\Downarrow$ \\
+\hline
+\end{tabular}
+\end{table}
+
+MATS++:
+
+\begin{table}[!ht]
+\caption{\emph{MATS++.}}
+\centering
+\label{TAB:MATS+}
+\begin{tabular}{| c | l r |}
+\hline
+1 & W0 & $\Updownarrow$ \\
+2 & R0, W1 & $\Uparrow$ \\
+3 & R1, W0, R0 & $\Downarrow$ \\
+\hline
+\end{tabular}
+\end{table}
+
+Marching 1/0:
+
+\begin{table}[!ht]
+\caption{\emph{Marching 1/0.}}
+\centering
+\label{TAB:MARCHING 1/0}
+\begin{tabular}{| c | l r |}
+\hline
+1 & W0 & $\Uparrow$ \\
+2 & R0, W1, R1 & $\Uparrow$ \\
+3 & R1, W0, R0 & $\Downarrow$ \\
+4 & W1 & $\Uparrow$ \\
+5 & R1, W0, R0 & $\Uparrow$ \\
+6 & R0, W1, R1 & $\Downarrow$ \\
+\hline
+\end{tabular}
+\end{table}
+
+March A:
+
+\begin{table}[!ht]
+\caption{\emph{March A.}}
+\centering
+\label{TAB:MARCHA}
+\begin{tabular}{| c | l r |}
+\hline
+1 & W0 & $\Updownarrow$ \\
+2 & R0, W1, W0, W1 & $\Uparrow$ \\
+3 & R1, W0, W1 & $\Uparrow$ \\
+4 & R1, W0, W1, W0 & $\Downarrow$ \\
+5 & R0, W1, W0 & $\Downarrow$ \\
+\hline
+\end{tabular}
+\end{table}
+
+March B:
+
+\begin{table}[!ht]
+\caption{\emph{March B.}}
+\centering
+\label{TAB:MARCHB}
+\begin{tabular}{| c | l r |}
+\hline
+1 & W0 & $\Updownarrow$ \\
+2 & R0, W1, R1, W0, R0, W1 & $\Uparrow$ \\
+3 & R1, W0, W1 & $\Uparrow$ \\
+4 & R1, W0, W1, W0 & $\Downarrow$ \\
+5 & R0, W1, W0 & $\Downarrow$ \\
+\hline
+\end{tabular}
+\end{table}
+
+March C:
+
+\begin{table}[!ht]
+\caption{\emph{March C.}}
+\centering
+\label{TAB:MARCHC}
+\begin{tabular}{| c | l r |}
+\hline
+1 & W0 & $\Updownarrow$ \\
+2 & R0, W1 & $\Uparrow$ \\
+3 & R1, W0 & $\Uparrow$ \\
+4 & R0 & $\Updownarrow$ \\
+5 & R0, W1 & $\Downarrow$ \\
+6 & R1, W0 & $\Downarrow$ \\
+7 & R0 & $\Updownarrow$ \\
+\hline
+\end{tabular}
+\end{table}
+
+March X:
+
+\begin{table}[!ht]
+\caption{\emph{March X.}}
+\centering
+\label{TAB:MARCHX}
+\begin{tabular}{| c | l r |}
+\hline
+1 & W0 & $\Updownarrow$ \\
+2 & R0, W1 & $\Uparrow$ \\
+3 & R1, W0 & $\Downarrow$ \\
+4 & R0 & $\Updownarrow$ \\
+\hline
+\end{tabular}
+\end{table}
+
+March Y:
+
+\begin{table}[!ht]
+\caption{\emph{March Y.}}
+\centering
+\label{TAB:MARCHY}
+\begin{tabular}{| c | l r |}
+\hline
+1 & W0 & $\Updownarrow$ \\
+2 & R0, W1, R1 & $\Uparrow$ \\
+3 & R1, W0, R0 & $\Downarrow$ \\
+4 & R0 & $\Updownarrow$ \\
+\hline
+\end{tabular}
+\end{table}
+
+March LA:
+
+\begin{table}[!ht]
+\caption{\emph{March LA.}}
+\centering
+\label{TAB:MARCHLA}
+\begin{tabular}{| c | l r |}
+\hline
+1 & W0 & $\Updownarrow$ \\
+2 & R0, W1, W0, W1, R1 & $\Uparrow$ \\
+3 & R1, W0, W1, W0, R0 & $\Uparrow$ \\
+4 & R0, W1, W0, W1, R1 & $\Downarrow$ \\
+5 & R1, W0, W1, W0, R0 & $\Downarrow$ \\
+6 & R0 & $\Downarrow$ \\
+\hline
+\end{tabular}
+\end{table}
+
+March SR+:
+
+\begin{table}[!ht]
+\caption{\emph{March SR+.}}
+\centering
+\label{TAB:MARCHSR+}
+\begin{tabular}{| c | l r |}
+\hline
+1 & W0 & $\Downarrow$ \\
+2 & R0, W1, W0, W1, R1 & $\Uparrow$ \\
+3 & R1, W0, W1, W0, R0 & $\Uparrow$ \\
+4 & R0, W1, W0, W1, R1 & $\Downarrow$ \\
+5 & R1, W0, W1, W0, R0 & $\Downarrow$ \\
+6 & R0 & $\Downarrow$ \\
+\hline
+\end{tabular}
+\end{table}

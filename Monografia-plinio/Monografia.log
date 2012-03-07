@@ -1,0 +1,1709 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.2)  28 FEB 2012 16:07
+entering extended mode
+**F:/Teleinfo/TCC/Monografia-plinio/Monografia.tex
+(F:/Teleinfo/TCC/Monografia-plinio/Monografia.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\base\book.cls"
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\base\bk12.clo"
+File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(F:\Teleinfo\TCC\Monografia-plinio\datetimepor.sty
+Package: datetimepor 2002/10/30 Date Time Package version 2.0
+\@DT@modctr=\count88
+\@ordinalctr=\count89
+\@orgargctr=\count90
+\strctr=\count91
+\@dtctr=\count92
+\dayofyear=\count93
+\dayofweek=\count94
+\@day=\count95
+\@month=\count96
+\@year=\count97
+\@hours=\count98
+\@minutes=\count99
+)
+(F:\Teleinfo\TCC\Monografia-plinio\monografia.sty
+
+LaTeX Warning: You have requested package `monografia',
+               but the package provides `dissertacao'.
+
+Package: dissertacao 
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\base\latin1.def"
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+))
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\hyphenat\hyphenat.sty"
+Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
+\langwohyphens=\language70
+LaTeX Info: Redefining \_ on input line 43.
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\generic\babel\english.ldf"
+Language: english 2005/03/30 v3.3o English support from the babel system
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count100
+\U@D=\dimen103
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\generic\babel\portuges.ldf"
+Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
+\l@brazil = a dialect from \language\l@portuges 
+Package babel Info: Making " an active character on input line 145.
+))
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count101
+\float@exts=\toks16
+\float@box=\box26
+\@float@everytoks=\toks17
+\@floatcapt=\box27
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\caption\caption2.sty"
+Package: caption2 2011/08/12 v2.2d Customising captions (AR)
+
+
+Package caption2 Warning: ****************************************************
+(caption2)                THIS PACKAGE IS OBSOLETE:
+(caption2)                This package attempts to provide an `caption2'
+(caption2)                package v2.0/2.1 author environment so that OLD
+(caption2)                documents can be successfully processed. It should
+(caption2)                NOT be used for NEW documents! New documents should
+(caption2)                use the regular `caption' package v3.x instead.
+(caption2)                ****************************************************
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2011/11/01 v1.4a caption3 kernel (AR)
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks18
+)
+\captionmargin=\dimen104
+\captionmargin@=\dimen105
+\captionwidth=\dimen106
+\caption@indent=\dimen107
+\caption@parindent=\dimen108
+\caption@hangindent=\dimen109
+)
+Package caption2 Info: Running in caption2 v2.0 compatibility mode on input lin
+e 210.
+\captionlinewidth=\dimen110
+\realcaptionwidth=\dimen111
+Package caption2 Info: float package v1.2 (or newer) detected on input line 319
+.
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: dvips.def on input line 91.
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\graphics\dvips.def"
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\subfigure\subfigure.sty"
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip43
+\subfigcapskip=\skip44
+\subfigcaptopadj=\dimen114
+\subfigbottomskip=\skip45
+\subfigcapmargin=\dimen115
+\subfiglabelskip=\skip46
+\c@subfigure=\count102
+\c@lofdepth=\count103
+\c@subtable=\count104
+\c@lotdepth=\count105
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\subfigure\subfigure.cfg")
+\subfig@top=\skip47
+\subfig@bottom=\skip48
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
+\wrapoverhang=\dimen116
+\WF@size=\dimen117
+\c@WF@wrappedlines=\count106
+\WF@box=\box28
+\WF@everypar=\toks19
+Package: wrapfig 2003/01/31  v 3.6
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2010/03/01 v1.5 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count107
+\Gm@cntv=\count108
+\c@Gm@tempcnt=\count109
+\Gm@bindingoffset=\dimen118
+\Gm@wd@mp=\dimen119
+\Gm@odd@mp=\dimen120
+\Gm@even@mp=\dimen121
+\Gm@layoutwidth=\dimen122
+\Gm@layoutheight=\dimen123
+\Gm@layouthoffset=\dimen124
+\Gm@layoutvoffset=\dimen125
+\Gm@dimlist=\toks20
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\base\alltt.sty"
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
+Package: colortbl 2001/02/13 v0.1j Color table columns (DPC)
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen126
+\extrarowheight=\dimen127
+\NC@list=\toks21
+\extratabsurround=\skip49
+\backup@length=\skip50
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count110
+))
+\everycr=\toks22
+\minrowclearance=\skip51
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
+Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
+\TX@col@width=\dimen128
+\TX@old@table=\dimen129
+\TX@old@col=\dimen130
+\TX@target=\dimen131
+\TX@delta=\dimen132
+\TX@cols=\count111
+\TX@ftn=\toks23
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\tools\multicol.sty"
+Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
+\c@tracingmulticols=\count112
+\mult@box=\box29
+\multicol@leftmargin=\dimen133
+\c@unbalance=\count113
+\c@collectmore=\count114
+\doublecol@number=\count115
+\multicoltolerance=\count116
+\multicolpretolerance=\count117
+\full@width=\dimen134
+\page@free=\dimen135
+\premulticols=\dimen136
+\postmulticols=\dimen137
+\multicolsep=\skip52
+\multicolbaselineskip=\skip53
+\partial@page=\box30
+\last@line=\box31
+\mult@rightbox=\box32
+\mult@grightbox=\box33
+\mult@gfirstbox=\box34
+\mult@firstbox=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\c@columnbadness=\count118
+\c@finalcolumnbadness=\count119
+\last@try=\dimen138
+\multicolovershoot=\dimen139
+\multicolundershoot=\dimen140
+\mult@nat@firstbox=\box53
+\colbreak@box=\box54
+\multicol@sort@counter=\count120
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip54
+\LTright=\skip55
+\LTpre=\skip56
+\LTpost=\skip57
+\LTchunksize=\count121
+\LTcapwidth=\dimen141
+\LT@head=\box55
+\LT@firsthead=\box56
+\LT@foot=\box57
+\LT@lastfoot=\box58
+\LT@cols=\count122
+\LT@rows=\count123
+\c@LT@tables=\count124
+\c@LT@chunks=\count125
+\LT@p@ftn=\toks24
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\carlisle\ltxtable.sty"
+Package: ltxtable 1995/12/11 v0.2 longtable/tabularx merge (DPC)
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+\bigstrutjot=\dimen142
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\psfrag\psfrag.sty"
+Package: psfrag 1998/04/11 v3.04 PSfrag (MCG)
+\pfg@pcount=\count126
+\pfg@scount=\count127
+\pfg@temp=\write3
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
+Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+\@enLab=\toks25
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\algorithms\algorithm.sty"
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks26
+\c@algorithm=\count128
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\algorithms\algorithmic.sty"
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count129
+\c@ALC@line=\count130
+\c@ALC@rem=\count131
+\c@ALC@depth=\count132
+\ALC@tlm=\skip58
+\algorithmicindent=\skip59
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+\fancy@headwidth=\skip60
+\f@ncyO@elh=\skip61
+\f@ncyO@erh=\skip62
+\f@ncyO@olh=\skip63
+\f@ncyO@orh=\skip64
+\f@ncyO@elf=\skip65
+\f@ncyO@erf=\skip66
+\f@ncyO@olf=\skip67
+\f@ncyO@orf=\skip68
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\fncychap\fncychap.sty"
+Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
+\RW=\skip69
+\mylen=\skip70
+\myhi=\skip71
+\px=\skip72
+\py=\skip73
+\pyy=\skip74
+\pxx=\skip75
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty"
+Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
+\ttl@box=\box59
+\beforetitleunit=\skip76
+\aftertitleunit=\skip77
+\ttl@plus=\dimen143
+\ttl@minus=\dimen144
+\ttl@toksa=\toks27
+\titlewidth=\dimen145
+\titlewidthlast=\dimen146
+\titlewidthfirst=\dimen147
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\titlesec\titletoc.sty"
+Package: titletoc 2011/12/15 v1.6 TOC entries
+\ttl@leftsep=\dimen148
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip78
+
+For additional information on amsmath, use the `?' option.
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\ams\math\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\ams\math\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks28
+\ex@=\dimen149
+))
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\ams\math\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen150
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\ams\math\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count133
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count134
+\leftroot@=\count135
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count136
+\DOTSCASE@=\count137
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box60
+\strutbox@=\box61
+\big@size=\dimen151
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count138
+\c@MaxMatrixCols=\count139
+\dotsspace@=\muskip10
+\c@parentequation=\count140
+\dspbrk@lvl=\count141
+\tag@help=\toks29
+\row@=\count142
+\column@=\count143
+\maxfields@=\count144
+\andhelp@=\toks30
+\eqnshift@=\dimen152
+\alignsep@=\dimen153
+\tagshift@=\dimen154
+\tagwidth@=\dimen155
+\totwidth@=\dimen156
+\lineht@=\dimen157
+\@envbody=\toks31
+\multlinegap=\skip79
+\multlinetaggap=\skip80
+\mathdisplay@stack=\toks32
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2009/06/22 v3.00
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+Package: setspace 2011/12/19 v6.7a set line spacing
+))
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\appendix\appendix.sty"
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count145
+\c@@ppsavesec=\count146
+\c@@ppsaveapp=\count147
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\rotating\rotating.sty"
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+\c@r@tfl@t=\count148
+\rotFPtop=\skip81
+\rotFPbot=\skip82
+\rot@float@box=\box62
+\rot@mess@toks=\toks33
+)
+(F:\Teleinfo\TCC\Monografia-plinio\monografia_defs.sty
+Package: monografia_defs 
+)
+(F:\Teleinfo\TCC\Monografia-plinio\assinatura.sty
+Package: assinatura 
+\signwidth=\skip83
+\signthickness=\skip84
+\signskip=\skip85
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\sidecap\sidecap.sty"
+Package: sidecap 2003/06/06 v1.6f SideCap Package (RN/HjG)
+\SC@BOXWD=\dimen158
+\SC@CAPWD=\dimen159
+\SC@tempdima=\dimen160
+\SC@tempdimb=\dimen161
+\c@SC@C=\count149
+\SC@BOX=\box63
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\supertabular\supertabular.sty"
+Package: supertabular 2004/02/20 v4.1e the supertabular environment
+\c@tracingst=\count150
+\ST@wd=\dimen162
+\ST@rightskip=\skip86
+\ST@leftskip=\skip87
+\ST@parfillskip=\skip88
+\ST@pageleft=\dimen163
+\ST@headht=\dimen164
+\ST@tailht=\dimen165
+\ST@pagesofar=\dimen166
+\ST@pboxht=\dimen167
+\ST@lineht=\dimen168
+\ST@stretchht=\dimen169
+\ST@prevht=\dimen170
+\ST@toadd=\dimen171
+\ST@dimen=\dimen172
+\ST@pbox=\box64
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2011/12/04 v6.82m Hypertext links for LaTeX
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2011/04/23 v1.4 Bundle oberdiek, subset hyperref (HO)
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2011/04/23 v1.4 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2011/04/23 v1.4 Subsetting bundle oberdiek (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
+Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/04/04 v1.12 Provides string conversions (HO)
+Package: bigintcalc 2011/01/30 v1.2 Expandable big integer calculations (HO)
+Package: bitset 2011/01/30 v1.1 Data type bit set (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provides unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2011/01/30 v1.0 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/04/23 v1.7 Hooks at very end of document (HO)
+Package: atbegshi 2011/01/30 v1.15 At begin shipout hook (HO)
+Package: refcount 2010/12/01 v3.2 Data extraction from references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options of hyperref/bookmark (HO)
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
+)
+\@linkdim=\dimen173
+\Hy@linkcounter=\count151
+\Hy@pagecounter=\count152
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2011/12/04 v6.82m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count153
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `final' set `true' on input line 3925.
+Package hyperref Info: Option `breaklinks' set `true' on input line 3925.
+Package hyperref Info: Option `final' set `true' on input line 3925.
+Package hyperref Info: Hyper figures OFF on input line 4046.
+Package hyperref Info: Link nesting OFF on input line 4051.
+Package hyperref Info: Hyper index ON on input line 4054.
+Package hyperref Info: Plain pages OFF on input line 4061.
+Package hyperref Info: Backreferencing OFF on input line 4066.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4284.
+\c@Hy@tempcnt=\count154
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4637.
+\Fld@menulength=\count155
+\Field@Width=\dimen174
+\Fld@charsize=\dimen175
+Package hyperref Info: Hyper figures OFF on input line 5757.
+Package hyperref Info: Link nesting OFF on input line 5762.
+Package hyperref Info: Hyper index ON on input line 5765.
+Package hyperref Info: backreferencing OFF on input line 5772.
+Package hyperref Info: Link coloring OFF on input line 5777.
+Package hyperref Info: Link coloring with OCG OFF on input line 5782.
+Package hyperref Info: PDF/A mode OFF on input line 5787.
+LaTeX Info: Redefining \ref on input line 5827.
+LaTeX Info: Redefining \pageref on input line 5831.
+\Hy@abspage=\count156
+\c@Item=\count157
+\c@Hfootnote=\count158
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2011/12/04 v6.82m Hyperref driver for pdfTeX
+\Fld@listcount=\count159
+\c@bookmark@seq@number=\count160
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip89
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\cite\cite.sty"
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 373.
+Package: cite 2010/09/10  v 5.3
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\abntex\abntcite.sty"
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\abntex\cvs-id.def")
+Package: abntcite 2003/10/13 v1.26 Chamadas de referencias no texto (NBR10520)
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count161
+\calc@Bcount=\count162
+\calc@Adimen=\dimen176
+\calc@Bdimen=\dimen177
+\calc@Askip=\skip90
+\calc@Bskip=\skip91
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count163
+\calc@Cskip=\skip92
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\abntex\abntex-abrev.sty"
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\abntex\cvs-id.def")
+Package: abntex-abrev 2003/10/13 v1.3 Abreviacoes
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\abntex\nbr10522-1988.def"
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\abntex\cvs-id.def")
+File: nbr10522-1988.def 2003/10/13 v1.2 Abreviacoes bibliograficas (NBR10522:19
+88)
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\abntex\abntex-abrev-pt_BR.def"
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\abntex\cvs-id.def")
+File: abntex-abrev-pt_BR.def 2003/10/13 v1.2 definicao de abntex-abrev, traduca
+o de termos en_US/pt_BR
+))
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\abntex\nbr10520-2002.def"
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\abntex\cvs-id.def")
+File: nbr10520-2002.def 2003/10/13 v1.2 Definicoes para abntcite (NBR10520:2002
+)
+)
+\minimumbiblabelwidth=\skip93
+\ABCIauxlen=\skip94
+\c@ABCIaux=\count164
+\c@ABCImax=\count165
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
+Package: relsize 2003/07/04 ver 3.1
+)
+\biblabelsep=\skip95
+LaTeX Info: Redefining \newblock on input line 562.
+LaTeX Info: Redefining \cite on input line 589.
+LaTeX Info: Redefining \citeonline on input line 647.
+\ABCItoken=\toks34
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\acronym\acronym.sty"
+Package: acronym 2010/09/08 v1.36 Support for acronyms (Tobias Oetiker)
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\bigfoot\suffix.sty"
+Package: suffix 2006/07/15 1.5 Variant command support
+)
+\AC@clearlist=\toks35
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\hvfloat\hvfloat.sty"
+Package: hvfloat 2003/05/31 rotating of floating objects
+
+`hvfloat' v1.1, 2003/05/31 (Herbert Voss)
+\hvObjectWidth=\skip96
+\hvCapWidth=\skip97
+\hvMaxCapWidth=\skip98
+\hvObjectBox=\box65
+\hvCaptionBox=\box66
+\hvOBox=\box67
+\hvAboveCaptionSkip=\skip99
+\hvBelowCaptionSkip=\skip100
+)
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\ltxmisc\here.sty")
+(F:\Teleinfo\TCC\Monografia-plinio\Monografia.aux
+(F:\Teleinfo\TCC\Monografia-plinio\pretexto/capa_externa.aux)
+(F:\Teleinfo\TCC\Monografia-plinio\pretexto/capa.aux)
+(F:\Teleinfo\TCC\Monografia-plinio\pretexto/resumo.aux)
+(F:\Teleinfo\TCC\Monografia-plinio\pretexto/abstract.aux)
+(F:\Teleinfo\TCC\Monografia-plinio\pretexto/dedicatoria.aux)
+(F:\Teleinfo\TCC\Monografia-plinio\pretexto/epistrofe.aux)
+(F:\Teleinfo\TCC\Monografia-plinio\chp1/introducao.aux)
+(F:\Teleinfo\TCC\Monografia-plinio\chp2/fundamentacao.aux)
+(F:\Teleinfo\TCC\Monografia-plinio\chp3/metodologia.aux)
+(F:\Teleinfo\TCC\Monografia-plinio\chp4/resultados.aux)
+(F:\Teleinfo\TCC\Monografia-plinio\chp5/conclusoes.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
+*geometry* detected driver: dvips
+*geometry* verbose mode - [ preamble ] result:
+* driver: dvips
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(99.58464pt, 660.10394pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=660.10394pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-4.55914pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=38.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count166
+\scratchdimen=\dimen178
+\scratchbox=\box68
+\nofMPsegments=\count167
+\nofMParguments=\count168
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count169
+\MPscratchDim=\dimen179
+\MPnumerator=\count170
+\makeMPintoPDFobject=\count171
+\everyMPtoPDFconversion=\toks37
+) ("F:\Programas\Latex\MiKTeX 2.9\tex\latex\ms\ragged2e.sty"
+Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\ms\everysel.sty"
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+
+ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 126.
+)
+\CenteringLeftskip=\skip101
+\RaggedLeftLeftskip=\skip102
+\RaggedRightLeftskip=\skip103
+\CenteringRightskip=\skip104
+\RaggedLeftRightskip=\skip105
+\RaggedRightRightskip=\skip106
+\CenteringParfillskip=\skip107
+\RaggedLeftParfillskip=\skip108
+\RaggedRightParfillskip=\skip109
+\JustifyingParfillskip=\skip110
+\CenteringParindent=\skip111
+\RaggedLeftParindent=\skip112
+\RaggedRightParindent=\skip113
+\JustifyingParindent=\skip114
+)
+\AtBeginShipoutBox=\box69
+Package hyperref Info: Link coloring OFF on input line 87.
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
+
+("F:\Programas\Latex\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count172
+)
+LaTeX Info: Redefining \ref on input line 87.
+LaTeX Info: Redefining \pageref on input line 87.
+LaTeX Info: Redefining \nameref on input line 87.
+
+(F:\Teleinfo\TCC\Monografia-plinio\Monografia.out)
+(F:\Teleinfo\TCC\Monografia-plinio\Monografia.out)
+\@outlinefile=\write4
+
+(F:\Teleinfo\TCC\Monografia-plinio\pretexto/capa_externa.tex
+
+Package pdftex.def Warning: Option `bb' does not make sense,
+(pdftex.def)                using `viewport' instead on input line 4.
+
+<figs/ufc.jpg, id=174, 383.4325pt x 466.74374pt>
+File: figs/ufc.jpg Graphic file (type jpg)
+ <use figs/ufc.jpg>
+Package pdftex.def Info: figs/ufc.jpg used on input line 4.
+(pdftex.def)             Requested size: 71.13188pt x 86.58147pt.
+) [1
+Non-PDF special ignored!
+Non-PDF special ignored!
+
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <F:/Teleinfo/TCC/Monografi
+a-plinio/figs/ufc.jpg>]
+(F:\Teleinfo\TCC\Monografia-plinio\pretexto/capa.tex
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd")
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd")
+Underfull \hbox (badness 2253) in paragraph at lines 39--39
+[]|\T1/cmr/m/n/12 Monografia de Con-clu-são de Curso
+ []
+
+
+Underfull \hbox (badness 7759) in paragraph at lines 39--39
+\T1/cmr/m/n/12 de Gra-du-a-ção em En-ge-nha-ria de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T1/cmr/m/n/12 Te-lein-for-má-tica da Uni-ver-si-dade
+ []
+
+
+Underfull \hbox (badness 3323) in paragraph at lines 39--39
+\T1/cmr/m/n/12 Fe-de-ral do Ce-ará como parte dos
+ []
+
+) [2
+
+
+] (F:\Teleinfo\TCC\Monografia-plinio\pretexto/resumo.tex
+\tmpht=\dimen180
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
+
+ []
+
+)
+Underfull \hbox (badness 1142) in paragraph at lines 15--110
+\T1/cmr/bx/n/12 Palavras-chaves: \T1/cmr/m/n/12 Mo-de-la-gem, Teste, Al-go-ritm
+o, Co-ber-tura, Com-ple-xi-dade,
+ []
+
+[1
+
+
+
+
+] (F:\Teleinfo\TCC\Monografia-plinio\pretexto/abstract.tex
+\tmpht=\dimen181
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--21
+
+ []
+
+) [2
+
+
+
+] (F:\Teleinfo\TCC\Monografia-plinio\pretexto/dedicatoria.tex) [3
+
+
+]
+(F:\Teleinfo\TCC\Monografia-plinio\pretexto/epistrofe.tex) [4
+
+
+]
+(F:\Teleinfo\TCC\Monografia-plinio\Monografia.toc [5
+
+
+])
+\tf@toc=\write5
+ [6]
+(F:\Teleinfo\TCC\Monografia-plinio\Monografia.lof)
+\tf@lof=\write6
+ [7
+
+]
+(F:\Teleinfo\TCC\Monografia-plinio\Monografia.lot)
+\tf@lot=\write7
+ [8
+
+]
+(F:\Teleinfo\TCC\Monografia-plinio\pretexto/acronimos.tex [9
+
+])
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 155.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 155.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10] (F:\Teleinfo\TCC\Monografia-plinio\chp1/introducao.tex
+Cap\'{\i }tulo 1.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 1.
+("F:\Programas\Latex\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+) [1
+
+
+
+]
+Underfull \hbox (badness 10000) detected at line 16
+[]
+ []
+
+Package acronym Info: Label `acro:VLSI' newly defined as it shall be overridden
+
+although it is yet undefined on input line 18.
+Package acronym Info: Label `acro:CI' newly defined as it shall be overridden
+although it is yet undefined on input line 18.
+Package acronym Info: Label `acro:SO' newly defined as it shall be overridden
+although it is yet undefined on input line 22.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2]
+Underfull \hbox (badness 10000) detected at line 28
+[]
+ []
+
+
+Underfull \hbox (badness 2828) in paragraph at lines 30--31
+[]\T1/cmr/m/n/12 Os ob-je-ti-vos ge-rais e es-pe-cí-fi-cos es-ta-be-le-ci-dos p
+ara este tra-ba-lho, são
+ []
+
+Package acronym Info: Label `acro:RAM' newly defined as it shall be overridden
+although it is yet undefined on input line 34.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[3]
+Underfull \hbox (badness 10000) detected at line 49
+[]
+ []
+
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4] (F:\Teleinfo\TCC\Monografia-plinio\chp2/fundamentacao.tex
+Cap\'{\i }tulo 2.
+(F:\Teleinfo\TCC\Monografia-plinio\chp2/sec2_1.tex
+Underfull \hbox (badness 10000) detected at line 1
+[]
+ []
+
+
+Underfull \hbox (badness 1571) in paragraph at lines 5--6
+[]\T1/cmr/m/n/12 Em sis-te-mas com-pu-ta-ci-o-nais, as pa-la-vras fa-lha, erro 
+e de-feito pos-suem
+ []
+
+<figs/falha_erro_defeito.pdf, id=409, 312.98033pt x 625.96065pt>
+File: figs/falha_erro_defeito.pdf Graphic file (type pdf)
+
+<use figs/falha_erro_defeito.pdf>
+Package pdftex.def Info: figs/falha_erro_defeito.pdf used on input line 17.
+(pdftex.def)             Requested size: 149.37877pt x 298.75264pt.
+ [5
+
+
+
+]
+Underfull \hbox (badness 1527) in paragraph at lines 25--26
+[]\T1/cmr/m/n/12 Neste tra-ba-lho será uti-li-zado ape-nas o con-ceito de fa-lh
+a, pois es-ta-mos
+ []
+
+<figs/abstraction_levels.png, id=420, 510.40688pt x 331.99031pt>
+File: figs/abstraction_levels.png Graphic file (type png)
+
+<use figs/abstraction_levels.png>
+Package pdftex.def Info: figs/abstraction_levels.png used on input line 31.
+(pdftex.def)             Requested size: 298.75264pt x 194.33258pt.
+Package acronym Info: Label `acro:HDL' newly defined as it shall be overridden
+although it is yet undefined on input line 35.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6 <F:/Teleinfo/TCC/Monografia-plinio/figs/falha_erro_defeito.pdf>]
+Package acronym Info: Label `acro:SAF' newly defined as it shall be overridden
+although it is yet undefined on input line 51.
+Package acronym Info: Label `acro:TF' newly defined as it shall be overridden
+although it is yet undefined on input line 51.
+Package acronym Info: Label `acro:CF' newly defined as it shall be overridden
+although it is yet undefined on input line 51.
+Package acronym Info: Label `acro:NPSF' newly defined as it shall be overridden
+
+although it is yet undefined on input line 51.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7 <F:/Teleinfo/TCC/Monografia-plinio/figs/abstraction_levels.png>]
+<figs/markov_fault_free.png, id=483, 437.38406pt x 172.39406pt>
+File: figs/markov_fault_free.png Graphic file (type png)
+
+<use figs/markov_fault_free.png>
+Package pdftex.def Info: figs/markov_fault_free.png used on input line 57.
+(pdftex.def)             Requested size: 298.75264pt x 117.7525pt.
+
+<figs/markov_stuckat_0.png, id=491, 220.57407pt x 63.98906pt>
+File: figs/markov_stuckat_0.png Graphic file (type png)
+
+<use figs/markov_stuckat_0.png>
+Package pdftex.def Info: figs/markov_stuckat_0.png used on input line 67.
+(pdftex.def)             Requested size: 170.71393pt x 49.52655pt.
+
+<figs/markov_stuckat_1.png, id=492, 220.57407pt x 62.48344pt>
+File: figs/markov_stuckat_1.png Graphic file (type png)
+
+<use figs/markov_stuckat_1.png>
+Package pdftex.def Info: figs/markov_stuckat_1.png used on input line 68.
+(pdftex.def)             Requested size: 170.71393pt x 48.36122pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8 <F:/Teleinfo/TCC/Monografia-plinio/figs/markov_fault_free.png> <F:/Teleinfo/
+TCC/Monografia-plinio/figs/markov_stuckat_0.png> <F:/Teleinfo/TCC/Monografia-pl
+inio/figs/markov_stuckat_1.png>]
+<figs/markov_transition.png, id=517, 467.49657pt x 118.94438pt>
+File: figs/markov_transition.png Graphic file (type png)
+
+<use figs/markov_transition.png>
+Package pdftex.def Info: figs/markov_transition.png used on input line 78.
+(pdftex.def)             Requested size: 298.75264pt x 76.01523pt.
+
+<figs/markov_2_cell.png, id=522, 493.845pt x 301.125pt>
+File: figs/markov_2_cell.png Graphic file (type png)
+
+<use figs/markov_2_cell.png>
+Package pdftex.def Info: figs/markov_2_cell.png used on input line 89.
+(pdftex.def)             Requested size: 341.43437pt x 208.18999pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9 <F:/Teleinfo/TCC/Monografia-plinio/figs/markov_transition.png> <F:/Teleinfo/
+TCC/Monografia-plinio/figs/markov_2_cell.png>]
+<figs/markov_coupling.png, id=546, 493.845pt x 301.125pt>
+File: figs/markov_coupling.png Graphic file (type png)
+
+<use figs/markov_coupling.png>
+Package pdftex.def Info: figs/markov_coupling.png used on input line 105.
+(pdftex.def)             Requested size: 341.43437pt x 208.18999pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10 <F:/Teleinfo/TCC/Monografia-plinio/figs/markov_coupling.png>]
+Package acronym Info: Label `acro:PSF' newly defined as it shall be overridden
+although it is yet undefined on input line 114.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11]) (F:\Teleinfo\TCC\Monografia-plinio\chp2/sec2_2.tex
+Underfull \hbox (badness 10000) detected at line 1
+[]
+ []
+
+<figs/array_no_01.pdf, id=603, 299.11815pt x 421.57594pt>
+File: figs/array_no_01.pdf Graphic file (type pdf)
+
+<use figs/array_no_01.pdf>
+Package pdftex.def Info: figs/array_no_01.pdf used on input line 11.
+(pdftex.def)             Requested size: 256.07741pt x 360.94005pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[13 <F:/Teleinfo/TCC/Monografia-plinio/figs/array_no_01.pdf>]
+Underfull \hbox (badness 2884) in paragraph at lines 77--78
+[]\T1/cmr/m/n/12 Os pa-drões de tes-tes de me-mó-ria são co-mu-mente ca-te-go-r
+i-za-dos como
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16]
+Package acronym Info: Label `acro:MOVI' newly defined as it shall be overridden
+
+although it is yet undefined on input line 165.
+
+Underfull \hbox (badness 3029) in paragraph at lines 165--166
+[]\T1/cmr/m/n/12 Outro pa-drão muito co-nhe-cido é o [][][]\T1/cmr/m/it/12 Movi
+ng In-ver-tion \T1/cmr/m/n/12 ([])[]. Seu
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17]
+Package acronym Info: Label `acro:LSB' newly defined as it shall be overridden
+although it is yet undefined on input line 169.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[18]
+Package acronym Info: Label `acro:MSB' newly defined as it shall be overridden
+although it is yet undefined on input line 228.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[19]
+Package acronym Info: Label `acro:DFT' newly defined as it shall be overridden
+although it is yet undefined on input line 258.
+Package acronym Info: Label `acro:BIST' newly defined as it shall be overridden
+
+although it is yet undefined on input line 258.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[20]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[21]) (F:\Teleinfo\TCC\Monografia-plinio\chp2/sec2_3.tex
+Underfull \hbox (badness 10000) detected at line 1
+[]
+ []
+
+Package acronym Info: Label `acro:LinuxMM' newly defined as it shall be overrid
+den
+although it is yet undefined on input line 4.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[22] <figs/topologia.pdf, id=777, 597.50786pt x 845.04686pt>
+File: figs/topologia.pdf Graphic file (type pdf)
+
+<use figs/topologia.pdf>
+Package pdftex.def Info: figs/topologia.pdf used on input line 14.
+(pdftex.def)             Requested size: 170.71393pt x 241.43399pt.
+ <figs/vector.pdf, id=778, 299.11815pt x 421.57594pt>
+File: figs/vector.pdf Graphic file (type pdf)
+
+<use figs/vector.pdf>
+Package pdftex.def Info: figs/vector.pdf used on input line 15.
+(pdftex.def)             Requested size: 170.71393pt x 240.60954pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[23 <F:/Teleinfo/TCC/Monografia-plinio/figs/topologia.pdf> <F:/Teleinfo/TCC/Mon
+ografia-plinio/figs/vector.pdf>]
+<figs/mem_virtual.pdf, id=806, 597.50786pt x 845.04686pt>
+File: figs/mem_virtual.pdf Graphic file (type pdf)
+
+<use figs/mem_virtual.pdf>
+Package pdftex.def Info: figs/mem_virtual.pdf used on input line 23.
+(pdftex.def)             Requested size: 213.39568pt x 301.80539pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+[]|[][]\T1/cmr/m/n/10.95 Memória vir-tual como alo-cada para um pro-cesso (adap
+-tado de
+ []
+
+Package acronym Info: Label `acro:OOM' newly defined as it shall be overridden
+although it is yet undefined on input line 35.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[24 <F:/Teleinfo/TCC/Monografia-plinio/figs/mem_virtual.pdf>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[25])
+Underfull \hbox (badness 10000) detected at line 13
+[]
+ []
+
+)
+Underfull \hbox (badness 1424) in paragraph at lines 17--162
+\T1/cmr/m/n/12 de-sen-vol-vi-mento, teste e va-li-da-ção, além de de-ta-lhes da
+ im-ple-men-ta-ção da
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[26] (F:\Teleinfo\TCC\Monografia-plinio\chp3/metodologia.tex
+Cap\'{\i }tulo 3.
+
+Underfull \hbox (badness 1348) in paragraph at lines 4--5
+[]\T1/cmr/m/n/12 Neste ca-pí-tulo são des-cri-tos os am-bi-en-tes uti-li-za-dos
+ no de-sen-vol-vi-mento,
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 4--5
+\T1/cmr/m/n/12 ava-li-a-ção e teste da fer-ra-menta pro-posta, cha-mada de MDia
+g. Al-gu-mas
+ []
+
+
+Underfull \hbox (badness 2582) in paragraph at lines 4--5
+\T1/cmr/m/n/12 ca-rac-te-rís-ti-cas im-por-tan-tes da im-ple-men-ta-ção, que ga
+-ran-tem a efi-cá-cia do
+ []
+
+(F:\Teleinfo\TCC\Monografia-plinio\chp3/sec3_1.tex
+Underfull \hbox (badness 10000) detected at line 1
+[]
+ []
+
+Package acronym Info: Label `acro:LESC' newly defined as it shall be overridden
+
+although it is yet undefined on input line 3.
+Package acronym Info: Label `acro:UFC' newly defined as it shall be overridden
+although it is yet undefined on input line 3.
+Package acronym Info: Label `acro:GDB' newly defined as it shall be overridden
+although it is yet undefined on input line 7.
+[27
+
+
+
+]) (F:\Teleinfo\TCC\Monografia-plinio\chp3/sec3_2.tex
+Underfull \hbox (badness 10000) detected at line 1
+[]
+ []
+
+
+Underfull \hbox (badness 1540) in paragraph at lines 4--5
+[]\T1/cmr/m/n/12 Para o de-sen-vol-vi-mento de um di-ag-nós-tico que atua so-br
+e um sis-tema
+ []
+
+<figs/fluxo.pdf, id=868, 794.97pt x 1228.59pt>
+File: figs/fluxo.pdf Graphic file (type pdf)
+ <use figs/fluxo.pdf>
+Package pdftex.def Info: figs/fluxo.pdf used on input line 12.
+(pdftex.def)             Requested size: 384.1096pt x 593.63458pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[28]
+
+LaTeX Warning: Text page 29 contains only floats.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[29 <F:/Teleinfo/TCC/Monografia-plinio/figs/fluxo.pdf>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[30]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[31]
+Underfull \hbox (badness 1297) in paragraph at lines 69--70
+[]\T1/cmr/m/n/12 Para um teste mais com-pleto, o al-go-ritmo ado-tado foi o pro
+-posto por
+ []
+
+
+Underfull \hbox (badness 2478) in paragraph at lines 71--72
+[]\T1/cmr/m/n/12 No MDiag, fo-ram im-ple-men-ta-dos os al-go-rit-mos par-cial e
+ com-pleto de
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[32]) (F:\Teleinfo\TCC\Monografia-plinio\chp3/sec3_3.tex
+Underfull \hbox (badness 10000) detected at line 1
+[]
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[33] <figs/celulas_falhas.pdf, id=955, 614.295pt x 398.3386pt>
+File: figs/celulas_falhas.pdf Graphic file (type pdf)
+
+<use figs/celulas_falhas.pdf>
+Package pdftex.def Info: figs/celulas_falhas.pdf used on input line 20.
+(pdftex.def)             Requested size: 298.75264pt x 193.72885pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[34] <figs/fluxo_sim.pdf, id=961, 845.04686pt x 1195.01572pt>
+File: figs/fluxo_sim.pdf Graphic file (type pdf)
+
+<use figs/fluxo_sim.pdf>
+Package pdftex.def Info: figs/fluxo_sim.pdf used on input line 42.
+(pdftex.def)             Requested size: 384.1096pt x 543.18597pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[35 <F:/Teleinfo/TCC/Monografia-plinio/figs/celulas_falhas.pdf>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[36 <F:/Teleinfo/TCC/Monografia-plinio/figs/fluxo_sim.pdf>])
+(F:\Teleinfo\TCC\Monografia-plinio\chp3/sec3_4.tex
+Underfull \hbox (badness 10000) detected at line 1
+[]
+ []
+
+Package acronym Info: Label `acro:SO-DIMM' newly defined as it shall be overrid
+den
+although it is yet undefined on input line 6.
+Package acronym Info: Label `acro:DIMM' newly defined as it shall be overridden
+
+although it is yet undefined on input line 6.
+Package acronym Info: Label `acro:LTT' newly defined as it shall be overridden
+although it is yet undefined on input line 8.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[37])
+Underfull \hbox (badness 10000) detected at line 15
+[]
+ []
+
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[38] (F:\Teleinfo\TCC\Monografia-plinio\chp4/resultados.tex
+Cap\'{\i }tulo 4.
+
+Underfull \hbox (badness 10000) detected at line 6
+[]
+ []
+
+[39
+
+
+
+]
+Underfull \hbox (badness 10000) detected at line 30
+[]
+ []
+
+Package acronym Info: Label `acro:POST' newly defined as it shall be overridden
+
+although it is yet undefined on input line 35.
+Package acronym Info: Label `acro:BIOS' newly defined as it shall be overridden
+
+although it is yet undefined on input line 35.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[40]
+Underfull \hbox (badness 1158) in paragraph at lines 61--62
+[]\T1/cmr/m/n/12 O MDiag mostrou-se efi-caz na de-tec-cão de fa-lhas re-ais, co
+m re-sul-ta-dos
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 63
+[]
+ []
+
+
+Underfull \hbox (badness 1596) in paragraph at lines 67--68
+\T1/cmr/m/n/12 com o va-lor real me-dido. A es-ti-ma-tiva le-vou em con-si-de-r
+a-ção parte do
+ []
+
+
+Overfull \hbox (8.80353pt too wide) in paragraph at lines 75--87
+ [][] 
+ []
+
+<figs/tempos_testes.pdf, id=1044, 556.34853pt x 226.95792pt>
+File: figs/tempos_testes.pdf Graphic file (type pdf)
+
+<use figs/tempos_testes.pdf>
+Package pdftex.def Info: figs/tempos_testes.pdf used on input line 91.
+(pdftex.def)             Requested size: 426.79135pt x 174.10706pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[41]
+Underfull \hbox (badness 10000) detected at line 97
+[]
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[42 <F:/Teleinfo/TCC/Monografia-plinio/figs/tempos_testes.pdf>]
+Underfull \hbox (badness 1484) in paragraph at lines 105--106
+[]\T1/cmr/m/n/12 A fer-ra-menta se com-por-tou de ma-neira es-tá-vel e ne-nhum 
+pro-blema de
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 107
+[]
+ []
+
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[43] (F:\Teleinfo\TCC\Monografia-plinio\chp5/conclusoes.tex
+Cap\'{\i }tulo 5.
+[44
+
+
+
+]
+Package acronym Info: Label `acro:API' newly defined as it shall be overridden
+although it is yet undefined on input line 15.
+
+Underfull \hbox (badness 10000) detected at line 17
+[]
+ []
+
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[45] (F:\Teleinfo\TCC\Monografia-plinio\Monografia.bbl [46
+
+
+]
+Underfull \hbox (badness 1681) in paragraph at lines 76--79
+[]\T1/cmr/m/n/12 MICRON TE-CH-NO-LOGY, INC. \T1/cmr/m/it/12 MT16JSF25664H 
+ []
+
+
+Underfull \hbox (badness 2538) in paragraph at lines 76--79
+\T1/cmr/m/it/12 Da-tasheet\T1/cmr/m/n/12 . Boise, USA, 2008. Dis-po-ní-vel em: 
+
+ []
+
+
+Underfull \hbox (badness 1057) in paragraph at lines 96--99
+[]\T1/cmr/m/n/12 PC-DOCTOR. \T1/cmr/m/it/12 PC-Doctor\T1/cmr/m/n/12 . [S.l.], 2
+011. Dis-po-ní-vel em: 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[47])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 186.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[48]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 186.
+ (F:\Teleinfo\TCC\Monografia-plinio\Monografia.aux
+(F:\Teleinfo\TCC\Monografia-plinio\pretexto/capa_externa.aux)
+(F:\Teleinfo\TCC\Monografia-plinio\pretexto/capa.aux)
+(F:\Teleinfo\TCC\Monografia-plinio\pretexto/resumo.aux)
+(F:\Teleinfo\TCC\Monografia-plinio\pretexto/abstract.aux)
+(F:\Teleinfo\TCC\Monografia-plinio\pretexto/dedicatoria.aux)
+(F:\Teleinfo\TCC\Monografia-plinio\pretexto/epistrofe.aux)
+(F:\Teleinfo\TCC\Monografia-plinio\chp1/introducao.aux)
+(F:\Teleinfo\TCC\Monografia-plinio\chp2/fundamentacao.aux)
+(F:\Teleinfo\TCC\Monografia-plinio\chp3/metodologia.aux)
+(F:\Teleinfo\TCC\Monografia-plinio\chp4/resultados.aux)
+(F:\Teleinfo\TCC\Monografia-plinio\chp5/conclusoes.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 186.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 186.
+Package rerunfilecheck Info: File `Monografia.out' has not changed.
+(rerunfilecheck)             Checksum: 6C1ACC054E5333299999D8FF744CE378;3034.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 11259 strings out of 494045
+ 164273 string characters out of 3147585
+ 287357 words of memory out of 3000000
+ 13882 multiletter control sequences out of 15000+200000
+ 26223 words of font info for 64 fonts, out of 3000000 for 9000
+ 715 hyphenation exceptions out of 8191
+ 43i,12n,45p,1003b,543s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
+cti1000.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
+\dpi600\ecrm0700.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
+nappen\ec\dpi600\ecti1095.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ecbi1200.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\
+fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\User\AppData\Local\Mi
+KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk>{F:/Programas/Latex/MiK
+TeX 2.9/fonts/enc/dvips/fontname/8r.enc} <C:\Users\User\AppData\Local\MiKTeX\2.
+9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\User\AppData\Local\
+MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\User\AppDa
+ta\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\U
+ser\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C
+:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx24
+88.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
+00\ecrm1440.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi600\ecrm1200.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\User\AppData\Local\MiKTeX\
+2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1200.pk><F:/Programas/Latex/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><F:/Programas/Latex/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmmi8.pfb><F:/Programas/Latex/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmr10.pfb><F:/Programas/Latex/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb><F:/Programas/Latex/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmr8.pfb><F:/Programas/Latex/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+msy10.pfb><F:/Programas/Latex/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/ms
+am10.pfb><F:/Programas/Latex/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msb
+m10.pfb><F:/Programas/Latex/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
+Output written on Monografia.pdf (60 pages, 868964 bytes).
+PDF statistics:
+ 1873 PDF objects out of 2073 (max. 8388607)
+ 248 named destinations out of 1000 (max. 500000)
+ 430 words of extra memory for PDF output out of 10000 (max. 10000000)
+

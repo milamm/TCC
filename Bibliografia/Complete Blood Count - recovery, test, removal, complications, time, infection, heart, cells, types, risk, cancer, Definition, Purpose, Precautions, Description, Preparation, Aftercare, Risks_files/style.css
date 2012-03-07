@@ -1,0 +1,130 @@
+@import url("default.css");
+
+#page{
+	padding-top:0px;
+}
+
+body{
+	background-color:white;
+}
+
+#body{
+	border:none;
+}
+#content{
+	margin-top:90px;
+	border:1px dotted #A5C3DE;
+	background-color:#FDFEFF;
+}
+#header{
+	background-image:url('surgery-back.jpg');
+	background-repeat: repeat-x;
+	background-position: top left;
+	border:none;
+	height:80px;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+}
+
+#header h1{
+	top:33px;
+	left:170px;
+	color:white;
+	z-index: 10;
+	display:inline;
+	font-weight:normal;
+	border-left:none;	
+	padding-left:0px;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:20pt;
+	letter-spacing:3px;
+}
+
+#header h2{
+	top:15px;
+	left:120px;
+	font-size:11pt;
+	font-family:Arial,Helvetica,sans-serif;	
+	color:#A4F200;
+	z-index: 10;
+	border-left:none;	
+	padding-left:0px;	
+}
+
+#header a {
+	color:white;
+	text-decoration: none;
+	border:none;
+}
+#header a:hover {
+	color:#7CFC00;
+	text-decoration: none;
+	border:none;
+}
+
+#hlogo {
+	position:absolute;
+	width:496px;
+	height:80px;
+	left:0px;
+	top:0px;
+	background-image:url('surgery-logo.jpg');
+	background-repeat:no-repeat;
+}
+
+
+#navigation{
+	font-size:10pt;
+	color:#8a8a8a;
+	padding:0px;
+	line-height: normal;
+	border:none;
+	margin:1px;
+	position:relative;
+	top:82px;
+}
+
+
+#hsearch {
+	top:14px;
+	color:#A2B0C6;
+	background-color:black;
+	opacity:0.7;-moz-opacity:0.7;filter:alpha(opacity=70);
+	width:200px;
+	height:44px;
+}
+
+#hsearch form {
+	margin:10px;
+}
+
+#hsearch input {
+	border:1px solid white;
+	color:white;
+	background-color:#526481;
+}
+
+#hsearch span a {
+	color:white;
+}
+
+#footer{
+	background-color:black;
+	color:white;
+}
+
+a {
+	border-bottom:1px dotted #67A9C1;
+	color:#0062BF;
+	text-decoration:none;
+}
+
+a:hover {
+	border:medium none;
+	color:#333333;
+	text-decoration:none;
+}
+
+

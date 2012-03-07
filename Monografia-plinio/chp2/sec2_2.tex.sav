@@ -1,0 +1,346 @@
+\section{Tipos de testes de memória}
+
+Uma memória guarda zeros e uns. Se zeros são escritos em todos os endereços da memória e lidos de todos os endereços, então metade dos defeitos foram cobertos, certo? Errado.
+
+O teste descrito, na realidade é um dos testes mais simples existentes. É chamado de padrão zero-um (\emph{zero-one pattern}) ou padrão trivial. Apesar da simplicidade, este teste tem cobertura de 100\% das falhas do tipo \ac{SAF}, porém é incapaz de detectar a maior parte dos outros tipos \cite{ADAMS:2003}. A situação descrita na figura \ref{FIG:ARRAY_NO_01} é um exemplo onde o teste não é suficiente. Neste caso há uma falha nos decodificadores de forma que, independente do endereço selecionado, sempre a mesma célula é acessada, tanto na escrita quanto na leitura.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = 0.4 \linewidth]{figs/array_no_01.pdf}
+\caption[Erro não detectável por padrão zero-um]{Erro não detectável por padrão zero-um.} \label{FIG:ARRAY_NO_01}
+\end{figure}
+
+Para que seja possível possível testar memórias de forma mais completa, é necessário usar uma combinação de padrões de teste (\emph{patterns}), onde cada padrão tem a capacidade de detectar certos tipos de falhas. Nenhum padrão sozinho é suficiente para testar uma memória por completo \cite{DEAN:1994}. Padrões são a essência dos testes de memória \cite{ADAMS:2003}.
+
+Para a descrição de testes, será adotada uma notação baseada em \cite{ADAMS:2003}. A tabela \ref{TAB:01} mostra a representação do teste zero-um citado anteriormente. Cada linha indica uma sequência de operações que deve ser aplicada a cada célula antes de prosseguir para a próxima sequência. A estas sequências, também dá-se o nome de elementos \cite{PAPACHRISTOU:1985}. No exemplo temos quatro elementos, 1 ao 4, cada um com apenas uma operação. As operações podem ser:
+\begin{itemize}
+  \item W0 escrever 0 na célula
+  \item W1 escrever 1 na célula
+  \item R0 ler estado da célula, esperado 0
+  \item R1 ler estado da célula, esperado 1
+\end{itemize}
+Ao final das operações em um endereço, a passagem de uma célula para outra pode ser de forma ascendente ($\Uparrow$), descendente ($\Downarrow$) ou em qualquer direção ($\Updownarrow$).
+
+\begin{table}[!ht]
+\caption{\emph{Zero-Ones Pattern.}}
+\centering
+\label{TAB:01}
+\begin{tabular}{| c | l r |}
+\hline
+1 & W0 & $\Updownarrow$ \\
+2 & R0 & $\Updownarrow$ \\
+3 & W1 & $\Updownarrow$ \\
+4 & R1 & $\Updownarrow$ \\
+\hline
+\end{tabular}
+\end{table}
+
+%A Complexidade de um algoritmo consiste na quantidade de trabalho necessária para a sua execução, expressa em função das operações fundamentais, as quais variam de acordo com o algoritmo, e em função do volume de dados. É medida segundo um modelo matemático que supõe que este vai trabalhar sobre uma entrada (massa de dados) de tamanho N. O processo de execução de um algoritmo pode ser dividido em etapas elementares denominadas passos (número fixo de operações básicas, tempo constante, operação de maior freqüência chamada dominante). O número de passos de um algoritmo é considerado como o número de execuções da operação dominante em função das saídas, desprezando-se constantes aditivas ou multiplicativas.
+
+Através desta drescrição também é possivel medir a complexidade do teste. Isto é, quantas ciclos são necessários para executar todo o teste. Supondo que uma operação de escrita ou leitura possa ser realizada em um ciclo, o teste apresentado possui uma complexidade 4$N$, onde $N$ é a quantidade de células ou o tamanho da memória. Este teste é dito ser de ordem $N$, representado por $O(N)$. Um teste de complexidade 14$N\log(N)$ possui ordem $O(Nlog(N))$. O conceito de complexidade é importante pois os chips de memória crescem constantemente seguindo a Lei de Moore. Isto faz com que testes mais complexos levem tempos impraticáveis para os tamanhos e velocidades das memórias atuais.
+
+Tomando como exemplo uma memória com tempo de acesso de 1,25 ns\footnote{Tempo de acesso retirado do datasheet de uma memória DDR3 SDRAM SODIMM. \cite{MICRON:2008}.}, a tabela \ref{TAB:TEMPOS} mostra os tempos de execução de supostos testes de diferentes complexidades em diferentes tamanhos de memória.
+
+\begin{table}[!ht]
+\caption{Tempos de execução em memória com tempo de acesso de 1,25 ns.}
+\centering
+\label{TAB:TEMPOS}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Tamanho & \multicolumn{4}{c|}{Complexidade} \\
+\cline{2-5}
+$N$ & $N$ & $N\log(N)$ & $N^{3/2}$ & $N^2$ \\
+\hline
+1 KB & 1,28 $\mu$s & 12,8 $\mu$s & 40,96 $\mu$s & 1,31 ms \\
+4 KB & 5,12 $\mu$s &  61,44 $\mu$s & 327,68 $\mu$s & 20,97 ms \\
+16 KB & 20,48 $\mu$s & 286,72 $\mu$s & 2,62 ms & 335,54 ms \\
+64 KB & 81,92 $\mu$s & 1,31 ms & 20,97 ms & 5,37 s \\
+256 KB & 327,68 $\mu$s & 5,90 ms & 167,77 ms &  1,43 min \\
+1 MB & 1,31 ms & 26,21 ms & 1,34 s &  22,91 min \\
+4 MB & 5,24 ms & 115,34 ms & 10,74 s &  6,11 h \\
+16 MB & 20,97 ms & 503,32 ms &  1,43 min &  4,07 dias \\
+64 MB & 83,89 ms & 2,18 s &  11,45 min &  65,16 dias \\
+256 MB & 335,54 ms & 9,40 s &  1,53 h &  2,86 anos \\
+1 GB & 1,34 s & 40,27 s &  12,22 h &  45,70 anos \\
+2 GB & 2,68 s & 1,39 min &  1,44 dia &  182,79 anos \\
+4 GB & 5,37 s & 2,86 min &  4,07 dias &  731,18 anos \\
+\hline
+\end{tabular}
+\end{table}
+
+É importante notar que em testes reais os tempos são múltiplos desses valores. Um teste de complixadade 8$N$, por exemplo, iria levar $8\cdot1,34 s = 10,72 s$ para testar 1 GB de memória. Assim, apenas testes de complexidade até $O(N\log(N))$ são aceitáveis.
+
+Os padrões de testes de memória são comumente categorizados como caminhantes (\emph{walking}), marchantes (\emph{marching}) e galopantes (\emph{galloping}) \cite{VANDEGOOR:1998}.
+
+\subsubsection{Walking Tests}
+
+Um teste é dito ser caminhante (\emph{walking}) quando, em qualquer momento cada momento, há apenas uma célula em um estado diferente de todas as outras.
+
+Inicialmente a memória é totalmente preenchida com um padrão, então as operações de escrita e leitura são realizadas em uma célula e ao final da sequencia, a célula deve voltar ao estado inicial. A tabela \ref{TAB:WALKING} mostra um exemplo de elemento para um teste caminhante.
+
+\begin{table}[!ht]
+\caption{Exemplo de \emph{walking}.}
+\centering
+\label{TAB:WALKING}
+\begin{tabular}{| c | l r |}
+\hline
+1 & R0, W1, R1, W0 & $\Uparrow$ \\
+\hline
+\end{tabular}
+\end{table}
+
+O que o caracteriza este elemento como caminhante é que a última operação de escrita (W0) retorna a célula para o estado em que ela se encontrava antes do início da sequencia (que pode ser notado pela leitura R0).
+
+\subsubsection{Marching Tests}
+
+Um padrão em marcha (\emph{marching pattern}) é quando o teste muda o estado na celula a ser testada e não a retorna para o estado anterior. Assim, antes de começar o teste, a memória está preenchida com um certo padrão, após uma sequência percorrer metade da memória, metade estará com o padrão inicial e a outra metade estará com o padrão escrito pelo teste. Um exemplo de um elemento \emph{march} é mostrado na tabela \ref{TAB:MARCHING}.
+
+\begin{table}[!ht]
+\caption{Exemplo de \emph{marching}.}
+\centering
+\label{TAB:MARCHING}
+\begin{tabular}{| c | l r |}
+\hline
+1 & R0, W1, R1 & $\Downarrow$ \\
+\hline
+\end{tabular}
+\end{table}
+
+O que diferencia este elemento de um caminhante é que sua última escrita não é necessariamente para o valor inicial da célula.
+
+\subsubsection{Galloping Tests}
+
+Enquanto os padrões walking e marching são orientados a dado, o galopante (\emph{galloping pattern}) é orientado a endereço. Isto porque os testes deste tipo fazem uma checagem do tipo ping-pong entre a célula base (célula atualmente testada) e todas as outras da memória. Como em cada operação todas as células precisam ser acessadas, este tipo de teste leva muito mais tempo para ser realizado. Sua complexidade é da ordem de $O(N^2)$, o que é bastante, comparada a complexidade de ordem $N$ dos outros dois tipos.
+
+A cobertura de falhas dos testes do tipo galloping é consideravelmente maior, no entanto o exesso de tempo faz com que sua utilização seja inviável. Como mostrado na tabela \ref{TAB:TEMPOS}, um teste que levaria alguns minutos com padrões caminhantes ou marchantes, poderia precisar de anos para ser concluído com um padrão galopante.
+
+\subsection{Testes Exsitentes}
+
+Desde metade do século XX muitos padrões para testes de memória têm sido propostos. Ao longo do tempo eles foram aperfeiçoados tanto no sentido de aprimorar a cobertura de falhas quanto no sentido de reduzir a complexidade. O apêndice \ref{CHP:APX:MARCHES} apresenta uma série de testes consagrados, mas que caíram em desuso por possuirem certas ineficiências que foram superadas posteriormente por novas propostas. Neste capítulo trataremos apenas dos algoritmos mais utilizados pela indústria e referenciados na literatura.
+
+\subsubsection{Série March}
+
+Existe uma tradicional série de testes do tipo marchante identificados por letras. Muitos estão descritos no apêndice \ref{CHP:APX:MARCHES}. Destes, o March C- ganhou destaque em muitos trabalhos por ser muito simples e ainda assim poderoso para identificar falhas. Seu nome é dado por ser uma otimização do padrão March C (apêncice \ref{CHP:APX:MARCHES}), onde algumas ineficiencias foram eliminadas. Como pode ser visto na tabela \ref{TAB:MARCHC-}, o March C- é um teste $10N$. Ele é capaz de detectar todas as falhas do tipo \ac{SAF}, idempotent \ac{CF}, \ac{TF} e outras \cite{ADAMS:2003}. De acordo com \cite{PETRU:2002}, 81,25\% das falhas \ac{CF} simples entre 2 células são detectadas por este teste.
+
+\begin{table}[!ht]
+\caption{\emph{March C- pattern.}}
+\centering
+\label{TAB:MARCHC-}
+\begin{tabular}{| c | l r |}
+\hline
+1 & W0 & $\Updownarrow$ \\
+2 & R0, W1 & $\Uparrow$ \\
+3 & R1, W0 & $\Uparrow$ \\
+4 & R0, W1 & $\Downarrow$ \\
+5 & R1, W0 & $\Downarrow$ \\
+6 & R0 & $\Updownarrow$ \\
+\hline
+\end{tabular}
+\end{table}
+
+Uma melhoria do March C- foi proposta por \cite{ADAMS:2003}. Chamado de Enhanced March C-, o teste, descrito na tabela \ref{TAB:EMARCHC-}, executa $18N$ operações e detecta algumas falhas além das já cobertas pelo March C-.
+
+\begin{table}[!ht]
+\caption{\emph{Enhanced March C- pattern.}}
+\centering
+\label{TAB:EMARCHC-}
+\begin{tabular}{| c | l r |}
+\hline
+1 & W0 & $\Updownarrow$ \\
+2 & R0, W1, R1, W1 & $\Uparrow$ \\
+3 & R1, W0, R0, W0 & $\Uparrow$ \\
+4 & R0, W1, R1, W1 & $\Downarrow$ \\
+5 & R1, W0, R0, W0 & $\Downarrow$ \\
+6 & R0 & $\Updownarrow$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Moving Invertion}
+
+Outro padrão muito conhecido é o \ac{MOVI}. Seu funcionamento é um pouco mais complexo que os testes do tipo marchante.
+
+Inialmente toda a memória é preenchida com zeros. Então repete-se o procedimeno: uma palavra é lida; um bit é escrito para 1; a palavra é lida novamente. Isto se repete até que todos os bits da palavra estejam com o valor 1 e é feito para todas as palavras da memória. Após completar toda a memória, a operação inversa é aplicada: uma palavra é lida; um bit é escrito para 0; a palavra é lida novamente. Até que todas as palavras estejam com o valor 0 novamente.
+
+Todo este procedimento é repetido $n$ vezes, onde $n$ é o tamanho do barramento de endereço. No entanto, o \ac{MOVI} utiliza uma forma de endereçamento diferenciada. Para cada repetição o endereço é deslocado de forma cíclica para a esquerda, considerando o bit $n$ como o \ac{LSB}. Por exemplo, na segunda repetição o \ac{LSB} será o bit $1$ e o endereçamento se dá como na tabela \ref{TAB:ENDMOVI}.
+
+\begin{table}[!ht]
+\caption{\emph{Endereçamento do MOVI na segunda iteração (LSB = bit 1).}}
+\centering
+\label{TAB:ENDMOVI}
+\begin{tabular}{| c |}
+\hline
+000\ldots0\underline{0}0 \\
+000\ldots0\underline{1}0 \\
+000\ldots1\underline{0}0 \\
+000\ldots1\underline{1}0 \\
+\vdots \\
+111\ldots1\underline{1}0 \\
+000\ldots0\underline{0}1 \\
+000\ldots0\underline{1}1 \\
+\vdots \\
+\hline
+\end{tabular}
+\end{table}
+
+Este teste realiza $12nN\log(N)$ operações e detecta falhas de endereçamento, \ac{SAF}, \ac{TF} e problemas com o tempo de acesso \cite{DIGITALELECTRONICS:2009}.
+
+\subsubsection{Nair}
+
+Um dos grandes trabalhos em testes de memória é \cite{NAIR:1978}, onde foram propostos dois algoritmos com uma boa eficiencia e cobertura de falhas. O primeiro, chamado de algoritmo A, é de ordem $O(N)$ e detecta todas a falhas simples e acoplamentos até 2 células. O segundo, algortimo B, é de ordem $O(N\log(N))$, mas detecta as mesmas falhas do algortimo A com o acréscimo de acoplamentos entre 3 células do tipo restrito (\emph{restricted 3-coupling faults}). Neste trabalho estes testes também serão chamdos de Nair A e Nair B para facilitar a leitura.
+
+\subsubsection{Papachristou}
+
+Dos testes mais conhecidos e utilizados, o que apresenta a melhor cobertura de falhas com complexidade praticável é o algoritmo proposto por \cite{PAPACHRISTOU:1985}. Inspirado nos algritmos A e B de \cite{NAIR:1978}, o autor desenvolveu um algortimo capaz de detectar todas as falhas detectaveis por A e B além alguns do tipos \ac{NPSF}. O teste pode ser dividido em duas etapas, uma de ordem $O(N)$ com a mesma cobertura que o algoritmo A e a segunda de ordem $N\log(N)$. No total, são necessárias $38 N + 24 N \log(N)$ operações.
+
+O teste de $38N$ operações é do tipo marchante e será chamado de Papachristou 1 neste trabalho. Ele é equivalente ao Nair A quanto às falhas detectadas e seus elementos são descritos na tabela \ref{TAB:PAPACHRISTOU1}.
+
+\begin{table}[!ht]
+\caption{Papachristou 1 \emph{pattern.}}
+\centering
+\label{TAB:PAPACHRISTOU1}
+\begin{tabular}{| c | l r |}
+\hline
+1 & W0 & $\Updownarrow$ \\
+2 & R0, W1, R1 & $\Uparrow$ \\
+3 & R1, W0, R0 & $\Uparrow$ \\
+4 & R0, W1, W0 & $\Uparrow$ \\
+5 & R0, W1 & $\Uparrow$ \\
+6 & R1, W0, W1 & $\Uparrow$ \\
+7 & R1, W0 & $\Uparrow$ \\
+8 & R0, W1, W0 & $\Uparrow$ \\
+9 & R0, W1 & $\Downarrow$ \\
+10 & R1, W0 & $\Downarrow$ \\
+11 & R0, W1, W0 & $\Downarrow$ \\
+12 & R0, W1 & $\Downarrow$ \\
+13 & R1, W0, W1 & $\Downarrow$ \\
+14 & R1, W0 & $\Downarrow$ \\
+15 & R0, W1, W0 & $\Downarrow$ \\
+16 & R0 & $\Updownarrow$ \\
+\hline
+\end{tabular}
+\end{table}
+
+O Papachristou 2 ou Papachristou completo, como será chamado o procedimento inteiro, consiste na aplicação do teste anterior seguido de um segundo teste com as operações descritas na tabela \ref{TAB:PAPACHRISTOU2} utilizando o mesmo endereçamento não linear do \ac{MOVI}. Um ponto importante é que este teste divide a memória em duas metades e as operações são realizadas na metade superior ou na inferior, definidas pelo \ac{MSB} do endereço após o deslocamento cíclico.
+
+\begin{table}[!ht]
+\caption{Papachristou 1 \emph{pattern.}}
+\centering
+\label{TAB:PAPACHRISTOU2}
+\begin{tabular}{| c | l r |}
+\hline
+1 & W0 & $\Updownarrow$  \\
+2 & R0, W1 & $\Uparrow t$ \\
+3 & R0 & $\Uparrow b$ \\
+4 & R0, W1 & $\Uparrow b$ \\
+5 & R1 & $\Uparrow t$ \\
+6 & R1, W0 & $\Uparrow t$ \\
+7 & R1 & $\Uparrow b$ \\
+8 & R1, W0 & $\Uparrow b$ \\
+9 & R0 & $\Uparrow t$ \\
+10 & R0, W1 & $\Downarrow b$ \\
+11 & R0 & $\Downarrow t$ \\
+12 & R0, W1 & $\Downarrow t$ \\
+13 & R1 & $\Downarrow b$ \\
+14 & R1, W0 & $\Downarrow b$ \\
+15 & R1 & $\Downarrow t$ \\
+16 & R1, W0 & $\Downarrow t$ \\
+17 & R0 & $\Downarrow b$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{MT}
+
+Nas últimas décadas pouco se tem avançado em relação a algoritmos de teste de memória salvo a criação padrões específicos para tipos particulares de falhas e o desenvolvimento de \emph{hardware} e \emph{cores} acoplados ao próprio circuito de memória para facilitar a aplicação de testes. Este \emph{hardware} faz parte de um conceito chamado de \ac{DFT}, que é um conjunto de técnicas que adicionam certas características de testabilidade a circuitos microeletrônicos. Em memórias, é utilizado particularmente circuitos de \ac{BIST}, que são mecanismos que permitem ao hardware fazer testes de forma automática.
+
+Mas entre os padrões mais recentes ganha destaque um algoritmo chamado de MT \cite{PETRU:2002}. É um teste do tipo marchante com apenas $36N$ operações, mas que detecta todas as falhas detectadas por Papachristou ($O(N\log(N))$), além de cobrir falhas do tipo \emph{3-coupling fault} mesmo que não sejam disjuntas, com a condição de seram células adjacentes.
+
+Para isto, a descrição do teste segue uma abordagem um pouco diferente. Ao invés de escrever sempre o mesmo valor em toda a memória, as células são preenchidas com padrões de fundos mostrados na tabela \ref{TAB:MTBACKGROUNDS}, nomeados de $I_1$ a $I_6$.
+
+\begin{table}[!ht]
+\centering
+\subtable[\label{TAB:I1}]{
+\begin{tabular}{| c | c | c | c |}
+\hline
+0 & 0 & 0 & 0 \\
+\hline
+0 & 0 & 0 & 0 \\
+\hline
+0 & 0 & 0 & 0 \\
+\hline
+0 & 0 & 0 & 0 \\
+\hline
+\end{tabular}
+}
+\subtable[\label{TAB:I2}]{
+\begin{tabular}{| c | c | c | c |}
+\hline
+0 & 1 & 0 & 1 \\
+\hline
+0 & 1 & 0 & 1 \\
+\hline
+0 & 1 & 0 & 1 \\
+\hline
+0 & 1 & 0 & 1 \\
+\hline
+\end{tabular}
+}
+\subtable[\label{TAB:I3}]{
+\begin{tabular}{| c | c | c | c |}
+\hline
+1 & 1 & 1 & 1 \\
+\hline
+1 & 1 & 1 & 1 \\
+\hline
+1 & 1 & 1 & 1 \\
+\hline
+1 & 1 & 1 & 1 \\
+\hline
+\end{tabular}
+}
+\subtable[\label{TAB:I4}]{
+\begin{tabular}{| c | c | c | c |}
+\hline
+1 & 0 & 1 & 0 \\
+\hline
+1 & 0 & 1 & 0 \\
+\hline
+1 & 0 & 1 & 0 \\
+\hline
+1 & 0 & 1 & 0 \\
+\hline
+\end{tabular}
+}
+\subtable[\label{TAB:I5}]{
+\begin{tabular}{| c | c | c | c |}
+\hline
+0 & 0 & 0 & 0 \\
+\hline
+1 & 1 & 1 & 1 \\
+\hline
+0 & 0 & 0 & 0 \\
+\hline
+1 & 1 & 1 & 1 \\
+\hline
+\end{tabular}
+}
+\subtable[\label{TAB:I6}]{
+\begin{tabular}{| c | c | c | c |}
+\hline
+1 & 1 & 1 & 1 \\
+\hline
+0 & 0 & 0 & 0 \\
+\hline
+1 & 1 & 1 & 1 \\
+\hline
+0 & 0 & 0 & 0 \\
+\hline
+\end{tabular}
+}
+\caption{Padrões de fundo no algoritmo MT. (a) $I_1$, (b) $I_2$, (c) $I_3$, (d) $I_4$, (e) $I_5$ e (f) $I_6$.} \label{TAB:MTBACKGROUNDS}
+\end{table}
+
+O teste consistem em preencher a memória com estes padrões e executar uma sequencia de operações e leitura e escrita. Diferentemente dos outros testes apresentados, a escrita utilizada é representada por WC, que indica uma operação de escrever o complemento do valor atual da célula. Assim a descrição em termos de elementos de teste é mostrada na tabela \ref{tab:MT}
+
+Um único teste é tomado como referência em termos de cobertura de falhas, o GALPAT \cite{NAIR:1978} \cite{PAPACHRISTOU:1985} \cite{RIEDEL:1995}. É um teste do tipo galopante que cobre praticamente todos os tipos de falhas conhecidos. No entanto é considerado uma teste meramente teórico, pois sua complexidade é de ordem $O(N^2)$.

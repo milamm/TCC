@@ -1,0 +1,21 @@
+\chapter{Metodologia}
+\label{CHP:MET}
+
+Neste capítulo são descritos os ambientes utilizados no desenvolvimento, avaliação e teste da ferramenta proposta, chamada de MDiag. Algumas características importantes da implementação, que garantem a eficácia do diagnóstico, são apresentadas na sessão \ref{SEC:DES}. Um sistema automático de inserção de falhas desenvolvido para validação do MDiag através de simulação, é detalhado na seção \ref{SEC:SIM}. Por fim, é descrito o procedimento de testes em ambientes reais.
+
+    %%% Seção 3.1:
+    \input{chp3/sec3_1}
+    %%% Seção 3.2:
+    \input{chp3/sec3_2}
+    %%% Seção 3.3:
+    \input{chp3/sec3_3}
+    %%% Seção 3.4:
+    \input{chp3/sec3_4}
+
+\section{Resumo do Capítulo}
+
+Neste capítulo foram descritos os principais passos e medidas tomadas no desenvolvimento da aplicação.
+Também foi abordada a metodologia de validação elaborada para medir a eficiência dos algoritmos escolhidos.
+
+No capítulo seguinte, são apresentados os resultados dos testes de inserção de falhas utilizados para validar a ferramenta, além de medir o desempenho desta em relação a ferramentas do mercado.
+

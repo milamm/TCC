@@ -1,0 +1,5 @@
+\section{Ambiente de Simulação}
+
+
+
+%Para o desenvolvimento deste trabalho foram utilizados dois ambientes: o primeiro para desenvolvimento em C ANSI, onde foi usado o Visual Studio Express 2008 da Microsoft integrado ao \ac{OpenCV} da Intel e o segundo foi o Matlab R2008a da Mathworks. O primeiro ambiente \'{e} usado para desenvolver o algoritmo principal. Nele, usa-se o \ac{OpenCV}, uma \ac{API} implementada em C ANSI que cont\'{e}m uma s\'{e}rie de fun\c{c}\~{o}es na \'{a}rea de processamento de imagens. Atrav\'{e}s de uma \emph{webcam}, o \ac{OpenCV} \'{e} utilizado para realizar a aquisi\c{c}\~{a}o das imagens dos gestos, tornando poss\'{\i}vel o processamento das mesmas para extra\c{c}\~{a}o dos dados a serem utilizados no treinamento. Todo esse algoritmo foi desenvolvido no Visual Studio. J\'{a} o segundo ambiente, o Matlab, foi utilizado para realizar o treinamento da rede neural empregada na classifica\c{c}\~{a}o dos gestos testados e tamb\'{e}m para realizar os c\'{a}lculos de avalia\c{c}\~{a}o dos m\'{e}todos propostos para extra\c{c}\~{a}o de caracter\'{\i}sticas. 

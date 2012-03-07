@@ -1,0 +1,21 @@
+\section{Teste em Ambientes Reais}
+\label{SEC:REAL}
+
+Além do ambiente de simulação de falhas descrito na seção anterior, o MDiag também foi submetido a situações de uso reais a fim de garantir sua utilidade prática.
+
+O acervo utilizado para teste foi composto por dez placas de memória, algumas em perfeito funcionamento, outras com falhas. Metade delas possuíam encapsulamento \ac{SO-DIMM}, próprias para computadores de dimensões reduzidas, como \emph{notebooks} e \emph{netbooks}, e as outras, encapsulamento \ac{DIMM}, geralmente usadas nos computadores pessoais comuns, estilo \emph{desktop}, ou em servidores.
+
+Nesses testes, o MDiag confrontou dois \emph{softwares} de diagnóstico consagrados no mercado. O primeiro foi o \ac{LTT} \cite{LTT:2011}, desenvolvido pela PC-Doctor \cite{PCDOCTOR:2011} para os computadores da fabricante Lenovo. Na realidade este produto reúne um conjunto de diagnósticos que cobre quase todos os componentes da máquina. O segundo foi o Memtest86+ \cite{MEMTEST:2011}, umas das ferramentas de diagnóstico de memória mais abrangentes em termos ed cobertura de falhas.
+
+É importante ressaltar que o \ac{LTT} foi utilizado com o sistema operacional Windows, enquanto o Memtest86+ é uma ferramenta \emph{stand-alone} que executa diretamente de uma mídia externa, como um CD ou \emph{pendrive} sem carregar nenhum \ac{SO}. Estas características influenciaram bastante nos resultados, pois afetam diretamente a quantidade de memória testada.
+
+O teste com cada ferramenta foi executado cinco vezes para cada módulo de memória. Estas, por sua vez, foram etiquetadas cegamente, não havendo nenhum conhecimento prévio sobre a presença ou ausência de falhas em cada uma delas.
+
+Uma estimativa do tempo de execução de cada algoritmo implementado pelo MDiag foi elaborada com base na sua complexidade e levando em consideração o \emph{overhead} das operações realizadas entre as escritas e leituras. Um algoritmo pode exigir apenas $10 N$ operações de acesso a memória, mas para ser realizado ainda é necessário alocar memória, executar checagens após as leituras, incrementar o contador de endereço, desalocar memória, etc. Assim, o total de operações de uma implementação deve ser maior que o simples valor da complexidade.
+
+A estimativa utilizou a fórmula \ref{EQU:FUNCLOGIS}, na qual $C$ é a complexidade do algortimo e $O$ é um parâmetro de tempo médio por operação, levando-se em conta alguns processamentos extras necessários. O valor de $O$ foi medido para cada algoritmo, individualmente, dividindo-se o tempo gasto para executar um elemento de teste pela quantidade de operações naquele elemento.
+
+\begin{equation}
+{T_{est} = C \cdot O}
+\label{EQU:FUNCLOGIS}
+\end{equation}

@@ -1,0 +1,111 @@
+\chapter{Resultados}
+\label{CHP:RESULT}
+
+Neste capítulo serão abordados os resultados adquiridos com os testes realizados a partir da metodologia descrita na seção \ref{SEC:SIM} e testes comparativos do MDiag com ferramentas existentes em memórias reais.
+
+\section{Testes com inserção de falhas}
+
+O mecanismo de inserção de falhas apresentado simulou um total de 968 combinações diferentes de falhas dos tipos \emph{idempotent} \ac{CF}, \emph{inversion} \ac{CF} e \emph{3-coupling fault}. O tempo total de simulação foi de 88 minutos. A tabela \ref{TAB:FALHAS} mostra a quantidade de falhas detectadas para cada algoritmo.
+
+\begin{table}[!ht]
+\caption{Falhas detectadas por algoritmo.}
+\centering
+\label{TAB:FALHAS}
+\begin{tabular}{| c | c | c |}
+\hline
+Algoritmo & Falhas detectadas & Falhas detectadas (\%) \\
+\hline
+March C- & 944 & 97,52\% \\
+Enhanced March C- & 956 & 98,76\% \\
+March G & 956 & 98,76\% \\
+Papachritou Parcial & 964 & 99,58\% \\
+Papachristou Completo & 964 & 99,58\% \\
+MT & 964 & 99,58\% \\
+\hline
+\end{tabular}
+\end{table}
+
+O resultado condiz com o esperado, porque a quantidade de falhas detectadas cresce de acordo com a evolução dos algoritmos. Algumas diferenças de cobertura entre os testes não foram percebidas, como entre o Papachristou parcial e completo. Isto é explicado pela pequena variedade de modelos simulados. É de se esperar que, com a ampliação dessa diversidade, os resultados revelem maior contraste entre os algoritmos.
+
+\section{Testes com Memórias Reais}
+
+Os testes comparativos entre o MDiag e ferramentas existentes foram realizados em um conjunto de 10 placas de memória, algumas possuindo falhas, outras não. As de número 01 a 05 são de encapsulamento \ac{DIMM} e as de 06 a 10, encapsulamento \ac{SO-DIMM}.
+Todas as ferramentas foram executadas nas configurações padrão, isto significa que todas executaram o teste mais completo, com todos os algortimos implementados por cada uma.
+
+Os resultados estão sintetizados na tabela \ref{TAB:REAIS}. Cada teste tem três possibilidades de resultado: nenhuma falha encontrada (\checkmark), uma ou mais falhas encontradas (F) ou não foi possível executar o teste ($\varnothing$). Esta última significa que a memória não passou no \ac{POST}, uma sequência de testes realizada pelo \ac{BIOS} que verifica preliminarmente se o sistema se encontra em estado operacional. Outra possibilidade é que o \ac{SO} não tenha conseguido executar por tempo suficiente para realizar o teste, provavelmente devido ao uso de parte danificada.
+
+\begin{table}[!ht]
+\caption{Resultados dos testes em memórias reais.}
+\centering
+\label{TAB:REAIS}
+\begin{tabular}{| c | c | c | c |}
+\hline
+Memória & MDiag & LTT & Memtest86+ \\
+\hline
+Memória 01 & \checkmark & \checkmark & \checkmark \\
+Memória 02 & $\varnothing$ & $\varnothing$ & $\varnothing$ \\
+Memória 03 & \checkmark & \checkmark & \checkmark \\
+Memória 04 & \checkmark & \checkmark & \checkmark \\
+Memória 05 & $\varnothing$ & $\varnothing$ & $\varnothing$ \\
+Memória 06 & F & $\varnothing$ & F \\
+Memória 07 & \checkmark & \checkmark & \checkmark \\
+Memória 08 & $\varnothing$ & $\varnothing$ & F \\
+Memória 09 & \checkmark & \checkmark & \checkmark \\
+Memória 10 & F & F+$\varnothing$ & F \\
+\hline
+\end{tabular}
+\end{table}
+
+A comparação mostra coerência de resultados entre as ferramentas. As memórias 02 e 05 não passaram no \ac{POST}, então não puderam ser testadas em nenhuma ferramenta. O Memtest86+, com a vantagem de não utilizar \ac{SO}, conseguiu testar todas as outras, detectando três placas com falha. Destas, o MDiag não pôde ser executado na de número 08, pois o Linux não conseguiu concluir sua inicialização, mas as outras também foram diagnosticadas com falha. Nos testes com o LTT, o Windows entrou em falha crítica antes de executar a ferramenta. Apenas em uma das iterações com a memória 10 foi possível finalizar o teste, obtendo o mesmo resultado que o Memtest86+ e o MDiag.
+
+O MDiag mostrou-se eficaz na deteccão de falhas reais, com resultados compatíveis com o Memtest86+. Por executar sobre Linux, apresentou, ainda, vantagem em relação ao \ac{LTT}, conseguindo testar memórias com falhas com maior estabilidade.
+
+\section{Tempo de Execução}
+
+Além da cobertura de falhas, é importante considerar o tempo de execução de cada ferramenta. O LTT executa 11 algoritmos em sequência, não possuindo opção para selecionar apenas alguns deles. O Memtest86+ possui 12 tipos de testes e permite selecionar quais serão executados. O MDiag possui 6 algoritmos, também permitindo a seleção de quais serão executados. Assim, o LTT demanda um tempo fixo de execução para uma dada máquina, enquanto o Memtest86+ e o MDiag podem ser configurados para testes rápidos, médios ou longos de acordo com os algortimos selecionados.
+
+Foi feita uma estimativa do tempo de execução de cada algoritmo implementado pelo MDiag, tomando como base na sua complexidade. O valor foi confrontado com o valor real medido. A estimativa levou em consideração parte do \emph{overhead} introduzido pelo processamento extra necessário entre cada operação de escrita/leitura.
+
+A tabela \ref{TAB:TXC} traz as medidas e as estimativas do tempo de execução, além da expressão da sua complexidade. Os dados da tabela são mostrados no gráfico da figura \ref{FIG:TEMPOS_TESTES}, com exceção do Papachristou Completo que difere dos demais por duas ordens de grandeza.
+
+\begin{table}[!ht]
+\caption{Tempo de execução.}
+\centering
+\label{TAB:TXC}
+\begin{tabular}{| c | c | c | c |}
+\hline
+Algoritmo & Complexidade & Tempo estimado & Tempo medido \\
+\hline
+March C- & $10 N$ & 56 s & 61 s \\
+Enhanced March C- & $18 N$ & 76 s & 84 s \\
+March G & $23 N$ & 95 s & 121 s \\
+Papachritou Parcial & $38 N$ & 159 s & 181 s \\
+Papachristou Completo & $36 N + 24 N \log_2(N)$ & 18934 s & 18032 s \\
+MT & $36 N$ & 280 s & 221 s \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = 1 \linewidth]{figs/tempos_testes.pdf}
+\caption[Tempo médio de execução \emph{versus} complexidade]{Tempo médio de execução \emph{versus} complexidade.} \label{FIG:TEMPOS_TESTES}
+\end{figure}
+
+As estimativas mostram de maneira mais realista o esforço computacional das implementações dos algoritmos, pois entre escritas e leituras na memória há uma série de instruções executadas e estas interferem significativamente no tempo de execução total. Por exemplo, a se basear apenas no acesso à memória, o algoritmo MT deveria ser mais rápido que o Papachristou Parcial. No entanto, suas operações envolvem a manipulação de padrões de fundo complexos, que variam de acordo com o endereço, enquanto o outro apenas escreve e lê o mesmo valor e o seu inverso, repetidamente, tornando o MT mais oneroso em termos de processamento.
+
+\section{Portabilidade}
+
+O MDiag foi compilado e testado em diversas plataformas. Entre elas estão um sistema embarcado com processador ARM, três servidores, dois \emph{notebooks} e dois \emph{desktops}. Estes testes não utilizaram memórias com erros nem inserção de falhas, foram realizados apenas como prova de conceito de que a ferramenta é capaz de atuar em ambientes computacionais variados.
+
+Além de diferentes distribuições Linux (Red Hat, Ubuntu, Suse e CentOS) e sistemas operacionais de 32 e 64 \emph{bits}, o MDiag também foi testado em uma plataforma de desenvolvimento de sistemas embarcados com processador ARM e em servidores de médio e grande porte com até 16 GB de memória.
+
+Foi desenvolvida uma versão inicializável do Linux, possibilitando diagnosticar memórias de computadores sem \ac{SO} ou sem Linux instalado. Foi utilizado um \emph{kernel} minimalista, otimizado para executar na maioria dos computadores de arquitetura PC x86 e com o uso mínimo de memória de sistema, permitindo que a quantidade alocada para diagnóstico seja maximizada.
+
+A ferramenta se comportou de maneira estável e nenhum problema de compatibilidade foi detectado durante a execução em todos os ambientes.
+
+\section{Resumo do Capítulo}
+
+Este capítulo apresentou resultados de diversos testes realizados com o MDiag. Seu desempenho e eficácia foram comprovados e comparados com outras ferramentas de diagnóstico.
+
+A seguir serão tiradas as conclusões acerca deste trabalho com base nos resultados obtidos, além de propostas de continuação do que foi desenvolvido. 

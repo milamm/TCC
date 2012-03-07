@@ -1,0 +1,135 @@
+\ProvidesPackage{dissertacao}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% O package inputenc adiciona suporte a caracteres ISO-8859-1.
+%%% Acentua\c{c}\~{a}o sem caracteres especiais,
+%%% e.g., "fun\c{c}\~{a}o" em vez de "fun\c c\~ao".
+\RequirePackage[latin1]{inputenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Hifeniza\c{c}\~{a}o correta de caracteres acentuados em Portugu\^{e}s.
+\RequirePackage[T1]{fontenc}
+
+% remoce hifeniza\c{c}\~{a}o
+\RequirePackage[none]{hyphenat}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Suporte para gerar o documento em Ingl\^{e}s e Portugu\^{e}s.
+%%% \'{U}ltima op\c{c}\~{a}o \'{e} padr\~{a}o no documento.
+\RequirePackage[english,brazil]{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% indenta o primeiro par\'{a}grafo, estilo brasileiro.
+\RequirePackage{indentfirst}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% \'{I}ndice Remissivo
+%%%\RequirePackage{makeidx}
+
+\RequirePackage{float}
+
+
+%\RequirePackage[hang,small,bf]{caption2}
+\RequirePackage[hang,small]{caption2}
+
+%\RequirePackage[]{rangecite}
+%\RequirePackage[sort]{cite}
+
+% \RequirePackage[ps2pdf,breaklinks,colorlinks,linkcolor=red,citecolor=blue,final]{hyperref}
+% \RequirePackage{hyperref}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Para incluir gr\'{a}ficos -- Formato .eps
+\RequirePackage[dvips]{graphicx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Package subfigure --- Figuras dentro de figuras.
+\RequirePackage[]{subfigure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Package wrapfig --- Figuras e tabelas ao lado de texto
+\RequirePackage{wrapfig}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Package placeins --- mantem figuras e tabelas na
+%%% se\c{c}\~{a}o onde s\~{a}o declaradas
+%%% \usepackage[below]{placeins}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Redefinir dimens\~{o}es da p\'{a}gina
+\RequirePackage[dvips]{geometry}
+\geometry{a4paper,left=3cm,right=3cm,top=3.5cm,bottom=3cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Package alltt -- Funciona como o pacote verbatim,
+%%% mas permite inclus\~{a}o de texto proveniente de arquivos.
+\RequirePackage{alltt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% suporte a tabelas coloridas
+\RequirePackage{colortbl}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% f\'{a}cil manipula\c{c}\~{a}o das propiedades de uma tabela
+\RequirePackage{array}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% configura\c{c}\~{a}o das dimens\~{o}es de uma tabela (manipula colunas)
+%%% ajusta a tabela as dimens\~{o}es da p\'{a}gina
+\RequirePackage{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Suporte para m\'{u}ltiplas colunas
+\RequirePackage{multicol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Package longtable -- Suporte para tabelas que ocupam mais de uma p\'{a}gina.
+\RequirePackage{longtable}
+
+\RequirePackage{ltxtable}
+
+\RequirePackage{multirow}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Package psfrag -- Suporte para superposi\c{c}\~{a}o de texto do LaTeX em
+%%% figuras PostScript. Carregado somente na vers\~{a}o DVI/PS.
+\RequirePackage{psfrag}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Package enumerare -- Extens\~{a}o do ambiente "enumerate".
+\RequirePackage{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Package algorithm -- pacote para manipula\c{c}\~{a}o de pseudo-c\'{o}digo.
+\RequirePackage[ruled,chapter]{algorithm}
+%plain,boxed,ruled
+%part,chapter,section,subsection,subsubsection,nothing
+\RequirePackage{algorithmic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Package fancyhdr -- manipula\c{c}\~{a}o f\'{a}cil de cabe\c{c}alhos e notas de radap\'{e}.
+\RequirePackage{fancyhdr}
+\RequirePackage[Lenny]{fncychap}
+%\RequirePackage[nobottomtitles,clearempty]{titlesec}
+\RequirePackage[clearempty,compact]{titlesec}
+
+\RequirePackage{titletoc}
+\RequirePackage{amsmath,amsfonts,amsbsy,amssymb}
+%\RequirePackage{afterpage}
+
+% incluir bibliografia, \'{\i}ndice e listas no sum\'{a}rio
+%\RequirePackage[nottoc,notlof,notlot]{tocbibind}
+%\settocname{teste}
+
+%\RequirePackage[lined,algonl,boxed]{algorithm2e}
+%\RequirePackage{footmisc}
+\RequirePackage{setspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% traduzir automaticamente os meses das refer\^{e}ncias para portugu\^{e}s
+\RequirePackage{datetimepor}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% incluir palavra "ap\^{e}ndice" antes da indexa\c{c}\~{a}o dos cap\'{\i}tulos do ap\^{e}ndice
+\RequirePackage[titletoc,title]{appendix}

@@ -1,0 +1,58 @@
+\section{Inserção de Falhas}
+\label{SEC:SIM}
+
+A fim de comprovar a eficácia dos testes, foi desenvolvido um ambiente de validação automático com inserção de falhas via \emph{debugging}.
+
+O método utiliza elementos de \emph{debugging} presente na maioria dos processadores atuais. O \ac{GDB} foi usado como interface de \emph{software} para explorar esses recursos do \emph{hardware}. Foram utilizadas principalmente duas estruturas: \emph{breakpoint} e \emph{watchpoint}. O primeiro é apenas um ponto de parada na execução do programa, congelando-o até que seja dado o comando para continuar. O segundo é similar ao primeiro, mas o critério de parada não está associado a um ponto específico do código, mas a uma variável, função ou posição da memória. A execução é interrompida cada vez que houver uma tentativa de leitura ou escrita no endereço monitorado.
+
+\subsection{Falhas simuladas}
+
+As falhas inseridas foram limitadas aos erros mais desafiadores para os algoritmos de teste de memória, eliminando redundâncias no sistema e otimizando o tempo de validação. Os modelos mais simples, como \ac{SAF} e \ac{TF}, não foram levados em consideração, pois todos os algoritmos apresentados possuem cobertura de 100\% na sua detecção \cite{RIEDEL:1995} \cite{PETRU:2002} \cite{RAGHURAMAN:2005}. Foram escolhidas apenas falhas representativas, em que é esperado que os testes não possam detectar todas as variações possíveis.
+
+Os modelos de falha que apresentam maior dificuldade na detecção são os de acoplamento. Tanto os \ac{CF} simples, como \ac{NPSF} ou, de forma mais geral, falhas de \emph{k-coupling}. Para a validação foram inseridas falhas do tipo \emph{idempotent} \ac{CF}, \emph{inversion} \ac{CF} e \emph{3-coupling fault}. Estas foram aplicadas apenas entre células vizinhas, pois, além de ser a situação mais comum encontrada em memórias reais \cite{PETRU:2002}, cobre as três ordenações possíveis de acoplamento: a vítima (célula que sofre transição errônea) acima da agressora (célula que dita o estado da vítima), a vítima abaixo da agressora e a vítima e a agressora no mesmo byte.
+
+Da mesma forma, para eliminar redundância no sistema e otimizar o tempo de validação, os \emph{bits} utilizados foram limitados aos mais representativos. As falhas se combinam apenas entre os bits 0, 1, 6 e 7 de cada \emph{byte}. Assim os casos cobertos são: \emph{bits} nas bordas da célula, \emph{bits} fora das bordas, \emph{bits} vizinhos, \emph{bits} distantes, vítima a direita da agressora e vítima a esquerda da agressora.
+
+De forma mais simples, cada falha foi inserida com todas as combinações entre acoplado e acoplador nos bits destacados na figura \ref{FIG:CELULAS_FALHAS}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = 0.7 \linewidth]{figs/celulas_falhas.pdf}
+\caption[Bits atingidos pela inserção de falhas]{Bits atingidos pela inserção de falhas.} \label{FIG:CELULAS_FALHAS}
+\end{figure}
+
+Para cada modelo simulado, as combinações possíveis são dadas por: $(b \cdot 3 - 1) \cdot b$ para acoplamento entre duas células e $(b \cdot 3 - 2) \cdot (b \cdot 3 - 1) \cdot b$ para três, com $b$ sendo a quantidade de \emph{bits} em que as falhas podem ocorrer em  cada \emph{byte}. Para a falha \emph{3-coupling fault} há duas possibilidades: que a célula vítima sofra transição quando uma das outras for escrita e a terceira esteja no estado 0 ou quando esta esteja no estado 1.
+
+Portanto, o total de combinações de falhas geradas para b = 4 é:
+
+$2 \cdot (4 \cdot 3 - 1) \cdot 4 = 88$
+
+$+$
+
+$2 \cdot (4 \cdot 3 - 2) \cdot (4 \cdot 3 - 1) \cdot 4 = 880$
+
+$= 968$ falhas.
+
+\subsection{Sistema de inserção de falhas}
+
+A Figura \ref{FIG:FLUXO_SIM} mostra os passos do sistema de inserção de falhas elaborado para validar o MDiag.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = 0.9 \linewidth]{figs/fluxo_sim.pdf}
+\caption[Fluxograma do método de inserção de falhas]{Fluxograma do método de inserção de falhas.} \label{FIG:FLUXO_SIM}
+\end{figure}
+
+As falhas são geradas através de um \emph{script} que escreve arquivos com os modelos das falhas utilizando comandos próprios do \ac{GDB}. %Por exemplo, uma falha do tipo \ac{CF} entre o \emph{bit} 3 do endereço 100 e o \emph{bit} 5 do endereço 101 é representada por um \emph{script} com os seguintes comandos do \ac{GDB}:
+
+%\begin{quote}
+%set \$x = buffer[100] \& ($\sim$(1$\ll$3))
+%
+%set \$y = ((buffer[101] \& (1$\ll$5)) $\gg$ 5) $\ll$ 3
+%
+%set buffer[100] = \$x | \$y
+%\end{quote}
+
+Para otimizar o tempo de validação, as falhas são inseridas em conjuntos. A quantidade é limitada pelo máximo de \emph{watchpoints} que o processador utilizado suporta. Neste trabalho foi possível inserir três falhas a cada execução do ciclo maior da figura \ref{FIG:FLUXO_SIM}. O endereço de cada uma é gerado a uma distância de 3 células da anterior, possibilitando que os arranjos da figura \ref{FIG:CELULAS_FALHAS} não se sobreponham. Assim, foram necessárias 323 iterações para cobrir todas as falhas testadas. A quantidade de memória necessária para comportar $n$ falhas é de $4 \cdot n - 1$. Portanto, apenas 11 bytes são suficientes para comportar as falhas inseridas em uma iteração. Por este motivo, a quantidade de memória alocada pelo MDiag, durante este processo de validação, foi forçada para o máximo de 1 MB, diminuindo bastante o tempo de teste de cada algoritmo.
+
+O MDiag foi desenvolvido de modo a guardar em um arquivo de relatório todos os acontecimentos relevantes durante a sua execução, como a quantidade de memória alocada, tempo de execução, falhas encontradas, etc. Estes relatórios passaram por um tratamento automático posterior para se obter os resultados relevantes. Estes resultados são apresentados e discutimos na próxima seção. 

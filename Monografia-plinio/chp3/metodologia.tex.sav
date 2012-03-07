@@ -1,0 +1,22 @@
+\chapter{Metodologia} \label{CHP:MET}%%
+
+Neste capítulo são descritos, o ambiente usado no desenvolvimento e validação do diagnóstico de desenvolvimento utilizado para implementar e testar os algoritmos,
+
+os gestos testados neste trabalho e as t\'{e}cnicas empregadas para extrair as caracter\'{\i}sticas que ir\~{a}o compor os dados utilizados na descri\c{c}\~{a}o desses gestos. Em seguida, tem-se a arquitetura e configura\c{c}\~{a}o da rede neural usada para treinamento e classifica\c{c}\~{a}o dos gestos, e por fim, \'{e} descrita a forma de avalia\c{c}\~{a}o dos m\'{e}todos de extra\c{c}\~{a}o de caracter\'{\i}sticas.
+
+    %%% Seção 3.1:
+    \input{chp3/sec3_1}
+    %%% Seção 3.2:
+    %\input{chp3/sec3_2}
+    %%% Seção 3.3:
+    \input{chp3/sec3_3}
+    %%% Seção 3.4:
+    \input{chp3/sec3_4}
+
+\section{Resumo do Cap\'{\i}tulo}
+
+Neste capítulo foram descritos todos os passos do desenvolvimento da aplicação. Todos os pontos importantes foram enunciados e justificados, tendo em vista a eficácia da implementação.
+Também foi abordada a metodologia de validação elaborada para medir a eficiência dos algortimos escolhidos.
+
+No capítulo seguinte, são apresentados os resultados dos testes de simulação para cada um dos métodos.
+
