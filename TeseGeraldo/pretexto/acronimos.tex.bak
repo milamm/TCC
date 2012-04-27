@@ -1,0 +1,39 @@
+\begin{acronym}[CAMshift]
+
+\acro{Camshift}[CAMShift]{\emph{Continuously Adaptive Mean Shift}}
+
+\acro{CCF}{Fun\c{c}\~{a}o de Correla\c{c}\~{a}o Cruzada \acroextra{(\emph{Cross-Correlation Function})}}
+
+\acro{CVIU}{\acroextra{Revisa de Vis\~{a}o Computacional e Compreens\~{a}o de Imagem (} \emph{Journal of Computer Vision and Image Understanding}\acroextra{)}}
+
+\acro{DT}{Diferencia\c{c}\~{a}o Temporal}
+
+\acro{fop}[FO]{Fluxo \'{O}ptico}
+
+\acro{fps}[FPS]{Quadros por Segundo \acroextra{(\emph{Frames per Second})}}
+
+\acro{FPU}{Unidade de Ponto Flutuante\acroextra{(\emph{Floating Point Unit})}}
+
+\acro{HSV}{Formato de Cor Tonalidade, Satura\c{c}\~{a}o e Brilho \acroextra{(\emph{Hue, Saturation e Brightness})}}
+
+\acro{IHC}{Interfaces Homem-Computador}
+
+\acro{LMS}{\emph{Least Mean Square} \acroextra{(M\'{\i}nimos Quadrados)}}
+
+\acro{MPEG}{\acroextra{Padr\~{a}o de compress\~{a}o do} \emph{Moving Picture Experts Group}}
+
+\acro{MSE}{Erro M\'{e}dio Quadr\'{a}tico \acroextra{(\emph{Mean Squared error})}}
+\acro{GUI}{Interface Gr\'{a}fica do Usu\'{a}rio \acroextra{(\emph{Interface Gr\'{a}fica do Usu\'{a}rio})}}
+\acro{PC}{Computador Pessoal \acroextra{(\emph{Personal Computer})}}
+
+\acro{PDA}{Assistente Pessoal Digital \acroextra{(\emph{Personal Digital Assistant})}}
+
+\acro{RITA}{Revista de Inform\'{a}tica e Teoria Aplicada}
+
+\acro{RGB}{Formato de Cor \acroextra{Vermelho Verde Azul (}\emph{Red Green Blue} \acroextra{)}}
+
+\acro{SAD}{Soma das Diferen\c{c}as Absolutas \acroextra{(\emph{Sum of Absolute Difference})}}
+
+\acro{VC}{Vis\~{a}o Computacional}
+
+\end{acronym} 

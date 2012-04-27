@@ -1,0 +1,23 @@
+\chapter*{Resumo}
+\label{CHP:RESUM0}%%
+\thispagestyle{empty}
+\PARstartOne{D}{iante} dos indicativos de uma r\'{a}pida altera\c{c}\~{a}o clim\'{a}tica em escala global, aprofundar os conhecimentos
+na \'{a}rea das ci\^{e}ncias atmosf\'{e}ricas tornou-se uma necessidade. E, para dar suporte ao desenvolvimento
+destes estudos, instrumentos para medida dos mais variados par\^{a}metros f\'{\i}sicos atmosf\'{e}ricos s\~{a}o desenvolvidos
+e constantemente aperfei\c{c}oados. Este trabalho descreve um sistema para a medida autom\'{a}tica da
+concentra\c{c}\~{a}o de aeross\'{o}is atmosf\'{e}ricos por vis\~{a}o computacional, os procedimentos e a infraestrutura de
+laborat\'{o}rio para sua avalia\c{c}\~{a}o e, por fim, apresenta seus resultados de uma intercompara\c{c}\~{a}o. O sistema de
+medida desenvolvido utiliza para tal, t\'{e}cnicas de processamento digital de imagens. O processo consiste na
+captura de uma amostra do ar atmosf\'{e}rico dentro de uma c\^{a}mara est\'{a}tica de difus\~{a}o t\'{e}rmica supersaturada
+de vapor de \'{a}gua. Nesta condi\c{c}\~{a}o, as mol\'{e}culas do vapor de \'{a}gua condensam sobre os aeross\'{o}is presentes
+no ar capturado, produzindo got\'{\i}culas de \'{a}gua. Estas got\'{\i}culas ao ca\'{\i}rem por gravidade cruzam um feixe
+de luz LASER, que define um volume de amostragem, o que as tornam vis\'{\i}veis. Uma s\'{e}rie de imagens
+deste processo \'{e} digitalizada e processada para identifica\c{c}\~{a}o e isolamento das gotas presentes no volume de
+amostragem. Em seguida, estas gotas s\~{a}o automaticamente contadas e a sua concentra\c{c}\~{a}o \'{e} calculada. As
+t\'{e}cnicas de binariza\c{c}\~{a}o por limiar, transformada watershed e contagem de regi\~{o}es conectadas s\~{a}o utilizadas.
+Uma metodologia inovadora para determina\c{c}\~{a}o do volume de amostragem tamb\'{e}m \'{e} apresentada. Os resultados
+dos experimentos de intercompara\c{c}\~{a}o em condi\c{c}\~{o}es controladas, utilizando-se como aerossol o sulfato de am\^{o}nia, indicam que os procedimentos aplicados s\~{a}o adequados na determina\c{c}\~{a}o da concentra\c{c}\~{a}o dos
+aeross\'{o}is atmosf\'{e}ricos.
+\newline
+\newline
+\noindent \textbf{Palavras-chaves:} watershed; processamento de imagens digitais; aerossol atmosf\'{e}rico; instrumenta\c{c}\~{a}o meteorol\'{o}gica.

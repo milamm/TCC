@@ -1,0 +1,112 @@
+\doublespacing
+%% ------------------------------------------------------------------------- %%
+\chapter{Incertezas}
+\label{cap:incertezas}
+Como mencionado na Se\c{c}\~{a}o \ref{detvol}, um dos procedimentos para se determinar o volume de amostragem consiste em posicionar um papel milimetrado alinhado com o LASER instalado na c\^{a}mara de nuvens. Este procedimento, como qualquer outro relativo a medi\c{c}\~{o}es, associa  uma incerteza no valor do volume de amostragem. O valor da incerteza  $\Delta v_a$ de 1,76 do volume de amostragem \'{e} obtido a partir de uma an\'{a}lise da repercuss\~{a}o que um erro no posicionamento do papel milimetrado em rela\c{c}\~{a}o a c\^{a}mera digital, utilizado para calibra\c{c}\~{a}o da rela\c{c}\~{a}o \emph{pixel}/milimetro,  pode acarretar.
+
+Considerando-se que o LASER tem aproximadamente 2 mm de di\^{a}metro, \'{e} admitido um poss\'{\i}vel erro de posicionamento de $\pm$ 1.0 mm em rela\c{c}\~{a}o ao eixo axial do mesmo no momento da calibra\c{c}\~{a}o. Assim sendo, foram tiradas tr\^{e}s fotografias do papel milimetrado nas posi\c{c}\~{o}es 1.0 mm atr\'{a}s do eixo, no centro do eixo e 1.0 mm a frente do eixo. Isto implica em tr\^{e}s diferentes rela\c{c}\~{o}es \emph{pixel}/milimetro, sendo que a correta \'{e} aquela cujo papel milimetrado  encontra-se perfeitamente alinhado com o centro axial do LASER. A possibilidade de um erro de $\pm$ 1.0 mm \'{e} uma  condi\c{c}\~{a}o bastante conservadora, pois, na pr\'{a}tica o LASER fornece uma boa orienta\c{c}\~{a}o no  posicionamento do papel milimetrado dentro da c\^{a}mara de nuvens. A fotografia mostrada na Figura \ref{SdccPapel} mostra o papel milimetrado posicionado dentro da c\^{a}mara de nuvens e a Figura \ref{PapelMili} mostra a fotografia do papel milimetrado tirada pela c\^{a}mera digital instalada na c\^{a}mara de nuvens mostrando a rela\c{c}\~{a}o \emph{pixel}/milimetro e a incerteza de cada medida  devido ao erro de posicionamento dentro da c\^{a}mara de nuvens.
+
+\begin{figure}[hbt]
+\begin{center}
+\includegraphics[scale=0.9]{derivacao/SdccPapel.eps}\\
+\end{center}
+\centering \caption{\label{SdccPapel}\hspace{-0.1em} papel milimetrado posicionado dentro da c\^{a}mara de nuvens.}
+\end{figure}
+
+\begin{figure}[hbt]
+\begin{center}
+\includegraphics[scale=0.9]{derivacao/Calibracao.eps}\\
+\end{center}
+\centering \caption{\label{PapelMili}\hspace{-0.1em} fotografia do papel milimetrado tirada pela c\^{a}mera do CCNC-SDCC para calibra\c{c}\~{a}o considerando o erro da rela\c{c}\~{a}o \emph{pixel}/milimetro devido ao erro de posicionamento dentro da c\^{a}mara de nuvens.}
+\end{figure}
+
+Conforme a Se\c{c}\~{a}o \ref{detvol} o volume de amostragem \textit{V$_{a}$} \'{e} definido por
+
+\begin{equation}
+\label {eqvol}
+V_a  = \pi r^2 l,
+\end{equation}
+em que \textit{r} \'{e} o raio do cilindro definido pela luz LASER e \textit{l} \'{e} o comprimento da luz LASER na regi\~{a}o de interesse.
+
+Os valores de $r$ e $l$ s\~{a}o obtidos, com a ajuda do papel milimetrado, atrav\'{e}s das rela\c{c}\~{o}es:
+
+% MathType!MTEF!2!1!+-
+% feqaeaartrvr0aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
+% hiov2DGi1BTfMBaeXatLxBI9gBaebbnrfifHhDYfgasaacH8srps0l
+% bbf9q8WrFfeuY-Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0-yr0R
+% Yxir-Jbba9q8aq0-yq-He9q8qqQ8frFve9Fve9Ff0dmeaabaqaciGa
+% caGaaeqabaaaamaaaOqaaiaadkhacqGH9aqpdaWcaaqaaiaadggaca
+% WGIbaabaGaaGOmaiaadogaaaaaaa!3722!
+\begin{equation}
+\label {eqr}
+r = \frac{{ab}}{{2c}}\;\;\;e
+\end{equation}
+
+% MathType!MTEF!2!1!+-
+% feqaeaartrvr0aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
+% hiov2DGi1BTfMBaeXatLxBI9gBaebbnrfifHhDYfgasaacH8srps0l
+% bbf9q8WrFfeuY-Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0-yr0R
+% Yxir-Jbba9q8aq0-yq-He9q8qqQ8frFve9Fve9Ff0dmeaabaqaciGa
+% caGaaeqabaaaamaaaOqaaiaadYgacqGH9aqpdaWcaaqaaiaadsgaca
+% WGLbaabaGaamOzaaaaaaa!3669!
+
+\begin{equation}
+\label {eql}
+l = \frac{{de}}{f}.
+\end{equation}
+
+em que $a$ \'{e} comprimento de $c$ \emph{pixels} na dire\c{c}\~{a}o vertical, $b$ \'{e} o n\'{u}mero de \emph{pixels} do di\^{a}metro do laser estimados de acordo com a Se\c{c}\~{a}o \ref{detvol}, $d$ \'{e} o comprimento de $f$ \emph{pixels} na dire\c{c}\~{a}o horizontal e $e$ \'{e} o m\'{a}ximo comprimento  de \emph{pixels} vis\'{\i}veis do volume de amostragem.
+
+
+Considerando-se que a incerteza na determina\c{c}\~{a}o da rela\c{c}\~{a}o \emph{pixel}/milimetro implica em uma incerteza em $r$ e $l$, a incerteza  $\Delta v_a$  \'{e}, desta forma, definida por:
+
+% MathType!MTEF!2!1!+-
+% feqaeaartrvr0aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
+% hiov2DGi1BTfMBaeXatLxBI9gBaebbnrfifHhDYfgasaacH8srps0l
+% bbf9q8WrFfeuY-Hhbbf9v8qqaqFr0xc9pk0xbba9q8WqFfea0-yr0R
+% Yxir-Jbba9q8aq0-yq-He9q8qqQ8frFve9Fve9Ff0dmeaabaqaciGa
+% caGaaeqabaaaamaaaOqaaiabfs5aejaadAhacqGH9aqpdaWcaaqaai
+% abgkGi2kaadAhaaeaacqGHciITcaWGHbaaaiabfs5aejaadggacqGH
+% RaWkdaWcaaqaaiabgkGi2kaadAhaaeaacqGHciITcaWGIbaaaiabfs
+% 5aejaadkgacqGHRaWkdaWcaaqaaiabgkGi2kaadAhaaeaacqGHciIT
+% caWGJbaaaiabfs5aejaadogacqGHRaWkdaWcaaqaaiabgkGi2kaadA
+% haaeaacqGHciITcaWGKbaaaiabfs5aejaadsgacqGHRaWkdaWcaaqa
+% aiabgkGi2kaadAhaaeaacqGHciITcaWGLbaaaiabfs5aejaadwgacq
+% GHRaWkdaWcaaqaaiabgkGi2kaadAhaaeaacqGHciITcaWGMbaaaiab
+% fs5aejaadAgaaaa!63C9!
+%\[
+\begin{equation}
+\label {eqincerteza}
+\Delta v_a = \frac{{\partial v}}{{\partial a}}\Delta a + \frac{{\partial v}}{{\partial b}}\Delta b + \frac{{\partial v}}{{\partial c}}\Delta c + \frac{{\partial v}}{{\partial d}}\Delta d + \frac{{\partial v}}{{\partial e}}\Delta e + \frac{{\partial v}}{{\partial f}}\Delta f,
+\end{equation}
+%\]
+em que $\Delta a$, $\Delta b$, $\Delta c$, $\Delta d$, $\Delta e$ e $\Delta f$  s\~{a}o as incertezas dos respectivos par\^{a}metros.
+
+Os valores dos par\^{a}metros e de suas incertezas s\~{a}o mostrados na Tabela \ref{deriva} a seguir:
+
+\begin{table}[!htbp]
+\centering \caption{\label{deriva} par\^{a}metros e suas incertezas}
+\begin{tabular}{ c | c c c}
+  \hline
+  Par\^{a}metro & Medida & Incerteza & Unidade\\
+  \hline
+  a & 2.0  & 0,05 & mm\\
+  b & 73 & 1  & \emph{pixel}\\
+  c & 89 & 1 & \emph{pixel}\\
+  d & 14 & 0.05 & mm \\
+  e & 620 & 10 & \emph{pixel}\\
+  f & 606 & 10 & \emph{pixel}\\
+  \hline
+\end{tabular}\\
+\end{table}
+
+
+
+
+
+
+
+
+
+
+

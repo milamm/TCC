@@ -1,0 +1,817 @@
+% This file was created with JabRef 2.6.
+% Encoding: Cp1252
+
+@ARTICLE{Alexander,
+  author = {W J R Alexander and F Bailey and D B Bredenkamp and A van der Merwe
+	andN Willemse},
+  title = {Linkages Between Solar Activity, Climate Predictable and Water ResourceDevelopment},
+  journal = {Journal of the South African},
+  year = {2007},
+  volume = {49},
+  pages = {32-44},
+  month = {June},
+  abstract = {This study is based on the numerical analysis of the properties of
+	routinelyobserved hydrometeorological data which in South Africa
+	alone is collectedat a rate of more than half a million station days
+	per year, with somerecords approaching 100 continuous years in length.
+	The analysis of thisdata demonstrates an unequivocal synchronous
+	linkage between these processesin South Africa and elsewhere, and
+	solar activity. This confirms observationsand reports by others in
+	many countries during the past 150 years. It isalso shown with a
+	high degree of assurance that there is a synchronouslinkage between
+	the statistically significant, 21-year periodicity in theseprocesses
+	and the acceleration and deceleration of the sun as it movesthrough
+	galactic space. Despite a diligent search, no evidence could befound
+	of trends in the data that could be attributed to human activities.It
+	is essential that this information be accommodated in water resourcedevelopment
+	and operation procedures in the years ahead.}
+}
+
+@ARTICLE{Andreae,
+  author = {M. O. Andreae and D.Rosenfeld and P. Artaxo and A. A. Costa and G.P.
+	Frankand K.M. Longo and M. A. F.Silva-Dias},
+  title = {Smoking Rain Clouds over the Amazon},
+  journal = {Science},
+  year = {2004},
+  volume = {303},
+  pages = {1337-1342},
+  month = {February}
+}
+
+@INPROCEEDINGS{Beucher,
+  author = {S Beucher and C Lantuéjoul},
+  title = {Use of watersheds in contour detection},
+  booktitle = {International Workshop on Image Processing, Real-Time Edge and Motion
+	Detection/Estimation},
+  year = {1979},
+  address = {Rennes},
+  month = {September},
+  abstract = {Beucher, S., and Lantu{\'e}joul, C. Use of watersheds in contour detection.In
+	Proc. International Workshop on Image Processing, Real-Time Edge
+	andMotion Detection/Estimation, Rennes, September (1979).}
+}
+
+@MASTERSTHESIS{Mendes,
+  author = {Kleiton do Carmo Mendes},
+  title = {Calibração de um Contador Fotoelétrico de Núcleos de Condensação
+	de Nuvens},
+  school = {Universidade Federal do Ceará},
+  year = {1995},
+  owner = {Francisco},
+  timestamp = {2010.11.01}
+}
+
+@ARTICLE{Chuang,
+  author = {Patrick Y. Chuang and Athanasios Nenes and James N. Smith and Richard
+	C.Flagan and John H. Seinfeld},
+  title = {Design of a CCN Instrument for Airborne Measurement},
+  journal = {Journal of Atmospheric and Oceanic Technology},
+  year = {2000},
+  volume = {17},
+  pages = {1005-1019},
+  month = {August},
+  abstract = {A new instrument for measuring cloud condensation nuclei (CCN) on
+	boardsmall aircraft is described. Small aircraft are attractive mainly
+	becausethey are less costly, but they require instruments that are
+	designed forminimum weight, volume, and power consumption; that are
+	robust; and thatare capable of autonomous operation and making measurements
+	at a frequencyappropriate for aircraft speeds. The instrument design
+	combines the streamwisegradient technique previously reported by
+	J. G. Hudson, and the alternatinggradient condensation nuclei counter
+	described by W. A. Hoppel et al. Fieldand laboratory measurements,
+	and modeling studies show that this combinationexhibits poor sensitivity
+	for the measurement of CCN spectra; for the climaticallyimportant
+	range of critical supersaturations, 0.03%–1%, the measured variable,droplet
+	diameter, varies only by 30%. The ability to resolve CCN spectrausing
+	this method is therefore in question. Studies of this instrumentin
+	a fixed supersaturation mode show that it can measure CCN at a singlesupersaturation
+	in the range of 0.1%–2%. Calibration and testing of theinstrument
+	in this mode is described. The instrument is capable of makingaccurate,
+	high-frequency (.0.1 Hz) measurements of CCN at a fixed supersaturation,while
+	satisfying the constraints for small aircraft.}
+}
+
+@ARTICLE{Debry,
+  author = {Edouard Debry},
+  title = {Reduction of the condensation/evaporation dynamics for atmospheric
+	aerosols:Theoretical and numerical investigation of hybrid methods},
+  journal = {Journal of Aerosol Science},
+  year = {2006},
+  volume = {37},
+  pages = {950-966},
+  number = {Issue 8},
+  month = {Agosto}
+}
+
+@INPROCEEDINGS{Digabel,
+  author = {H Digabel and C Lantuéjoul},
+  title = {Iterative algorithms},
+  year = {1978},
+  editor = {Caen},
+  pages = {85-99},
+  journal = {Actes du Second Symposium Europ´een d’Analyse Quantitative des Microstructuresen
+	Sciences des Mat´eriaux, Biologie et M´edecine,}
+}
+
+@ARTICLE{Ricardo,
+  author = {Ricardo Fabbri and Luciano da F. Costa and Julio C. Torelli and Odemir
+	M.Bruno},
+  title = {2D Euclidean Distance Transform Algorithms: A Comparative Survey.pdf},
+  journal = {ACM Computing Surveys},
+  year = {2008},
+  volume = {40},
+  pages = {1-44},
+  number = {1},
+  month = {February},
+  abstract = {The distance transform (DT) is a general operator forming the basis
+	of manymethods in computer vision and geometry, with great potential
+	for practicalapplications. However, all the optimal algorithms for
+	the computation ofthe exact Euclidean DT (EDT) were proposed only
+	since the 1990s. In thiswork, state-of-theart sequential 2D EDT algorithms
+	are reviewed and compared,in an effort to reach more solid conclusions
+	regarding their differencesin speed and their exactness. Six of the
+	best algorithms were fully implementedand compared in practice.}
+}
+
+@ARTICLE{Frank,
+  author = {G. P. Frank and U. Dusek and M. O. Andreae},
+  title = {Technical note: Characterization of a static thermal-gradient CCN
+	counter},
+  journal = {Atmospheric Chemistry and Physics},
+  year = {2006},
+  volume = {6},
+  pages = {2151-2174},
+  month = {March},
+  abstract = {The static (parallel-plate thermal-gradient) diffusion chamber (SDC)
+	wasone of the first instruments designed to measure cloud condensation
+	nuclei(CCN) concentrations as a function of supersaturation. It has
+	probablyalso been the most widely used type of CCN counter. This
+	paper describesthe detailed experimental characterization of a SDC
+	CCN counter, includingcalibration with respect to supersaturation
+	and particle number concentration.In addition, we investigated the
+	proposed effect of lowered supersaturationbecause of water vapor
+	depletion with increasing particle concentration.The results obtained
+	gives a larger understanding why and in which wayit is neces sary
+	to calibrate the SDC CCN counter. The calibration methodis described
+	in detail as well. The method can, in parts, be used for calibrationsalso
+	for other types of CCN counters. We conclude the following: 1) itis
+	important to experimentally calibrate SDC CCN counters with respectto
+	supersaturation, and not only base the supersaturation on the theoreticaldescription
+	of the instrument; 2) the number concentration calibrationneeds to
+	be performed as a function of supersaturation, also for SDC CCNcounter
+	using the photographic technique; and 3) we observed no evidencethat
+	water vapor depletion lowered the supersaturation.}
+}
+
+@ARTICLE{Freud,
+  author = {E. Freud and D. Rosenfeld1 and M. O. Andreae and A. A. Costa and
+	P. Artaxo},
+  title = {Robust relations between CCN and the vertical evolution of cloud
+	drop size distribution in deep convective clouds},
+  journal = {Atmospheric Chemistry and Physics},
+  year = {2008},
+  volume = {8},
+  pages = {1661-1675},
+  abstract = {In-situ measurements in convective clouds (up to the freezing level)
+	over the Amazon basin show that smoke from deforestation fires prevents
+	clouds from precipitating until they acquire a vertical development
+	of at least 4 km, compared to only 1–2 km in clean clouds. The average
+	cloud depth required for the onset of warm rain increased by _350m
+	for each additional 100 cloud condensation nuclei per cm3 at a super-saturation
+	of 0.5% (CCN0.5%). In polluted clouds, the diameter of modal liquid
+	water content grows much slower with cloud depth (at least by a factor
+	of _2), due to the large number of droplets that compete for available
+	water and to the suppressed coalescence processes. Contrary to what
+	other studies have suggested, we did not observe this effect to reach
+	saturation at 3000 or more accumulation mode particles per cm3. The
+	CCN0.5% concentration was found to be a very good predictor for the
+	cloud depth required for the on et of warm precipitation and other
+	microphysical factors, leaving only a secondary role for the updraft
+	velocities in determining the cloud drop size distributions. The
+	effective radius of the cloud droplets (re) was found to be a quite
+	robust parameter for a given environment and cloud depth, showing
+	only a small effect of partial droplet evaporation from the cloud’s
+	mixing with its drier environment. This supports one of the basic
+	assumptions of satellite analysis of cloud microphysical processes:
+	the ability to look at different cloud top heights in the same region
+	and regard their re as if they had been measured inside one well
+	developed cloud. The dependence of re on the adiabatic fraction decreased
+	higher in the clouds, especially for cleaner conditions, and disappeared
+	at re__10?m. We propose that droplet coalescence, which is at its
+	peak when warm rain is formed in the cloud at re=_10(micro)m, continues
+	to be significant during the cloud’s mixing with the entrained air,
+	cancelling out the decrease in re due to evaporation.},
+  owner = {fgmpinheiro},
+  timestamp = {2010.09.10}
+}
+
+@ARTICLE{Fukuta,
+  author = {N. Fukuta and V.K. Saxena},
+  title = {A Horizontal Thermal Gradient Cloud Condensation Nucleus Spectrometer},
+  journal = {Journal of Applied Meteorology},
+  year = {1979},
+  volume = {18},
+  pages = {1352-1362},
+  month = {January}
+}
+
+@PROCEEDINGS{Fukuta2,
+  title = {A Horizontal Thermal Gradient Cloud Condensation Nucleus Spectrometer:
+	Thetheory of operation},
+  year = {1977},
+  publisher = {Pergamon Press},
+  author = {N. Fukuta and V.K. Saxena}
+}
+
+@INBOOK{Gonzales,
+  title = {Digital Image Processing},
+  year = {2001},
+  author = {R. C. Gonzalez and R. Woods},
+  edition = {2}
+}
+
+@ARTICLE{howell,
+  author = {Wallace E. Howell},
+  title = {The Growth of Cloud Drops in Uniformly Cooled Air},
+  journal = {Journal of Meteorology},
+  year = {1949},
+  volume = {6},
+  pages = {134–149},
+  abstract = {Recent studies of precipitation, aircraft icing, and visibility through
+	fog have focussed attention on the physical constitution of clouds,
+	a subject to which knowledge of the drop-size spectrum and its origin
+	would be an important contribution. The drop-size spectrum resulting
+	when air containing condensation nuclei is uniformly cooled may be
+	computed, leading to a differential equation for the growth of a
+	cloud drop which cannot be integrated analytically. A numerical method
+	of integration is therefore employed.
+	
+	
+	Three integrations of drop growth under simulated natural conditions
+	are described and compared with data for natural clouds, leading
+	to the following conclusions:
+	
+	
+	The computed drop-size spectra agree with observation regarding the
+	relatively uniform clouds most frequently observed. Convergence and
+	mixing of fine-grained turbulence are suggested as influences broadening
+	the distribution in the less uniform clouds. Even for the latter,
+	the computed spectra agree with observation on the shape of the spectrum
+	curve. It is not clear what conditions of cooling most favor a broad
+	spectrum. The computed mean drop sizes agree very well with observation,
+	indicating that growth by collision is not ordinarily significant
+	in uniform clouds.
+	
+	
+	The concentration of drops is determined primarily by the rate of
+	cooling during the initial stage of condensation. It depends, as
+	a rule, only slightly on the concentration of condensation nuclei.
+	With continued uniform cooling, the drop concentration diminishes
+	slightly toward a fixed constant value. It can be increased, once
+	the cloud has formed, only through a great increase in the rate of
+	cooling.
+	
+	
+	Supersaturation during cloud formation ordinarily reaches about 0.1
+	per cent and can surpass 1 per cent only under extreme circumstances.
+	Subsaturations in descending air currents have the same order of
+	magnitude. Observations of lower relative humidities in clouds, if
+	real, must indicate clear spaces.
+	
+	
+	Operation of the equation of growth on nuclei of modal sizes proposed
+	by Dessens cannot explain the modal drop sizes reported by Köhler.},
+  owner = {Francisco},
+  timestamp = {2010.11.01}
+}
+
+@ARTICLE{Hudson,
+  author = {James G. Hudson},
+  title = {Cloud Condensation Nuclei Measurements within Clouds},
+  journal = {Journal of Climate and applied Meteorology},
+  year = {1984},
+  volume = {23},
+  pages = {42-51},
+  month = {January}
+}
+
+@BOOK{Bernd,
+  title = {Digital Image Processing: Concepts, Algorithms and Scientific Applications},
+  year = {1997},
+  editor = {Springer},
+  author = {Bernd Jahne},
+  edition = {4}
+}
+
+@INBOOK{Junge,
+  title = {Air Chemistry and Radioactivity},
+  publisher = {Academic Press, New York},
+  year = {1963},
+  author = {Junge}
+}
+
+@BOOK{Kasabov,
+  title = {Foundations of Neural Networks, Fuzzy Systems, and Knowledge Engineering},
+  publisher = {Massachusetts Institute of Technology},
+  year = {1998},
+  editor = {Massachusetts Institute of Technology},
+  author = {Nikola K. Kasabov}
+}
+
+@ARTICLE{Lala,
+  author = {G.G. Lala and J.E. Jiusto},
+  title = {An automatic light scattering CCN counter},
+  journal = {Journal of Applied Meteorology},
+  year = {1977},
+  volume = {16},
+  pages = {413-418}
+}
+
+@ARTICLE{Langsdorf,
+  author = {A. Langsdorf},
+  title = {A Continuously Sensitive Diffusion Cloud Chamber},
+  journal = {Review of Scientific Instruments },
+  year = {1939},
+  volume = {10},
+  pages = {91-103},
+  month = {March}
+}
+
+@PHDTHESIS{Lantuejoul,
+  author = {C Lantuéjoul},
+  title = {La squelettisation et son application aux mesures topologiques des
+	mosa{\"i}quespolycristallines},
+  school = {Ecole des Mines},
+  year = {1978},
+  address = {Paris}
+}
+
+@ARTICLE{Matteo,
+  author = {Matteo Leone and Nadia Robotti},
+  title = {A note on the Wilson cloud chamber},
+  journal = {European Journal of Physics},
+  year = {2004},
+  volume = {25},
+  pages = {781-791},
+  month = {September},
+  abstract = {Wilson in 1911-12 will be given here. This instrument soon became
+	a fundamentaltool of research in nuclear, cosmic ray and elementary
+	particle physics.The close examination of the expansion apparatus,
+	the illumination methodand the photographic method shows that the
+	cloud chamber is a fine exampleof experimental ingenuity.}
+}
+
+@BOOK{Marcel,
+  title = {Global Warming - Myth or Reality: The Erring Ways of Climatology},
+  publisher = {Springer},
+  year = {2005},
+  author = {Marcel LeRoux and Jacques Comby}
+}
+
+@MASTERSTHESIS{Pinheiro,
+  author = {Francisco G de M Pinheiro},
+  title = {Cancelador Adaptativo de Ru{\'i}do para um Contador de N{\'u}cleos
+	de Condensa{\c{c}}{\~a}ode Nuvens},
+  school = {Universidade Federal do Cear{\'a}},
+  year = {1999},
+  month = {Junho},
+  abstract = {O contador de n{\'u}cleos de condensa{\c{c}}{\~a}o de nuvens (CCNC
+	- Cloud CondensationNuclei Counter) {\'e} um instrumento destinado
+	{\`a} contagem do n{\'u}mero de n{\'u}cleosde condensa{\c{c}}{\~a}o
+	de nuvens (CCN - Cloud Condensation Nuclei). Seu funcionamento{\'e}
+	baseado no espalhamento da luz LASER no interior de uma c{\^a}mara
+	que confinauma amostra de ar e vapor de {\'a}gua. Dentro da c{\^a}mara
+	{\'e} gerado um gradientede temperatura, provocando a condensa{\c{c}}{\~a}o
+	da {\'a}gua nos CCN. Tais n{\'u}cleosgeram espalhamento de luz LASER,
+	cada vez que eles cortam a trajet{\'o}riado feixe luminoso. A intensidade
+	da luz espalhada {\'e} proporcional ao n{\'u}merode n{\'u}cleos presentes
+	na trajet{\'o}ria do LASER e {\`a} tens{\~a}o em um dispositivofotossensor
+	ruidoso. Assim, o sinal el{\'e}trico resultante na sa{\'i}da do fotossensor{\'e}
+	composto pelo sinal {\'u}til ou desejado contaminado por ru{\'i}do.
+	Se a raz{\~a}osinal-ru{\'i}do (SNR - Signal-to-Noise Ratio) for pequena,
+	haver{\'a} um erro nacontagem dos n{\'u}cleos. O objetivo deste trabalho
+	{\'e} propor uma estrat{\'e}giade cancelamento adaptativo do ru{\'i}do
+	visando uma melhoria da SNR. O m{\'e}todoconsidera uma entrada prim{\'a}ria
+	(detector do CCN) contendo o sinal contaminadoe uma entrada de refer{\^e}ncia,
+	obtido do mesmo sensor, contendo um sinalruidoso correlacionado fortemente
+	com o ru{\'i}do que contamina o sinal deinteresse. O ru{\'i}do de
+	refer{\^e}ncia {\'e} obtido atrav{\'e}s da gera{\c{c}}{\~a}o de momentosde
+	sil{\^e}ncio no sinal do detetor do CCNC. A entrada de refer{\^e}ncia
+	{\'e} adaptativamentefiltrada e subtra{\'i}da da entrada prim{\'a}ria
+	para obter uma estimativa do sinalde interesse. A solu{\c{c}}{\~a}o
+	{\'o}tima da filtragem de Wiener {\'e} obtida e tomadacomo refer{\^e}ncia
+	no contexto estoc{\'a}stico, em que sua procura {\'e} feita atrav{\'e}sde
+	um processo convergente baseado em t{\'e}cnicas de ajuste dos coeficientesdo
+	filtro adaptativo. Os resultados das simula{\c{c}}{\~o}es indicam
+	que a t{\'e}cnicada filtragem adaptativa associada {\`a} gera{\c{c}}{\~a}o
+	de momentos de sil{\^e}ncio, paraobten{\c{c}}{\~a}o de um ru{\'i}do
+	de refer{\^e}ncia fortemente correlacionado com o ru{\'i}doque contamina
+	o sinal de interesse, levar{\'a} {\`a} obten{\c{c}}{\~a}o de uma
+	maior raz{\~a}osinal-ru{\'i}do na sa{\'i}da do cancelador melhorando
+	conseq{\"u}entemente o desempenhodo CCNC. }
+}
+
+@CONFERENCE{Pinheiro_2,
+  author = {Francisco G. de M. Pinheiro and Paulo C. Cortez and João C. M. Mota},
+  title = {SISTEMA AUTOM{\'A}TICO PARA MEDIDA DA CONCENTRAÇÃO DOS NÚCLEOS DE
+	CONDENSA{\c{C}}{\~A}O DE NUVENS},
+  booktitle = {XVI CONGRESSO BRASILEIRO DE AUTOM{\'A}TICA},
+  year = {2008},
+  abstract = {Este artigo descreve um sistema para a medida automática da concentração
+	de aerossóis atmosféricos. Utiliza-se para tal, técnicas de processamento
+	digital de imagens. O processo consiste na captura de uma amostra
+	do ar atmosférico dentro de uma câmara estática de difusão térmica
+	supersaturada de vapor de água. Nessa condição, as moléculas do vapor
+	de água condensam sobre os aerossóis presentes no ar capturado, produzindo
+	gotículas de água. Estas gotículas ao caírem por gravidade cruzam
+	um feixe de luz LASER, o que as tornam visíveis. Uma série de imagens
+	deste processo é digitalizada e processada para identificação e isolamento
+	das gotas. Em seguida, estas gotas são automaticamente contadas.
+	As técnicas de binarização por limiar, transformada watershed e contagem
+	de regiões conectadas são utilizadas. Os resultados encontrados indicam
+	que os procedimentos aplicados são adequados na determinação da concentração
+	dos aerossóis atmosféricos.Este artigo descreve um sistema para a
+	medida automática da concentração de aerossóis atmosféricos. Utiliza-se
+	para tal, técnicas de processamento digital de imagens. O processo
+	consiste na captura de uma amostra do ar atmosférico dentro de uma
+	câmara estática de difusão térmica supersaturada de vapor de água.
+	Nessa condição, as moléculas do vapor de água condensam sobre os
+	aerossóis presentes no ar capturado, produzindo gotículas de água.
+	Estas gotículas ao caírem por gravidade cruzam um feixe de luz LASER,
+	o que as tornam visíveis. Uma série de imagens deste processo é digitalizada
+	e processada para identificação e isolamento das gotas. Em seguida,
+	estas gotas são automaticamente contadas. As técnicas de binarização
+	por limiar, transformada watershed e contagem de regiões conectadas
+	são utilizadas. Os resultados encontrados indicam que os procedimentos
+	aplicados são adequados na determinação da concentração dos aerossóis
+	atmosféricos.},
+  owner = {fgmpinheiro},
+  timestamp = {2010.09.11}
+}
+
+@BOOK{Mason,
+  title = {Physics of Clouds},
+  year = {1971},
+  editor = {Oxford University Press},
+  author = {B. J. Mason},
+  owner = {Francisco},
+  timestamp = {2010.11.01}
+}
+
+@ARTICLE{McMurry,
+  author = {Peter H McMurry},
+  title = {A review of atmospheric aerosol measurements},
+  journal = {Atmospheric Environment },
+  year = {2000},
+  volume = {34},
+  pages = {1959-1999}
+}
+
+@ARTICLE{Nenes,
+  author = {Nenes, Athanasios and Chuang, Patrick Y and Flagan, Richard C and
+	Seinfeld, John H},
+  title = {A theoretical analysis of cloud condensation nucleus (CCN) instruments},
+  journal = {Journal of Geophysical Research},
+  year = {2001},
+  volume = {106},
+  pages = {3449-3474}
+}
+
+@ARTICLE{Oliveira,
+  author = {J.C.P. Oliveira and G Vali},
+  title = {Calibration of a photoelectric cloud condensation},
+  journal = {Atmospheric Research},
+  year = {1995},
+  volume = {38},
+  pages = {237-248},
+  abstract = {Calibrations were peformed for the photodetector output of a static
+	thermal-gradientdiffusion chamber by comparing the detector signals
+	with visual countsof the number of droplets developing in the chamber.
+	The calibrations coverthe supersaturation range 0.3% to 1%. For each
+	supersaturation, the CCNconcentration was found to be proportional
+	to the detector output. Duringthe activation and growth of droplets,
+	the time of peak signal correspondswell to the time at which droplet
+	count is a maximum within the samplevolume. The use of an average
+	output signal over a period bracketing themean position of the peak
+	is a slightly better measure of droplet concentrationsthan the peak
+	value. The calibration equations here derived are specificto the
+	CCN counter used to obtain the data. Also, the calibration constantscan
+	be expected to be dependent on the type of aerosol which serve as
+	CCN;the limited data so for available show only weak variations in
+	the constants.}
+}
+
+@ARTICLE{Otto,
+  author = {Peter Otto and Hans-Walter Georgii and Heinz Bingemer},
+  title = {A new three-stage continuous flow CCN-counter},
+  journal = {Atmospheric Research},
+  year = {2002},
+  volume = {61},
+  pages = {299-310},
+  abstract = {A three-stage vertical-flow thermal gradient vapour diffusion chamber
+	forthe fast, continuous measurement of the number concentration of
+	cloud condensationnuclei (CCN) at three different water vapour supersaturations
+	was constructed.CCN are monitored by imaging cloud droplets in the
+	chamber with a CCD-camera.The counting of droplets and the control
+	of all instrumental parametersare computerized. The instrument was
+	calibrated with NaCl-aerosols, andwas successfully operated in the
+	field. Data from 2 weeks of field measurementsat an island in the
+	North Sea are presented. }
+}
+
+@ARTICLE{Roberts,
+  author = {Gregory C. Roberts and Meinrat O. Andreae and Jingchuan Zhou and
+	Paulo Artaxo},
+  title = {Cloud condensation nuclei in the Amazon Basis: Marine conditions
+	over continent?},
+  journal = {Geophysical Reasearch Letters},
+  year = {2001},
+  volume = {28},
+  pages = {2807-2810},
+  number = {14},
+  month = {July}
+}
+
+@ARTICLE{Rose,
+  author = {D. Rose and S. S. Gunthe and E. Mikhailov and G. P. Frank and U.
+	Dusek1 and M. O. Andreae1, and U. Pöschl},
+  title = {Calibration and measurement uncertainties of a continuous-flow cloud
+	condensation nuclei counter (DMT-CCNC): CCN activation of ammonium
+	sulfate and sodium chloride aerosol particles in theory and experiment},
+  journal = {Atmospheric Chemistry and Physics},
+  year = {2008},
+  volume = {8},
+  pages = {1153-1179},
+  abstract = {Experimental and theoretical uncertainties in the measurement of cloud
+	condensation nuclei (CCN) with a continuous-flow thermal-gradient
+	CCN counter from Droplet Measurement Technologies (DMT-CCNC) have
+	been assessed by model calculations and calibration experiments with
+	ammonium sulfate and sodium chloride aerosol particles in the diameter
+	range of 20–220 nm. Experiments have been performed in the laboratory
+	and during field measurement campaigns, covering a wide range of
+	instrument operating conditions (650–1020 hPa pressure, 293–303K
+	inlet temperature, 4–34Km?1 temperature gradient, 0.5–1.0 L min?1
+	flow rate). For each set of conditions, the effective water vapor
+	supersaturation (Seff, 0.05–1.4%) was determined from the measured
+	CCN activation spectra (dry particle activation diameters) and K¨ohler
+	model calculations. High measurement precision was achieved under
+	stable laboratory conditions, where the relative standard deviations
+	of Seff were as low as ±1%. During field measurements, however, the
+	relative deviations increased to about ±5%, which can be mostly attributed
+	to variations of the CCNC column top temperature with ambient temperature.
+	The observed dependence of Seff on temperature, pressure, and flow
+	rate was compared to the CCNC flow model of Lance et al. (2006).
+	At high Seff the relative deviations between flow model and experimental
+	results were mostly less than 10%, but at Seff_0.1% they exceeded
+	40%. Thus, careful experimental calibration is required for high-accuracy
+	CCN measurements – especially},
+  owner = {fgmpinheiro},
+  timestamp = {2010.09.13}
+}
+
+@ARTICLE{Sinnarwalla,
+  author = {A. M. Sinnarwalla and D. J. Alofs},
+  title = {A cloud nucleus counter with long available growth time},
+  journal = {Journal of Applied Meteorological},
+  year = {1973},
+  volume = {12},
+  pages = {831-835},
+  month = {August}
+}
+
+@ARTICLE{Squires,
+  author = {P. SQUIRES AND S. TWOMEY},
+  title = {A Comparison of Cloud Nucleus Measurements over Central North. America
+	and the Caribbean Sea},
+  journal = {Journal of Atmospheric Science},
+  year = {1966},
+  volume = {23},
+  pages = {401-404},
+  owner = {Francisco},
+  timestamp = {2010.11.01}
+}
+
+@ARTICLE{HSU,
+  author = {H. Su and D. Rose and Y. F. Cheng and S. S. Gunthe and A. Massling
+	and M. Stock and A. Wiedensohler and M. O. Andreae and U. Poschl},
+  title = {Hygroscopicity distribution concept for measurement data analysis
+	and modeling of aerosol particle mixing state with regard to hygroscopic
+	growth and CCN activation},
+  journal = {Atmospheric Chemistry and Physics},
+  year = {2010},
+  volume = {10},
+  pages = {7489-7503},
+  owner = {fgmpinheiro},
+  timestamp = {2010.09.30}
+}
+
+@ARTICLE{Twomey3,
+  author = {S. Twomey},
+  title = {Aerossol, Cloud and Radiation},
+  journal = {Atmosferic Environement},
+  year = {1991},
+  volume = {25},
+  pages = {2435-2442},
+  owner = {Francisco},
+  timestamp = {2010.11.01}
+}
+
+@ARTICLE{Twomey2,
+  author = {S. Twomey},
+  title = {Observation of the Geographical Variation of Cloud Nuclei},
+  journal = {Journal of Atmospheric Science},
+  year = {1969},
+  volume = {26},
+  pages = {684-688},
+  owner = {Francisco},
+  timestamp = {2010.11.01}
+}
+
+@ARTICLE{Twomey,
+  author = {S. Twomey},
+  title = {Measurements of natural cloud nuclei},
+  journal = {Journal of Atmospheric Research},
+  year = {1963},
+  volume = {1},
+  pages = {101-105},
+  abstract = {Calibrations were peformed for the photodetector output of a static
+	thermal-gradientdiffusion chamber by comparing the detector signals
+	with visual countsof the number of droplets developing in the chamber.
+	The calibrations coverthe supersaturation range 0.3% to 1%. For each
+	supersaturation, the CCNconcentration was found to be proportional
+	to the detector output. Duringthe activation and growth of droplets,
+	the time of peak signal correspondswell to the time at which droplet
+	count is a maximum within the samplevolume. The use of an average
+	output signal over a period bracketing themean position of the peak
+	is a slightly better measure of droplet concentrationsthan the peak
+	value. The calibration equations here derived are specificto the
+	CCN counter used to obtain the data. Also, the calibration constantscan
+	be expected to be dependent on the type of aerosol which serve as
+	CCN;the limited data so for available show only weak variations in
+	the constants.}
+}
+
+@BOOK{Meteorologia,
+  title = {Meteorologia B{\'a}sica e Aplica{\c{c}}{\~o}es},
+  publisher = {Universidae Federal de Vi{\c{c}}osa},
+  year = {1991},
+  author = {Rubens L. Vianello and Adil R. Alves}
+}
+
+@ARTICLE{Luc,
+  author = {Luc Vincent and Pierre Soille},
+  title = {Watersheds in Digital Spaces: An Efficient Algorithm Based on Immersion
+	Simulations},
+  journal = {IEE Transactions on Pattern Analysis and Machine Intelligence},
+  year = {1991},
+  volume = {13},
+  pages = {583-598},
+  month = {June},
+  abstract = {] Luc Vincent and Pierre Soille. Watersheds in Digital Spaces: An
+	EfficientAlgorithm Based on Immersion Simulations. IEE Transactions
+	on Pattern Analysisand Machine Intelligence V 13 no 6 June 1991}
+}
+
+@ARTICLE{Hoppel,
+  author = {Hopple W.A. and S. Twomey and T.A. Wojciechowski},
+  title = {A segmented thermal diffusion chamber for continuous measurements
+	os CN},
+  journal = {Journal of Aerosol Science},
+  year = {1979},
+  volume = {10},
+  pages = {369-373}
+}
+
+@ARTICLE{Waring,
+  author = {R.H. Waring},
+  title = {A process model analysis of environmental limitation on the growth
+	of sitka spure plantations in Great Britain},
+  journal = {An International Journal of Forest Research},
+  year = {2000},
+  volume = {73},
+  pages = {65-79},
+  abstract = {The extent to which growth is limited by climatic factors or soil
+	fertility is of significance to foresters concerned with the management
+	of Sitka spruce plantations throughout Great Britain. A simplified
+	physiologically based model, driven with monthly weather data, provided
+	a means to assess growth limitations imposed by solar radiation,
+	subfreezing and suboptimal temperatures, soil drought and atmospheric
+	vapour pressure deficits, wind and soil fertility at sites differing
+	in maximum wood volume production by fourfold. To drive the model,
+	conventional weather station data were extrapolated to provide estimates
+	of precipitation, solar radiation, vapour pressure deficits, suboptimal
+	temperatures and frequency of subfreezing conditions. Variation in
+	solar radiation associated with topography accounted for nearly half
+	the differences observed in plantation growth. Unfavourable temperatures
+	reduced annual photosynthesis and growth only by 10–15 per cent as
+	they occur primarily in months with limited solar radiation. Drought
+	and vapour pressure deficits do not appear to offer major constraints
+	on growth. Soil fertility, however, significantly limited growth
+	on a number of sites. The modelling approach provides a measure of
+	nutrient availability by predicting the maximum accumulation of nitrogen
+	in the canopy. The modelling analysis suggests that foresters could
+	improve forecasts of Sitka spruce plantation growth throughout the
+	UK with better estimates of solar radiation and canopy nitrogen content
+	than with more conventional sets of measurements.},
+  owner = {fgmpinheiro},
+  timestamp = {2010.05.20}
+}
+
+@ARTICLE{SL,
+  author = {S.L. von der Weiden and F. Drewnick and S. Borrmann},
+  title = {Particle Loss Calculator – a new software tool for the assessment
+	of the performance of aerosol inlet systems},
+  journal = {Atmospheric Measurement. Technology},
+  year = {2009},
+  volume = {2},
+  pages = {479-494},
+  abstract = {Most aerosol measurements require an inlet system
+	
+	to transport aerosols from a select sampling location to a
+	
+	suitable measurement device through some length of tubing.
+	
+	Such inlet systems must be optimized to minimize aerosol
+	
+	sampling artifacts and maximize sampling efficiency. In this
+	
+	study we introduce a new multifunctional software tool (Particle
+	
+	Loss Calculator, PLC) that can be used to quickly determine
+	
+	aerosol sampling efficiency and particle transport
+	
+	losses due to passage through arbitrary tubing systems. The
+	
+	software employs relevant empirical and theoretical relationships
+	
+	found in established literature and accounts for the
+	
+	most important sampling and transport effects that might
+	
+	be encountered during deployment of typical, ground-based
+	
+	ambient aerosol measurements through a constant-diameter
+	
+	sampling probe. The software treats non-isoaxial and nonisokinetic
+	
+	aerosol sampling, aerosol diffusion and sedimentation
+	
+	as well as turbulent inertial deposition and inertial deposition
+	
+	in bends and contractions of tubing. This software
+	
+	was validated through comparison with experimentally determined
+	
+	particle losses for several tubing systems bent to
+	
+	create various diffusion, sedimentation and inertial deposition
+	
+	properties. As long as the tube geometries are not “too
+	
+	extreme”, agreement is satisfactory. We discuss the conclusions
+	
+	of these experiments, the limitations of the software
+	
+	and present three examples of the use of the Particle Loss
+	
+	Calculator in the field.},
+  owner = {Francisco},
+  timestamp = {2010.10.28}
+}
+
+@ARTICLE{Wilson,
+  author = {C.T.R. Wilson},
+  title = {On a method of making visible the paths of ionising particles through
+	agas},
+  journal = {Proc. R. Soc.},
+  year = {1911},
+  volume = {85},
+  pages = {285-8}
+}
+
+@TECHREPORT{IPCC,
+  author = {{Working Group I of the Intergovernmental Panel on Climate Change}},
+  title = {Climate Change 2007: The Physical Science Basis},
+  institution = {World Meteorological Organization and United Nations Environment
+	Programme},
+  year = {2007},
+  month = {Fevereiro},
+  abstract = {The report includes information on changes in greenhouse gases and
+	aerosolsin the atmosphere and the extent to which they affect climate.
+	It providesdetails of recent changes in air, land and ocean temperatures,
+	rainfall,glaciers and ice sheets and considers a large amount of
+	new satellite andother data that have not been assessed previously.
+	A paleoclimatic perspectiveconsiders the Earth's past cold and warm
+	periods and the understandingof climate processes that can be gained
+	from these. New information onfeedbacks arising from the interaction
+	of climate change with the biosphereand geochemistry is also considered.
+	The most recent climate models areevaluated in detail, as is their
+	use to explain observed climate changein terms of different driving
+	factors. Projections of future climate changeusing climate models
+	are considered broadly and cover near term climatechange, the degree
+	to which this is 'committed' due to past increases ingreenhouse gases,
+	and a range of potential longer term climate changes.Patterns of
+	future climate change are considered both globally and regionally.}
+}
+

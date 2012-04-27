@@ -1,0 +1,2750 @@
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=latex 2009.1.7)  22 APR 2009 14:19
+entering extended mode
+**tese_formato_cortez.tex
+(tese_formato_cortez.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8h> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman, ngerman, french, loaded.
+(report_ppgeti.cls
+
+LaTeX Warning: You have requested document class `report_ppgeti',
+               but the document class provides `report'.
+
+Document Class: report 2004/02/16 v1.4f Standard LaTeX document class
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\base\size12.clo"
+File: size12.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@subsubsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(ppgeti-V3.sty
+Document Style Option `dalthesis'.
+\defbaselineskip=\skip43
+\tclineskip=\skip44
+) ("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\base\inputenc.sty"
+Package: inputenc 2006/05/05 v1.1b Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\base\latin1.def"
+File: latin1.def 2006/05/05 v1.1b Input encoding file
+))
+("C:\Arquivos de programas\MiKTeX 2.7\tex\generic\babel\babel.sty"
+Package: babel 2005/11/23 v3.8h The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Arquivos de programas\MiKTeX 2.7\tex\generic\babel\portuges.ldf"
+Language: portuges 2005/03/31 v1.2p Portuguese support from the babel system
+
+("C:\Arquivos de programas\MiKTeX 2.7\tex\generic\babel\babel.def"
+File: babel.def 2005/11/23 v3.8h Babel common definitions
+\babel@savecnt=\count89
+\U@D=\dimen103
+)
+
+Package babel Warning: No hyphenation patterns were loaded for
+(babel)                the language `Portuguese'
+(babel)                I will use the patterns loaded for \language=0 instead.
+
+\l@portuges = a dialect from \language0
+\l@brazil = a dialect from \language\l@portuges 
+Package babel Info: Making " an active character on input line 145.
+)) ("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip45
+
+For additional information on amsmath, use the `?' option.
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen104
+))
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen105
+)
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count90
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count91
+\leftroot@=\count92
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count93
+\DOTSCASE@=\count94
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen106
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count95
+\c@MaxMatrixCols=\count96
+\dotsspace@=\muskip10
+\c@parentequation=\count97
+\dspbrk@lvl=\count98
+\tag@help=\toks17
+\row@=\count99
+\column@=\count100
+\maxfields@=\count101
+\andhelp@=\toks18
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
+\@envbody=\toks19
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2001/10/25 v2.2f
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
+)
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2002/01/22 v2.2d
+)
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\amscls\amsthm.sty"
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks21
+\thm@bodyfont=\toks22
+\thm@headfont=\toks23
+\thm@notefont=\toks24
+\thm@headpunct=\toks25
+\thm@preskip=\skip48
+\thm@postskip=\skip49
+\thm@headsep=\skip50
+\dth@everypar=\toks26
+)
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\base\newlfont.sty"
+Package: newlfont 1998/08/17 v2.2m Standard LaTeX package
+LaTeX Info: Redefining \em on input line 67.
+
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\base\latexsym.sty"
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+))
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\acronym\acronym.sty"
+Package: acronym 2008/12/19 v1.33 Support for acronyms (Tobias Oetiker)
+
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\bigfoot\suffix.sty"
+Package: suffix 2006/07/15 1.5 Variant command support
+)
+\AC@clearlist=\toks27
+)
+
+! LaTeX Error: File `listacronyms.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\abntex\abntcite.sty"
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\abntex\cvs-id.def")
+Package: abntcite 2003/10/13 v1.26 Chamadas de referencias no texto (NBR10520)
+
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\tools\calc.sty"
+Package: calc 2005/08/06 v4.2 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count102
+\calc@Bcount=\count103
+\calc@Adimen=\dimen113
+\calc@Bdimen=\dimen114
+\calc@Askip=\skip51
+\calc@Bskip=\skip52
+LaTeX Info: Redefining \setlength on input line 75.
+LaTeX Info: Redefining \addtolength on input line 76.
+\calc@Ccount=\count104
+\calc@Cskip=\skip53
+)
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\abntex\abntex-abrev.sty"
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\abntex\cvs-id.def")
+Package: abntex-abrev 2003/10/13 v1.3 Abreviacoes
+
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\abntex\nbr10522-1988.def"
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\abntex\cvs-id.def")
+File: nbr10522-1988.def 2003/10/13 v1.2 Abreviacoes bibliograficas (NBR10522:19
+88)
+)
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\abntex\abntex-abrev-pt_BR.def"
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\abntex\cvs-id.def")
+File: abntex-abrev-pt_BR.def 2003/10/13 v1.2 definicao de abntex-abrev, traduca
+o de termos en_US/pt_BR
+))
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\abntex\nbr10520-2002.def"
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\abntex\cvs-id.def")
+File: nbr10520-2002.def 2003/10/13 v1.2 Definicoes para abntcite (NBR10520:2002
+)
+)
+\minimumbiblabelwidth=\skip54
+\ABCIauxlen=\skip55
+\c@ABCIaux=\count105
+\c@ABCImax=\count106
+
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\ltxmisc\relsize.sty"
+Package: relsize 2003/07/04 ver 3.1
+)
+\biblabelsep=\skip56
+LaTeX Info: Redefining \newblock on input line 562.
+LaTeX Info: Redefining \cite on input line 589.
+\ABCItoken=\toks28
+)
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks29
+)
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\graphics\graphics.sty"
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: dvips.def on input line 90.
+
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\graphics\dvips.def"
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen115
+\Gin@req@width=\dimen116
+)
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\hyphenat\hyphenat.sty"
+Package: hyphenat 2001/01/02 v2.3a hyphenation utilities
+\langwohyphens=\language6
+LaTeX Info: Redefining \_ on input line 46.
+)
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\tools\multicol.sty"
+Package: multicol 2006/05/18 v1.6g multicolumn formatting (FMi)
+\c@tracingmulticols=\count107
+\mult@box=\box28
+\multicol@leftmargin=\dimen117
+\c@unbalance=\count108
+\c@collectmore=\count109
+\doublecol@number=\count110
+\multicoltolerance=\count111
+\multicolpretolerance=\count112
+\full@width=\dimen118
+\page@free=\dimen119
+\premulticols=\dimen120
+\postmulticols=\dimen121
+\multicolsep=\skip57
+\multicolbaselineskip=\skip58
+\partial@page=\box29
+\last@line=\box30
+\mult@rightbox=\box31
+\mult@grightbox=\box32
+\mult@gfirstbox=\box33
+\mult@firstbox=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\c@columnbadness=\count113
+\c@finalcolumnbadness=\count114
+\last@try=\dimen122
+\multicolovershoot=\dimen123
+\multicolundershoot=\dimen124
+\mult@nat@firstbox=\box52
+\colbreak@box=\box53
+)
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\subfigure\subfigure.sty"
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip59
+\subfigcapskip=\skip60
+\subfigcaptopadj=\dimen125
+\subfigbottomskip=\skip61
+\subfigcapmargin=\dimen126
+\subfiglabelskip=\skip62
+\c@subfigure=\count115
+\c@lofdepth=\count116
+\c@subtable=\count117
+\c@lotdepth=\count118
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\subfigure\subfigure.cfg")
+\subfig@top=\skip63
+\subfig@bottom=\skip64
+)
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\multirow\multirow.sty"
+\bigstrutjot=\dimen127
+)
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\multirow\bigstrut.sty")
+
+! LaTeX Error: File `rangecite.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\caption\caption2.sty"
+Package: caption2 2008/07/01 v2.2c Customising captions (AS)
+
+
+Package caption2 Warning: ****************************************************
+(caption2)                THIS PACKAGE IS OBSOLETE:
+(caption2)                This package attempts to provide an `caption2'
+(caption2)                package v2.0/2.1 author environment so that OLD
+(caption2)                documents can be successfully processed. It should
+(caption2)                NOT be used for NEW documents! New documents should
+(caption2)                use the regular `caption' package v3.x instead.
+(caption2)                ****************************************************
+
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\caption\caption3.sty"
+Package: caption3 2008/08/24 v3.1j caption3 kernel (AR)
+\captionmargin=\dimen128
+\captionmargin@=\dimen129
+\captionwidth=\dimen130
+\caption@indent=\dimen131
+\caption@parindent=\dimen132
+\caption@hangindent=\dimen133
+)
+Package caption2 Info: Running in caption2 v2.0 compatibility mode on input lin
+e 209.
+\captionlinewidth=\dimen134
+\realcaptionwidth=\dimen135
+Package caption2 Info: subfigure package v2.1 (or newer) detected on input line
+ 437.
+\subfigcapwidth=\dimen136
+\subcapindent=\dimen137
+)
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\tools\indentfirst.sty"
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+
+! LaTeX Error: File `epsf.tex' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: tex)
+
+Enter file name: 
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\ltxmisc\here.sty")
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\psfrag\psfrag.sty"
+Package: psfrag 1998/04/11 v3.04 PSfrag (MCG)
+\pfg@pcount=\count119
+\pfg@scount=\count120
+\pfg@temp=\write3
+)
+No file tese_formato_cortez.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 185.
+LaTeX Font Info:    ... okay on input line 185.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 185.
+LaTeX Font Info:    ... okay on input line 185.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 185.
+LaTeX Font Info:    ... okay on input line 185.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 185.
+LaTeX Font Info:    ... okay on input line 185.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 185.
+LaTeX Font Info:    ... okay on input line 185.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 185.
+LaTeX Font Info:    ... okay on input line 185.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+:?0000
+Páginas pré-textuais.
+Erros são verificados para as páginas pré-textuais.
+
+LaTeX Warning: File `ufc1.ps' not found on input line 192.
+
+
+! LaTeX Error: File `ufc1.ps' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.192 \modelo
+             
+? 
+
+! LaTeX Error: Cannot determine size of graphic in ufc1.ps (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.192 \modelo
+             
+? 
+File: ufc1.ps Graphic file (type eps)
+<ufc1.ps>
+Overfull \hbox (15.36449pt too wide) in paragraph at lines 192--192
+[][] 
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 192.
+
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 192.
+
+! Undefined control sequence.
+\@copyrightyear ->\thisyear 
+                            
+l.192 \modelo
+             
+? 
+[1
+
+]
+! Undefined control sequence.
+\pagina ...xpandafter {Palavras-chave: \@palavras 
+                                                  _chave.}} \else {\expandaf...
+l.192 \modelo
+             
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.192 \modelo
+             
+? 
+LaTeX Font Info:    Try loading font information for U+msa on input line 192.
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 192.
+
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 192.
+
+("C:\Arquivos de programas\MiKTeX 2.7\tex\latex\base\ulasy.fd"
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+! Extra }, or forgotten $.
+\pagina ...er {Palavras-chave: \@palavras _chave.}
+                                                  } \else {\expandafter {\'A...
+l.192 \modelo
+             
+? 
+! Extra }, or forgotten $.
+\pagina ...r {Palavras-chave: \@palavras _chave.}}
+                                                   \else {\expandafter {\'Ar...
+l.192 \modelo
+             
+? 
+
+! LaTeX Error: Command \end{flushleft} invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.192 \modelo
+             
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.192 \modelo
+             
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.192 \modelo
+             
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.192 \modelo
+             
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.192 \modelo
+             
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.192 \modelo
+             
+? 
+! Undefined control sequence.
+\@copyrightyear ->\thisyear 
+                            
+l.192 \modelo
+             
+? 
+[2] [3] [4]
+\@defbaselineskip=\skip65
+
+No file tese_formato_cortez.toc.
+\tf@toc=\write4
+[5
+
+]
+No file tese_formato_cortez.lot.
+\tf@lot=\write5
+[6
+
+]
+No file tese_formato_cortez.lof.
+\tf@lof=\write6
+[7
+
+]
+:?1111
+Resumo e Abstract
+Agradecimentos
+(pretexto/agradecimentos.tex [8
+
+
+]) [9] (pretexto/acronimos.tex [10
+
+
+]) [11]
+Início do texto da tese ou dissertação.
+Introduction
+(chp1/introducao.tex
+! Undefined control sequence.
+l.1 \capitulo
+             {Introdu\c{c}\~{a}o}%%
+? 
+\tmpht=\dimen138
+
+Package acronym Warning: Acronym `PDA' is not defined on input line 6.
+
+
+LaTeX Warning: Citation `Wang:2006' on page 1 undefined on input line 10.
+
+
+LaTeX Warning: Citation `Drab:2005' on page 1 undefined on input line 10.
+
+! Undefined control sequence.
+l.10 ...{Drab:2005}, conforme ilustrado na \figref
+                                                  {FIG:CELEVO}.
+? 
+File: figs/intro/mobile-evolution.png Graphic file (type eps)
+<figs/intro/mobile-evolution.png>
+
+LaTeX Warning: Citation `MobileWorks:2009' on page 1 undefined on input line 15
+.
+
+
+LaTeX Warning: Citation `Hannuksela:2007' on page 1 undefined on input line 20.
+
+
+
+LaTeX Warning: Citation `Wang:2006' on page 1 undefined on input line 20.
+
+
+LaTeX Warning: Citation `Hannuksela:2007' on page 1 undefined on input line 22.
+
+
+
+LaTeX Warning: Citation `Hannuksela:2006' on page 1 undefined on input line 22.
+
+
+
+LaTeX Warning: Citation `Haro:2005' on page 1 undefined on input line 22.
+
+[1
+
+]
+Package acronym Info: Label `acro:PC' newly defined as it shall be overridden
+although it is yet undefined on input line 25.
+
+
+Package acronym Warning: Acronym `PC' is not defined on input line 25.
+
+
+Package acronym Warning: Acronym `PC' is not defined on input line 25.
+
+
+LaTeX Warning: Citation `Wang:2006' on page 2 undefined on input line 26.
+
+! Undefined control sequence.
+l.28 \secao
+           {Intera\c{c}\~{a}o com Dispositivos Port\'{a}teis}
+? 
+
+LaTeX Warning: Citation `Masui:2000' on page 2 undefined on input line 46.
+
+
+LaTeX Warning: Citation `Hinckley:2000' on page 2 undefined on input line 46.
+
+
+LaTeX Warning: Citation `Hinckley:2000' on page 2 undefined on input line 46.
+
+
+LaTeX Warning: Citation `Harrison:1998' on page 2 undefined on input line 46.
+
+
+LaTeX Warning: Citation `Hinckley:2000' on page 2 undefined on input line 46.
+
+! Undefined control sequence.
+l.55 ...oposto no trabalho desenvolvido por \citet
+                                                  {Oakley:2004}. Neste, %uti...
+
+? 
+! Undefined control sequence.
+l.56 ...hida a letra conforme ilustrado na \figref
+                                                  {FIG:Vibroativo}.
+? 
+File: figs/intro/vibroativo.png Graphic file (type eps)
+<figs/intro/vibroativo.png>
+
+LaTeX Warning: Citation `Oakley:2004' on page 2 undefined on input line 62.
+
+
+LaTeX Warning: Citation `Masui:2000' on page 2 undefined on input line 67.
+
+
+LaTeX Warning: Reference `FIG:FIELDMOUSEa' on page 2 undefined on input line 68
+.
+
+
+LaTeX Warning: Reference `FIG:FIELDMOUSEb' on page 2 undefined on input line 72
+.
+
+
+LaTeX Warning: Citation `Masui:2000' on page 2 undefined on input line 74.
+
+[2]
+
+LaTeX Warning: Reference `FIG:FIELDMOUSEc' on page 3 undefined on input line 76
+.
+
+File: figs/intro/rwgui.jpg Graphic file (type eps)
+<figs/intro/rwgui.jpg>
+File: figs/intro/rwgui_usage.jpg Graphic file (type eps)
+ <figs/intro/rwgui_usage.jpg>
+File: figs/intro/rwgui_barcode.jpg Graphic file (type eps)
+
+<figs/intro/rwgui_barcode.jpg>
+
+LaTeX Warning: Citation `Masui:2000' on page 3 undefined on input line 91.
+
+
+LaTeX Warning: Citation `Masui:2000' on page 3 undefined on input line 91.
+
+
+LaTeX Warning: Citation `Wang:2006' on page 3 undefined on input line 94.
+
+
+LaTeX Warning: Citation `Barnard:2007' on page 3 undefined on input line 97.
+
+
+LaTeX Warning: Citation `Campo:2006' on page 3 undefined on input line 99.
+
+
+LaTeX Warning: Citation `Jepsen:2006' on page 3 undefined on input line 99.
+
+[3]
+
+LaTeX Warning: Citation `Campo:2006' on page 4 undefined on input line 101.
+
+! Undefined control sequence.
+l.158 \secao
+            {Objetivos}
+? 
+[4]
+! Undefined control sequence.
+l.178 \secao
+            {Produ\c{c}\~{a}o Cient\'{\i}fica}
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.183   \item \textbf
+                     {Rodrigo C. S. Costa} et al. Algoritmo De Fluxo \'{O}pt...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.183   \item \textbf
+                     {Rodrigo C. S. Costa} et al. Algoritmo De Fluxo \'{O}pt...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.183   \item \textbf
+                     {Rodrigo C. S. Costa} et al. Algoritmo De Fluxo \'{O}pt...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.184   \item \textbf
+                     {Rodrigo C. S. Costa} et al. Sistema Classificador de M...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.184   \item \textbf
+                     {Rodrigo C. S. Costa} et al. Sistema Classificador de M...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.184   \item \textbf
+                     {Rodrigo C. S. Costa} et al. Sistema Classificador de M...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.185   \item \textbf
+                     {Rodrigo C. S. Costa}, Paulo C. Cortez, Jos\'{e} M. Soa...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.185   \item \textbf
+                     {Rodrigo C. S. Costa}, Paulo C. Cortez, Jos\'{e} M. Soa...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.185   \item \textbf
+                     {Rodrigo C. S. Costa}, Paulo C. Cortez, Jos\'{e} M. Soa...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.186   \item \textbf
+                     {Rodrigo C. S. Costa}, Paulo C. Cortez, Jos\'{e} M. Soa...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.186   \item \textbf
+                     {Rodrigo C. S. Costa}, Paulo C. Cortez, Jos\'{e} M. Soa...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.186   \item \textbf
+                     {Rodrigo C. S. Costa}, Paulo C. Cortez, Jos\'{e} M. Soa...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.187   \item \textbf
+                     {Rodrigo C. S. Costa}, Paulo C. Cortez, Jos\'{e} M. Soa...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.187   \item \textbf
+                     {Rodrigo C. S. Costa}, Paulo C. Cortez, Jos\'{e} M. Soa...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.187   \item \textbf
+                     {Rodrigo C. S. Costa}, Paulo C. Cortez, Jos\'{e} M. Soa...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.188   \item \textbf
+                     {Rodrigo C. S. Costa}, Paulo C. Cortez, Jos\'{e} M. Soa...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.188   \item \textbf
+                     {Rodrigo C. S. Costa}, Paulo C. Cortez, Jos\'{e} M. Soa...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.188   \item \textbf
+                     {Rodrigo C. S. Costa}, Paulo C. Cortez, Jos\'{e} M. Soa...
+
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.189 \end{enumerate}
+                     
+? 
+
+Overfull \hbox (19.07718pt too wide) in paragraph at lines 182--189
+\OT1/cmr/m/n/12 PI0605829-9. Deposito: 28/12/2006. Pub-licac~ao do pe-dido de
+ patente: 19/08/2008.
+ []
+
+! Undefined control sequence.
+l.191 \secao
+            {Organiza\c{c}\~{a}o da Tese}
+? 
+) [5] (chp2/revisao.tex (chp2/motiondetection.tex
+! Undefined control sequence.
+l.1 \capitulo
+             {Detec\c{c}\~{a}o de Movimentos}%%
+? 
+
+LaTeX Warning: Citation `Gonzalez:2008' on page 6 undefined on input line 7.
+
+
+LaTeX Warning: Citation `Minhoni:2006' on page 6 undefined on input line 17.
+
+
+LaTeX Warning: Citation `Truyenque:2005' on page 6 undefined on input line 29.
+
+
+LaTeX Warning: Citation `Denman:2007' on page 6 undefined on input line 31.
+
+
+LaTeX Warning: Citation `Truyenque:2005' on page 6 undefined on input line 31.
+
+Package acronym Info: Label `acro:VC' newly defined as it shall be overridden
+although it is yet undefined on input line 38.
+
+Package acronym Warning: Acronym `VC' is not defined on input line 38.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 38.
+
+
+LaTeX Warning: Citation `Gonzalez:2008' on page 6 undefined on input line 40.
+
+Package acronym Info: Label `acro:fop' newly defined as it shall be overridden
+although it is yet undefined on input line 42.
+
+Package acronym Warning: Acronym `fop' is not defined on input line 42.
+
+
+Package acronym Warning: Acronym `fop' is not defined on input line 42.
+
+
+LaTeX Warning: Citation `Horn:1981' on page 6 undefined on input line 42.
+
+
+LaTeX Warning: Citation `Denman:2007' on page 6 undefined on input line 42.
+
+
+LaTeX Warning: Citation `Gonzalez:2008' on page 6 undefined on input line 42.
+
+
+LaTeX Warning: Citation `Soares:2004' on page 6 undefined on input line 42.
+
+
+LaTeX Warning: Citation `Paragios:1998' on page 6 undefined on input line 42.
+
+[6
+
+
+]
+
+Package acronym Warning: Acronym `fop' is not defined on input line 47.
+
+! Undefined control sequence.
+l.49 \secao
+           {Diferen\c{c}a Temporal}
+? 
+
+LaTeX Warning: Citation `Wang:2003' on page 7 undefined on input line 54.
+
+
+LaTeX Warning: Citation `Gonzalez:2008' on page 7 undefined on input line 54.
+
+
+! LaTeX Error: Command \rmfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57    1, & {{\rm
+                   se }\left| {I\left( {x,y,t_j } \right) - I\left( {x,y,t_i...
+
+? 
+
+! LaTeX Error: Command \rmfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58    0, & {{\rm
+                   caso~contr\acute{a}rio}}.  \\
+? 
+
+LaTeX Warning: Citation `Soares:2004' on page 7 undefined on input line 69.
+
+
+LaTeX Warning: Citation `Migliore:2006' on page 7 undefined on input line 71.
+
+
+LaTeX Warning: Citation `Wang:2003' on page 7 undefined on input line 71.
+
+
+LaTeX Warning: Reference `FIG:TIMDIF' on page 7 undefined on input line 71.
+
+File: figs/opflw/timdif01.jpg Graphic file (type eps)
+<figs/opflw/timdif01.jpg>
+File: figs/opflw/timdif02.jpg Graphic file (type eps)
+ <figs/opflw/timdif02.jpg>
+File: figs/opflw/timdif03.jpg Graphic file (type eps)
+ <figs/opflw/timdif03.jpg>
+[7]
+
+LaTeX Warning: Citation `Soares:2004' on page 8 undefined on input line 94.
+
+
+LaTeX Warning: Citation `Soares:2004' on page 8 undefined on input line 99.
+
+! Undefined control sequence.
+l.101 \secao
+            {Correla\c{c}\~{a}o} \label{SEC:BLOCKM}
+? 
+
+LaTeX Warning: Citation `Muraret:2005' on page 8 undefined on input line 105.
+
+! Undefined control sequence.
+l.109 ...cas de erro, conforme mostrado na \figref
+                                                  {BLOCK_CORR}.
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.109 ...erro, conforme mostrado na \figref{BLOCK_
+                                                  CORR}.
+? 
+! Extra }, or forgotten $.
+l.109 ... conforme mostrado na \figref{BLOCK_CORR}
+                                                  .
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.110 
+      
+? 
+File: figs/opflw/correlacao.eps Graphic file (type eps)
+<figs/opflw/correlacao.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 123--123
+[]\OT1/cmr/m/n/12 Regi~ao
+ []
+
+
+Overfull \hbox (0.92195pt too wide) in paragraph at lines 123--123
+[]\OT1/cmr/m/n/12 maior
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--123
+\OT1/cmr/m/n/12 cor-
+ []
+
+
+Overfull \hbox (7.44966pt too wide) in paragraph at lines 123--123
+\OT1/cmr/m/n/12 relac~ao 
+ []
+
+
+LaTeX Warning: Citation `Hussei:1991' on page 8 undefined on input line 129.
+
+[8]
+Package acronym Info: Label `acro:MSE' newly defined as it shall be overridden
+although it is yet undefined on input line 131.
+
+
+Package acronym Warning: Acronym `MSE' is not defined on input line 131.
+
+
+Package acronym Warning: Acronym `MSE' is not defined on input line 131.
+
+Package acronym Info: Label `acro:SAD' newly defined as it shall be overridden
+although it is yet undefined on input line 131.
+
+Package acronym Warning: Acronym `SAD' is not defined on input line 131.
+
+
+Package acronym Warning: Acronym `SAD' is not defined on input line 131.
+
+! Undefined control sequence.
+l.145 \secao
+            {\acf{fop}}
+? 
+
+Package acronym Warning: Acronym `fop' is not defined on input line 145.
+
+
+Package acronym Warning: Acronym `fop' is not defined on input line 145.
+
+
+Package acronym Warning: Acronym `fop' is not defined on input line 147.
+
+
+Package acronym Warning: Acronym `fop' is not defined on input line 149.
+
+
+LaTeX Warning: Citation `Barbosa:2005' on page 9 undefined on input line 151.
+
+[9]
+
+LaTeX Warning: Citation `Horn:1981' on page 10 undefined on input line 158.
+
+
+LaTeX Warning: Citation `Li:2000' on page 10 undefined on input line 158.
+
+
+LaTeX Warning: Citation `Barbosa:2005' on page 10 undefined on input line 158.
+
+
+Package acronym Warning: Acronym `fop' is not defined on input line 160.
+
+
+Package acronym Warning: Acronym `fop' is not defined on input line 160.
+
+
+LaTeX Warning: Citation `Denman:2007' on page 10 undefined on input line 160.
+
+
+Package acronym Warning: Acronym `fop' is not defined on input line 162.
+
+
+LaTeX Warning: Reference `FIG:OPFLW' on page 10 undefined on input line 165.
+
+
+LaTeX Warning: Citation `Laureano:2006' on page 10 undefined on input line 169.
+
+
+
+LaTeX Warning: Citation `Barbosa:2005' on page 10 undefined on input line 172.
+
+File: figs/opflw/optfla.jpg Graphic file (type eps)
+<figs/opflw/optfla.jpg>
+File: figs/opflw/optflb.jpg Graphic file (type eps)
+ <figs/opflw/optflb.jpg>
+File: figs/opflw/optflc.jpg Graphic file (type eps)
+ <figs/opflw/optflc.jpg>
+
+Package acronym Warning: Acronym `fop' is not defined on input line 181.
+
+
+Package acronym Warning: Acronym `fop' is not defined on input line 187.
+
+
+LaTeX Warning: Citation `Beauchemin:1995' on page 10 undefined on input line 18
+9.
+
+
+Package acronym Warning: Acronym `fop' is not defined on input line 189.
+
+[10]
+
+Package acronym Warning: Acronym `fop' is not defined on input line 191.
+
+! Undefined control sequence.
+l.196 ...{c}\~{a}o (similar ao descrito na \secref
+                                                  {SEC:BLOCKM}), e iii) proc...
+
+? 
+
+LaTeX Warning: Citation `Barron:2002' on page 11 undefined on input line 197.
+
+
+LaTeX Warning: Citation `Beauchemin:1995' on page 11 undefined on input line 22
+1.
+
+
+Package acronym Warning: Acronym `fop' is not defined on input line 223.
+
+
+LaTeX Warning: Citation `Barbosa:2005' on page 11 undefined on input line 223.
+
+
+LaTeX Warning: Citation `Fleet:2005' on page 11 undefined on input line 223.
+
+
+LaTeX Warning: Citation `Horn:1981' on page 11 undefined on input line 223.
+
+
+LaTeX Warning: Citation `Beauchemin:1995' on page 11 undefined on input line 24
+8.
+
+[11]
+
+LaTeX Warning: Citation `Beauchemin:1995' on page 12 undefined on input line 25
+3.
+
+
+LaTeX Warning: Citation `Horn:1981' on page 12 undefined on input line 253.
+
+! Undefined control sequence.
+l.255 Para um movimento 2D, a \equref
+                                     {EQ:Constrain} pode ser re-escrita por:
+? 
+! Undefined control sequence.
+l.265 \'{E} importante destacar que a \equref
+                                             {EQ:Constrain} isoladamente n\~...
+
+? 
+
+LaTeX Warning: Reference `FIG:restricaoFO' on page 12 undefined on input line 2
+68.
+
+
+LaTeX Warning: Citation `Beauchemin:1995' on page 12 undefined on input line 26
+8.
+
+File: figs/opflw/restricao.eps Graphic file (type eps)
+<figs/opflw/restricao.eps>
+
+Package acronym Warning: Acronym `fop' is not defined on input line 277.
+
+
+LaTeX Warning: Citation `Barbosa:2005' on page 12 undefined on input line 284.
+
+[12]
+! Undefined control sequence.
+l.286 ...se problema foram desenvolvida por \citet
+                                                  {Horn:1981} and \citet{Luc...
+
+? 
+! Undefined control sequence.
+l.286 ...nvolvida por \citet{Horn:1981} and \citet
+                                                  {Lucas:1989}.
+? 
+! Undefined control sequence.
+l.288 \subsecao
+               {M\'{e}todo de \citet{Horn:1981}}
+? 
+! Undefined control sequence.
+l.288 \subsecao{M\'{e}todo de \citet
+                                    {Horn:1981}}
+? 
+! Undefined control sequence.
+l.290 \citet
+            {Horn:1981} foi o primeiro a impor uma restri\c{c}\~{a}o adicion...
+
+? 
+
+LaTeX Warning: Citation `Laureano:2006' on page 13 undefined on input line 296.
+
+
+
+LaTeX Warning: Citation `Beauchemin:1995' on page 13 undefined on input line 30
+0.
+
+
+Package acronym Warning: Acronym `fop' is not defined on input line 320.
+
+! Undefined control sequence.
+l.320 ...agens consecutivas, o \acl{fop} de \citet
+                                                  {Horn:1981} realiza uma s\...
+
+? 
+
+LaTeX Warning: Reference `speedx' on page 13 undefined on input line 320.
+
+
+LaTeX Warning: Reference `speedy' on page 13 undefined on input line 320.
+
+[13]
+! Undefined control sequence.
+l.322 \subsecao
+               {M\'{e}todo de \citet{Lucas:1989}}
+? 
+! Undefined control sequence.
+l.322 \subsecao{M\'{e}todo de \citet
+                                    {Lucas:1989}}
+? 
+! Undefined control sequence.
+l.324 A solu\c{c}\~{a}o dada por \citet
+                                       {Lucas:1989} \'{e} um m\'{e}todo n\~{...
+
+? 
+
+Package acronym Warning: Acronym `fop' is not defined on input line 324.
+
+! Undefined control sequence.
+l.324 ...eslocamento, conforme mostrado na \figref
+                                                  {FIG:LKRestriction}.
+? 
+File: figs/opflw/lucaskanade.eps Graphic file (type eps)
+<figs/opflw/lucaskanade.eps>
+! Undefined control sequence.
+<argument> ...tri\c {c}\~{a}o proposta por \citet 
+                                                  {Lucas:1989}.}}{\thepage }}
+l.331 ...}\~{a}o proposta por \citet{Lucas:1989}.}
+                                                  \label{FIG:LKRestriction}
+? 
+! Undefined control sequence.
+\captiontext ...i\c {c}\~{a}o proposta por \citet 
+                                                  {Lucas:1989}.
+l.331 ...}\~{a}o proposta por \citet{Lucas:1989}.}
+                                                  \label{FIG:LKRestriction}
+? 
+! Undefined control sequence.
+l.335 ...m cada \emph{pixels} da janela na \equref
+                                                  {EQ:Constaint2D} e resulta em
+
+? 
+[14]
+! Undefined control sequence.
+l.371 ... de equa\c{c}\~{o}es descritos na \equref
+                                                  {EQ:LK} pode ser resolvido...
+
+? 
+
+Package acronym Warning: Acronym `LMS' is not defined on input line 372.
+
+
+Package acronym Warning: Acronym `LMS' is not defined on input line 372.
+
+
+Package acronym Warning: Acronym `fop' is not defined on input line 382.
+
+
+LaTeX Warning: Citation `Barron:2002' on page 15 undefined on input line 382.
+
+
+Package acronym Warning: Acronym `fop' is not defined on input line 404.
+
+
+LaTeX Warning: Citation `Barron:2002' on page 15 undefined on input line 404.
+
+
+LaTeX Warning: Reference `CHP:INTERACTION' on page 15 undefined on input line 4
+12.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 412.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 412.
+
+) [15] (chp2/interaction.tex
+! Undefined control sequence.
+l.1 \capitulo
+             {Intera\c{c}\~{a}o Homem Computador por Vis\~{a}o Computacional...
+
+? 
+Package acronym Info: Label `acro:IHC' newly defined as it shall be overridden
+although it is yet undefined on input line 3.
+
+Package acronym Warning: Acronym `IHC' is not defined on input line 3.
+
+
+Package acronym Warning: Acronym `IHC' is not defined on input line 3.
+
+
+LaTeX Warning: Citation `Truyenque:2005' on page 16 undefined on input line 7.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \unhbox 
+l.7 ...cado na Figura~\ref{FIG:Intera\c{c}\~{a}oA}
+                                                  .
+? 
+
+LaTeX Warning: Reference `\voidb@x ' on page 16 undefined on input line 7.
+
+! Extra \endcsname.
+\org@ref ...after \@setref \csname r@#1\endcsname 
+                                                  \@firstoftwo {#1}
+l.7 ...cado na Figura~\ref{FIG:Intera\c{c}\~{a}oA}
+                                                  .
+? 
+File: figs/intro/inttradvsnovas.png Graphic file (type eps)
+<figs/intro/inttradvsnovas.png>
+
+LaTeX Warning: Citation `Truyenque:2005' on page 16 undefined on input line 12.
+
+
+
+LaTeX Warning: Citation `Truyenque:2005' on page 16 undefined on input line 19.
+
+
+
+LaTeX Warning: Citation `Zhou:2007' on page 16 undefined on input line 23.
+
+
+LaTeX Warning: Citation `Truyenque:2005' on page 16 undefined on input line 28.
+
+
+! Undefined control sequence.
+l.32 \secao
+           {Intera\c{c}\~{a}o com Computadores Pessoais}
+? 
+[16]
+
+Package acronym Warning: Acronym `VC' is not defined on input line 34.
+
+
+LaTeX Warning: Citation `Rios:2001' on page 17 undefined on input line 35.
+
+! Undefined control sequence.
+l.38 Os trabalhos desenvolvidos por \citet
+                                          {Porta:2002,James:2007} fornecem u...
+
+? 
+
+Package acronym Warning: Acronym `VC' is not defined on input line 38.
+
+
+LaTeX Warning: Reference `FIG:InteracaoPC' on page 17 undefined on input line 3
+8.
+
+
+LaTeX Warning: Citation `Bradski:1998' on page 17 undefined on input line 38.
+
+
+LaTeX Warning: Citation `Fu:2007' on page 17 undefined on input line 38.
+
+
+LaTeX Warning: Citation `Hsu:2002' on page 17 undefined on input line 38.
+
+
+LaTeX Warning: Citation `Zhou:2004' on page 17 undefined on input line 38.
+
+
+! LaTeX Error: File `figs/intro/pose' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 ... 4 cm, bb = 0 0 404 317]{figs/intro/pose}}
+                                                   \quad
+? 
+
+Overfull \hbox (12.77782pt too wide) in paragraph at lines 42--42
+ []|\OT1/cmr/m/n/10 (a) 
+ []
+
+
+! LaTeX Error: File `figs/intro/facialexpressions' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 ... 0 146 147]{figs/intro/facialexpressions}}
+                                                   \quad
+? 
+
+Overfull \hbox (13.33337pt too wide) in paragraph at lines 43--43
+ []|\OT1/cmr/m/n/10 (b) 
+ []
+
+
+! LaTeX Error: File `figs/intro/olhos' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.44 ...4 cm, bb = 0 0 220 298]{figs/intro/olhos}}
+                                                   \\
+? 
+
+Overfull \hbox (12.22224pt too wide) in paragraph at lines 44--44
+ []|\OT1/cmr/m/n/10 (c) 
+ []
+
+
+! LaTeX Error: File `figs/intro/gesture' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.45 ...cm, bb = 0 0 214 167]{figs/intro/gesture}}
+                                                  
+? 
+
+Overfull \hbox (13.33337pt too wide) in paragraph at lines 45--45
+ []|\OT1/cmr/m/n/10 (d) 
+ []
+
+
+! LaTeX Error: File `figs/intro/corpo' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 ...4 cm, bb = 0 0 298 199]{figs/intro/corpo}}
+                                                  
+? 
+
+Overfull \hbox (12.22224pt too wide) in paragraph at lines 46--46
+ []|\OT1/cmr/m/n/10 (e) 
+ []
+
+
+LaTeX Warning: Citation `Vinteraction' on page 17 undefined on input line 49.
+
+
+LaTeX Warning: Citation `Bretzner:2001' on page 17 undefined on input line 49.
+
+
+LaTeX Warning: Citation `Truyenque:2005' on page 17 undefined on input line 49.
+
+
+
+LaTeX Warning: Citation `Shan:2007' on page 17 undefined on input line 49.
+
+
+LaTeX Warning: Citation `Song:2006' on page 17 undefined on input line 49.
+
+
+LaTeX Warning: Citation `Paula:2006' on page 17 undefined on input line 49.
+
+! Undefined control sequence.
+l.53 \citet
+           {CameraMouse:2007}, \citet{Nouse} e \citet{Vinteraction} s\~{a}o ...
+
+? 
+! Undefined control sequence.
+l.53 \citet{CameraMouse:2007}, \citet
+                                     {Nouse} e \citet{Vinteraction} s\~{a}o ...
+
+? 
+! Undefined control sequence.
+l.53 ...{CameraMouse:2007}, \citet{Nouse} e \citet
+                                                  {Vinteraction} s\~{a}o bas...
+
+? 
+
+Overfull \hbox (2.54909pt too wide) in paragraph at lines 52--55
+[]\OT1/cmr/m/n/12 Os metodos de-sen-volvi-dos por Cam-er-a-Mouse:2007, Nouse e
+ Vin-ter-ac-tion s~ao basea-
+ []
+
+! Undefined control sequence.
+l.56 ...lo, no m\'{e}todo desenvolvido por  \citet
+                                                  {Nouse}, o usu\'{a}rio sen...
+
+? 
+
+LaTeX Warning: Reference `FIG:Nouse' on page 17 undefined on input line 59.
+
+File: figs/intro/nouse.jpg Graphic file (type eps)
+<figs/intro/nouse.jpg>
+
+LaTeX Warning: Citation `Nouse' on page 17 undefined on input line 64.
+
+
+LaTeX Warning: Citation `Muraret:2005' on page 17 undefined on input line 67.
+
+[17]
+! Undefined control sequence.
+l.71 No m\'{e}todo desenvolvido por \citet
+                                          {Nouse}, faz-se necess\'{a}rio uma
+? 
+Package acronym Info: Label `acro:Camshift' newly defined as it shall be overri
+dden
+although it is yet undefined on input line 77.
+
+Package acronym Warning: Acronym `Camshift' is not defined on input line 77.
+
+
+Package acronym Warning: Acronym `Camshift' is not defined on input line 77.
+
+
+LaTeX Warning: Citation `Bradski:1998' on page 18 undefined on input line 77.
+
+
+LaTeX Warning: Citation `Allen:2004' on page 18 undefined on input line 77.
+
+
+LaTeX Warning: Citation `Zhou:2007' on page 18 undefined on input line 77.
+
+
+LaTeX Warning: Citation `Hansen:2005' on page 18 undefined on input line 77.
+
+! Undefined control sequence.
+l.77 ...u\'{a}rio. No trabalho proposto por \citet
+                                                  {Zhou:2007}, o \ac{Camshif...
+
+? 
+
+Package acronym Warning: Acronym `Camshift' is not defined on input line 77.
+
+Package acronym Info: Label `acro:HSV' newly defined as it shall be overridden
+although it is yet undefined on input line 77.
+
+Package acronym Warning: Acronym `HSV' is not defined on input line 77.
+
+
+Package acronym Warning: Acronym `HSV' is not defined on input line 77.
+
+
+Package acronym Warning: Acronym `Camshift' is not defined on input line 79.
+
+
+LaTeX Warning: Reference `FIG:CamshiftEX' on page 18 undefined on input line 79
+.
+
+
+! LaTeX Error: File `figs/intro/camshift1' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 ..., bb = 0 0 318 238]{figs/intro/camshift1}}
+                                                   \quad
+? 
+
+Overfull \hbox (12.77782pt too wide) in paragraph at lines 84--84
+ []|\OT1/cmr/m/n/10 (a) 
+ []
+
+
+! LaTeX Error: File `figs/intro/camshift2' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ..., bb = 0 0 318 238]{figs/intro/camshift2}}
+                                                  
+? 
+
+Overfull \hbox (13.33337pt too wide) in paragraph at lines 85--85
+ []|\OT1/cmr/m/n/10 (b) 
+ []
+
+
+Package acronym Warning: Acronym `Camshift' is not defined on input line 86.
+
+
+LaTeX Warning: Citation `Allen:2004' on page 18 undefined on input line 86.
+
+
+Package acronym Warning: Acronym `Camshift' is not defined on input line 86.
+
+
+LaTeX Warning: Citation `Allen:2004' on page 18 undefined on input line 86.
+
+! Undefined control sequence.
+l.89 O trabalho de \citet
+                         {Truyenque:2005} realiza a intera\c{c}\~{a}o atrav\...
+
+? 
+
+LaTeX Warning: Reference `FIG:TRU' on page 18 undefined on input line 89.
+
+
+! LaTeX Error: File `figs/intro/mao1' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.94 ...=2.7 cm, bb = 0 0 84 64]{figs/intro/mao1}}
+                                                  
+? 
+
+Overfull \hbox (12.77782pt too wide) in paragraph at lines 94--94
+ []|\OT1/cmr/m/n/10 (a) 
+ []
+
+
+! LaTeX Error: File `figs/intro/mao2' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.95 ...=2.7 cm, bb = 0 0 86 64]{figs/intro/mao2}}
+                                                  
+? 
+
+Overfull \hbox (13.33337pt too wide) in paragraph at lines 95--95
+ []|\OT1/cmr/m/n/10 (b) 
+ []
+
+
+! LaTeX Error: File `figs/intro/mao3' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.96 ...=2.7 cm, bb = 0 0 85 64]{figs/intro/mao3}}
+                                                  
+? 
+
+Overfull \hbox (12.22224pt too wide) in paragraph at lines 96--96
+ []|\OT1/cmr/m/n/10 (c) 
+ []
+
+
+! LaTeX Error: File `figs/intro/mao4' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.97 ...=2.7 cm, bb = 0 0 86 67]{figs/intro/mao4}}
+                                                  
+? 
+
+Overfull \hbox (13.33337pt too wide) in paragraph at lines 97--97
+ []|\OT1/cmr/m/n/10 (d) 
+ []
+
+
+LaTeX Warning: Citation `Truyenque:2005' on page 18 undefined on input line 98.
+
+
+
+LaTeX Warning: Citation `Truyenque:2005' on page 18 undefined on input line 98.
+
+
+[18]
+! Undefined control sequence.
+l.101 ...e segmenta\c{c}\~{a}o utilizado em \citet
+                                                  {Truyenque:2005} \'{e} \'{...
+
+? 
+! Undefined control sequence.
+l.103 No trabalho proposto por \citet
+                                     {Mory:2000} \'{e} descrito um algoritmo...
+
+? 
+
+LaTeX Warning: Reference `Fig:Mory' on page 19 undefined on input line 103.
+
+
+! LaTeX Error: File `figs/intro/cameramov' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.107 ..., bb = 0 0 626 437]{figs/intro/cameramov}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...etectados pelo m\'{e}todo de \citet 
+                                                  {Mory:2000}.}}{\thepage }}
+l.108 ...os pelo m\'{e}todo de \citet{Mory:2000}.}
+                                                  \label{Fig:Mory}
+? 
+! Undefined control sequence.
+\captiontext ...ectados pelo m\'{e}todo de \citet 
+                                                  {Mory:2000}.
+l.108 ...os pelo m\'{e}todo de \citet{Mory:2000}.}
+                                                  \label{Fig:Mory}
+? 
+[19]
+
+Package acronym Warning: Acronym `PC' is not defined on input line 113.
+
+Package acronym Info: Label `acro:PC' overridden on input line 113.
+
+Package acronym Warning: Acronym `PC' is not defined on input line 113.
+
+
+Package acronym Warning: Acronym `PC' is not defined on input line 113.
+
+
+LaTeX Warning: Citation `Chen:2007' on page 20 undefined on input line 113.
+
+
+Package acronym Warning: Acronym `PC' is not defined on input line 117.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 117.
+
+
+LaTeX Warning: Citation `Chen:2007' on page 20 undefined on input line 117.
+
+
+LaTeX Warning: Citation `Hannuksela:2007' on page 20 undefined on input line 11
+7.
+
+! Undefined control sequence.
+l.122 \secao
+            {Intera\c{c}\~{a}o com Dispositivos port\'{a}teis}
+? 
+
+Package acronym Warning: Acronym `VC' is not defined on input line 124.
+
+
+LaTeX Warning: Citation `Hannuksela:2005' on page 20 undefined on input line 12
+5.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 130.
+
+
+LaTeX Warning: Citation `BNokia6230i' on page 20 undefined on input line 131.
+
+
+LaTeX Warning: Citation `Jepsen:2006' on page 20 undefined on input line 131.
+
+
+LaTeX Warning: Citation `Ballagas' on page 20 undefined on input line 131.
+
+
+LaTeX Warning: Citation `CameraMouse:2007' on page 20 undefined on input line 1
+31.
+
+
+LaTeX Warning: Citation `Nouse' on page 20 undefined on input line 131.
+
+
+LaTeX Warning: Citation `Vinteraction' on page 20 undefined on input line 131.
+
+! Undefined control sequence.
+l.134 \subsecao
+               {T\'{e}cnicas Baseadas em Marcadores}
+? 
+[20]
+! Undefined control sequence.
+l.136 \citet
+            {Jepsen:2006}, \cite{Hatchet:2005}, \citet{Qin:2006}, \citet{Man...
+
+? 
+
+LaTeX Warning: Citation `Hatchet:2005' on page 21 undefined on input line 136.
+
+! Undefined control sequence.
+l.136 ...Jepsen:2006}, \cite{Hatchet:2005}, \citet
+                                                  {Qin:2006}, \citet{Manduch...
+
+? 
+! Undefined control sequence.
+l.136 ...e{Hatchet:2005}, \citet{Qin:2006}, \citet
+                                                  {Manduchi:2008} e \citet{B...
+
+? 
+! Undefined control sequence.
+l.136 ...Qin:2006}, \citet{Manduchi:2008} e \citet
+                                                  {Ballagas} utilizam
+? 
+! Undefined control sequence.
+l.139 O trabalho proposto por \citet
+                                    {Qin:2006}, utiliza dois tipos de padr\~...
+
+? 
+
+LaTeX Warning: Reference `FIG:Qin' on page 21 undefined on input line 139.
+
+
+! LaTeX Error: File `figs/intro/qin_1' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.143 ...dth, bb = 0 0 647 459]{figs/intro/qin_1}}
+                                                  
+? 
+
+Overfull \hbox (12.77782pt too wide) in paragraph at lines 143--143
+ []|\OT1/cmr/m/n/10 (a) 
+ []
+
+
+! LaTeX Error: File `figs/intro/qin_2' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.144 ...dth, bb = 0 0 640 480]{figs/intro/qin_2}}
+                                                  
+? 
+
+Overfull \hbox (13.33337pt too wide) in paragraph at lines 144--144
+ []|\OT1/cmr/m/n/10 (b) 
+ []
+
+! Undefined control sequence.
+<argument> ...is utilizados no trabalho de \citet 
+                                                  {Qin:2006}}}{\thepage }}
+l.145 ...ilizados no trabalho de \citet{Qin:2006}}
+                                                  \label{FIG:Qin}
+? 
+! Undefined control sequence.
+\captiontext ... utilizados no trabalho de \citet 
+                                                  {Qin:2006}
+l.145 ...ilizados no trabalho de \citet{Qin:2006}}
+                                                  \label{FIG:Qin}
+? 
+! Undefined control sequence.
+l.149 ...{o}digos visuais desenvolvidos por \citet
+                                                  {Ballagas} s\~{a}o mostrad...
+
+? 
+
+LaTeX Warning: Reference `FIG:PATTERN' on page 21 undefined on input line 150.
+
+
+LaTeX Warning: Reference `FIG:PATTERNa' on page 21 undefined on input line 150.
+
+
+
+LaTeX Warning: Reference `FIG:PATTERNb' on page 21 undefined on input line 150.
+
+
+File: figs/intro/visual_codes.jpg Graphic file (type eps)
+<figs/intro/visual_codes.jpg>
+File: figs/intro/visual_codes2.jpg Graphic file (type eps)
+ <figs/intro/visual_codes2.jpg>
+File: figs/intro/visual_codes4.png Graphic file (type eps)
+
+<figs/intro/visual_codes4.png>
+File: figs/intro/visual_codes3.jpg Graphic file (type eps)
+ <figs/intro/visual_codes3.jpg>
+
+LaTeX Warning: Citation `Robs:2005' on page 21 undefined on input line 157.
+
+
+LaTeX Warning: Citation `Robs:2006' on page 21 undefined on input line 157.
+
+
+LaTeX Warning: Citation `Robs:2005' on page 21 undefined on input line 157.
+
+
+LaTeX Warning: Citation `Robs:2006' on page 21 undefined on input line 157.
+
+
+LaTeX Warning: Reference `FIG:PATTERNd' on page 21 undefined on input line 166.
+
+
+
+LaTeX Warning: Reference `FIG:PATTERNc' on page 21 undefined on input line 169.
+
+
+
+LaTeX Warning: Citation `Ballagas' on page 21 undefined on input line 170.
+
+
+LaTeX Warning: Citation `Robs:2005' on page 21 undefined on input line 172.
+
+! Undefined control sequence.
+l.174 ...telefones celulares, descritos por \citet
+                                                  {Bucolo:2005} and \citet{R...
+
+? 
+! Undefined control sequence.
+l.174 ...critos por \citet{Bucolo:2005} and \citet
+                                                  {Robs:2006}. O primeiro ut...
+
+? 
+
+LaTeX Warning: Reference `FIG:Bucolo' on page 21 undefined on input line 174.
+
+
+LaTeX Warning: Reference `FIG:Robs06' on page 21 undefined on input line 174.
+
+
+! LaTeX Error: File `figs/intro/bucolo05' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.179 ..., bb = 0 0 269 320]{figs/intro/bucolo05}}
+                                                   \qquad
+? 
+
+Overfull \hbox (12.77782pt too wide) in paragraph at lines 179--179
+ []|\OT1/cmr/m/n/10 (a) 
+ []
+
+
+! LaTeX Error: File `figs/intro/robs06game' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.180 ...bb = 0 0 486 330]{figs/intro/robs06game}}
+                                                  
+? 
+
+Overfull \hbox (13.33337pt too wide) in paragraph at lines 180--180
+ []|\OT1/cmr/m/n/10 (b) 
+ []
+
+
+LaTeX Warning: Citation `Bucolo:2005' on page 21 undefined on input line 181.
+
+
+LaTeX Warning: Citation `Robs:2006' on page 21 undefined on input line 181.
+
+
+LaTeX Warning: Citation `Bucolo:2005' on page 21 undefined on input line 181.
+
+
+LaTeX Warning: Citation `Robs:2006' on page 21 undefined on input line 181.
+
+[21]
+! Undefined control sequence.
+l.187 Trabalho similares, propostos por \citet
+                                              {Manduchi:2008} e \citet{Mandu...
+
+? 
+! Undefined control sequence.
+l.187 ...postos por \citet{Manduchi:2008} e \citet
+                                                  {Manduchi:2007}, utilizam ...
+
+? 
+
+LaTeX Warning: Reference `FIG:ManduchiMarker' on page 22 undefined on input lin
+e 187.
+
+
+LaTeX Warning: Reference `FIG:Manduchi' on page 22 undefined on input line 187.
+
+
+
+! LaTeX Error: File `figs/intro/MarkerManduchi' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.192 ... 0 0 165 163]{figs/intro/MarkerManduchi}}
+                                                  
+? 
+
+Overfull \hbox (12.77782pt too wide) in paragraph at lines 192--192
+ []|\OT1/cmr/m/n/10 (a) 
+ []
+
+
+! LaTeX Error: File `figs/intro/guiding' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.193 ...h, bb = 0 0 583 778]{figs/intro/guiding}}
+                                                  
+? 
+
+Overfull \hbox (13.33337pt too wide) in paragraph at lines 193--193
+ []|\OT1/cmr/m/n/10 (b) 
+ []
+
+
+! LaTeX Error: File `figs/intro/manduchiblind' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.194 ...= 0 0 254 195]{figs/intro/manduchiblind}}
+                                                  
+? 
+
+Overfull \hbox (12.22224pt too wide) in paragraph at lines 194--194
+ []|\OT1/cmr/m/n/10 (c) 
+ []
+
+
+LaTeX Warning: Citation `Manduchi:2007' on page 22 undefined on input line 195.
+
+
+
+LaTeX Warning: Citation `Manduchi:2008' on page 22 undefined on input line 195.
+
+
+
+LaTeX Warning: Citation `Manduchi:2007' on page 22 undefined on input line 195.
+
+
+
+LaTeX Warning: Citation `Manduchi:2008' on page 22 undefined on input line 195.
+
+
+[22]
+! Undefined control sequence.
+l.202 \subsecao
+               {T\'{e}cnicas Baseadas em Segmenta\c{c}\~{a}o de Pele}
+? 
+
+LaTeX Warning: Citation `Hansen:2005' on page 23 undefined on input line 204.
+
+
+LaTeX Warning: Citation `Gallo:2008' on page 23 undefined on input line 204.
+
+! Undefined control sequence.
+l.206 O diagrama m\'{e}todo proposto por \citet
+                                               {Gallo:2008} adquire o \emph{...
+
+? 
+Package acronym Info: Label `acro:RGB' newly defined as it shall be overridden
+although it is yet undefined on input line 206.
+
+Package acronym Warning: Acronym `RGB' is not defined on input line 206.
+
+
+Package acronym Warning: Acronym `RGB' is not defined on input line 206.
+
+
+LaTeX Warning: Citation `Gallo:2008' on page 23 undefined on input line 213.
+
+
+LaTeX Warning: Reference `FIG:GALLO2a' on page 23 undefined on input line 215.
+
+[23]
+
+LaTeX Warning: Reference `FIG:GALLO2a' on page 24 undefined on input line 223.
+
+
+LaTeX Warning: Reference `FIG:GALLO2b' on page 24 undefined on input line 223.
+
+File: figs/intro/problemagallo.png Graphic file (type eps)
+<figs/intro/problemagallo.png>
+File: figs/intro/problemagallo.png Graphic file (type eps)
+ <figs/intro/problemagallo.png>
+! Undefined control sequence.
+<argument> ...s do m\'{e}todo proposto por \citet 
+                                                  {Gallo:2008} na m\~{a}o a)...
+l.229 ...08} na m\~{a}o a) direita e b) esquerda.}
+                                                  
+? 
+! Undefined control sequence.
+\captiontext ...do m\'{e}todo proposto por \citet 
+                                                  {Gallo:2008} na m\~{a}o a)...
+l.229 ...08} na m\~{a}o a) direita e b) esquerda.}
+                                                  
+? 
+! Undefined control sequence.
+\captiontext ...do m\'{e}todo proposto por \citet 
+                                                  {Gallo:2008} na m\~{a}o a)...
+l.229 ...08} na m\~{a}o a) direita e b) esquerda.}
+                                                  
+? 
+! Undefined control sequence.
+l.233 ... de intera\c{c}\~{a}o proposto por \citet
+                                                  {Hansen:2005} realiza a de...
+
+? 
+
+LaTeX Warning: Reference `FIG:FACIAL' on page 24 undefined on input line 233.
+
+! Undefined control sequence.
+l.234 No seu trabalho, \citet
+                             {Hansen:2005} utiliza dois m\'{e}todos de rastr...
+
+? 
+
+LaTeX Warning: Citation `Xu:1990' on page 24 undefined on input line 234.
+
+
+Package acronym Warning: Acronym `Camshift' is not defined on input line 234.
+
+
+LaTeX Warning: Citation `Bradski:1998' on page 24 undefined on input line 234.
+
+
+! LaTeX Error: File `figs/intro/facial' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.238 ...idth,bb = 0 0 357 338]{figs/intro/facial}
+                                                  
+? 
+! Undefined control sequence.
+l.245 \subsecao
+               {T\'{e}cnicas Baseadas no Movimento \'{O}ptico}
+? 
+
+LaTeX Warning: Citation `Hannuksela:2006' on page 24 undefined on input line 24
+8.
+
+
+LaTeX Warning: Reference `FIG:MOVCELULAR' on page 24 undefined on input line 24
+8.
+
+[24]
+
+! LaTeX Error: File `figs/intro/interaction' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.253 ...bb = 0 0 303 355]{figs/intro/interaction}
+                                                  
+? 
+
+LaTeX Warning: Citation `BNokia6230i' on page 25 undefined on input line 258.
+
+File: figs/intro/pyrofers.jpg Graphic file (type eps)
+<figs/intro/pyrofers.jpg>
+
+LaTeX Warning: Citation `BNokia6230i' on page 25 undefined on input line 267.
+
+
+LaTeX Warning: Citation `BNokia6230i' on page 25 undefined on input line 267.
+
+! Undefined control sequence.
+l.284 O trabalho de \citet
+                          {Hidreth:2006} realiza a detec\c{c}\~{a}o de canto...
+
+? 
+! Undefined control sequence.
+l.286 Os m\'{e}todos , proposto por \citet
+                                          {Drab:2005} e \citet{Hannuksela:20...
+
+? 
+! Undefined control sequence.
+l.286 ..., proposto por \citet{Drab:2005} e \citet
+                                                  {Hannuksela:2007} realizam...
+
+? 
+Package acronym Info: Label `acro:fps' newly defined as it shall be overridden
+although it is yet undefined on input line 286.
+
+Package acronym Warning: Acronym `fps' is not defined on input line 286.
+
+
+Package acronym Warning: Acronym `fps' is not defined on input line 286.
+
+[25]
+
+LaTeX Warning: Citation `Wang:2006' on page 26 undefined on input line 288.
+
+! Undefined control sequence.
+l.290 Os m\'{e}todos desenvolvidos por \citet
+                                             {Robs:2004} e \citet{Wang:2006}...
+
+? 
+! Undefined control sequence.
+l.290 ...envolvidos por \citet{Robs:2004} e \citet
+                                                  {Wang:2006} s\~{a}o basead...
+
+? 
+
+LaTeX Warning: Citation `Rohs:2007' on page 26 undefined on input line 290.
+
+
+LaTeX Warning: Reference `FIG:Rohs05' on page 26 undefined on input line 290.
+
+
+! LaTeX Error: File `figs/intro/rohs2005' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.294 ...h, bb = 0 0 454 262]{figs/intro/rohs2005}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...pelo m\'{e}todo proposto por \citet 
+                                                  {Robs:2004}.}}{\thepage }}
+l.295 ...'{e}todo proposto por \citet{Robs:2004}.}
+                                                  \label{FIG:Rohs05}
+? 
+! Undefined control sequence.
+\captiontext ...lo m\'{e}todo proposto por \citet 
+                                                  {Robs:2004}.
+l.295 ...'{e}todo proposto por \citet{Robs:2004}.}
+                                                  \label{FIG:Rohs05}
+? 
+
+LaTeX Warning: Citation `Robs:2004' on page 26 undefined on input line 301.
+
+
+LaTeX Warning: Citation `Rohs:2007' on page 26 undefined on input line 301.
+
+
+Package acronym Warning: Acronym `fps' is not defined on input line 301.
+
+[26]
+! Undefined control sequence.
+l.303 O m\'{e}todo desenvolvido por \citet
+                                          {Wang:2006} \'{e} similar ao m\'{e...
+
+? 
+! Undefined control sequence.
+l.303 ...06} \'{e} similar ao m\'{e}todo de \citet
+                                                  {Robs:2004}, a imagem \'{e...
+
+? 
+
+Package acronym Warning: Acronym `MSE' is not defined on input line 303.
+
+
+Package acronym Warning: Acronym `SAD' is not defined on input line 303.
+
+Package acronym Info: Label `acro:CCF' newly defined as it shall be overridden
+although it is yet undefined on input line 303.
+
+Package acronym Warning: Acronym `CCF' is not defined on input line 303.
+
+
+Package acronym Warning: Acronym `CCF' is not defined on input line 303.
+
+! Undefined control sequence.
+l.303 ...CF}), descritos detalhadamente na \secref
+                                                  {SEC:BLOCKM}. O bloco que ...
+
+? 
+! Undefined control sequence.
+l.304 ...eren\c{c}a entre os m\'{e}todos de \citet
+                                                  {Robs:2004} e \citet{Wang:...
+
+? 
+! Undefined control sequence.
+l.304 ...m\'{e}todos de \citet{Robs:2004} e \citet
+                                                  {Wang:2006} \'{e} que no p...
+
+? 
+
+Package acronym Warning: Acronym `fps' is not defined on input line 305.
+
+! Undefined control sequence.
+l.310 \subsecao
+               {Resumo}
+? 
+
+LaTeX Warning: Reference `TAB:MetodosEmbedded' on page 27 undefined on input li
+ne 312.
+
+
+! LaTeX Error: Environment sidewaystable undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.315 \begin{sidewaystable}
+                           [p]
+? 
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.317   \caption
+                {resumo dos m\'{e}todos de intera\c{c}\~{a}o desenvolvidos p...
+
+? 
+
+! LaTeX Error: Environment tabularx undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318   \begin{tabularx}
+                        {\linewidth}{YYYYYY}
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.318   \begin{tabularx}{\linewidth}
+                                    {YYYYYY}
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.318   \begin{tabularx}{\linewidth}
+                                    {YYYYYY}
+? 
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.319   \hline
+              
+? 
+! Misplaced alignment tab character &.
+l.320   Autores  &
+                   M\'{e}todo    & Objeto de Refer\^{e}ncia & Graus de Liber...
+
+? 
+! Misplaced alignment tab character &.
+l.320   Autores  & M\'{e}todo    &
+                                   Objeto de Refer\^{e}ncia & Graus de Liber...
+
+? 
+! Misplaced alignment tab character &.
+l.320 ...\'{e}todo    & Objeto de Refer\^{e}ncia &
+                                                   Graus de Liberdade & Disp...
+
+? 
+! Misplaced alignment tab character &.
+l.320 ... de Refer\^{e}ncia & Graus de Liberdade &
+                                                   Dispositivo & Tempo de Pr...
+
+? 
+! Misplaced alignment tab character &.
+l.320 ...ncia & Graus de Liberdade & Dispositivo &
+                                                   Tempo de Processamento (m...
+
+? 
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.321   \hline
+              
+? 
+! Undefined control sequence.
+<recently read> \citet 
+                       
+l.322   \citet
+              {Robs:2005}    & VisualCodes            & Marcador     & 5  & ...
+
+? 
+! Misplaced alignment tab character &.
+l.322   \citet{Robs:2005}    &
+                               VisualCodes            & Marcador     & 5  & ...
+
+? 
+! Misplaced alignment tab character &.
+l.322 ...{Robs:2005}    & VisualCodes            &
+                                                   Marcador     & 5  &     & \\
+
+? 
+! Misplaced alignment tab character &.
+l.322 ...& VisualCodes            & Marcador     &
+                                                   5  &     & \\
+? 
+! Misplaced alignment tab character &.
+l.322 ...ualCodes            & Marcador     & 5  &
+                                                       & \\
+? 
+! Misplaced alignment tab character &.
+l.322 ...es            & Marcador     & 5  &     &
+                                                   \\
+? 
+! Undefined control sequence.
+<recently read> \citet 
+                       
+l.323   \citet
+              {Gallo:2008}   & Proje\c{c}\~{a}o do Gradiente  & M\~{a}o (Pel...
+
+? 
+! Misplaced alignment tab character &.
+l.323   \citet{Gallo:2008}   &
+                               Proje\c{c}\~{a}o do Gradiente  & M\~{a}o (Pel...
+
+? 
+! Misplaced alignment tab character &.
+l.323 ...008}   & Proje\c{c}\~{a}o do Gradiente  &
+                                                   M\~{a}o (Pele)   & 2  & N...
+
+? 
+! Misplaced alignment tab character &.
+l.323 ...\~{a}o do Gradiente  & M\~{a}o (Pele)   &
+                                                   2  & Nokia N95 & 5 \\
+? 
+! Misplaced alignment tab character &.
+l.323 ...o do Gradiente  & M\~{a}o (Pele)   & 2  &
+                                                   Nokia N95 & 5 \\
+? 
+! Misplaced alignment tab character &.
+l.323 ...te  & M\~{a}o (Pele)   & 2  & Nokia N95 &
+                                                   5 \\
+? 
+! Undefined control sequence.
+<recently read> \citet 
+                       
+l.324   \citet
+              {Hansen:2005}  & \ac{Camshift}          & Face         & 4  & ...
+
+? 
+! Misplaced alignment tab character &.
+l.324   \citet{Hansen:2005}  &
+                               \ac{Camshift}          & Face         & 4  & ...
+
+? 
+
+Package acronym Warning: Acronym `Camshift' is not defined on input line 324.
+
+! Misplaced alignment tab character &.
+l.324 ...{Hansen:2005}  & \ac{Camshift}          &
+                                                   Face         & 4  & - &  \\
+? 
+! Misplaced alignment tab character &.
+l.324 ...& \ac{Camshift}          & Face         &
+                                                   4  & - &  \\
+? 
+! Misplaced alignment tab character &.
+l.324 ...{Camshift}          & Face         & 4  &
+                                                   - &  \\
+? 
+! Misplaced alignment tab character &.
+l.324 ...shift}          & Face         & 4  & - &
+                                                    \\
+? 
+! Undefined control sequence.
+<recently read> \citet 
+                       
+l.325   \citet
+              {Hidreth:2006} & \acl{fop}              & Cantos       & 6  & ...
+
+? 
+! Misplaced alignment tab character &.
+l.325   \citet{Hidreth:2006} &
+                               \acl{fop}              & Cantos       & 6  & ...
+
+? 
+
+Package acronym Warning: Acronym `fop' is not defined on input line 325.
+
+! Misplaced alignment tab character &.
+l.325 ...{Hidreth:2006} & \acl{fop}              &
+                                                   Cantos       & 6  &  -   ...
+
+? 
+! Misplaced alignment tab character &.
+l.325 ...& \acl{fop}              & Cantos       &
+                                                   6  &  -   & - \\
+? 
+! Misplaced alignment tab character &.
+l.325 ...l{fop}              & Cantos       & 6  &
+                                                    -   & - \\
+? 
+! Misplaced alignment tab character &.
+l.325 ...             & Cantos       & 6  &  -   &
+                                                   - \\
+? 
+! Undefined control sequence.
+<recently read> \citet 
+                       
+l.326   \citet
+              {Drab:2005}    & Proje\c{c}\~{a}o da Intensidade& Nenhum      ...
+
+? 
+! Misplaced alignment tab character &.
+l.326   \citet{Drab:2005}    &
+                               Proje\c{c}\~{a}o da Intensidade& Nenhum      ...
+
+? 
+! Misplaced alignment tab character &.
+l.326 ...05}    & Proje\c{c}\~{a}o da Intensidade&
+                                                   Nenhum       &    &  -   ...
+
+? 
+! Misplaced alignment tab character &.
+l.326 ...c{c}\~{a}o da Intensidade& Nenhum       &
+                                                      &  -    & - \\
+? 
+! Misplaced alignment tab character &.
+l.326 ...~{a}o da Intensidade& Nenhum       &    &
+                                                    -    & - \\
+? 
+! Misplaced alignment tab character &.
+l.326 ... Intensidade& Nenhum       &    &  -    &
+                                                   - \\
+? 
+! Undefined control sequence.
+<recently read> \citet 
+                       
+l.327   \citet
+              {Wang:2006}    & TinyMotion             & Nenhum       & 2  & ...
+
+? 
+! Misplaced alignment tab character &.
+l.327   \citet{Wang:2006}    &
+                               TinyMotion             & Nenhum       & 2  & ...
+
+? 
+! Misplaced alignment tab character &.
+l.327 ...{Wang:2006}    & TinyMotion             &
+                                                   Nenhum       & 2  & Motor...
+
+? 
+! Misplaced alignment tab character &.
+l.327 ...& TinyMotion             & Nenhum       &
+                                                   2  & Motorola v710    & 1...
+
+? 
+! Misplaced alignment tab character &.
+l.327 ...yMotion             & Nenhum       & 2  &
+                                                   Motorola v710    & 15 \\
+? 
+! Misplaced alignment tab character &.
+l.327 ... & Nenhum       & 2  & Motorola v710    &
+                                                   15 \\
+? 
+! Undefined control sequence.
+<recently read> \citet 
+                       
+l.328   \citet
+              {Robs:2004}    & \emph{Sweep and Tilt}  & Nenhum       & 3  & ...
+
+? 
+! Misplaced alignment tab character &.
+l.328   \citet{Robs:2004}    &
+                               \emph{Sweep and Tilt}  & Nenhum       & 3  & ...
+
+? 
+! Misplaced alignment tab character &.
+l.328 ...{Robs:2004}    & \emph{Sweep and Tilt}  &
+                                                   Nenhum       & 3  & Nokia...
+
+? 
+! Misplaced alignment tab character &.
+l.328 ...& \emph{Sweep and Tilt}  & Nenhum       &
+                                                   3  & Nokia N95 & 4 \\
+? 
+! Misplaced alignment tab character &.
+l.328 ...ph{Sweep and Tilt}  & Nenhum       & 3  &
+                                                   Nokia N95 & 4 \\
+? 
+! Misplaced alignment tab character &.
+l.328 ... Tilt}  & Nenhum       & 3  & Nokia N95 &
+                                                   4 \\
+? 
+! Undefined control sequence.
+<argument> \citet 
+                  {Winker:2007}
+l.329   \multirow{3}*{\citet{Winker:2007}}
+                                            & ARToolkitPlus             & Ma...
+
+? 
+
+Overfull \vbox (21.74998pt too high) detected at line 329
+ []
+
+! Misplaced alignment tab character &.
+l.329   \multirow{3}*{\citet{Winker:2007}}  &
+                                              ARToolkitPlus             & Ma...
+
+? 
+! Misplaced alignment tab character &.
+l.329 ...ker:2007}}  & ARToolkitPlus             &
+                                                   Marcador       & 6  & \mu...
+
+? 
+! Misplaced alignment tab character &.
+l.329 ...oolkitPlus             & Marcador       &
+                                                   6  & \multirow{3}*{HP RW6...
+
+? 
+! Misplaced alignment tab character &.
+l.329 ...tPlus             & Marcador       & 6  &
+                                                   \multirow{3}*{HP RW6828 P...
+
+? 
+
+Overfull \vbox (21.74998pt too high) detected at line 329
+ []
+
+! Misplaced alignment tab character &.
+l.329 ... 6  & \multirow{3}*{HP RW6828 PocketPC} &
+                                                   30 \\
+? 
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.330                        &
+                               \ac{Camshift}          & Face         & 4  & ...
+
+? 
+
+Package acronym Warning: Acronym `Camshift' is not defined on input line 330.
+
+! Misplaced alignment tab character &.
+l.330 ...               & \ac{Camshift}          &
+                                                   Face         & 4  & & 20 ...
+
+? 
+! Misplaced alignment tab character &.
+l.330 ...& \ac{Camshift}          & Face         &
+                                                   4  & & 20 - 35 \\
+? 
+! Misplaced alignment tab character &.
+l.330 ...{Camshift}          & Face         & 4  &
+                                                   & 20 - 35 \\
+? 
+! Misplaced alignment tab character &.
+l.330 ...amshift}          & Face         & 4  & &
+                                                   20 - 35 \\
+? 
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.331                        &
+                               TinyMotion             & Nenhum       & 2  & ...
+
+? 
+! Misplaced alignment tab character &.
+l.331 ...               & TinyMotion             &
+                                                   Nenhum       & 2  & & 5 \\
+? 
+! Misplaced alignment tab character &.
+l.331 ...& TinyMotion             & Nenhum       &
+                                                   2  & & 5 \\
+? 
+! Emergency stop.
+l.331 ...& TinyMotion             & Nenhum       &
+                                                   2  & & 5 \\
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 4155 strings out of 95341
+ 54170 string characters out of 1183923
+ 114244 words of memory out of 1500000
+ 7076 multiletter control sequences out of 110000
+ 13589 words of font info for 51 fonts, out of 1200000 for 2000
+ 64 hyphenation exceptions out of 8191
+ 36i,19n,38p,857b,470s stack positions out of 5000i,500n,10000p,200000b,5000s
+Output written on tese_formato_cortez.dvi (37 pages, 78876 bytes).

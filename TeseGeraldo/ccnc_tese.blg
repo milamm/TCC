@@ -1,0 +1,91 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: ccnc_tese.aux
+A level-1 auxiliary file: pretexto/capa_externa.aux
+A level-1 auxiliary file: pretexto/capa.aux
+A level-1 auxiliary file: pretexto/dedicatoria.aux
+A level-1 auxiliary file: pretexto/dedicatoria2.aux
+A level-1 auxiliary file: pretexto/agradecimentos.aux
+A level-1 auxiliary file: pretexto/epistrofe.aux
+A level-1 auxiliary file: pretexto/ccnc_resumo.aux
+A level-1 auxiliary file: pretexto/ccnc_abstract.aux
+A level-1 auxiliary file: ccnc_introducao/ccnc_introducao.aux
+A level-1 auxiliary file: ccnc_revisao/ccnc_revisao.aux
+A level-1 auxiliary file: ccnc_sdcc/ccnc_metodologia.aux
+A level-1 auxiliary file: ccnc_resultados/ccnc_resultados.aux
+A level-1 auxiliary file: ccnc_conclusoes/ccnc_conclusoes.aux
+A level-1 auxiliary file: ccnc_aerossois/ccnc_aerossois.aux
+A level-1 auxiliary file: ccnc_bancada/ccnc_bancada.aux
+A level-1 auxiliary file: ccnc_incertezas/ccnc_incertezas.aux
+The style file: abnt-alf.bst
+Illegal, another \bibstyle command---line 51 of file ccnc_tese.aux
+ : \bibstyle
+ :          {abnt-alf}
+I'm skipping whatever remains of this command
+I couldn't open database file C:/Users/FGMPinheiro/Documents/refbib/ref_bib_fgmp.bib
+---line 52 of file ccnc_tese.aux
+ : \bibdata{abnt-options,C:/Users/FGMPinheiro/Documents/refbib/ref_bib_fgmp
+ :                                                                         }
+I'm skipping whatever remains of this command
+Database file #1: abnt-options.bib
+Warning--I didn't find a database entry for "Meteorologia"
+Warning--I didn't find a database entry for "Roberts"
+Warning--I didn't find a database entry for "scott"
+Warning--I didn't find a database entry for "IPCC"
+Warning--I didn't find a database entry for "Alexander"
+Warning--I didn't find a database entry for "Marcel"
+Warning--I didn't find a database entry for "Andreae"
+Warning--I didn't find a database entry for "Debry"
+Warning--I didn't find a database entry for "McMurry"
+Warning--I didn't find a database entry for "Rosenfeld"
+Warning--I didn't find a database entry for "wilson"
+Warning--I didn't find a database entry for "Nenes"
+Warning--I didn't find a database entry for "twomey"
+Warning--I didn't find a database entry for "Lala"
+Warning--I didn't find a database entry for "Oliveira"
+Warning--I didn't find a database entry for "Pinheiro"
+Warning--I didn't find a database entry for "Rose"
+Warning--I didn't find a database entry for "Frank"
+Warning--I didn't find a database entry for "Matteo"
+Warning--I didn't find a database entry for "Langsdorf"
+Warning--I didn't find a database entry for "wagner"
+Warning--I didn't find a database entry for "Frisvad"
+Warning--I didn't find a database entry for "Sinnarwalla"
+Warning--I didn't find a database entry for "Fukuta2"
+Warning--I didn't find a database entry for "chuang"
+Warning--I didn't find a database entry for "Hudson"
+Warning--I didn't find a database entry for "Hoppel"
+Warning--I didn't find a database entry for "Otto"
+Warning--I didn't find a database entry for "Schmitt"
+Warning--I didn't find a database entry for "Albuquerque"
+Warning--I didn't find a database entry for "Pavlidis"
+Warning--I didn't find a database entry for "Felix"
+Warning--I didn't find a database entry for "Norberto"
+Warning--I didn't find a database entry for "Xiaodong"
+Warning--I didn't find a database entry for "Mao"
+Warning--I didn't find a database entry for "Parvati"
+Warning--I didn't find a database entry for "Li"
+Warning--I didn't find a database entry for "Xie"
+Warning--I didn't find a database entry for "Gonzales"
+Warning--I didn't find a database entry for "bernd"
+Warning--I didn't find a database entry for "Ricardo"
+Warning--I didn't find a database entry for "Digabel"
+Warning--I didn't find a database entry for "Lantuejoul"
+Warning--I didn't find a database entry for "Beucher"
+Warning--I didn't find a database entry for "Luc"
+Warning--I didn't find a database entry for "HSU"
+Warning--I didn't find a database entry for "Mendes"
+Warning--I didn't find a database entry for "Joel"
+Warning--I didn't find a database entry for "Wang"
+Warning--I didn't find a database entry for "Junge"
+Warning--I didn't find a database entry for "Mason"
+Warning--I didn't find a database entry for "Squires"
+Warning--I didn't find a database entry for "Twomey2"
+Warning--I didn't find a database entry for "Howell"
+Warning--I didn't find a database entry for "freud"
+Warning--I didn't find a database entry for "Twomey3"
+Warning--I didn't find a database entry for "SL"
++---------------------------------------------------------+
+| Estilo bibliográfico abnt-alf.bst versão 1.45.2.1           |
+| Em caso de dúvidas ou problemas com este estilo procure |
+| http://abntex.codigolivre.org.br                        |
++---------------------------------------------------------+
+(There were 2 error messages)

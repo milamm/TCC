@@ -1,0 +1,97 @@
+From kry@sulminas.com.brThu Dec  4 17:38:11 1997
+Date: Wed, 19 Nov 1997 12:34:44 -0200
+From: Luiz Celso Braga Pinto <kry@sulminas.com.br>
+To: Manoel Pereira <fgmp@funceme.br>
+Subject: Recebeu?
+
+Gostaria de saber se recebeu 
+o mail que mandei na semana passada. Caso negativo, me avise por favor. Eu e o 
+prof. Bonilha estivemos ontem em Americana na fabrica da Tecnobras. Acho que foi 
+interessante esta visita a fabrica pois consguimos dados muito interessantes. 
+Espero que esteja tudo bem por ai. Alguma novidade?
+Luiz Celso Braga Pinto
+
+/******************************************************************************/
+
+From bira@dpi.inpe.brThu Dec  4 17:38:22 1997
+Date: Wed, 19 Nov 1997 14:42:30 -0200
+From: Ubirajara Freitas <bira@dpi.inpe.br>
+To: fgmp@funceme.br
+Cc: laercio@dpi.inpe.br
+Subject: Dados de Batimetria
+
+Prezado Francisco,
+
+O Manoel gostaria de obter os manuais do Spring.
+
+On-line voce pode obter pela rede veja nosso ftp anonymous:
+pub/spring/help-2.0.4/port.tar.gz ou pub/spring/help204.zip
+
+Em papel envie e-mail para: netgis@polovale.softex.br
+
+O Laercio gerou um banco spring e converteu os dados da batimetria,
+verifique por anonymous ftp em incoming/acude.
+Existe um arquivo README.TXT que possue as informacoes do que foram
+colocadas la.
+
+Abracos,
+
+Bira
+Ubirajara Moura de Freitas
+Divisao de Processamento de Imagens
+INPE Instituto Nacional de Pesquisas Espaciais
+Av. dos Astronautas, 1758 - Jardim da Granja
+C.P.515 CEP 12201-970
+Sao Jose dos Campos - SP - Brasil
+e-mail: bira@dpi.inpe.br
+tel:(012)345-6444
+fax:(012)345-6468
+
+
+From kry@sulminas.com.brThu Dec  4 17:38:38 1997
+Date: Fri, 21 Nov 1997 13:39:10 -0200
+From: Luiz Celso Braga Pinto <kry@sulminas.com.br>
+To: Manoel Pereira <fgmp@funceme.br>
+Subject: =?iso-8859-1?Q?En:_De_Itajub=E1?=
+
+    [The following text is in the "iso-8859-1" character set]
+    [Your display is set for the "US-ASCII" character set]
+    [Some characters may be displayed incorrectly]
+
+
+
+Alo Manoel
+
+    Fiquei muito feliz em saber que o pacote nao atingiu a Cogerh. Sobre
+aquela conversa de ontem sobre representacoes, foi otimo saber deste seu
+interesse, pois ja estava com isso em mente a tempos, seria otimo levar tal
+ideia adiante.Tem uma representacao bem interessante que ha tempos gostaria
+de trabalhar com ela. Eh o seguinte: Trata-se de uma empresa de
+impermeabilizacoes de um tio meu de SP. Ele trouxe um produto do Canadá
+altamente sofisticado e inovador que e feito atraves de aplicacoes
+diretamente no concreto, ele se infiltra no concreto ate 30 cm e se
+cristaliza quando encontra umidade(fazem muitas aplicacoes em tuneis, metros
+e barragens).Eh um produto relativamente caro, mas por enquanto nao tem
+similares no mercado a nivel de eficiencia. Ele falou que acabou de fechar
+um contrato ai com a Cagece para uma ETE e tem um representante ai em fase
+experimental, ou seja, nao tem nenhum contrato de exclusividade com tal
+pessoa. Vou dar um pulo em SP para conversar com ele com calma, e pegar
+catalogos, etc.
+    Sobre medidores, uma fabrica inglesa me mandou um mail dizendo haver
+muito interesse em ter um representante aqui no Brasil. Trata-se de uma
+empresa totalmente nova, e a inauguracao parece que e em Janeiro, numa
+grande feira na UK. Vou me correspondendo com ele para saber mais detalhes.
+    Relativo a camera digital, seria interessante voce escolher o modelo que
+mais interessa, para eu correr atras de precos, pois estas cameras sao
+deificeis de serem encontradas(em especial a Sony).
+    Estou aguardando uns catalogos que pedi sobre medidores, mas nao sei se
+virao por correio, fax, e-mail. Assim que chegarem mandarei copias para
+voce. O que deu aquela assunto sobre a instalacao da Internet ai? Qualquer
+duvida ou problema que tiver ai, me ligue ou escreva.
+
+    Um abraco,
+
+                              Luiz Celso Braga Pinto
+e-mail: kry@sulminas.com.br
+HP: www.sulminas.com.br/~kry
+

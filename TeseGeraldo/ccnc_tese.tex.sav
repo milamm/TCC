@@ -1,0 +1,219 @@
+%/**
+% * @file tese.tex
+% * @brief This file have the configuration parameters of Dr. Degree thesis.
+% * @ingroup Documentation
+% * @author $Author: rodcosta $
+% * @version $Revision: 1.9 $
+% * @date $Date: 2009/04/03 14:05:04 $
+%**/
+\documentclass[12pt,a4paper,oneside,final]{book}
+\usepackage{listings}
+\usepackage{verbatim}
+
+%%% para vers\~{o}es parciais do dumento final utilizar:
+%\documentclass[12pt,a4paper,draft]{book}
+%\documentclass[12pt,a4paper,twoside,fleqn,draft]{book}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PREAMBULO DO DOCUMENTO COME\c{C}A AQUI
+%\usepackage{natbib}
+%\bibliographystyle{elsart-harv}
+%inclui coisas da abnt
+%\bibliographystyle{abntcite}
+%\usepackage{hvfoat}
+
+\usepackage{dissertacao}
+\usepackage{multicol}
+\usepackage{rotating}
+%\usepackage{Fancyheader}
+\usepackage{dissertacao_defs}
+\usepackage[none]{hyphenat}
+\usepackage[latin1]{inputenc}
+\usepackage{rod_teste}
+\usepackage{color}
+\usepackage{pdfpages}
+\usepackage{eso-pic}
+\usepackage{everyshi}
+%\usepackage{graphicx}
+%\usepackage[alf]{abntcite}
+
+\usepackage{multirow}
+%\usepackage[small]{subfigure}
+%\usepackage{multicol}
+% \bibstyle{abnt-alf}
+\usepackage{sidecap}
+\usepackage{ifthen}
+\usepackage{psfrag}
+\newcommand{\titulo}{Um Novo Contador de N\'{u}cleos de Condensa\c{c}\~{a}o de Nuvens Baseado em T\'{e}cnicas de Vis\~{a}o Computacional}
+\newcommand{\autor}{Francisco Geraldo de Melo Pinheiro}
+\newcommand{\orientador}{Prof. Dr. Paulo C\'{e}sar Cortez}
+\usepackage[breaklinks,pdftitle={\titulo},pdfauthor = {\autor}]{hyperref}
+\newcommand{\alfref}{0}
+\ifthenelse{\isundefined{\alfref}}{
+\usepackage[square]{natbib}
+}{
+\usepackage[sort]{cite}
+\usepackage[alf,abnt-and-type=e,abnt-full-initials=no,abnt-last-names=abnt,abnt-etal-list=2,abnt-etal-text = emph]{abntcite}
+\newcommand{\citet}[1]{\citeonline{#1}}
+}
+\newcommand{\figref}[1]{Figura~\ref{#1}}
+\newcommand{\fisgref}[1]{Figuras~\ref{#1}}
+\newcommand{\equref}[1]{Equa\c{c}\~{a}o~\ref{#1}}
+%\newcommand{\eqref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Se\c{c}\~{a}o~\ref{#1}}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+
+\usepackage[dvips]{graphicx}
+%\usepackage[portuges]{babel}
+\usepackage[printonlyused]{acronym}
+%\usepackage[final]{pdfpages}
+%\usepackage{Fancyhdr}
+%\bibliographystyle{IEEEtranPor}
+% \includeonly{capa,agradecimentos}
+% \includeonly{capa_externa,capa}
+%%% PREAMBULO DO DOCUMENTO ACABA AQUI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{hvfloat}
+
+
+
+\usepackage{longtable}
+\usepackage{supertabular}
+\usepackage{tabularx}
+%\usepackage{listings}
+\begin{document}
+\newcommand{\membroa}{Prof. Dr. Jo\~{a}o Cesar Moura Mota \\ Co-orientador}
+\newcommand{\membrob}{Prof. Dr. ???? \\ ????}
+\newcommand{\membroc}{Prof. Dr. ???? \\ ????}
+\newcommand{\membrod}{Prof. Dr. ???? \\ ????}
+%padronizacao
+\newcommand{\capitulo}{\chapter}
+\newcommand{\secao}{\section}
+\newcommand{\subsecao}{\subsection}
+\DeclareGraphicsExtensions{.jpg,.pdf,.mps,.png}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% CAPA
+
+\include{pretexto/capa_externa}
+\include{pretexto/capa}
+%\include{pretexto/folhadeaprovacao}
+\frontmatter \pagestyle{roman}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% RESUMO
+\include{pretexto/ccnc_resumo}
+\include{pretexto/ccnc_abstract}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% DEDICAT\'{O}RIA
+%\include{pretexto/dedicatoria}
+%\include{pretexto/dedicatoria2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% AGRADECIMENTOS
+%\include{pretexto/agradecimentos}
+%\include{pretexto/epistrofe}
+%\include{dedicatoria}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ABREVIA\c{C}\~{O}ES
+\begin{singlespace}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%% \'{I}NDICE
+    %\addtocontents{toc}{\noindent\protect\rule{\textwidth}{.2pt}\par}
+    \tableofcontents%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%% LISTA DE FIGURAS
+    \listoffigures%
+    \addcontentsline{toc}{chapter}{Lista de Figuras}%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%% LISTA DE TABELAS
+    \listoftables%
+    \addcontentsline{toc}{chapter}{Lista de Tabelas}%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%% LISTA DE ALGORITMOS
+    %    \listofalgorithms%
+    %    \addcontentsline{toc}{chapter}{Lista de Algoritmos}%
+     %\addtocontents{toc}{\noindent\protect\rule{\textwidth}{.2pt}\par}
+    %%%%%%%%
+    %%%% NOTA\c{C}\^{A}O
+%    \addcontentsline{toc}{chapter}{Lista de S\'{\i}mbolos}%
+%    \chapter*{Lista de S\'{\i}mbolos}%%
+%    \LTXtable{\textwidth}{pretexto/simbolos}%%
+%    \newpage
+%    \addcontentsline{toc}{chapter}{Lista de Siglas}%
+%    \chapter*{Lista de Siglas}%%
+ %   \input{pretexto/acronimos}
+    %\LTXtable{\textwidth}{pretexto/siglas}%%
+    %GATHER{pretexto/simbolos.tex}%%
+    %GATHER{pretexto/siglas.tex}%%
+\end{singlespace}
+
+\pagestyle{capitulo} \setlength{\parskip}{1ex plus 0.5ex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% CAP\'{I}TULO 1: INTRODU\c{C}\~{A}O
+\mainmatter
+\include{ccnc_introducao/ccnc_introducao}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% CAP\'{I}TULO 2: Aerossois
+%\include{ccnc_aerossois/ccnc_aerossois}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% CAP\'{I}TULO 3: CCNC_revis\~{a}o
+\include{ccnc_revisao/ccnc_revisao}
+%%\include{materiais}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% CAP\'{I}TULO 3: Materiais e M\'{e}todos
+\include{ccnc_sdcc/ccnc_metodologia}
+%\include{chp3/cronograma}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% Capitulo 4: Bancada Geradora de Aeross\'{o}is
+%\include{ccnc_bancada/ccnc_bancada}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% CAP\'{I}TULO 5: Resultados
+\include{ccnc_resultados/ccnc_resultados}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% CAP\'{I}TULO 5.1: Listagem
+%\include{ccnc_listagem/ccnc_listagem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% CAP\'{I}TULO 6: Conclus\~{o}es
+\include{ccnc_conclusoes/ccnc_conclusoes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% AP\^{E}NDICE
+%\appendix
+\begin{appendices}
+    \include{ccnc_aerossois/ccnc_aerossois}
+    \include{ccnc_bancada/ccnc_bancada}
+    \include{ccnc_incertezas/ccnc_incertezas}
+     \chapter{Diagrama el\'{e}trico do CCNC-SDCC}
+
+\newpage
+\begin{figure}[!hbt]
+    \begin{center}
+        \includegraphics[bb=1.0in 12.0in 7.5in 10in,scale=0.9]{eps/ccncsch.pdf}
+    \end{center}
+    \caption{\label{ccncsch}\hspace{-0.1em} diagrama el\'{e}trico da unidade de controle do CCNC-SDCC.}
+\end{figure}
+
+
+
+\end{appendices}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% INDICE REMISSIVO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% GLOSS\'{A}RIO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% REFER\^{E}NCIAS BIBLIOGR\'{A}FICAS
+\bibliographystyle{abnt-alf}
+\ifthenelse{\isundefined{\alfref}}{\bibliographystyle{unsrtnat}}{\bibliographystyle{abnt-alf}}
+%\bibliography{bib_optflw,bib_pointer,livros,simulink}
+\bibliography{C:/Users/FGMPinheiro/Documents/refbib/ref_bib_fgmp}
+
+
+
+%\bibliography{refaaaa}
+\addcontentsline{toc}{chapter}{\bibname}
+
+\end{document}

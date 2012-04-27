@@ -1,0 +1,96 @@
+
+
+From Joao_Cesar.Mota@int-evry.frThu Dec  4 17:38:55 1997
+Date: Tue, 2 Dec 1997 20:59:09 +0100 (MET)
+From: "Joao_Cesar.Mota" <Joao_Cesar.Mota@int-evry.fr>
+To: Francisco Geraldo de Melo Pinheiro <fgmp@funceme.br>
+Subject: Re: Estimativa Espectral de Potencia + Indice
+
+    [The following text is in the "iso-8859-1" character set]
+    [Your display is set for the "US-ASCII" character set]
+    [Some characters may be displayed incorrectly]
+
+                Francisco:
+        Olhei as curvas enviadas e me pareceram relativamente boas.
+A
+introdução da transformada Z-Chirp(processamento não-linear) melhorou
+a
+identificação das harmônicas. Você precisa fazer um ZOOM para a escala
+de 0
+a 1 Hz no caso do rui'do do CCN, pois não deu p'ra ver claramente se
+ha' ou
+não algumas harmônicas destacadas la'. Neste caso, calcule a potência
+de
+cada uma delas, e tambe'm para todo o espectro do rui'do, comparando-as.
+        Você deve incluir a T Z-Chirp na tua dissertação, sem precisar
+colocar a calculeira, mas citando em poucas linhas os seus aspectos
+positivos e seus limites, e não deixando de citar a referência bibliogra'fica.
+        Quanto ao suma'rio enviado, quero fazer algumas sugestões:
+a) no item (4.3), modifique-o para: Distribuição Cumulativa e Parâmetros
+Estati'sticos do Rui'do e do Sinal U'til. Neste i'tem, mais propriamente
+no
+sub-i'tem (4.3.1), a ide'ia e' você caracterizar melhor o rui'do,
+construindo (com as amostras do mesmo obtidos pelas experiências) a
+função
+distribuição e a sua derivada, ou seja , a famosa função densidade de
+probabilidade (fdp). Com esta u'ltima você podera' calcular a me'dia
+e a
+variância do rui'do, e comparar com os seus ca'lculos diretos. Outra
+caracteri'stica e' a densidade espectral de potência (ou a sua transformada
+inversa de Fourier que e' a função de autocorrelação). Mas esta você
+ja'
+esta' calculando no item (4.4). Lembre-se de citar na introdução deste
+capi'tulo que você não tem acesso direto ao sinal u'til(ou desejado),
+mas
+que tem ao rui'do e ao sinal u'til+rui'do. Dai' porque o estudo sobre
+o
+rui'do e mais tarde(em outro capi'tulo) da sua eliminação por um esquema
+adaptativo, para a obtenção do sinal u'til.
+b) no i'tem (4.3.2), modifique-o para: Sinal U'til contaminado por Rui'do
+Aditivo. Aqui você deve fazer o mesmo o que você fêz para o estudo do
+rui'do
+no sub-i'tem anterior, mas visando a obtenção dos parâmetros e fdp do
+sinal
+u'til x. Verifique em um livro sobre processo estoca'stico e probabilidade
+como e' construi'da a fdp de um sinal (y) que e' composto da soma de
+dois
+sinais x(sinal u'til) e v(rui'do) independentes(y=x+v). A partir dai',
+com o
+conhecimento das pdfs de y e de v, você constroi a de x. Aqui talvez
+você
+tenha que fazer desconvolução! Isto sera' importante para comparar com
+os
+mesmos parâmetros estati'sticos e fdp de x obtidos depois do cancelamento
+do
+rui'do. Qualquer du'vida me contacte.
+c) no i'tem (4.4), modifique-o para: Estimativa do Espectro e da Potência
+do
+Rui'do. Lembre-se que aqui você estima a potência(variância) do rui'do
+por
+ca'lculo da a'rea da Densidade Espectral de Potência estimada. Compare
+com
+as variâncias do rui'do obtidas no i'tem (4.3.1). Estas comparações
+todas
+servem para confirmar e validar a te'cnica adaptativa proposta.
+d) nos i'tens (5.1) e (5.3), modifique-os incluindo no final nos dois
+ti'tulos existentes ": resultados fundamentais". Isto e' para prevenir
+o
+leitor que você vai dispor no texto que segue somente os principais
+resultados que serão usados, e não reescrever detalhadamente o que ja'
+existe nos livros.
+        Coragem e sucesso.
+        Um abraço.
+                        João Cesar.
+*************************************************
+*      João Cesar Moura Mota                    *
+*      Institut National des Télécommunications *
+*      Dép. Electronique et Physique            *
+*      9, rue Charles Fourier                   *
+*      91.011 - Evry   Cédex   France           *
+*      e-mails: Joao_Cesar.Mota@int-evry.fr     *
+*               mota@olympe.int-evry.fr         *
+*      tel:(0033) 1.60.76.46.27                 *
+*      fax:(0033) 1.60.76.42.84                 *
+*************************************************
+
+

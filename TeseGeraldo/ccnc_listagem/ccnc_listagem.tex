@@ -1,0 +1,108 @@
+%\doublespacing
+\documentclass[12pt,a4paper,oneside,final]{book}
+
+\usepackage{listings}
+\usepackage{verbatim}
+
+%\usepackage{algorithm}
+\usepackage{algorithmic}
+%\usepackage{algorithm2e}
+
+
+
+\begin{document}
+
+%\begin{algorithm}
+
+
+\begin{algorithmic}[1]
+
+%\caption{Fast Watershed - Vicent and Soiller}
+\STATE{\#define MASK -2}\COMMENT{\textit{coment\'{a}rio}}
+\STATE{\#define WSHED 0}
+\STATE{\#define INIT -1}
+\STATE{entrada: imi /*imagem de entrada*/}
+\STATE{sa\'{\i}da: imo /*imagem de sa\'{\i}da*/}
+\STATE{ imd /*imagem de trabalho*/}
+\STATE{Inicializa\c{c}\~{a}o:}
+
+\STATE{corrent\_label $\leftarrow$ 0}
+\STATE{corrent\_dist $\leftarrow$ 0}
+%\STATE{$\forall$p $\in$ D$_{imo}$,\ imo(p) $\leftarrow$ INIT}
+\STATE{imo $\leftarrow$ INIT}
+\STATE{imd$\leftarrow$ 0}
+\STATE{Organiza pixels de imi em ordem crescente de n\'{\i}veis de cinza}
+\STATE{h$_{min}$ $\leftarrow$ MIN(imi),\ h$_{max}$ $\leftarrow$ MAX(imi)}
+
+\FOR{h=h$_{min}$ to h$_{max}$}
+    \FOR{$\forall$p$\mid$ imi(p)=h}
+        \STATE{imo(p)$\leftarrow$MASK}
+        \IF{$\exists$p'$\in$N$_G$(p)$\mid$ (imo(p')$>$0) ou (imo(p')=WSHED)}
+            \STATE{imd(p)$\leftarrow$1}
+            \STATE{fifo\_add(p)}
+        \ENDIF
+    \ENDFOR
+    \STATE{current\_dist$\leftarrow$1}
+    \STATE{fifo\_add(pixel\_ficticio)}
+
+    \LOOP
+        \STATE{p$\leftarrow$fifo\_first()}
+        \IF{p=pixel\_ficticio}
+            \IF{fifo\_empty()=TRUE}
+                \STATE{BREAK}
+            \ELSE
+                \STATE{fifo\_add(pixel\_ficticio)}
+                \STATE{current\_dist $\leftarrow$ current\_dist+1}
+                \STATE{p$\leftarrow$fifo\_first()}
+            \ENDIF
+        \ENDIF
+        \FOR{$\forall$p'$\in$N$_G$(p)}
+            \IF{imd(p')$<$current\_dist $\ $ and $\ $ (imo(p')$>$0 $\ $ OR imo(p')=WSHED)}
+
+                \IF{imo(p')$>$0}
+                    \IF{imo(p)=MASK OR imo(p)=WSHED}
+                        \STATE{imo(p)$\leftarrow$imo(p')}
+                    \ELSE
+                        \IF{imo(p)$\neq$imo(p')}
+                            \STATE{imo(p)$\leftarrow$WSHED}
+                        \ENDIF
+                    \ENDIF
+                \ELSE
+                    \IF{imo(p)=MASK}
+                        \STATE{imo(p)$\leftarrow$WSHED}
+                    \ENDIF
+                \ENDIF
+            \ELSE
+                \IF{imo(p')=MASK AND imd(p')=0}
+                    \STATE{imd(p')$\leftarrow$current\_dist+1}
+                    \STATE{fifo\_add(p')}
+                \ENDIF
+
+            \ENDIF
+        \ENDFOR
+    \ENDLOOP
+    \FOR{$\forall$ p $\mid$ imi(p)=h}
+        \STATE{imd(p) $\leftarrow$ 0}
+        \IF{imo(p)=MASK}
+            \STATE{current\_label $\leftarrow$ current\_label+1}
+            \STATE{fifo\_add(p)}
+            \STATE{imo(p)=current\_label}
+            \WHILE {fifo\_empty()=false}
+                \STATE{p' $\leftarrow$  fifo\_first()}
+                \FOR{$\forall$ p" $\in$ N$_G$(p')}
+                    \IF{imo(p")=MASK}
+                        \STATE{fifo\_add(p")}
+                        \STATE{imo(p")$\leftarrow$current\_label}
+                    \ENDIF
+                \ENDFOR
+            \ENDWHILE
+        \ENDIF
+    \ENDFOR
+           
+\ENDFOR
+\end{algorithmic}
+%\end{algorithm}
+
+
+\end{document}
+

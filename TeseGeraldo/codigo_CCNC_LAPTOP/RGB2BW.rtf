@@ -1,0 +1,337 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Courier-Oblique;}{\f1\fnil\fcharset0 Courier-Bold;}{\f2\fnil\fcharset0 Courier;}}
+{\colortbl ;\red0\green0\blue128;\red0\green0\blue0;}
+{\*\generator Msftedit 5.41.21.2509;}\viewkind4\uc1\pard\cf1\i\f0\fs20 RECORTA E CONVERTE IMAGEM COLORIDA EM OUTRA EM PRETO E BRANCO\par
+ENTRADA \'c9 A IMAGEM COMPLETA E COLORIDA DA WEBCAN\par
+SA\'cdDA \'c9 UM RECORTE EM PRETO E BRANCO CORRESPONDENTE A \'c1REA A SER PROCESSADA\par
+(IH1,IW1),\par
+(IH2,IW2) ---> S\'e3o as coordenadas iniciais e finais da regi\'e3o da\par
+imagem a ser processada. Estas coordenadas s\'e3o definidas no\par
+processo de determina\'e7\'e3o do volume de amostragem.\par
+BW ----------> Matriz que cont\'e9m a imagem a ser processada. O seu tamanho \'e9\par
+definido por (IH1,IW1), (IH2,IW2)\par
+K ----------> N\'edvel de corte na detec\'e7\'e3o de pixel branco.\par
+ih,iw,a,ab,ag,ar,ac -> Vari\'e1veis auxiliares\par
+\par
+\cf2\b\i0\f1 PARA \b0 (\f2 ih<--IH1 \b AT\'c9\b0  IH2)\par
+\{\par
+   \b\f1 PARA  \b0 (\f2 iw<-IW1 \b AT\'c9\b0  IW2)\par
+   \{\par
+      a<--Pixels[iw][ih];\par
+\tab ab=AZUL(a)\tab ag=VERDE(a)\tab ar=VERMELHO(a)\par
+\tab ac=(ab+ag+ar)\par
+    \par
+   \}\tab\par
+\b\f1       SE \b0\f2 ac>K \b Ent\'e3o\b0  BW[xx][yy]=\cf1 255\cf2  \par
+   \b\f1 SE N\'c3O \b0\f2 BW[xx][yy]=\cf1 0\par
+\}\par
+\par
+********************************************************************\par
+\par
+\par
+/*********************TRANSPARAMADA DE DIST\'c2NCIA**********************/\par
+ENTRADA BW imagem binarizada\par
+SA\'cdDA   ID imagem transformada\par
+IHD,IWD Tamanho da imagem BW e ID\par
+yy,xx,sai,ws_d,y1,x1 vari\'e1veis auxiliares\par
+\par
+\cf0    \b PARA\b0  (yy=0 AT\'c9 IHD)\par
+   \{\par
+      \b PARA\b0 (xx=0 AT\'c9 IWD)\par
+      \{\par
+         \b SE\b0 (BW[xx][yy]==0) \b ENT\'c3O\b0  ID[xx][yy]=0;\par
+         \b SE N\'c3O\b0\par
+         \{\par
+            sai=0;\par
+            ws_d=1;\par
+            \b ENQUANTO\b0  (sai==0)\par
+            \{\par
+                \b PARA\b0  (y1=(yy-ws_d) \b AT\'c9\b0 (yy+ws_d))\par
+                \{\par
+                    \b PARA\b0  (x1=(xx-ws_d) \b AT\'c9\b0 (xx+ws_d))\par
+                    \{\par
+                        \b SE\b0 ((y1>=0)&&(x1>=0)&&(y1<IHD)&&(x1<IWD)) \b ENT\'c3O\b0\par
+                        \{\par
+                           \b SE\b0 (BW[x1][y1]==0) \b ENT\'c3O\b0\par
+                           \{\par
+                              ID[xx][yy]=255-ws_d;\par
+                              sai=1;\par
+                           \}\par
+                        \}\par
+                        \b SE\b0 (sai==1) \b ENT\'c3O\b0  break;\par
+                    \}\par
+                    \b SE\b0 (sai==1) ENT\'c3O break;\par
+                \}\par
+                ws_d++;\par
+            \}\par
+        \}\par
+      \}\par
+   \}\cf1\par
+/***FIM******************TRANSPARAMADA DE DIST\'c2NCIA**********************/\par
+\par
+\par
+\par
+\par
+/***********************TRANSFORMADA WATERSHED*****************************/\par
+/*HISTOGRAMA*/\par
+   for(i=0;i<256;i++)  hist[i]=0; //Inicializa vetor h\par
+   hmin=255;\par
+   hmax=0;\par
+\par
+   for (ih = 0; ih < IHD; ih++)\par
+   \{\par
+      for (iw = 0; iw < IWD; iw++)\par
+      \{\par
+         ac=ID[iw][ih];  //(ab+ag+ar)/3;\par
+         hist[ac]++;\par
+         if (ac<hmin) hmin=ac;\par
+         if (ac>hmax) hmax=ac;\par
+      \}\par
+   \}\par
+//----------------------------------------------------------------------------\par
+                  // histograma acumulado\par
+   for (i=0;i<256;i++) hc[i]=0;\par
+   for (i=hmin+1;i<hmax+1+1;i++) hc[i]=hc[i-1]+hist[i-1];\par
+ //----------------------------------------------------------------------------\par
+\par
+                  // vetor ordenado da imagem\par
+   for (ih = 0; ih < IHD; ih++)  //LINHA 17\par
+      for (iw = 0; iw < IWD; iw++)\par
+      \{\par
+         ac=ID[iw][ih];\par
+         ima[iw][ih]=ac;\par
+         ims[hc[ac]][0]=iw;\par
+         ims[hc[ac]][1]=ih;\par
+         hc[ac]++;\par
+      \}\par
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\par
+//                %INICIALIZA\'c7\'d5ES\par
+   rotulo=0;\par
+   fndx=0;\par
+   indx=0;\par
+\par
+   p1_ui=imd[0];\par
+   p2_i=imo[0];\par
+   for(iiix=0;iiix<IWDIHD; iiix++)\par
+   \{\par
+      *p1_ui=0;\par
+      p1_ui++;\par
+\par
+      *p2_i=INIT;\par
+      p2_i++;\par
+   \}\par
+   for (i=0;i<LENFIFO;i++)\par
+   \{\par
+      fifo[i][1]=0;\par
+      fifo[i][2]=0;\par
+   \}\par
+\par
+   ii=0;\par
+   for (i=0;i<256;i++)\par
+   \{\par
+      if (hist[i]>0)\par
+      \{\par
+         hord[ii][0]=i;\par
+         hord[ii][1]=hist[i];\par
+         ii++;\par
+      \}\par
+   \}\par
+   nh=ii; //N\'famero de classes de cinza identificadas na imagem\par
+   for (iii=0;iii<nh;iii++)\par
+   \{\par
+      if (iii==0)\par
+      \{\par
+         start=0;\par
+         final=hord[0][1];\par
+      \}\par
+      else\par
+      \{\par
+        start=final;\par
+        final=final+hord[iii][1];\par
+      \}\par
+      h=hord[iii][0];\par
+      for (j=start;j<final;j++)\par
+      \{\par
+         ph=ims[j][1];\par
+         pw=ims[j][0];\par
+         imo[pw][ph]=MASK;\par
+         i=0;\par
+         while (i<8)\par
+         \{\par
+            x=NG[i][0];y=NG[i][1];\par
+            i=i+1;\par
+            if (((ph+y)>-1)&&((pw+x)>-1)&&((ph+y)<(IHD))&&((pw+x)<(IWD)))\par
+            \{\par
+               if ((imo[pw+x][ph+y]>0)||(imo[pw+x][ph+y]==WSHED))\par
+               \{\par
+                  imd[pw][ph]=1;\par
+                  fifo[fndx][0]=pw;  //QUEUE_ADD(pw,ph);\par
+                  fifo[fndx][1]=ph;\par
+                  fndx++;\par
+                  i=9;\par
+                \}\par
+            \}\par
+        \}\par
+    \}\par
+    distancia=1;\par
+    fifo[fndx][0]=-1; //QUEUE_ADD(-1,-1);\par
+    fifo[fndx][1]=-1;\par
+    fndx++;\par
+\par
+\par
+   while (1)\par
+    \{\par
+        //ptr=QUEUE_FIRST();//LINHA 58\par
+           /*\par
+           a1=indx;\par
+           indx++;\par
+           */\par
+           ptr=indx;\par
+           indx++;\par
+\par
+\par
+\par
+        pw=fifo[ptr][0];\par
+        ph=fifo[ptr][1];\par
+        if (ph==-1)// % Linha 15\par
+        \{\par
+            if (indx==fndx)\par
+                break;\par
+            else\par
+            \{\par
+                //QUEUE_ADD(-1,-1);\par
+                fifo[fndx][0]=-1;\par
+                fifo[fndx][1]=-1;\par
+                fndx++;\par
+\par
+\par
+                distancia++;\par
+\par
+                //ptr=QUEUE_FIRST();//LINHA 58\par
+                  ptr=indx;\par
+                  indx++;\par
+\par
+\par
+\par
+                pw=fifo[ptr][0];\par
+                ph=fifo[ptr][1];\par
+\par
+            \};//    %linha 24\par
+        \};//  %linha25\par
+        i=0;\par
+        while (i<8)\par
+        \{\par
+            x=NG[i][0];y=NG[i][1];\par
+            i++;\par
+            if (((ph+y)>-1)&&((pw+x)>-1)&&((ph+y)<(IHD))&&((pw+x)<(IWD)))\par
+            \{\par
+                if((imd[pw+x][ph+y]<=distancia)&&((imo[pw+x][ph+y]>0)||(imo[pw+x][ph+y]==WSHED)))\par
+                \{\par
+                    if (imo[pw+x][ph+y]>0)\par
+                    \{\par
+\par
+                        if (imo[pw][ph]==MASK)  //||(imo[pw][ph]==WSHED))//   %linha29\par
+                        \{\par
+                            imo[pw][ph]=imo[pw+x][ph+y];// %talvez seja aquui\par
+\par
+                        \}\par
+                        else// %linha 31\par
+                        \{\par
+                            if ((imo[pw][ph]!=imo[pw+x][ph+y]))\par
+                            \{\par
+                                imo[pw][ph]=WSHED;// %linha 33\par
+                            \}\par
+                        \}\par
+                    \}\par
+                    else// %linha 36\par
+                    \{\par
+                        if (imo[pw][ph]==MASK) //%linha 37\par
+                        \{\par
+                            imo[pw][ph]=WSHED;\par
+                        \}// %linha 39\par
+                    \}// %linha 40\par
+                \}\par
+                else //%linha 41\par
+                \{\par
+                    if ((((imo[pw+x][ph+y]==MASK)&&(imd[pw+x][ph+y]==0))))\par
+                    \{\par
+                        imd[pw+x][ph+y]=distancia+1;\par
+                        //QUEUE_ADD(pw+x,ph+y);\par
+                        fifo[fndx][0]=pw+x;\par
+                        fifo[fndx][1]=ph+y;\par
+                        fndx++;\par
+\par
+\par
+                    \}// %linha 47\par
+\par
+                \}// %linha 48\par
+            \}\par
+         \}// %linha 49\par
+    \}// %linha 50\par
+\par
+    for (j=start;j<final;j++)\par
+    \{\par
+        ph=ims[j][1];\par
+        pw=ims[j][0];\par
+        imd[pw][ph]=0;\par
+        if (imo[pw][ph]==MASK)\par
+        \{\par
+            rotulo++; //=rotulo+1;\par
+\par
+            //QUEUE_ADD(pw,ph);\par
+            fifo[fndx][0]=pw;\par
+            fifo[fndx][1]=ph;\par
+            fndx++;\par
+\par
+\par
+\par
+            imo[pw][ph]=rotulo;\par
+            while (!(fndx==indx))\par
+            \{\par
+                //ptr=QUEUE_FIRST();//LINHA 58\par
+                  ptr=indx;\par
+                  indx++;\par
+\par
+\par
+\par
+\par
+                pwl=fifo[ptr][0];\par
+                phl=fifo[ptr][1];\par
+                i=0;\par
+                while (i<8)\par
+                \{\par
+                    x=NG[i][0];y=NG[i][1];\par
+                    i++;\par
+                    if (((phl+y)>-1)&&((pwl+x)>-1)&&((phl+y)<(IHD))&&((pwl+x)<(IWD)))\par
+                    \{\par
+                        if (imo[pwl+x][phl+y]==MASK) // %linha 61\par
+                        \{\par
+\par
+                            //QUEUE_ADD(pwl+x,phl+y);\par
+                            fifo[fndx][0]=pwl+x;\par
+                            fifo[fndx][1]=phl+y;\par
+                            fndx++;\par
+\par
+                            imo[pwl+x][phl+y]=rotulo;\par
+                        \}\par
+                    \}\par
+                \}\par
+            \}\par
+        \}\par
+    \}\par
+\}\par
+//sec2=GetTickCount();\par
+//sec3=sec3+(sec2-sec1);\par
+if (rotulo>ngotas) ngotas=rotulo;\par
+Form1->Edit32->Text=IntToStr(ngotas);\par
+conc=ngotas/0.0285266;\par
+Form1->Edit34->Text=FloatToStrF(conc,ffFixed,5,3);\par
+for (ih = 0; ih < IHD; ih++)\par
+   for (iw = 0; iw < IWD; iw++)\par
+      if(imo[iw][ih]==0) Form1->Image1->Canvas->Pixels[iw][ih]=clRed;\par
+//---------------------------------------------------------------------------\par
+\par
+//FIM DO WTSH2\par
+/************************FIM TRANSFORMADA WATERSHED*************************/\par
+\par
+}
+ 

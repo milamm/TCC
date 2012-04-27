@@ -1,0 +1,8 @@
+\chapter*{Abstract}
+\label{CHP:ABSTRACT}%%
+\thispagestyle{empty}
+\PARstartOne{T}{his} Thesis proposes a new static cloud condensation nuclei counter based on computer vision techniques. This process involves capturing a sample of atmospheric air inside a static cloud chamber supersaturated of water vapor, producing water droplets. These water droplets fall by gravity and cross a  laser beam, which defines a sampling volume, making them visible. A series of images of this process is digitalized and processed to determine the number of the droplets present in the sampling volume. These droplets are counted automatically by a computer vision system which uses three techniques: binarization by threshold, distance transform and watershed transform. The sampling volume is calculated using a new methodology, proposed in this thesis. This new methodology makes it unnecessary the use of sophisticated procedures to calibrate the developed counter. A prototype was assembled and experiments based on a comparison of those instruments were performed. The results indicate that the procedures developed are appropriate to determine the concentration of cloud condensation nuclei and that the developed device can be used in high concentrations, where equivalent products are unreliable due to the effect of overlapping droplets in the images analyzed. Moreover, the temporal resolution has been significantly improved and the intense use of digital electronics also allowed the reduction of volume, weight and power consumption of this prototype.
+
+%\newline
+%\newline
+\noindent \textbf{Keywords:}watershed transform; distance transform; digital image processing; atmospheric aerosol; meteorological instrumentation.

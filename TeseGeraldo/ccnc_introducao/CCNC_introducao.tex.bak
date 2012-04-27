@@ -1,0 +1,140 @@
+%\doublespacing
+%% ------------------------------------------------------------------------- %%
+\chapter{Introdu\c{c}\~{a}o}
+\label{cap:introducao}
+
+\PARstartOne{O}{homem}, desde os prim\'{o}rdios de sua exist\^{e}ncia, sempre buscou
+compreender o comportamento do clima da Terra. Estudos geol\'{o}gicos,
+em diversas regi\~{o}es do planeta, mostram, com muita seguran\c{c}a, que o
+clima n\~{a}o \'{e} est\'{a}vel. Grandes regi\~{o}es que atualmente s\~{a}o desertos j\'{a}
+foram, em tempos remotos, regi\~{o}es tropicais e vice-versa. Pode-se
+afirmar, portanto, que o clima da Terra tem um comportamento
+din\^{a}mico.
+
+Na atmosfera da Terra s\~{a}o encontradas part\'{\i}culas e
+componentes qu\'{\i}micos de origem natural e antropog\^{e}nica. Estes
+elementos, suspensos na atmosfera, chamados de aeross\'{o}is
+atmosf\'{e}ricos, juntamente com a energia solar, a energia geot\'{e}rmica e
+com as condi\c{c}\~{o}es dos oceanos criam um conjunto de fatores que
+modulam o clima da Terra \cite{Meteorologia,Roberts}.
+
+Estudos recentes indicam que uma mudan\c{c}a clim\'{a}tica em escala global
+est\'{a} ocorrendo em um ritmo jamais observado \cite{scott}. Suas conseq\"{u}\^{e}ncias j\'{a}
+s\~{a}o sentidas em diversas partes do planeta.  As raz\~{o}es para tal
+mudan\c{c}a s\~{a}o diagnosticadas e apresentadas no documento ``Climate
+Change 2007: The Physical Science Basis'' \cite{IPCC}. A forte
+presen\c{c}a de aeross\'{o}is de origem antropog\^{e}nica na atmosfera da Terra
+\'{e} apontada como uma das causas. Entretanto, outros
+pesquisadores concluem que a altera\c{c}\~{a}o clim\'{a}tica
+que se observa atualmente \'{e} natural e n\~{a}o est\'{a} relacionada com
+fatores antropog\^{e}nicos \cite{Alexander,Marcel}.
+
+Nos \'{u}ltimos anos, com o avan\c{c}o da fronteira agr\'{\i}cola no Brasil em
+especial nas regi\~{o}es Norte e Centro Oeste, vem sendo praticadas
+queimadas indiscriminadas que lan\c{c}am na atmosfera uma quantidade
+brutal de aeross\'{o}is provocando uma redu\c{c}\~{a}o no tamanho das gotas de
+nuvens o que por sua vez potencializa uma mudan\c{c}a no ciclo
+hidrol\'{o}gico da regi\~{a}o \cite{Andreae,Debry}.
+
+Diante deste quadro, diversas institui\c{c}\~{o}es voltadas a pesquisas
+atmosf\'{e}ricas v\^{e}em ampliando seus laborat\'{o}rios e est\~{a}o investindo em
+ferramentas computacionais e equipamentos para melhorar a
+compreens\~{a}o dos fen\^{o}menos atmosf\'{e}ricos.  Podem-se apontar tr\^{e}s importantes objetivos nestes estudos: o primeiro \'{e} prever, com uma boa anteced\^{e}ncia e com uma alta resolu\c{c}\~{a}o espacial,  eventos atmosf\'{e}ricos severos como chuvas intensas, furac\~{o}es e tornados tornando mais efetivas e precisas as a\c{c}\~{o}es emerg\^{e}nciais; o segundo, trata-se  de determinar como deve ser o clima em cada regi\~{a}o do planeta nas pr\'{o}ximas d\'{e}cadas ou s\'{e}culos norteando dessa forma, a\c{c}\~{o}es governamentais de longo prazo; o terceiro, mas n\~{a}o menos importante, \'{e} determinar se existe um fator antropog\^{e}nico neste fen\^{o}meno.
+
+O aprofundamento do conhecimento na \'{a}rea das ci\^{e}ncias atmosf\'{e}ricas, tem recebido, portanto, muita aten\c{c}\~{a}o n\~{a}o s\'{o} de governos mas tamb\'{e}m da iniciativa privada por causa dos fortes impactos s\'{o}cio-econ\^{o}micos para as regi\~{o}es do globo fortemente afetadas pela r\'{a}pida mudan\c{c}a clim\'{a}tica global.
+
+Para entender melhor os processos
+f\'{\i}sico-qu\'{\i}micos, relacionados \`{a} atmosfera, medidas de campo v\^{e}m sendo
+sistematicamente realizadas e modelos matem\'{a}ticos de funcionamento
+da atmosfera s\~{a}o desenvolvidos e aperfei\c{c}oados. Assim, para dar suporte a
+estes modelos, instrumentos tais como sondas espectrom\'{e}tricas,
+espectr\^{o}metros de massa, contadores de \'{a}gua l\'{\i}quida, medidores de
+concentra\c{c}\~{a}o de aeross\'{o}is, entre outros, tamb\'{e}m v\^{e}m sendo
+desenvolvidos e aperfei\c{c}oados para medidas diretas. N\~{a}o se pode
+deixar de mencionar outros instrumentos, sendo que estes, para
+medidas indiretas, a partir das mais variadas t\'{e}cnicas de
+sensoriamento remoto como os radares instalados, tanto na superf\'{\i}cie da terra quanto
+aqueles embarcados em sat\'{e}lites.
+
+Dentro desse contexto, um instrumento est\'{a} ganhando destaque,
+devido a import\^{a}ncia que \'{e} dada ao par\^{a}metro medido.
+Trata-se do Contador de N\'{u}cleos de Condensa\c{c}\~{a}o de Nuvens (CCNC, sigla em ingl\^{e}s para
+\textit{Cloud Condensation Nuclei Counter}). Esse \'{e} um instrumento
+especialmente desenvolvido para medir a concentra\c{c}\~{a}o de uma
+classe especial de aeross\'{o}is chamados de n\'{u}cleos de condensa\c{c}\~{a}o de nuvens (CCN -\textit{Cloud
+Condensation Nuclei}). O CCN presente na atmosfera, seja por motivos
+naturais e/ou antropog\^{e}nicos, participa de forma decisiva na
+g\^{e}nesis, evolu\c{c}\~{a}o e precipita\c{c}\~{a}o, ou n\~{a}o, de uma nuvem e nas
+propriedades radiativas, tanto das nuvens quanto da atmosfera na sua
+totalidade. Assim sendo, a medida da concentra\c{c}\~{a}o dos CCN \'{e}
+fundamental para compreens\~{a}o do comportamento das nuvens e
+consequentemente do clima da Terra \cite{McMurry,Meteorologia,Roberts,Rosenfeld}.
+
+O princ\'{\i}pio de funcionamento do CCNC, baseado na C\^{a}mara de Wilson, consiste
+em tornar o n\'{u}cleo de condensa\c{c}\~{a}o opticamente detect\'{a}vel e contar
+sua quantidade dentro de um volume determinado. Isto \'{e} conseguido
+expondo o aerossol, ou seja o CCN, a uma atmosfera supersaturada de
+vapor de \'{a}gua dentro de uma c\^{a}mara. Nessa condi\c{c}\~{a}o, o vapor condensa sobre
+a superf\'{\i}cie do aerossol, gerando uma got\'{\i}cula de \'{a}gua \cite{wilson}. Neste
+processo, parte-se do princ\'{\i}pio que uma got\'{\i}cula de \'{a}gua \'{e} formada por um \'{u}nico aerossol.
+
+Diversos contadores de CCN (CCNC) j\'{a} foram desenvolvidos, sendo eles divididos entre os de fluxo cont\'{\i}nuo e os est\'{a}ticos, dependendo da cin\'{e}tica da parcela da atmosfera dentro do instrumento. Nenes et al. estudaram teoricamente o comportamento de quatro tipos destes instrumentos \cite{Nenes}. No caso do presente trabalho, o CCNC \'{e} do tipo est\'{a}tico sendo baseado na c\^{a}mara de nuvens est\'{a}tica por difus\~{a}o (SDCC - \textit{Static Diffusion Cloud Chamber}).
+
+
+
+\section{Justificativa}
+
+Nos primeiros CCNC-SDCC que foram desenvolvidos a concentra\c{c}\~{a}o de got\'{\i}culas \'{e} obtida atrav\'{e}s da contagem visual direta usando t\'{e}cnicas fotogr\'{a}ficas mas, posteriormente, t\'{e}cnicas para medir o espalhamento de luz foram inseridas, permitindo a automatiza\c{c}\~{a}o do processo \cite{twomey,Lala}. A t\'{e}cnica fotogr\'{a}fica de an\'{a}lise visual direta tem limita\c{c}\~{o}es claras, como a de se analisar milhares de fotos manualmente. As t\'{e}cnicas de espalhamento s\~{a}o baseadas na exist\^{e}ncia de uma rela\c{c}\~{a}o entre a concentra\c{c}\~{a}o de part\'{\i}culas e a intensidade da luz espalhada quando essas s\~{a}o iluminadas por um feixe de LASER. Essa rela\c{c}\~{a}o, entretanto, \'{e} bastante complexa, tornando-se necess\'{a}rio a utiliza\c{c}\~{a}o de equa\c{c}\~{o}es emp\'{\i}ricas com coeficientes a serem determinados experimentalmente. Al\'{e}m disso, essa t\'{e}cnica introduz incertezas intr\'{\i}nsecas associadas ao fato de que o espalhamento de luz depende n\~{a}o somente da concentra\c{c}\~{a}o das part\'{\i}culas, mas tamb\'{e}m das "se\c{c}\~{o}es de choques" \ e, portanto, da geometria de cada part\'{\i}cula no caminho do feixe \cite{Oliveira}. Outra quest\~{a}o importante \'{e} o ru\'{\i}do intr\'{\i}nseco  ao sistema eletr\^{o}nico de fotodetec\c{c}\~{a}o  que deteriora a rela\c{c}\~{a}o sinal ru\'{\i}do, principalmente em situa\c{c}\~{o}es de baixa concentra\c{c}\~{a}o \cite{Pinheiro}.
+
+
+Os equipamentos mais modernos incorporam an\'{a}lise fotogr\'{a}fica associada a processamento digital de imagens.
+Nesse contexto, t\'{e}cnicas de vis\~{a}o computacional, como por exemplo binariza\c{c}\~{a}o, podem realizar essa tarefa. Entretanto, este processo de contagem individual imp\~{o}e limites em casos de alta concentra\c{c}\~{a}o de aeross\'{o}is (got\'{\i}culas). Isso \'{e} devido a taxa de sobreposi\c{c}\~{a}o de got\'{\i}culas em uma imagem que normalmente ocorre em concentra\c{c}\~{o}es elevadas de aeross\'{o}is. Para evitar este problema, a concentra\c{c}\~{a}o m\'{a}xima de part\'{\i}culas que se sugere \'{e} de 3000/cm$^3$ \cite{Rose}. Entretanto, alguns trabalhos pr\'{a}ticos mostram claramente que as medidas s\~{a}o acuradas somente at\'{e} concentra\c{c}\~{o}es de 600/cm$^3$ \cite{Frank}, que s\~{a}o muito baixas em compara\c{c}\~{a}o com as concentra\c{c}\~{o}es encontradas em muitas situa\c{c}\~{o}es que atualmente s\~{a}o de interesse \cite{Andreae}.
+
+A t\'{e}cnica de dilui\c{c}\~{a}o de amostras em ar limpo \'{e} uma op\c{c}\~{a}o a ser considerada nos casos de alta concentra\c{c}\~{a}o, mas exige a utiliza\c{c}\~{a}o de equipamentos espec\'{\i}ficos e torna a medida mais lenta.
+
+T\'{e}cnicas de vis\~{a}o computacional mais elaboradas podem ser adicionadas a binariza\c{c}\~{a}o para permitir a detec\c{c}\~{a}o de gotas sobrepostas, podendo aumentar consideravelmente o limite m\'{a}ximo da concentra\c{c}\~{a}o de part\'{\i}culas que pode ser medida.
+
+Na presente tese prop\~{o}e-se um sistema de vis\~{a}o computacional que envolve, principalmente, binariza\c{c}\~{a}o, transformada de dist\^{a}ncia e transformada \emph{watershed}  na determina\c{c}\~{a}o do n\'{u}mero de CCN em um CCNC de c\^{a}mara de nuvens est\'{a}tica por difus\~{a}o (CCNC-SDCC). Al\'{e}m disto, tamb\'{e}m \'{e} proposta uma nova metodologia de calibra\c{c}\~{a}o para o CCNC-SDCC.
+
+
+
+%% ------------------------------------------------------------------------- %%
+\section{Objetivos}
+\label{sec:objetivo}
+
+Esta tese objetiva desenvolver um novo contador de n\'{u}cleos de condensa\c{c}\~{a}o de nuvens baseado na c\^{a}mara de difus\~{a}o est\'{a}tica utilizando t\'{e}cnicas de vis\~{a}o computacional para contagem individual das gotas.
+
+Durante o desenvolvimento desta tese, outros objetivos espec\'{\i}ficos s\~{a}o atingidos, destacando-se:
+
+\begin {itemize}
+
+\item aumento do limite m\'{a}ximo de concentra\c{c}\~{a}o de n\'{u}cleos de condensa\c{c}\~{a}o de nuvens que pode ser medido pelo CCNC-SDCC;
+
+\item desenvolvimento de um prot\'{o}tipo com reduzido consumo de energia, baixo peso e de dimens\~{o}es pequenas quando comparado com outros equipamentos equivalentes;
+
+\item proposi\c{c}\~{a}o de uma nova metodologia de calibra\c{c}\~{a}o para o CCNC;
+
+\item caracteriza\c{c}\~{a}o do funcionamento do CCNC-SDCC atrav\'{e}s de testes de bancada.
+
+%\item contribui\c{c}\~{a}o para o estabelecimento de um grupo de pesquisa  com expertise na \'{a}rea de instrumenta\c{c}\~{a}o eletr\^{o}nica capaz de atender as necessidades espec\'{\i}ficas de desenvolvimento e aperfei\c{c}oamento de equipamentos voltados a pesquisa das ci\^{e}ncias atmosf\'{e}ricas.
+\end{itemize}
+
+\section{Organiza\c{c}\~{a}o da Tese}
+\label{sec:organizacao}
+
+Esta Tese encontra-se organizada numa estrutura de 5 cap\'{\i}tulos e 4 ap\^{e}ndices.
+
+ No Cap\'{\i}tulo 1, de introdu\c{c}\~{a}o, \'{e} contextualiza a import\^{a}ncia do contador de n\'{u}cleos de condensa\c{c}\~{a}o de nuvens dentro das ci\^{e}ncias atmosf\'{e}ricas na atualidade. A justificativa e os objetivos da Tese tamb\'{e}m s\~{a}o colocados neste cap\'{\i}tulo.
+
+ No Cap\'{\i}tulo 2 s\~{a}o apresentados seis contadores de n\'{u}cleos de condensa\c{c}\~{a}o de nuvens que foram desenvolvidos e/ou aperfei\c{c}oados ao longo dos anos por diversos pesquisadores.
+
+ No Cap\'{\i}tulo 3  \'{e} descrito o CCNC-SDCC proposto tanto no aspecto do \emph{hardware} quanto do \emph{software}. A metodologia de calibra\c{c}\~{a}o do volume de amostragem do CCNC-SDCC tamb\'{e}m \'{e} mostrada.
+
+No Cap\'{\i}tulo 4 s\~{a}o apresentados os resultados da segmenta\c{c}\~{a}o de got\'{\i}culas dentro da c\^{a}mara de nuvens, a metodologia empregada para avalia\c{c}\~{a}o global do CCNC-SDCC e os resultados dessa avalia\c{c}\~{a}o.
+
+No Cap\'{\i}tulo 5 s\~{a}o apresentadas as conclus\~{o}es, as contribui\c{c}\~{o}es e s\~{a}o propostos trabalhos futuros.
+
+No ap\^{e}ndice A s\~{a}o descritos os aeross\'{o}is atmosf\'{e}ricos, bem como apresenta sua rela\c{c}\~{a}o com as got\'{\i}culas de nuvens. No ap\^{e}ndice B, a bancada de testes e seus equipamentos s\~{a}o apresentados.  No ap\^{e}ndice C, as incertezas associadas a medida do volume de amostragem e que  interferem diretamente no desempenho do CCNC-SDCC s\~{a}o identificadas e calculadas. Por fim,  o diagrama el\'{e}trico do CCNC-SDCC \'{e} apresentado no ap\^{e}ndice D.
+
+
+%% ------------------------------------------------------------------------- %%

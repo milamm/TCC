@@ -1,0 +1,36 @@
+\ProvidesPackage{rod_teste}
+
+\newlength{\signwidth}
+\setlength{\signwidth}{8cm}
+
+% thickness of the line
+\newlength{\signthickness}
+\setlength{\signthickness}{0.05pt}
+
+% ammount of space left between previous text and th signature line
+\newlength{\signskip}
+\setlength{\signskip}{1.25cm}
+
+% \assinatura{name} -> types a line with name under the line, centralized
+%
+% \assinatura*{name} -> Creates the box with the line and name under
+%     it, but the box has no position assigned. However the line and the
+%     name are centralized with respect to each other.
+
+\newcommand{\assinatura}{\@ifstar{\sign}{\csign}}
+
+\newcommand{\sign}[1]{%
+  \parbox{\signwidth}{\vspace*{\signskip}\centering%
+  \rule{\signwidth}{\signthickness}\\%
+  \nopagebreak #1\par}%
+}
+
+\newcommand{\csign}[1]%
+  {\begingroup\par\centering\sign{#1}\par\endgroup}
+
+% environment "folhadeaprovacao" 
+%   just clearpage correctly to twoside and openright compatibility
+%
+%\newenvironment{folhadeaprovacao}%
+%  {\if@openright\cleardoublepage\else\clearpage\fi\begingroup}%
+%  {\endgroup\if@openright\cleardoublepage\else\clearpage\fi}

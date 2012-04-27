@@ -1,0 +1,44 @@
+\select@language {brazil}
+\contentsline {chapter}{Lista de Figuras}{xi}{chapter*.5}
+\contentsline {chapter}{Lista de Tabelas}{xii}{chapter*.6}
+\contentsline {chapter}{\numberline {1}Introdu\c {c}\~{a}o}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Justificativa}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Objetivos}{4}{section.1.2}
+\contentsline {section}{\numberline {1.3}Organiza\c {c}\~{a}o da Tese}{5}{section.1.3}
+\contentsline {chapter}{\numberline {2}Contadores de N\'{u}cleos de Condensa\c {c}\~{a}o de Nuvens}{6}{chapter.2}
+\contentsline {section}{\numberline {2.1}CCNC-WYO}{7}{section.2.1}
+\contentsline {section}{\numberline {2.2}CCNC-CFDC}{11}{section.2.2}
+\contentsline {section}{\numberline {2.3}CCNC-FUKUTA/SAXENA}{13}{section.2.3}
+\contentsline {section}{\numberline {2.4}CCNC-Chuang}{14}{section.2.4}
+\contentsline {section}{\numberline {2.5}CCNC-Peter}{16}{section.2.5}
+\contentsline {section}{\numberline {2.6}O CCNC-MPI-Chemie}{17}{section.2.6}
+\contentsline {chapter}{\numberline {3}Novo Contador de N\'{u}cleos de Condensa\c {c}\~{a}o de Nuvens - CCNC-SDCC }{19}{chapter.3}
+\contentsline {section}{\numberline {3.1}Descri\c {c}\~{a}o do Hardware}{20}{section.3.1}
+\contentsline {section}{\numberline {3.2}Controle da Supersatura\c {c}\~{a}o}{22}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Unidade de controle}{26}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Software CCNC-SDCC ver1.0}{27}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Descri\c {c}\~{a}o dos algoritmos usados no CCNC-SDCC proposto}{29}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Conceitos b\'{a}sicos de processamento digital de imagens}{30}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}T\'{e}cnica proposta}{33}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Determina\c {c}\~{a}o do volume de amostragem da c\^{a}mara de nuvens}{35}{section.3.4}
+\contentsline {chapter}{\numberline {4}Resultados}{39}{chapter.4}
+\contentsline {section}{\numberline {4.1}Resultados do Sistema de Vis\~{a}o Computacional}{39}{section.4.1}
+\contentsline {section}{\numberline {4.2}Metodologia para avalia\c {c}\~{a}o de desempenho do CCNC-SDCC em bancada}{42}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Aspectos pr\'{a}ticos do processo de compara\c {c}\~{a}o}{45}{subsection.4.2.1}
+\contentsline {subsubsection}{Ajuste da concentra\c {c}\~{a}o de aeross\'{o}is}{45}{subsubsection*.7}
+\contentsline {subsubsection}{Varia\c {c}\~{a}o da concentra\c {c}\~{a}o}{45}{subsubsection*.8}
+\contentsline {subsubsection}{Transit\'{o}rios}{46}{subsubsection*.9}
+\contentsline {subsubsection}{Procedimentos adotados para compara\c {c}\~{a}o}{46}{subsubsection*.10}
+\contentsline {section}{\numberline {4.3}Resultados da compara\c {c}\~{a}o entre o CCNC-SDCC e o CPC}{47}{section.4.3}
+\contentsline {section}{\numberline {4.4}Aspectos mec\^{a}nicos e el\'{e}tricos}{50}{section.4.4}
+\contentsline {chapter}{\numberline {5}Conclus\~{o}es, contribui\c {c}\~{o}es e trabalhos futuros}{54}{chapter.5}
+\contentsline {chapter}{Ap\^endice \numberline {A}Aeross\'{o}is}{57}{Apêndice.a.A}
+\contentsline {section}{\numberline {A.1}N\'{u}cleos de Condensa\c {c}\~{a}o de Nuvens}{58}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}Medidas Aerotransportadas}{59}{section.a.A.2}
+\contentsline {section}{\numberline {A.3}Rela\c {c}\~{a}o entre CCN e Got\'{\i }culas de Nuvens}{60}{section.a.A.3}
+\contentsline {chapter}{Ap\^endice \numberline {B}Bancada geradora de Aeross\'{o}is}{63}{Apêndice.a.B}
+\contentsline {subsection}{\numberline {B.0.1}Prevenindo perda de part\'{\i }culas por deposi\c {c}\~{a}o eletrost\'{a}tica}{64}{subsection.a.B.0.1}
+\contentsline {chapter}{Ap\^endice \numberline {C}Incertezas}{69}{Apêndice.a.C}
+\contentsline {chapter}{Ap\^endice \numberline {D}Diagrama el\'{e}trico do CCNC-SDCC}{73}{Apêndice.a.D}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{75}{chapter*.11}
+\contentsfinish 

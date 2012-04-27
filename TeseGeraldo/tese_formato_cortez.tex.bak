@@ -1,0 +1,305 @@
+% ------------------------------------------------------------------------
+% AMS-LaTeX definitions:     Thesis ++++ Alex, September 1994 ************
+% ------------------------------------------------------------------------
+% Ph.D. Thesis Defended on November 25, 1994 - Modificado por Cortez para o PPGETI em Abril/2008
+% ------------------------------------------------------------------------
+\documentclass[12pt]{report_ppgeti}
+
+\usepackage{ppgeti-V3} 
+
+\usepackage[latin1]{inputenc} % para acentua\c{c}{\~a}o no texto comum
+\usepackage[brazil]{babel}
+\usepackage[centertags]{amsmath}
+\usepackage{amsfonts,amssymb}
+\usepackage{amsthm}
+\usepackage{newlfont}
+
+\usepackage{acronym}% acronimos
+\usepackage{listacronyms}% acronimos
+
+%% antes da correção
+%\usepackage[alf,abnt-repeated-title-omit=yes,abnt-show-options=warn]{abntcite}%cita\c{c}{\~a}o abntex
+
+%% depois da correção
+%\usepackage[alf,abnt-cite-style=AUTHOR, YEAR]{abntcite}
+
+\usepackage[alf]{abntcite} % também deu certo
+
+\usepackage[dvips]{graphicx}% graficos
+\usepackage{hyphenat}
+\usepackage{multicol}% multicolunas
+
+\usepackage{ifthen}
+
+\usepackage{calc}
+\usepackage{amstext}
+\usepackage[center,footnotesize]{subfigure}
+
+\usepackage{multirow}% mesclar cel.
+\usepackage{bigstrut}% mesclar cel.
+
+\usepackage{rangecite}
+
+\usepackage[center]{caption2}
+\usepackage{indentfirst}
+\usepackage{latexsym}
+\input{epsf.tex}
+
+
+
+
+\usepackage{here}
+\usepackage{psfrag}
+
+
+
+
+\hyphenation{a-pre-sen-ta-do re-co-nhe-ci-men-to en-ca-psu-la-do
+ca-rac-te-res con-su-mi-do-res i-ma-gem e-ner-gia re-sul-ta-do
+re-a-li-za-das ca-rac-te-ri-za ou-tras cor-res-pon-de a-pre-sen-tada
+es-pa-lha-men-to po-pu-lar a-na-li-sa-do di-gi-tal ve-ri-fi-ca-dos
+in-tui-to pro-ble-mas e-fe-tu-ar al-ga-ris-mos li-mi-ar a-pre-sen-ta
+re-a-li-za-da al-ga-ris-mo i-ma-gens e-xis-ten-tes es-co-lher
+me-di-ci-na des-co-ber-ta ra-di-o-lo-gis-tas gi-ne-co-lo-gi-a
+es-pa-lha-men-to fo-ca-li-za-do di-fe-ren-te-men-te
+ca-rac-te-ris-ti-cas va-lo-res fi-na-li-da-des ca-rac-te-ri-za-da
+re-a-li-za-da di-mi-nu-in-do e-xem-plo An-te-ri-or-men-te
+ra-dio-lo-gis-ta rea-li-zados  mo-de-los ho-ri-zon-tal
+di-fe-ren-ci-al a-pro-xi-ma-cao vo-lun-ta-ri-os ca-li-bra-cao}
+
+%Ver ca-rac-te-ri-za-da li-mia-ri-za-\c{c}\tilde{a}o a-pro-xi-ma-\c{c}{\~a}o
+%vo-lun-t{\'a}-ri-os  ca-li-bra-\c{c}{\~a}o
+
+
+
+\permissionfalse    % n{\~a}o p{\~o}e a p{\'a}gina de permiss{\~a}o para publica\c{c}{\~a}o
+
+\dedicate{Aos meus pais, C{\'\i}cero e Jos{\'e}lia, \\e {\`a} minha namorada
+Andr{\'e}a \\pelo incentivo e apoio}
+
+
+
+%%%% colocar estes dados para MONOGRAFIA DE GRADUAÇÃO
+
+%\grad % gradua\c{c}{\~a}o   
+%\tipo{Monografia}  \GRAUfalse % para monografia de gradua\c{c}{\~a}o, default {\'e} \GRAUtrue para p{\'o}s
+
+%\A_de_conhecimento{Vis{\~a}o Computacional} % {\'a}rea de conhecimento -> SOMENTE gradua\c{c}{\~a}o
+
+%\curso{Curso de Gradua\c{c}{\~a}o em Engenharia de Teleinform{\'a}tica} % OBS.: SOMENTE SE PODE DEFINIR UM CURSO, SENDO NECESSÁRIO COMENTAR O OUTRO E 	                                                                            %      VICE-VERSA
+
+%%% FIM DOS DADOS DA MONOGRAFIA DE GRADUAÇÃO
+
+%%%% colocar estes dados para PROJETO DE MESTRADO
+
+\PROJtrue
+\tipo{Projeto de Mestrado} %\QUALIFtrue % para exame de qual. de mestrado
+\curso{Programa de P{\'o}s-Gradua\c{c}{\~a}o em Engenharia de Teleinform{\'a}tica} % Pós SOMENTE: para \msc ou \phd ou projetos
+\candidato{Candidato} % somente para projetos
+% Obs.: NÃO ESQUECER DE CHAMAR O COMANDO \assinaturas NO LOCAL ONDE VOCÊ DESEJA POR AS ASSINATURAS - GERALMENTE AO FINAL DO DOCUMENTO, ANTES DA BIBLIOGRAFIA - TAMBÉM SOMENTE PARA PROJETOS
+
+
+
+%%% FIM DOS DADOS PARA PROJETO DE MESTRADO
+
+
+%%%% colocar estes dados para DISSERTAÇÃO DE MESTRADO
+
+% \msc   \tipo{Disserta\c{c}{\~a}o}  % para disserta\c{c}{\~a}o de mestrado
+% \curso{Programa de P{\'o}s-Gradua\c{c}{\~a}o em Engenharia de Teleinform{\'a}tica} % Pós SOMENTE: para \msc ou \phd ou EXAMES DE QUALIFICAÇÃO
+
+
+%%% FIM DOS DADOS DA DISSERTAÇÃO DE MESTRADO
+
+%%%% colocar estes dados para EXAME DE QUALIFICAÇÃO DE MESTRADO
+
+%\msc \tipo{Exame de Qualifica\c{c}{\~a}o de Mestrado} \QUALIFtrue % para exame de qual. de mestrado
+%\curso{Programa de P{\'o}s-Gradua\c{c}{\~a}o em Engenharia de Teleinform{\'a}tica} % Pós SOMENTE: para \msc ou \phd ou EXAMES DE QUALIFICAÇÃO
+
+%%% FIM DOS DADOS PARA EXAME DE QUALIFICAÇÃO DE MESTRADO
+
+%%%% colocar estes dados para TESE DE DOUTORADO
+
+%\phd  \tipo{Tese}    % para tese de doutorado
+%\curso{Programa de P{\'o}s-Gradua\c{c}{\~a}o em Engenharia de Teleinform{\'a}tica} % Pós SOMENTE: para \msc ou \phd ou EXAMES DE QUALIFICAÇÃO
+
+
+%%% FIM DOS DADOS para TESE DE DOUTORADO
+
+%%%% colocar estes dados para EXAME DE QUALIFICAÇÃO DE DOUTORADO
+
+%\phd \tipo{Exame de Qualifica\c{c}{\~a}o de Doutorado} \QUALIFtrue  % para exame de qualifica\c{c}{\~a}o de doutorado
+%\curso{Programa de P{\'o}s-Gradua\c{c}{\~a}o em Engenharia de Teleinform{\'a}tica} % Pós SOMENTE: para \msc ou \phd ou EXAMES DE QUALIFICAÇÃO ou \projeto
+
+
+%%% FIM DOS DADOS para EXAME DE QUALIFICAÇÃO DE DOUTORADO
+
+
+%%%% Definições gerais, SERVINDO PARA QUAIQUER DOCUMENTO
+
+\area_concentracao{Sinais e Sistemas} % Pós SOMENTE: para \msc ou \phd ou projetos
+\linha_de_pesquisa{Processamento de Biosinais} % Pós SOMENTE: para \msc ou \phd ou projetos
+\palavras_chave{snakes, visão computacional} % Pós SOMENTE: para projetos
+
+%\versaoparcial  % vers{\~a}o parcial
+
+% ORIENTADORES
+\twosupervisors % necess{\'a}rio somente se existir dois orientadores: orientador e co-orientador (cosupervisor)
+
+
+\supervisor{Prof. Dr. Paulo C{\'e}sar Cortez}{Orientador}
+\cosupervisor{Prof. Dr. Marcelo Alcântara Holanda}{Co-Orientador}
+
+% MEMBROS DA BANCA
+\firstreader{Dr. Jo{\~a}o Marques de Carvalho}
+\secondreader{Dr. Murilo Pereira de Almeida}
+\thirdreader{Dra. F{\'a}tima N. Sombra de Medeiros} 
+\fourthreader{Dr. Giovanni Cordeiro Barroso}
+\fifthreader{Dr. Jos{\'e} Marques Soares}
+
+
+% DATAS IMPORTANTES
+\copyrightyear{2008}
+\submitdate{Junho - 2008} % entrega
+\convocation{Junho}{2008} % m{\^e}s da defesa
+\data_aprovacao{10/06/2008} % data da aprova\c{c}{\~a}o
+
+% ------------------------------------------------------------------------
+
+\title{DESENVOLVIMENTO E ESTUDO COMPARATIVO DE ALGORITMOS
+     DE CONTORNOS ATIVOS PARA A SEGMENTAÇÃO E
+ IDENTIFICAÇÃO DE NÓDULOS PULMONARES EM IMAGENS DE
+       TOMOGRAFIA COMPUTADORIZADA DO TÓRAX}
+
+\author{Tarique da Silveira Cavalcante}
+
+\address{Fortaleza - Cear{\'a}}
+
+\university{Universidade Federal do Cear{\'a}}
+
+
+
+%\nobib
+%\nofront   % caso colocado n{\~a}o p{\~o}e as p{\'a}ginas referentes a tabelas, figuras e permiss{\~a}o
+
+
+
+
+\begin{document}
+
+
+
+% ------------------------------------------------------------------------
+{
+\typeout{:?0000} % Don't bother with over/under-full boxes
+\modelo
+
+
+
+% \begin{resumo}
+% \PARstartOne{N}{este} trabalho é desenvolvido um sistema de Visão
+% Computacional utilizando, capaz de segmentar as imagens de
+% Tomografia Computadorizada dos pulmões e as estruturas pulmonares em
+% voluntários sadios e em pacientes com Doença Pulmonar Obstrutiva
+% Crônica (DPOC). Inicialmente é feito um estudo sobre a Tomografia
+% Computadorizada, aplicada na aquisição das imagens e, sobre as
+% técnicas de segmentação aplicadas as imagens dos pulmões e dos
+% algoritmos aplicados na detecção e quantificação do enfisema
+% pulmonar. A análise dos resultados busca avaliar a eficiência,
+% precisão e otimização do sistema proposto comparando-o com o sistema
+% Osiris, e também com outros dois algoritmos para a segmentação dos
+% pulmões. Os resultados da segmentação do sistema proposto
+% apresenta-se mais eficiente do que os dois algoritmos e mais preciso
+% do que o \emph{software} Osiris. O sistema proposto chamado de SDEP,
+% faz a segmentação das faixas das densidades pulmonares através da
+% mascara colorida (pseudo-cores), aplicanco várias cores em uma única
+% imagem e quantifica cada cor por área e porcentagem, enquanto que o
+% sistema Osiris apenas usa uma cor por vez em cada imagem. O sistema
+% SDEP apresenta também uma ferramenta que realiza a sobreposição dos
+% histogramas, o qual permitir uma análise visual melhor da evolução
+% da componente do enfisema. Portanto, o sistema SDEP possibilita um
+% auxílio ao diagnóstico, bem como mostra-se uma boa ferramenta de
+% pesquisa para análise do enfisema pulmonar.
+% \end{resumo}
+% 
+% \begin{abstract}
+% \PARstartOne{T}{his} work describes a Computer Vision system which
+% can make lung Computer Tomography image segmentation and its
+% structures. Image of healthy voluntaries and patients with Chronic
+% Obstructive Pulmonary Disease (COPD) were analyzed. Initially a
+% study about Computer Tomography, applied to image acquisition, lung
+% segmentation techniques and emphysema detection and quantification
+% was performed. The obtained results were compared to Osiris system
+% and two lung segmentation algorithms results, in order to evaluate
+% the proposed system efficiency, precision and optimization. Proposed
+% system results were more efficient than the two mentioned algorithms
+% and more precise than Osiris software.  The proposed system, named
+% SDEP, performs lung density range segmentation through a
+% multi-colored (pseudo-colors) mask application at an image,
+% calculating absolute percentage and area of each colored region.
+% This is an advantage to Osiris system which uses only one color per
+% analyzed image. SDEP also include a histogram superposition tool
+% that permits a better visual analysis of emphysema component
+% evolution. Then, the proposed system can help medical diagnostics,
+% besides it is a good research tool against pulmonary emphysema.
+% \end{abstract}
+% 
+\typeout{:?1111} % Process All Errors from Here on
+
+% ------------------------------------------------------------------------
+%
+% ------------------------------------------------------------------------
+
+
+{
+\typeout{Resumo e Abstract}
+}
+
+% ------------------------------------------------------------------------
+{ \typeout{Agradecimentos}
+\include{Agradecimentos_John}
+}
+
+ \include{AcronismoJohn} % no arquivo simbolos.tex e coloque todos os seus
+                         % definido da mesma forma que agradecimentos.
+
+
+% ------------------------------------------------------------------------
+\afterpreface
+
+% Início do texto e inclusão de capítulos
+% ------------------------------------------------------------------------
+{ \typeout{Introduction}
+\include{Cap1_John}
+\assinaturas  % somente para projetos
+}
+% ------------------------------------------------------------------------
+
+%\include{Cap2_John} %cap 2
+%
+%\include{Cap3_John} %cap 3
+%
+%\include{Cap4_John} %cap 4
+%
+%\include{Cap5_John} %cap 5
+%
+%\include{Cap6_John} % cap 6
+
+\pagestyle{headings}
+
+
+\bibliographystyle{abnt-alf} %abnt-alf, abnt-num
+\bibliography{John} % arquivo .bib
+
+\chapter*{Apêndices}  % nome 
+\appendix    % para iniciar os apêndices
+%%%\chapter*{Anexos} % nome 
+%\anex        % para iniciar anexos
+\include{ApendiceA_TC} %Usar este ao inv{\'e}s do Cap2_John
+
+
+
+%%%\include{ApendiceB_John}
+\end{document}
+
+% ------------------------------------------------------------------------

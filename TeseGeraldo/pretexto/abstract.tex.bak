@@ -1,0 +1,22 @@
+\chapter*{Abstract}
+\label{CHP:ABSTRACT}%%
+\thispagestyle{empty}
+\PARstartOne{C}{onsidering} the rapid climate change indicatives on a global scale, deeper knowledge in development
+of these studies, instruments to measure various physical parameters of the atmosphere are being developed
+and constantly improved. This article describes a system for automatic measurement of the concentration of
+atmospheric aerosols by computer vision, the procedures and infrastructure of the laboratory for evaluation,
+and finally presents the results of an intercomparison. The measurement system developed uses digital
+image processing techniques. The process consists of capturing a sample of atmospheric air inside a static
+thermal diffusion chamber supersaturated with water vapor. In this condition, the molecules of water vapor
+condenses on the aerosol captured in the air, producing water droplets. These droplets fall by gravity and
+cross a laser light beam, that defines a sampling volume, which makes them visible. A series of images of
+this process is digitized and processed for identification and isolation of the droplets present in the sample
+volume. These drops are then automatically counted and their concentration is calculated using binarization,
+watershed transform and count by connected regions techniques. A new method for determination of sample
+volume is also presented. The results of the intercomparison experiments under controlled conditions, using
+as aerosol ammonium sulfate, indicate that the procedures are appropriate in determining the concentration of atmospheric aerosols.
+
+
+%\newline
+%\newline
+\noindent \textbf{Keywords:}watershed; digital image processing; atmospheric aerosol; meteorological instrumentation .

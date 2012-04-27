@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="F:/Programas/ImageJ/ij.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Java/jdk1.7.0_01/jre/lib/ext/jai_codec.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/jai-1_1_2_01/jai-1_1-mr-doc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Java/jdk1.7.0_01/jre/lib/ext/jai_core.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/jai-1_1_2_01/jai-1_1-mr-doc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="F:/Programas/ImageJ/plugins/ij-plugins_toolkit.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

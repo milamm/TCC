@@ -1,0 +1,89 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{1.45.2.1 }
+
+\bibitem[Barnard \emph{et al.} 2007]{Barnard:2007}
+\abntrefinfo{Barnard \emph{et al.}}{BARNARD \emph{et al.}}{2007}
+{BARNARD, M. \emph{et al.} A vision based motion interface for mobile phones.
+  In:  \emph{The 5th International Conference on Computer Vision Systems}.
+  Bielefeld, Germany: Pergamon Press, 2007.}
+
+\bibitem[Campo, Navarrete e Garc{\'\i}a-Rubio 2007]{Campo:2006}
+\abntrefinfo{Campo, Navarrete e Garc{\'\i}a-Rubio}{CAMPO; NAVARRETE;
+  GARC{\'I}A-RUBIO}{2007}
+{CAMPO, C. \emph{et al.} Performance evaluation of {J2ME} and {Symbian}
+  applications in smart camera phones. In:  \emph{International Conference on
+  Consumer Electronics}. Las Vegas, NV: IEEE Society Press, 2007. p.~1--2.}
+
+\bibitem[Drab e Artner 2005]{Drab:2005}
+\abntrefinfo{Drab e Artner}{DRAB; ARTNER}{2005}
+{DRAB, S.~A.; ARTNER, N.~M. Motion detection as interaction techinique for
+  games \& aplications on mobile devices. In:  \emph{Proc. of PERVASIVE 2005}.
+  Munich, Germany: Springer, 2005.  (Lecture Notes in Computer Science,
+  v.~3468).}
+
+\bibitem[Grunnet-Jepsen, Salsman e Sweetser 2006]{Jepsen:2006}
+\abntrefinfo{Grunnet-Jepsen, Salsman e Sweetser}{GRUNNET-JEPSEN; SALSMAN;
+  SWEETSER}{2006}
+{BLAKELY SKOLOFF TAYLOR \& ZAFMAN. A. Grunnet-Jepsen, K. Salsman e J. Sweetser.
+  \emph{Handleld Device For Handheld Vision Based Absolute Pointing System}.
+  2006.
+US 2006/0152487, 21 jul. 2005, 13. Jul 2006.}
+
+\bibitem[Hannuksela, Sangi e Heikkil{\"a} 2006]{Hannuksela:2006}
+\abntrefinfo{Hannuksela, Sangi e Heikkil{\"a}}{HANNUKSELA; SANGI;
+  HEIKKIL{\"A}}{2006}
+{HANNUKSELA, J. \emph{et al.} Motion-based handwriting recognition for mobile
+  interaction. In:  \emph{The 18th International Conference on Pattern
+  Recognition (ICPR'06)}. Washington: IEEE Computer Society, 2006.}
+
+\bibitem[Hannuksela, Sangi e Heikkila 2007]{Hannuksela:2007}
+\abntrefinfo{Hannuksela, Sangi e Heikkila}{HANNUKSELA; SANGI; HEIKKILA}{2007}
+{HANNUKSELA, J. \emph{et al.} Vision-based motion estimation for interaction
+  with mobile devices.
+\emph{Computer Vision and Image Understanding}, v.~108, p. 188--195, 2007.}
+
+\bibitem[Haro \emph{et al.} 2005]{Haro:2005}
+\abntrefinfo{Haro \emph{et al.}}{HARO \emph{et al.}}{2005}
+{HARO, A. \emph{et al.} Mobile camera-based user interaction.
+\emph{Lecture Notes in Computer Science}, v.~3766, p. 79--89, 2005.}
+
+\bibitem[Harrison 1998]{Harrison:1998}
+\abntrefinfo{Harrison}{HARRISON}{1998}
+{HARRISON, B.~L. Squeeze me, hold me, tilt me! an exploration of manipulative
+  user interfaces. In:  \emph{In Proc of CHI 1998}. New York: ACM
+  Press/Addison-Wesley Publishin, 1998. p. 17--24.}
+
+\bibitem[Hinckley \emph{et al.} 2000]{Hinckley:2000}
+\abntrefinfo{Hinckley \emph{et al.}}{HINCKLEY \emph{et al.}}{2000}
+{HINCKLEY, K. \emph{et al.} Sensing techiniques for mobile interaction. In:
+  \emph{Proc of UIST 2000}. New York: ACM, 2000. p. 91--100.}
+
+\bibitem[Masui e Siio 2000]{Masui:2000}
+\abntrefinfo{Masui e Siio}{MASUI; SIIO}{2000}
+{MASUI, T.; SIIO, I. Real--world graphical user interfaces.
+\emph{Lecture Notes In Computer Science}, v.~1927, p. 72--84, 2000.}
+
+\bibitem[Mobile~Phones 2009]{MobileWorks:2009}
+\abntrefinfo{Mobile~Phones}{MOBILE~PHONES}{2009}
+{MOBILE~PHONES: The basics of mobile phones. 2009.
+Dispon{\'\i}vel em:
+  $<$http://www.celtnet.org.uk/mobile-phone/mobile-phone-information.php$>$.}
+
+\bibitem[Oakley \emph{et al.} 2004]{Oakley:2004}
+\abntrefinfo{Oakley \emph{et al.}}{OAKLEY \emph{et al.}}{2004}
+{OAKLEY, I. \emph{et al.} Tilt and feel: Scrolling with vibrotactile display.
+  In:  BUSS, M. \emph{et al.} (Ed.). \emph{Proceedings of EuroHaptics 2004}.
+  Munich Germany: [s.n.], 2004. p. 316--323.}
+
+\bibitem[Wang, Zhai e Canny 2006]{Wang:2006}
+\abntrefinfo{Wang, Zhai e Canny}{WANG; ZHAI; CANNY}{2006}
+{WANG, J. \emph{et al.} Camera phone based motion sensing: Interaction,
+  techiniques, applications and performance study. In:  \emph{Proceedings of
+  the 19th annual ACM symposium on User interface software and technology}.
+  Montreux, Switzerland: ACM, 2006. p. 101--110.}
+
+\end{thebibliography}

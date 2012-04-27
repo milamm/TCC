@@ -1,0 +1,8 @@
+\doublespacing
+%% ------------------------------------------------------------------------- %%
+\chapter{Incertezas}
+\label{cap:incertezas}
+
+O valor da incerteza do volume de amostragem \'{e} obtido a partir de uma an\'{a}lise da repercuss\~{a}o que um erro no posicionamento do papel milimetrado, utilizado para calibra\c{c}\~{a}o da rela\c{c}\~{a}o \emph{pixel}/milimetro, em rela\c{c}\~{a}o a c\^{a}mera digital pode acarretar.
+
+Como mencionado anteriormente, um dos procedimentos para se determinar o volume de amostragem consiste em posicionar um papel milimetrado alinhado com o LASER da c\^{a}mara de nuvens. Considerando-se que o LASER tem aproximadamente 2 mm de di\^{a}metro, foi admitido um poss\'{\i}vel erro de posicionamento de \pm 1.0 mm em rela\c{c}\~{a}o ao eixo axial do mesmo. Assim sendo, foram tiradas tr\^{e}s fotografias do papel milimetrado nas posi\c{c}\~{o}es 1.0mm atr\'{a}s do eixo, no centro do eixo e 1.0 mm a frente do eixo. Isto implica em tr\^{e}s diferentes rela\c{c}\~{o}es \emph{pixel}/milimetro, sendo que a correta \'{e} aquela cujo papel milimetrado  encontra-se perfeitamente alinhado com o centro axial do LASER. A possibilidade de um erro de \pm 1.0 mm \'{e} uma  condi\c{c}\~{a}o bastante conservadora, pois, na pr\'{a}tica o LASER fornece uma boa orienta\c{c}\~{a}o no momento de se posicionar o papel milimetrado para a determin\c{c}\~{a}o da rela\c{c}\~{a}o \emph{pixel}/milimetro.

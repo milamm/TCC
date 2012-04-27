@@ -1,0 +1,138 @@
+%\doublespacing
+%% ------------------------------------------------------------------------- %%
+\chapter{Introdu\c{c}\~{a}o}
+\label{cap:introducao}
+
+\PARstartOne{O}{homem}, desde os prim\'{o}rdios de sua exist\^{e}ncia, sempre buscou
+compreender o comportamento do clima da Terra. Estudos geol\'{o}gicos,
+em diversas regi\~{o}es do planeta, mostram, com muita seguran\c{c}a, que o
+clima n\~{a}o \'{e} est\'{a}vel. Grandes regi\~{o}es que atualmente s\~{a}o desertos j\'{a}
+foram, em tempos remotos, regi\~{o}es tropicais e vice-versa. Pode-se
+afirmar, portanto, que o clima da Terra tem um comportamento
+din\^{a}mico.
+
+Na atmosfera da Terra s\~{a}o encontradas part\'{\i}culas e
+componentes qu\'{\i}micos de origem natural e antropog\^{e}nica. Estes
+elementos, suspensos na atmosfera, chamados de aeross\'{o}is
+atmosf\'{e}ricos, juntamente com a energia solar, a energia geot\'{e}rmica e
+com as condi\c{c}\~{o}es dos oceanos criam um conjunto de fatores que
+modulam o clima da Terra \cite{Meteorologia,Roberts}.
+
+Estudos recentes indicam que uma mudan\c{c}a clim\'{a}tica em escala global
+est\'{a} ocorrendo em um ritmo jamais observado. Suas conseq\"{u}\^{e}ncias j\'{a}
+s\~{a}o sentidas em diversas partes do planeta.  As raz\~{o}es para tal
+mudan\c{c}a s\~{a}o diagnosticadas e apresentadas no documento ``Climate
+Change 2007: The Physical Science Basis'' \cite{IPCC}. A forte
+presen\c{c}a de aeross\'{o}is de origem antropog\^{e}nica na atmosfera da Terra
+\'{e} apontada como uma importante causa. Entretanto, outros
+pesquisadores concluem que a altera\c{c}\~{a}o clim\'{a}tica
+que se observa atualmente \'{e} natural e n\~{a}o est\'{a} relacionada com
+fatores antropog\^{e}nicos \cite{Alexander,Marcel}.
+
+Nos \'{u}ltimos anos, com o avan\c{c}o da fronteira agr\'{\i}cola no Brasil em
+especial nas regi\~{o}es Norte e Centro Oeste, vem sendo praticadas
+queimadas indiscriminadas que lan\c{c}am na atmosfera uma quantidade
+brutal de aeross\'{o}is provocando uma redu\c{c}\~{a}o no tamanho das gotas de
+nuvens o que por sua vez potencializa uma mudan\c{c}a no ciclo
+hidrol\'{o}gico da regi\~{a}o \cite{Andreae,Debry}.
+
+Diante deste quadro, diversas institui\c{c}\~{o}es voltadas a pesquisas
+atmosf\'{e}ricas v\^{e}em ampliando seus laborat\'{o}rios e est\~{a}o investindo em
+ferramentas computacionais e equipamentos para melhorar a
+compreens\~{a}o dos fen\^{o}menos atmosf\'{e}ricos. Um dos objetivos destes
+investimentos \'{e} prever a altera\c{c}\~{a}o clim\'{a}tica, em que
+janela temporal, e conseq\"{u}entemente determinar quais os impactos
+s\'{o}cio-econ\^{o}micos para as regi\~{o}es do globo fortemente afetadas. Outro
+objetivo, n\~{a}o menos importante, \'{e} determinar se existe um fator
+antropog\^{e}nico neste fen\^{o}meno.
+
+Para entender melhor os processos
+f\'{\i}sicos-qu\'{\i}micos, relacionados \`{a} atmosfera, medidas de campo v\^{e}m sendo
+sistematicamente realizadas e modelos matem\'{a}ticos de funcionamento
+da atmosfera s\~{a}o desenvolvidos e aperfei\c{c}oados. E, para dar suporte a
+estes modelos, instrumentos tais como sondas espectrom\'{e}tricas,
+espectr\^{o}metros de massa, contadores de \'{a}gua l\'{\i}quida, medidores de
+concentra\c{c}\~{a}o de aeross\'{o}is, entre outros, tamb\'{e}m v\^{e}m sendo
+desenvolvidos e aperfei\c{c}oados para medidas diretas. N\~{a}o se pode
+deixar de mencionar outros instrumentos, sendo que estes, para
+medidas indiretas, a partir das mais variadas t\'{e}cnicas de
+sensoriamento remoto como os radares instalados, tanto na superf\'{\i}cie da terra quanto
+aqueles embarcados em sat\'{e}lites.
+
+Dentro desse contexto, um instrumento est\'{a} ganhando destaque,
+devido a import\^{a}ncia que \'{e} dada ao par\^{a}metro por ele medido.
+Trata-se do Contador de N\'{u}cleos de Condensa\c{c}\~{a}o de Nuvens (CCNC, sigla em ingl\^{e}s para
+\textit{Cloud Condensation Nuclei Counter}). Este \'{e} um instrumento
+especialmente desenvolvido para medir a concentra\c{c}\~{a}o de uma
+classe especial de aeross\'{o}is chamados de CCN (\textit{Cloud
+Condensation Nuclei}). O CCN presente na atmosfera, seja por motivos
+naturais e/ou antropog\^{e}nicos, participa de forma decisiva na
+g\^{e}nesis, evolu\c{c}\~{a}o e precipita\c{c}\~{a}o ou n\~{a}o de uma nuvem e nas
+propriedades radiativas, tanto das nuvens quanto da atmosfera na sua
+totalidade. Assim sendo, a medida da concentra\c{c}\~{a}o dos CCNs \'{e}
+fundamental para compreens\~{a}o do comportamento das nuvens e
+conseq\"{u}entemente do clima da Terra \cite{McMurry}.
+
+O princ\'{\i}pio de funcionamento do CCNC, baseado na C\^{a}mara de Wilson
+\cite{wilson}, consiste
+em tornar o n\'{u}cleo de condensa\c{c}\~{a}o opticamente detect\'{a}vel e contar
+sua quantidade dentro de um volume determinado. Isto \'{e} conseguido
+expondo o aerossol, ou seja o CCN, a uma atmosfera supersaturada de
+vapor dentro de uma c\^{a}mara. Nesta condi\c{c}\~{a}o o vapor condensa sobre
+a superf\'{\i}cie do aerossol, gerando uma got\'{\i}cula de \'{a}gua. Neste
+processo, \'{e} afirmado que uma got\'{\i}cula de \'{a}gua \'{e} formada por um \'{u}nico aerossol.
+
+Existem algumas varia\c{c}\~{o}es de CCNC. Cada uma apresenta vantagens
+espec\'{\i}ficas em rela\c{c}\~{a}o \`{a}s outras. No caso do presente trabalho, o
+CCNC \'{e} baseado na c\^{a}mara t\'{e}rmica de difus\~{a}o est\'{a}tica
+SDTC (\textit{Static Diffusion Thermal Chamber}).
+
+De baixa complexidade, baixo custo e volume reduzido, se comparado a
+outros, o CCNC-SDTC tem sido objeto de diversos trabalhos, tanto de
+an\'{a}lise quanto de aperfei\c{c}oamento e \'{e} bastante utilizado em
+laborat\'{o}rios de qu\'{\i}mica da atmosfera e f\'{\i}sica de nuvens.
+
+Nos primeiros modelos do CCNC-SDTC, a concentra\c{c}\~{a}o era obtida
+contando-se visualmente as gotas formadas dentro da SDTC e que estavam contidas
+em um volume de amostragem definido por uma fonte de luz. Por se
+tratar de um processo din\^{a}mico (crescimento e precipita\c{c}\~{a}o de gotas)
+a contagem \'{e} feita a partir de registros fotogr\'{a}ficos das gotas.
+Posteriormente, um m\'{e}todo autom\'{a}tico de contagem de gotas foi
+implementado. Este m\'{e}todo \'{e} baseado na rela\c{c}\~{a}o entre a intensidade
+de luz espalhada pelas gotas, ao cruzarem um feixe luz LASER, e a
+sua concentra\c{c}\~{a}o. Desta forma, sua medida autom\'{a}tica foi poss\'{\i}vel
+atrav\'{e}s da instala\c{c}\~{a}o de um fotodetector na SDTC  \cite {Lala}.
+
+\section{Justificativa}
+
+A determina\c{c}\~{a}o dos coeficientes de calibra\c{c}\~{a}o da rela\c{c}\~{a}o entre a
+sa\'{\i}da do fotodetector  instalado na sa\'{\i}da da STDC e a concentra\c{c}\~{a}o
+de CCN \'{e} uma tarefa complexa, \'{a}rdua e necessita ser realizada
+periodicamente. Isto exige uma an\'{a}lise visual de milhares de
+fotografias, incorporando ao resultado final erros devido a este
+processo que \'{e} totalmente subjetivo. Al\'{e}m disso, a intensidade de
+luz espalhada \'{e} proporcional a integral do n\'{u}mero de gotas,
+multiplicada pela se\c{c}\~{a}o transversal das gotas e n\~{a}o somente ao
+n\'{u}mero de gotas, adicionando-se uma importante incerteza neste
+procedimento \cite{Oliveira}.
+
+Com a evolu\c{c}\~{a}o da eletr\^{o}nica e de t\'{e}cnicas de processamento digital
+de sinais e imagens, o valor da concentra\c{c}\~{a}o de CCN passou a ser
+obtido atrav\'{e}s da contagem autom\'{a}tica e direta das gotas de \'{a}gua
+formadas dentro da SDTC, dispensando desta forma um enorme esfor\c{c}o
+de calibra\c{c}\~{a}o \cite{Oliveira}. Trata-se, portanto, de uma contagem
+individual de gotas e, por assim ser, a medida da concentra\c{c}\~{a}o pode ser considerada obtida de forma direta e absoluta. Al\'{e}m disto, esta \'{e} uma t\'{e}cnica que confere ao CCNC outras melhorias consider\'{a}veis nos seguintes aspectos: maior toler\^{a}ncia no que se refere a pot\^{e}ncia do LASER e a sensibilidade do fotossensor e elimina\c{c}\~{a}o da incerteza na medida da concentra\c{c}\~{a}o causada pelo tamanho da se\c{c}\~{a}o transversal das gotas. T\'{e}cnicas simples de vis\~{a}o computacional, como por exemplo binariza\c{c}\~{a}o, podem realizar esta tarefa. Entretanto, este processo de contagem
+individual imp\~{o}e limites em casos de alta concentra\c{c}\~{a}o de aeross\'{o}is (gotas).
+Isto \'{e} devido a taxa de sobreposi\c{c}\~{a}o de gotas em uma imagem
+bi-dimensional que normalmente ocorre em concentra\c{c}\~{o}es elevadas de aeross\'{o}is. Para evitar este problema, em ensaios de intercompara\c{c}\~{a}o, a concentra\c{c}\~{a}o m\'{a}xima de part\'{\i}culas que se sugere \'{e} de 3000/cm3. CITAR XXXXX.  A t\'{e}cnica de dilui\c{c}\~{a}o de amostras em ar limpo \'{e} uma op\c{c}\~{a}o a ser considerada nestes casos de alta concentra\c{c}\~{a}o mas, exige a utiliza\c{c}\~{a}o de equipamentos espec\'{\i}ficos e torna a medida mais demorada. T\'{e}cnicas de vis\~{a}o computacional mais elaboradas podem ser adicionadas a binariza\c{c}\~{a}o para permitir a detec\c{c}\~{a}o de gotas sobrepostas.
+
+
+
+
+
+%% ------------------------------------------------------------------------- %%
+\section{Objetivo}
+\label{sec:objetivo}
+
+Esta Tese apresenta o prot\'{o}tipo de um CCNC-SDTC de baixo custo cuja a medida da concentra\c{c}\~{a}o dos n\'{u}cleos de condensa\c{c}\~{a}o de nuvens \'{e} estruturada em t\'{e}cnicas de vis\~{a}o computacional. Uma robusta metodologia de calibra\c{c}\~{a}o do CCNC-SDTC tamb\'{e}m \'{e} apresentada.
+%% ------------------------------------------------------------------------- %%

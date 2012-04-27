@@ -1,0 +1,138 @@
+\doublespacing
+%% ------------------------------------------------------------------------- %%
+
+\chapter{Bancada geradora de Aeross\'{o}is}
+\label{cap:bancada}
+\PARstartOne{A}{metodologia} para avalia\c{c}\~{a}o de desempenho do CCNC-SDCC consiste praticamente na mesma que foi utilizada por Frank e colaboradores \cite{Frank}.  Isto \'{e}, foi realizada uma intercompara\c{c}\~{a}o entre um contador de part\'{\i}culas condens\'{a}veis (Ultrafine Condensation Particle Counter Model 3025) e o CCNC-SDCC. Para tal, foi utilizada, no Laborat\'{o}rio de Qu\'{\i}mica da Part\'{\i}cula do Instituto Max Planck na Universidade de Mainz - Alemanha, uma bancada capaz de produzir aeross\'{o}is sob condi\c{c}\~{o}es controladas de concentra\c{c}\~{a}o, bem como de di\^{a}metro de part\'{\i}cula. Na Figura \ref{bga} s\~{a}o apresentados os diversos componentes da bancada: compressor, armadilha, atomizador, reservat\'{o}rio de sulfato de am\^{o}nia, secador, classificador eletrost\'{a}tico, e o contador de part\'{\i}culas.
+
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[scale=0.7]{eps/bga2.eps}\\
+\end{center}
+\caption{\label{bga}\hspace{-0.1em} bancada geradora de aeross\'{o}is.}
+\end{figure}
+
+
+O processo de gera\c{c}\~{a}o de aeross\'{o}is inicia-se em um compressor com sa\'{\i}da de ar filtrado. Em seguida, este ar filtrado passa por uma armadilha de \'{a}gua. Neste ponto, o ar pressurizado, filtrado e seco \'{e} injetado no atomizador TSI3076 que esta acoplado a um reservat\'{o}rio, contendo uma solu\c{c}\~{a}o de sulfato de am\^{o}nia (NH$_4$)$_2$SO$_4$. Outras subst\^{a}ncias higosc\'{o}picas podem ser utilizadas como por exemplo nitrato de am\^{o}nia NH$_4$NO$_3$, cloreto de s\'{o}dio NaCl e etc. Na sa\'{\i}da deste atomizador, tem-se os aeross\'{o}is propriamente dito, embora polidisperssivo e com uma umidade muito alta. A remo\c{c}\~{a}o da umidade \'{e} feita por um secador a base de silicagel.
+
+Como o processo de condensa\c{c}\~{a}o do vapor de \'{a}gua \'{e} altamente dependente do tamanho do aerossol, ou seja , do tamanho do n\'{u}cleo de condensa\c{c}\~{a}o, exige-se um controle deste par\^{a}metro. Isto \'{e}, exige-se que o aerossol seja monodispersivo. Para tal, utiliza-se na sa\'{\i}da do secador um classificador eletrost\'{a}tico, que no caso \'{e} o TSI3080. Por fim, a medida da concentra\c{c}\~{a}o das part\'{\i}culas \'{e} feita por um contador de part\'{\i}culas condens\'{a}veis (CPC), no caso o TSI3025A.
+
+O contador de part\'{\i}culas condens\'{a}veis  TSI3025A \'{e} capaz de medir aeross\'{o}is com um di\^{a}metro de 3nm at\'{e} 3$\mu$m numa faixa de concentra\c{c}\~{a}o  de 0 at\'{e} 9,99$\cdot$10$^{4}$part\'{\i}culas $\cdot$ cm$^{-3}$. Em condi\c{c}\~{o}es normais, seu sensor de part\'{\i}culas opera em uma atmosfera saturada de Butanol-1.  Esta caracter\'{\i}stica o torna sens\'{\i}vel,  n\~{a}o apenas aos aeross\'{o}is respons\'{a}veis pela forma\c{c}\~{a}o das nuvens e das chuvas, mas a qualquer aerossol. Por esta raz\~{a}o, no processo de intercompara\c{c}\~{a}o, normalmente se utiliza apenas aeross\'{o}is higosc\'{o}picos (como por exemplo o sulfato de am\^{o}nia, nitrato de am\^{o}nia ou cloreto de s\'{o}dio) que s\~{a}o capazes de sensibilizar tanto o CCNC-SDCC quanto o CPC TSI3025A.
+
+
+\begin{figure}[hbt]
+\begin{center}
+\includegraphics[scale=0.1]{eps/TSI3074FILTRO.eps}\\
+\end{center}
+\caption{\label{TSI3074FILTRO}\hspace{-0.1em} filtro para remo\c{c}\~{a}o de gotas de \'{o}leo, \'{a}gua e particulados (TSI3074B). }
+\end{figure}
+
+\begin{figure}[hbt]
+\begin{center}
+\includegraphics[scale=0.5]{eps/TSI3076ATOMIZADOR.eps}\\
+\end{center}
+\caption{\label{TSI3074FILTRO}\hspace{-0.1em} diagrama esquem\'{a}tico do atomizador (TSI3076).}
+\end{figure}
+
+\begin{figure}[hbt]
+\begin{center}
+\includegraphics[scale=0.1]{eps/TSI3062SECADOR.eps}\\
+\end{center}
+\caption{\label{TSI3062SECADOR}\hspace{-0.1em} secador (TSI3062).}
+\end{figure}
+
+
+
+\begin{figure}[hbt]
+\begin{center}
+\includegraphics[scale=0.9]{eps/TSI3025CPC.eps}\\
+\end{center}
+\caption{\label{TSI3025CPC}\hspace{-0.1em} contador de part\'{\i}culas condens\'{a}veis  CPC (TSI 3025A).}
+\end{figure}
+
+\begin{figure}[hbt]
+\begin{center}
+\includegraphics[scale=0.1]{eps/TSI3080CE.eps}\\
+\end{center}
+\caption{\label{TSI3080CE}\hspace{-0.1em} classificador eletrost\'{a}tico (TSI 3080).}
+\end{figure}
+
+
+\begin{figure}[hbt]
+\begin{center}
+\includegraphics[scale=0.1]{eps/BANCADA_FOTO.eps}\\
+\end{center}
+\caption{\label{BANCADA_FOTO}\hspace{-0.1em} vista geral da bancada (TSI 3080).}
+\end{figure}
+
+
+
+
+\section{Aspectos pr\'{a}ticos do processo de intercompara\c{c}\~{a}o}
+Considerando-se que este trabalho envolve fen\^{o}menos f\'{\i}sicos reais, algumas considera\c{c}\~{o}es do ponto de vista pr\'{a}tico, no que diz respeito ao ajuste da concentra\c{c}\~{a}o sua varia\c{c}\~{a}o e seus transit\'{o}rios, s\~{a}o importantes de serem postas.
+
+
+\subsection {Ajuste da concentra\c{c}\~{a}o}
+O ajuste da concentra\c{c}\~{a}o \'{e} feito de forma emp\'{\i}rica. Isto \'{e}, dissolve-se o sulfato de am\^{o}nia em \'{a}gua destilada em uma propor\c{c}\~{a}o que corresponda a  uma dada concentra\c{c}\~{a}o que se deseja medir no CPC. Pequenas corre\c{c}\~{o}es podem ser realizadas, adicionando-se \'{a}gua destilada ou sulfato de am\^{o}nia para redu\c{c}\~{a}o ou aumento da concentra\c{c}\~{a}o, respectivamente. Outra forma de se obter pequenos ajustes \'{e} aumentando ou diminuindo a press\~{a}o de ar comprimido no sistema atrav\'{e}s de uma v\'{a}lvula.
+
+
+Foram definidas 3 faixas de concentra\c{c}\~{o}es para realiza\c{c}\~{a}o dos experimentos de intercompara\c{c}\~{a}o:
+\begin {itemize}
+\item baixa ... abaixo de1500 part\'{\i}culas $\cdot$ cm$^{-3}$
+\item m\'{e}dia.....1500-3000 part\'{\i}culas $\cdot$ cm$^{-3}$
+\item alta..........acima de 3000 part\'{\i}culas $\cdot$ cm$^{-3}$
+\end{itemize}
+
+Estas faixas de valores de concentra\c{c}\~{a}o de part\'{\i}culas foram escolhidas, pelo fato destas representarem situa\c{c}\~{o}es normalmente encontradas na natureza \cite{Andreae}.
+
+
+
+
+\subsection {Varia\c{c}\~{a}o da concentra\c{c}\~{a}o}
+A concentra\c{c}\~{a}o medida pelo CPC varia ao logo do tempo como \'{e} mostrado na Figura \ref{concvar}. Esta varia\c{c}\~{a}o \'{e} uma conseq\"{u}\^{e}ncia do processo de produ\c{c}\~{a}o de aerossol, devida a uma remo\c{c}\~{a}o de \'{a}gua e de sulfato em propor\c{c}\~{o}es diferentes. Este fen\^{o}meno, tem forte implica\c{c}\~{a}o no procedimento de intercompara\c{c}\~{a}o. Isto porque as m\'{e}dias de medidas obtidas em um longo per\'{\i}odo de tempo n\~{a}o fazem sentido neste caso, mas sim a compara\c{c}\~{a}o da medida obtida pelo CCNC-SDCC e a medida obtida pelo CPC em um curto espa\c{c}o de tempo.
+
+\begin{figure}[hbt]
+\begin{center}
+\includegraphics[scale=0.7]{eps/concvar.eps}\\
+\end{center}
+\caption{\label{concvar}\hspace{-0.1em} varia\c{c}\~{a}o da concentra\c{c}\~{a}o da bancada geradora de aerossois.}
+\end{figure}
+
+
+
+\subsection {Transit\'{o}rios}
+O CPC foi projetado para trabalhar com um fluxo cont\'{\i}nuo de aerossol. O modelo TSI3025A, utilizado como refer\^{e}ncia neste trabalho, possui uma bomba que procura sempre manter o fluxo de 0,3 litros/min de aerossol constante em seu sistema de medi\c{c}\~{a}o. Como o CCNC-SDCC encontra-se em paralelo com o CPC, ao ser acionada a sua bomba para a realiza\c{c}\~{a}o da medida, este sofre uma altera\c{c}\~{a}o moment\^{a}nea de fluxo como mostra as grandes varia\c{c}\~{o}es destacadas na Figura \ref{transiente}. Estes transit\'{o}rios devem ser descartados no processo de intercompara\c{c}\~{a}o.
+
+\subsection{Procedimentos adotados para intercompara\c{c}\~{a}o}
+Os efeitos da varia\c{c}\~{a}o da concentra\c{c}\~{a}o ao longo do tempo, bem como os efeitos transit\'{o}rios impostos ao CPC devido ao princ\'{\i}pio operacional do CCNC-SDCC imp\~{o}em restri\c{c}\~{o}es nos dados de sa\'{\i}da do CPC usado como refer\^{e}ncia no processo de intercompara\c{c}\~{a}o. Considera-se como medida v\'{a}lida do CPC, para efeito de intercompara\c{c}\~{a}o, as 50 \'{u}ltimas medidas antes do acionamento da bomba do CCNC-SDCC. Na Figura \ref{transiente} s\~{a}o destacadas as regi\~{o}es consideradas e descartadas do sinal do CPC no processo de intecompara\c{c}\~{a}o.
+
+%ucpc_59.xls arquivo de origem de gr\'{a}fico
+\begin{figure}[hbt]
+\begin{center}
+\includegraphics[scale=0.7]{eps/transiente4.eps}\\
+\end{center}
+\caption{\label{transiente}\hspace{-0.1em} concentra\c{c}\~{a}o medida pelo CPC. }
+\end{figure}
+
+
+
+\subsection{Prevenindo perda de part\'{\i}culas}
+As medidas de aerossois requerem um sistema de dutos para condu\c{c}\~{a}o destes aerossois at\'{e} os mais variados instrumentos de medi\c{c}\~{a}o. Dependendo das caracter\'{\i}sticas f\'{\i}sicas dos aeross\'{o}is e dos dutos diversos mecanismos de perda de part\'{\i}culas podem interferir nas medi\c{c}\~{o}es \cite{SL}. Uma destas causas chama-se de perda por deposi\c{c}\~{a}o eletrost\'{a}tica. Ela ocorre por conta do mecanismo de forma\c{c}\~{a}o do aerossol. Com o objetivo de verificar estas perdas, um experimento foi realizado econsistia em comparar a medida da concentra\c{c}\~{a}o realizada pelo CPC em 2 condi\c{c}\~{o}es: a primeira utilizando um duto coletor de 3 metros de pl\'{a}stico e a segunda utilizando um duto de a\c{c}o inox de mesmo comprimento.
+
+% colocar TABELA
+% Plastico	A\c{c}o inox		
+% 2272	2611	339	12.9778595
+
+
+
+\begin{figure}[hbt]
+\begin{center}
+\includegraphics[scale=1.0]{eps/dutos.eps}\\
+\end{center}
+\caption{\label{duto}\hspace{-0.1em} perdas em fun\c{c}\~{a}o do tipo de duto. }
+\end{figure}
+
+
+
+
