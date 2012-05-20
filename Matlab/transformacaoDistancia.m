@@ -2,7 +2,7 @@
 clear all;
 close all;
 
-image = imread('circulo.jpg');
+image = imread('HEME.jpg');
 
 %limiar
 image_bin = im2bw(image(:,:,1),0.6);
@@ -97,5 +97,5 @@ while(notConv)
         end
 
     end
-    imshow(image_out, [0 100],'InitialMagnification',500);     
+    imshow(image_out, [0 255],'InitialMagnification',500);     
 end

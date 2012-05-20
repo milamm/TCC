@@ -1,33 +1,113 @@
 package image;
 
+import ij.IJ;
 import ij.ImagePlus;
+import ij.ImageStack;
+import ij.WindowManager;
+import ij.gui.HistogramWindow;
+import ij.gui.Plot;
 import ij.process.ByteProcessor;
 import ij.process.ColorProcessor;
 import ij.process.ImageProcessor;
+import ij.process.ImageConverter;
 
+import java.awt.Image;
 import java.awt.color.ColorSpace;
 import java.awt.image.BufferedImage;
 import java.awt.image.ColorModel;
 import java.awt.image.ComponentColorModel;
+import java.awt.image.RenderedImage;
 import java.util.ArrayList;
 import java.util.Vector;
+
+import javax.media.jai.JAI;
+import javax.media.jai.KernelJAI;
+import javax.media.jai.RenderedOp;
+import javax.media.jai.operator.ErodeDescriptor;
+import javax.swing.text.MaskFormatter;
 
 import org.ietf.jgss.Oid;
 
 import net.sf.ij_plugins.color.ColorSpaceConvertion;
 
 public class ImageOperations {
-	private static ImagePlus imagep = new ImagePlus();
+	
+	public static ImageProcessor copyImage(ImageProcessor image) {
+		ImageProcessor image_copy = image.createProcessor(image.getWidth(), image.getHeight());
+		image_copy.setPixels(image.getPixelsCopy());
+		return image_copy;
+	} 
 
+	public static ImageProcessor switchBlackWhite(ImageProcessor image) {
+		ImageProcessor switchedIm = copyImage(image);
+		
+		for(int y = 0; y < image.getHeight(); y++) {
+			for(int x = 0; x < image.getWidth(); x++) {
+				if(image.getPixel(x, y) == 0)
+					switchedIm.putPixelValue(x, y, 255);
+				else if(image.getPixel(x, y) == 255)
+					switchedIm.putPixelValue(x, y, 0);
+				else {
+					IJ.error("Error", "Image is not binary.");
+					return null;
+				}
+			}
+		}
+		
+		return switchedIm;
+	}
+	
 	public static ByteProcessor[] convertfromRGBtoYCbCr(BufferedImage rgb) {
 		ColorProcessor rgpCP = new ColorProcessor(rgb);
 		return ColorSpaceConvertion.rgbToYCbCr(rgpCP);
 	}
 	
+	public static ByteProcessor[] convertfromRGBtoHSB(BufferedImage image) {
+		ImagePlus imagePlus = new ImagePlus("", image);
+		ImageProcessor imageP;
+		ImageStack imageStack;
+	    ByteProcessor[] imageHSB = new ByteProcessor[3];
+	    
+		new ImageConverter(imagePlus).convertToHSB();
+		imageStack = imagePlus.getStack();
+		
+		//imageHSB = (ByteProcessor[]) imageStack.getImageArray();
+		
+		imageP = imageStack.getProcessor(1);
+		imageHSB[0] = new ByteProcessor(imageP.getWidth(), imageP.getHeight(), (byte[]) imageP.getPixels(), imageP.getColorModel());
+		imageP = imageStack.getProcessor(2);
+		imageHSB[1] = new ByteProcessor(imageP.getWidth(), imageP.getHeight(), (byte[]) imageP.getPixels(), imageP.getColorModel());
+		imageP = imageStack.getProcessor(3);
+		imageHSB[2] = new ByteProcessor(imageP.getWidth(), imageP.getHeight(), (byte[]) imageP.getPixels(), imageP.getColorModel());
+		
+		return imageHSB;
+	}
+	
+	public static double[] normalizedHistogram(ImageProcessor image) {
+		//ImagePlus imagePlus = new ImagePlus("", image);
+		int[] hist;
+		double[] hist_norm = new double[256];
+		int N = image.getWidth()*image.getHeight();
+		
+		//hist = new HistogramWindow(imagePlus).getHistogram();
+		hist = image.getHistogram();
+		//Histogram Normalization
+		/*for (int i = 0; i < hist.length; i++) {
+			if(hist_max < hist[i]) {
+				hist_max = hist[i]; 
+	        }
+	    }*/
+		for (int i = 0; i < hist.length; i++) {
+			hist_norm[i] = (float) hist[i]/N; 
+	    }
+		
+		return hist_norm;
+	}
+	
 	public static ByteProcessor doThresholding(ImageProcessor image, int threshold) {
 		byte[] pixels = (byte[]) image.getPixels();
 		int[] pixels_int = new int[pixels.length];
-		byte[] pixels_out = pixels;
+		byte[] pixels_out = pixels.clone();
 		
 		for(int i=0; i<pixels.length; i++)
 			pixels_int[i] = Integer.parseInt(""+pixels[i]);
@@ -45,9 +125,68 @@ public class ImageOperations {
 		
 		return new ByteProcessor(image.getWidth(),image.getHeight(),pixels_out,colorModel);
 	}
-
-	public static int countRBC(ImageProcessor im, int diameter) {
+	
+	public static ByteProcessor doBinaryThresholding(ImageProcessor image, int threshold) {
+		byte[] pixels = (byte[]) image.getPixels();
+		int[] pixels_int = new int[pixels.length];
+		byte[] pixels_out = pixels.clone();
 		
+		for(int i=0; i<pixels.length; i++)
+			pixels_int[i] = Integer.parseInt(""+pixels[i]);
+		
+		for(int i=0; i<pixels.length; i++) {
+			int value = pixels[i] & 0xff; 
+			if(value < threshold)
+				pixels_out[i] = 0;
+			else
+				pixels_out[i] = (byte) 255;
+		}
+		
+		ColorModel colorModel = new ComponentColorModel(
+				ColorSpace.getInstance(ColorSpace.CS_GRAY), false, false, 1, 0);
+		
+		return new ByteProcessor(image.getWidth(),image.getHeight(),pixels_out,colorModel);
+	}
+
+	public static ByteProcessor doOtsuThresholding(ImageProcessor image) {
+		double[] hist_norm = normalizedHistogram(image);
+		int L = (int) Math.pow(2,image.getColorModel().getComponentSize(0)); // number of gray levels
+		double[] P = new double[L];
+		double[] m = new double[L];
+		double mG;                     //Average intensity of entire image
+		double[] var = new double[L];   //between-class variance
+		double max_var = 0;
+		int optimum_k = 0;             //Otsu's threshold value              
+		
+		for(int k = 0; k < L; k++) {
+			if(k==0) {
+				P[k] = hist_norm[k];
+				m[k] = k*hist_norm[k];
+			} else {
+				P[k] = P[k-1] + hist_norm[k];   //Probability of pixel with intensity <= k
+				m[k] = m[k-1] + k*hist_norm[k]; //Average intensity up to level k
+			}
+			/*for(int i = 0; i <= k; i++) {
+				P[k] = P[k] + hist_norm[i];    //Probability of pixel with intensity <= k
+				m[k] = m[k] + i*hist_norm[i];  //Average intensity up to level k
+			}*/
+		}
+		mG = m[L-1];
+		
+		//Compute between-class variance
+		for(int k = 0; k < L; k++) {
+			var[k] = Math.pow( mG * P[k] - m[k], 2 ) / ( P[k] * (1-P[k]) );
+			if(var[k] > max_var) {
+				max_var = var[k];
+				optimum_k = k;
+			}
+		}
+		
+		return doBinaryThresholding(image, optimum_k);
+	}
+	
+	public static int countRBC(ImageProcessor im, int diameter) {
+		ImagePlus imagep = new ImagePlus();
 		//double diameter = 31;
 		int w = im.getWidth();
 		int h= im.getHeight();
@@ -484,7 +623,6 @@ public class ImageOperations {
 		return;
 	}
 	
-
 	public static double pixelsDistance(Pixel p1, Pixel p2) {
 		int x1 = p1.getX();
 		int y1 = p1.getY();
@@ -492,19 +630,183 @@ public class ImageOperations {
 		int y2 = p2.getY();
 		return Math.pow(Math.pow(x2-x1, 2) + Math.pow(y2-y1, 2), 0.5);
 	}
-	
-	/*public static void calculateFFT() {
-		FFT fft = new FFT();
-		fft.run("");
-		Raster data = image.getData();
-		int[] aux = null;
-		int[] pixels = data.getPixels(0, 0, image.getWidth(),
-				image.getHeight(), aux);
-		FFT fft = new FFT(pixels, image.getWidth(), image.getHeight());
-		ColorModel colorModel = new ComponentColorModel(
-				ColorSpace.getInstance(ColorSpace.CS_GRAY), false, false, 1, 0);
 
-		return new ByteProcessor(image.getWidth(), image.getHeight(),
-				fft.getPixels(), colorModel);
-	}*/
+	public static ByteProcessor distanceTransform(ImageProcessor imageproc) {
+		ImageProcessor image = imageproc.convertToByte(false);
+		new ImagePlus("",image).show();
+		//System.out.println(image.getSliceNumber());
+		//int pixel_in, pixel_out;
+		int out,max_graylevel=0,min_graylevel=255,pixelValue;
+		byte ws_d;
+		//byte[] pixels_in = (byte[]) image.getPixels();
+		int height = image.getHeight();
+		int width  = image.getWidth();
+		ByteProcessor distanceImage = new ByteProcessor(width, height);
+		ImagePlus distImagePlus =  new ImagePlus("",distanceImage);
+		
+		for (int yy=0; yy<height; yy++) {
+			for(int xx=0; xx<width; xx++) {
+				if(image.getPixel(xx,yy)==0) 
+					distanceImage.putPixelValue(xx,yy,0);
+			    else {
+			        out = 0;
+			        ws_d = 1;
+			        while (out==0) {
+			        	for(int y1=(yy-ws_d); y1<=(yy+ws_d); y1++) {
+			        		for(int x1=(xx-ws_d); x1<=(xx+ws_d); x1++) {
+			        			if( (y1>=0) && (x1>=0) && (y1<height) && (x1<width)) {
+			        				if(image.getPixel(x1,y1)==0) {
+			        					//new ImagePlus("",image).show();
+			        					pixelValue = (255-ws_d) & 0xff;
+			        					distanceImage.putPixel(xx,yy,pixelValue);
+			        					out=1;
+			        					if( (255-ws_d)>max_graylevel ) 
+			        						max_graylevel = 255-ws_d;
+			        					if( (255-ws_d)<min_graylevel )
+			        						min_graylevel = 255-ws_d;
+			                        }
+			        				distImagePlus.show();
+			                    }
+			                    if(out==1) break;
+			                 }
+	                         if(out==1) break;
+		                 }
+			             ws_d++;
+			        }
+			    }
+			}
+		}
+		
+		distanceImage.setMinAndMax(0, max_graylevel);
+		return distanceImage;
+		/*ImageProcessor G_ = image.createProcessor(width, height); //new ByteProcessor(width, height);
+		ImageProcessor G  = image.createProcessor(width, height); //new ByteProcessor(width, height);
+		//int[] pixels_out = (int[]) G_.getPixels();
+		
+		for(int i = 0; i < height; i++) {
+			for(int j = 0; j < width; j++) {
+				G_.putPixelValue(i, j, height*width);
+				G.putPixelValue(i, j, height*width);
+			}
+		}
+		
+	// Algoritmo de Saito e Toriwaki
+		
+		// Transformacao 1 (linhas)
+		// forward scan
+		for(int i = 0; i<height; i++) {
+			//pixel = pixels_in[i*width];
+			pixel_in = image.getPixel(i, 0);
+		    //if( pixel_in == 0) {
+		    	//pixels_out[i*width] = 0;
+		    	pixel_out = G_.getPixel(i, 0);
+		    	pixel_out = 0;
+		    	G_.putPixelValue(i, 0, 0);
+		    //}
+		    for (int j = 1; j<width; j++) {
+		    	//pixel_in = pixels_in[i*width + j];
+		    	pixel_in  = image.getPixel(i, j);
+		    	pixel_out = G_.getPixel(i, j);
+		        if(pixel_in != 0) {
+		        	//pixels_out[i*width + j] = (G_.getPixel(i,j-1)^(1/2) + 1)^2;
+		        	pixel_out = (G_.getPixel(i,j-1)^(1/2) + 1)^2;
+		        	G_.putPixelValue(i, j, pixel_out);
+		        } else {
+		        	//pixels_out[i*width + j] = 0;
+		        	//pixel_out = 0;
+		        	G_.putPixelValue(i, 0, 0);
+		        }
+		    }
+		}
+		
+		return G_;*/
+		
+	}
+	
+	public static int computeCutOffFrequency(ImageProcessor fftIm) {
+		//int cutoffFreq = 110;
+		//double[] fftProfile = fftIm.getLine(0, 0, fftIm.getWidth()-1, fftIm.getHeight()-1);
+		double[] fftProfile = fftIm.getLine(0, fftIm.getHeight()/2, fftIm.getWidth()-1, fftIm.getHeight()/2);
+		double[] xValues = new double[fftProfile.length];
+		double avF = 0, sdF = 0; //average frequency, standard deviation
+		int cutoffFreq = 0;
+		   
+		for(int i = 0; i < xValues.length; i++)
+		  	xValues[i] = i;
+		Plot fftProfilePlot = new Plot("FFT Profile", "", "Magnitude", xValues, fftProfile);
+		fftProfilePlot.show();
+		    
+		for(int i = 0; i < fftProfile.length; i++) 
+			avF += fftProfile[i];
+		avF = avF/fftProfile.length;
+		
+		for(int i = 0; i < fftProfile.length; i++) 
+			sdF += Math.pow(fftProfile[i] - avF, 2);
+		sdF = Math.sqrt(sdF/fftProfile.length);	
+		
+		/*for(int i = 0; i < fftProfile.length; i++) { 
+		   	if(fftProfile[i] >= avF + sdF) {
+		   		cutoffFreq = fftProfile.length/2-(i-1);
+		   		break;
+		   	}
+		}*/
+		cutoffFreq = (int) avF + 2 * (int)sdF;
+		return cutoffFreq;
+	}
+
+	public static ByteProcessor AND(ImageProcessor image1, ImageProcessor image2) {
+		int width1 = image1.getWidth();
+		int height1 = image1.getHeight();
+		int width2 = image2.getWidth();
+		int height2 = image2.getHeight();
+		ByteProcessor imagesAND = null;
+		int pixel1, pixel2;
+		
+		try {
+			if(width1==width2 && height1==height2) {
+				
+				imagesAND = new ByteProcessor(width1,height1);
+				for(int y = 0; y < height1; y++) {
+					for(int x = 0; x < width1; x++) {
+						pixel1 = image1.getPixel(x, y);
+						pixel2 = image2.getPixel(x, y);
+						if(pixel1==0 || pixel2==0) {
+							imagesAND.set(x, y, 0);
+						} else
+							imagesAND.set(x, y, pixel1);
+					}
+				}
+				return imagesAND;
+			} else 
+				throw new Exception();
+		} catch (Exception e) {
+			System.out.println("Images are not of the same size.");
+		}
+		return imagesAND;
+	}
+
+	public static ImagePlus runFFT(ImagePlus image) {
+		ImagePlus fft = image;
+		
+		WindowManager.setTempCurrentImage(fft);
+		IJ.run("FFT");
+		
+		fft = WindowManager.getCurrentImage();
+		//fft.show();
+		
+		return fft;
+	}
+	
+	public static ImagePlus runInverseFFT(ImagePlus fftIm) {
+		ImagePlus fftFilteredIm = fftIm;
+		
+		WindowManager.setTempCurrentImage(fftFilteredIm);
+		IJ.run("Inverse FFT");
+		
+		fftFilteredIm = WindowManager.getCurrentImage();
+		fftFilteredIm.show();
+		
+		return fftFilteredIm;
+	}
+
 }

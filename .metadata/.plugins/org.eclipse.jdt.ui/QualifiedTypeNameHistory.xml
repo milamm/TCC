@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.IncompatibleClassChangeError"/>
+<fullyQualifiedTypeName name="java.sql.Blob"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.lang.Package"/>
+<fullyQualifiedTypeName name="BloodCellsCountFrame"/>
+<fullyQualifiedTypeName name="javax.swing.text.MaskFormatter"/>
+<fullyQualifiedTypeName name="ij.process.ImageConverter"/>
+<fullyQualifiedTypeName name="ij.ImageStack"/>
+<fullyQualifiedTypeName name="ij.IJ"/>
+<fullyQualifiedTypeName name="ij.plugin.Histogram"/>
+<fullyQualifiedTypeName name="ij.gui.HistogramWindow"/>
+<fullyQualifiedTypeName name="java.awt.Image"/>
+<fullyQualifiedTypeName name="javax.media.jai.operator.ErodeDescriptor"/>
+<fullyQualifiedTypeName name="java.awt.image.RenderedImage"/>
+<fullyQualifiedTypeName name="javax.media.jai.RenderedOp"/>
+<fullyQualifiedTypeName name="javax.media.jai.JAI"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="javax.media.jai.KernelJAI"/>
+<fullyQualifiedTypeName name="image.MorphologicalOp"/>
+<fullyQualifiedTypeName name="ij.process.ByteProcessor"/>
+<fullyQualifiedTypeName name="ij.WindowManager"/>
+<fullyQualifiedTypeName name="ij.process.ImageProcessor"/>
+<fullyQualifiedTypeName name="image.ImageOperations"/>
+<fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
+<fullyQualifiedTypeName name="ij.ImagePlus"/>
+</qualifiedTypeNameHistroy>

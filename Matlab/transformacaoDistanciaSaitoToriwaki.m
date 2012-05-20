@@ -2,7 +2,8 @@
 clear all;
 close all;
 
-image = imread('circulo.jpg');
+%image = imread('circulo_cut1.jpg');
+image = imread('HEME.jpg');
 
 %limiar
 image_bin = im2bw(image(:,:,1),0.6);
@@ -10,9 +11,9 @@ imshow(image_bin,'InitialMagnification',800);
 
 [h,w] = size(image_bin);
 max_dist = w*h;
-max_gray = max_dist/5;
-image1 = max_dist*ones(h,w);
-image2 = image1;
+max_gray = 0;% max_dist/5;
+%image1 = max_dist*ones(h,w);
+%image2 = image1;
 
 F = image_bin;
 G_ = max_dist*ones(h,w);
@@ -22,12 +23,16 @@ figure;
 
 % forward scan
 for i = 1 : h     
-    if(F(i,1)==0)
+    %if(F(i,1)==0)
         G_(i,1) = 0;
-    end
+    %end
     for j = 2 : w
         if(F(i,j)~=0)
-            G_(i,j) = (G_(i,j-1)^(1/2) + 1)^2;
+            gray_level = (G_(i,j-1)^(1/2) + 1)^2;
+            G_(i,j) = gray_level;
+            if(gray_level > max_gray)
+                max_gray = gray_level;
+            end
         else
             G_(i,j) = 0;
         end
@@ -38,7 +43,11 @@ end
 for i = 1 : h 
     G(i,:) = G_(i,:);
     for j = (w-1) : -1 : 1
-        G(i,j) = min([(G(i,j+1)^(1/2) + 1)^2 G_(i,j)]);
+        gray_level = min([(G(i,j+1)^(1/2) + 1)^2 G_(i,j)]);
+        G(i,j) = gray_level;
+        if(gray_level > max_gray)
+            max_gray = gray_level;
+        end
     end
 end
 imshow(G,[0 max_gray],'InitialMagnification',800);
@@ -67,6 +76,7 @@ H_ = max_dist*ones(h,w);
 H = max_dist*ones(h,w);
 
 % top-bottom
+max_gray = 0;
 for j = 1 : w
     H_(1,j) = G(1,j);
     for i = 2 : h
@@ -78,19 +88,28 @@ for j = 1 : w
             end
             for n = 0 : n_max
                 if ( G(i-1,j) + (n+1)^2 ) < G(i+n,j)
-                    H_(i+n,j) = G(i-1,j) + (n+1)^2;
+                    gray_level = G(i-1,j) + (n+1)^2; 
+                    H_(i+n,j) = gray_level;
+                    if(gray_level > max_gray)
+                        max_gray = gray_level;
+                    end
                 else 
                     break;
                 end
             end  
         else
-            H_(i,j) = G(i,j);
+            gray_level = G(i,j);
+            H_(i,j) = gray_level;
+            if(gray_level > max_gray)
+                max_gray = gray_level;
+            end
         end
     end
 end
 imshow(H_,[0 max_gray],'InitialMagnification',800);
 
 % bottom-top
+max_gray = 0;
 for j = 1 : w
     H(h,j) = H_(h,j);
     for i = (h-1) : -1 : 1
@@ -102,13 +121,21 @@ for j = 1 : w
             end
             for n = 0 : n_max
                 if ( H_(i+1,j) + (n+1)^2 ) < H_(i-n,j)
-                    H(i-n,j) = H_(i+1,j) + (n+1)^2;
+                    gray_level = H_(i+1,j) + (n+1)^2;
+                    H(i-n,j) = gray_level;
+                    if(gray_level > max_gray)
+                        max_gray = gray_level;
+                    end
                 else 
                     break;
                 end
             end  
         else
-            H(i,j) = H_(i,j);
+            gray_level = H_(i,j);
+            H(i,j) = gray_level;
+            if(gray_level > max_gray)
+                max_gray = gray_level;
+            end
         end
     end
 end
