@@ -1,0 +1,186 @@
+%/**
+% * @file tese.tex
+% * @brief This file have the configuration parameters of Dr. Degree thesis.
+% * @ingroup Documentation
+% * @author $Author: rodcosta $
+% * @date $Date: 2009/07/12 18:54:10 $
+%**
+\documentclass[12pt,a4paper,oneside,final]{book}
+%%% para vers\~{o}es parciais do dumento final utilizar:
+%\documentclass[12pt,a4paper,draft]{book}
+%\documentclass[12pt,a4paper,twoside,fleqn,draft]{book}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PREAMBULO DO DOCUMENTO COME\c{C}A AQUI
+%\usepackage{natbib}
+%\bibliographystyle{elsart-harv}
+%inclui coisas da abnt
+%\bibliographystyle{abntcite}
+%\usepackage{hvfoat}
+\usepackage{datetimepor}
+\usepackage{monografia}
+\usepackage{multicol}
+\usepackage{rotating}
+\usepackage{monografia_defs}
+\usepackage[none]{hyphenat}
+% Permite utilizar configuracoes da linguagem portugesa do Brasil e Inglesa
+\usepackage[english,brazil]{babel}
+% Permite especificar codificacao das entradas (caracteres acentuados - á - sem usar \'a)
+\usepackage[latin1]{inputenc}
+\usepackage{assinatura}
+\usepackage{color}
+\usepackage{multirow}
+% \bibstyle{abnt-alf}
+\usepackage{sidecap}
+\usepackage{ifthen}
+\usepackage{psfrag}
+\usepackage{supertabular}
+
+
+%
+\newcommand{\titulo}{MDiag: Ferramenta de Diagnóstico de Falhas em Memória para Sistemas Operacionais Linux.}
+\newcommand{\autor}{Mila Maracaba Moreira}
+\newcommand{\orientador}{Prof. Dr. Paulo César Cortez}
+\newcommand{\coorientador}{}
+\newcommand{\membroa}{Prof. Dr. }
+\newcommand{\membrob}{Prof. }
+\renewcommand{\eqref}[1]{equa\c{c}\~{a}o~\ref{#1}}
+\newcommand{\eqrefp}[1]{equa\c{c}\~{o}es~\ref{#1}}
+\newcommand{\ok}{$\blacksquare$}
+\newcommand{\nok}{$\square$}
+
+\newcommand{\secao}{\section}
+\newcommand{\capitulo}{\chapter}
+\newcommand{\subsecao}{\subsection}
+
+\newcommand{\secref}[1]{se\c{c}\~{a}o~\ref{#1}}
+\newcommand{\secrefp}[1]{se\c{c}\~{o}es~\ref{#1}}
+\newcommand{\tabref}[1]{Tabela~\ref{#1}}
+\newcommand{\tabrefp}[1]{Tabelas~\ref{#1}}
+\newcommand{\figref}[1]{Figura~\ref{#1}}
+\newcommand{\figrefp}[1]{Figuras~\ref{#1}}
+
+\usepackage[breaklinks,final,pdftitle={\titulo},pdfauthor = {\autor}]{hyperref}
+
+%\usepackage{hyperref}
+\usepackage[sort]{cite}
+\usepackage[alf,abnt-and-type=e,abnt-full-initials=no,abnt-last-names=abnt,abnt-etal-list=2,abnt-etal-text = emph]{abntcite}
+\newcommand{\citet}[1]{\citeonline{#1}}
+
+%\newcommand{\eqref}[1]{(\ref{#1})}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+%\newcommand{\secref}[1]{se\c{c}\~{a}o~\ref{#1}}
+%\newcommand{\secrefp}[1]{se\c{c}\~{o}es~\ref{#1}}
+%\newcommand{\tabref}[1]{Tabela~\ref{#1}}
+%\newcommand{\tabrefp}[1]{Tabelas~\ref{#1}}
+%\newcommand{\figref}[1]{Figura~\ref{#1}}
+%\newcommand{\figrefp}[1]{Figuras~\ref{#1}}
+%
+%\usepackage[dvips]{graphicx}
+%\usepackage[portuges]{babel}
+\usepackage[printonlyused]{acronym}
+\usepackage{hvfloat}
+\usepackage{longtable}
+\usepackage{supertabular}
+\usepackage{tabularx}
+\usepackage{here}
+%\usepackage{abntcite}
+\begin{document}
+%padronizacao
+\DeclareGraphicsExtensions{.jpg,.pdf,.mps,.png}
+
+%\usepackage[final]{pdfpages}
+%\usepackage{Fancyhdr}
+%\bibliographystyle{IEEEtranPor}
+% \includeonly{capa,agradecimentos}
+% \includeonly{capa_externa,capa}
+%%% PREAMBULO DO DOCUMENTO ACABA AQUI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% CAPA
+
+\pagenumbering{Roman}
+\include{pretexto/capa_externa}
+\include{pretexto/capa}
+%\include{pretexto/folhadeaprovacao}
+\frontmatter \pagestyle{roman}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% RESUMO
+
+\include{pretexto/resumo}
+\include{pretexto/abstract}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% DEDICAT\'{O}RIA
+\include{pretexto/dedicatoria}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% AGRADECIMENTOS
+%\include{pretexto/agradecimentos}
+\include{pretexto/epistrofe}
+%\include{dedicatoria}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ABREVIA\c{C}\~{O}ES
+\begin{singlespace}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%% \'{I}NDICE
+    %\addtocontents{toc}{\noindent\protect\rule{\textwidth}{.2pt}\par}
+    \pdfbookmark[1]{Sum\'{a}rio}{sumario_label} %\label{sumario_label}
+    \tableofcontents%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%% LISTA DE FIGURAS
+    \listoffigures%
+    \addcontentsline{toc}{chapter}{Lista de Figuras}%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%% LISTA DE TABELAS
+    \listoftables%
+    \addcontentsline{toc}{chapter}{Lista de Tabelas}%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%% LISTA DE ALGORITMOS
+    %    \listofalgorithms%
+    %    \addcontentsline{toc}{chapter}{Lista de Algoritmos}%
+     %\addtocontents{toc}{\noindent\protect\rule{\textwidth}{.2pt}\par}
+    %%%%%%%%
+    %%%% NOTA\c{C}\^{A}O
+%    \addcontentsline{toc}{chapter}{Lista de S\'{\i}mbolos}%
+%    \chapter*{Lista de S\'{\i}mbolos}%%
+%    \LTXtable{\textwidth}{pretexto/simbolos}%%
+%    \newpage
+    \addcontentsline{toc}{chapter}{Lista de Siglas}%
+    \chapter*{Lista de Siglas}%%
+    \input{pretexto/acronimos}
+    %\LTXtable{\textwidth}{pretexto/siglas}%%
+    %GATHER{pretexto/simbolos.tex}%%
+    %GATHER{pretexto/siglas.tex}%%
+\end{singlespace}
+
+\pagestyle{capitulo} \setlength{\parskip}{1ex plus 0.5ex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% CAP\'{I}TULO 1: INTRODU\c{C}\~{A}O
+\mainmatter
+\include{chp1/introducao}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% CAP\'{I}TULO 2: Revis\~{a}o Bibliografica
+\include{chp2/fundamentacao}
+%%%% CAP\'{I}TULO 3: Metodologia
+\include{chp3/metodologia}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% CAP\'{I}TULO 4: Resultados
+\include{chp4/resultados}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% CAP\'{I}TULO 5: Conclusoes
+\include{chp5/conclusoes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% APÊNDICE
+%\appendix
+%\begin{appendices}
+%\include{apendice/marches}
+%\end{appendices}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% INDICE REMISSIVO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% GLOSS\'{A}RIO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% REFER\^{E}NCIAS BIBLIOGR\'{A}FICAS
+\bibliographystyle{abnt-alf}
+\bibliography{referencias}
+\addcontentsline{toc}{chapter}{\bibname}
+\end{document}

@@ -28,6 +28,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
+import Watershed.WatershedStruct;
 import Watershed.Watershed_Algorithm;
 
 
@@ -128,6 +129,7 @@ public class BloodCellsCountFrame extends JFrame implements ActionListener {
 	    //***************************************************************************************
 		//Otsu Threshold - Plano H
 	    ImageProcessor otsuThresholdImH = ImageOperations.doOtsuThresholding(enhancedImH);
+	    //ImageProcessor otsuThresholdImH = ImageOperations.doOtsuThresholding(enhancedImH, 10);
 		new ImagePlus("Otsu Threshold",otsuThresholdImH).show();
 		//***************************************************************************************
 		
@@ -166,7 +168,7 @@ public class BloodCellsCountFrame extends JFrame implements ActionListener {
 		//ImageProcessor morphoIm1 = MorphologicalOp.erode(morphoIm, kernel);
 		//new ImagePlus("Morfological Operation",morphoIm1).show();
 		
-		ImageProcessor fillHolesIm = MorphologicalOp.fillHoles(morphoIm);
+		ImageProcessor fillHolesIm = MorphologicalOp.fillHoles_Morpho(morphoIm);
 		new ImagePlus("Fill Holes",fillHolesIm).show();
 	    
 		//***************************************************************************************
@@ -175,46 +177,50 @@ public class BloodCellsCountFrame extends JFrame implements ActionListener {
 	    ImageProcessor thresholdIm = ImageOperations.doBinaryThresholding(maskedIm, threshold);
 	    new ImagePlus("Thresholded Image",thresholdIm).show();*/
 	    
-	    //ImageProcessor distanceIm = ImageOperations.distanceTransform(fillHolesIm);
-	    //new ImagePlus("Distance Image",distanceIm).show();
+	    ImageProcessor distanceIm = ImageOperations.distanceTransform2(fillHolesIm);
+	    new ImagePlus("Distance Image",distanceIm).show();
 	    
 	    // Watershed Segmentation 
 	    //ImageProcessor watershedIm = Watershed_Algorithm.performWatershed(distanceIm);
-	    //new ImagePlus("Watershed", watershedIm).show();
-	    /*int RBCcount = ImageOperations.countRBC(watershedIm, diameter);
-	    JOptionPane.showMessageDialog(null, "Há "+RBCcount+" hemácias na amostra.");*/
+	    WatershedStruct watershedStruct = Watershed_Algorithm.performWatershed(distanceIm);
+	    ImageProcessor watershedIm = watershedStruct.getWatershedImage();
+	    new ImagePlus("Watershed", watershedIm).show();
+	    //int RBCcount = ImageOperations.countRBC(watershedIm);
+	    int RBCcount = Watershed_Algorithm.countRBC(watershedStruct);
+	    //int RBCcount = ImageOperations.countRBC(watershedIm, diameter);
+	    JOptionPane.showMessageDialog(null, "Há "+RBCcount+" hemácias na amostra.");
 		 
 	 }
 	 
 	 private ImageProcessor imageImprovement(ImageProcessor image) {
 		//***************************************************************************************
 		// Smooth
-		ImageProcessor filteredImage = ImageOperations.copyImage(image);
+		/*ImageProcessor filteredImage = ImageOperations.copyImage(image);
 		filteredImage.smooth();
 		ImagePlus filteredImPlus = new ImagePlus("Smooth", filteredImage);
-		filteredImPlus.show();
+		filteredImPlus.show();*/
 		
 		//***************************************************************************************
 			
 		//***************************************************************************************
 		// Median Filter - 3x3
-		/*
-		ImageProcessor filteredImage = ImageOperations.copyImage(imageH);
+		
+		/*ImageProcessor filteredImage = ImageOperations.copyImage(image);
 		new RankFilters().rank(filteredImage, 3, RankFilters.MEDIAN);
 		//filteredImage.medianFilter();
-		ImagePlus filteredImPlus = new ImagePlus("Plano H - Median Filter", filteredImage);
-		filteredImPlus.show();
-		*/
+		ImagePlus filteredImPlus = new ImagePlus("Median Filter", filteredImage);
+		filteredImPlus.show();*/
+		
 		//***************************************************************************************
 				 
 		//*************************************************************************************** 
 		// Low-pass filter 
-		
-		/*ImagePlus fftImPlus = ImageOperations.runFFT(imagePlusH);
+		ImagePlus imagePlus = new ImagePlus("",image);
+		ImagePlus fftImPlus = ImageOperations.runFFT(imagePlus);
 		int cutOffFreq = ImageOperations.computeCutOffFrequency(fftImPlus.getProcessor());
 		ImagePlus filteredFFTImPlus = FreqFilter.filter(fftImPlus, true, cutOffFreq);
-		ImagePlus filteredImPlus = ImageOperations.runInverseFFT(filteredFFTImPlus);*/
-		
+		ImagePlus filteredImPlus = ImageOperations.runInverseFFT(filteredFFTImPlus);
+		//filteredImPlus.show();
 		//***************************************************************************************
 						
 		//***************************************************************************************

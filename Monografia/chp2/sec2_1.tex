@@ -1,0 +1,140 @@
+\section{Modelos de Falhas em Memórias}
+
+%\subsection{Modelagem de Falhas}
+
+Em sistemas computacionais, as palavras falha, erro e defeito possuem significados distintos. Suas diferenças serão enunciadas como apresentadas por \cite{WEBER:2001}, para uma melhor contextualização.
+
+A falha (\emph{fault}) é um comportamento que ocorre no nível mais baixo do sistema. Geralmente está associada ao \emph{hardware} ou à escrita do código. Por exemplo, uma flutuação na fonte de alimentação ou a troca de um ``>='' por um ``>'' pode causar uma falha. Assim, estas estão associadas ao universo físico, conforme ilustrado na Figura \ref{FIG:FED}.
+
+O erro (\emph{error}) é a representação da falha no universo da informação. Ele se apresenta quando, por conseqüência de uma falha, a informação for corrompida. Quando um estado pode levar a ocorrência de um defeito, pode-se dizer que o sistema está em estado de erro.
+
+O defeito (\emph{failure}) é um desvio da especificação, e ocorre em conseqüência de um erro. O defeito é algo percebido pelo usuário, por isso os defeitos estão associados ao universo do usuário.
+
+%Uma falha não necessariamente leva a um estado de erro, pois a linha de código com falha pode nunca ser executada. Um erro também não necessariamente leva a um estado de defeito, pois talvez uma informação nunca seja usada.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[height = 0.7 \linewidth, angle = 90]{figs/falha_erro_defeito.pdf}
+\caption[Falha, erro e defeito]{Modelo de três universos \cite{WEBER:2001}.}
+\label{FIG:FED}
+\end{figure}
+
+Por exemplo, um chip de memória que apresenta uma falha em um de seus bits (falha, universo físico) pode provocar uma interpretação errada da informação armazenada em uma estrutura de dados (erro, universo da informação) e como resultado o sistema pode negar autorização de embarque para todos os passageiros de um vôo (defeito, universo do usuário).
+É interessante observar que uma falha não leva, necessariamente, a um erro (aquela porção da memória pode nunca ser usada) e um erro não leva, necessariamente, a um defeito (no exemplo, a informação de vôo lotado poderia eventualmente ser obtida a partir de outros dados redundantes da estrutura).
+
+Neste trabalho será utilizado apenas o conceito de falha, pois estamos interessados em diagnosticar um \emph{hardware}, parte do universo físico.
+
+A descrição de como alguma coisa pode falhar é o modelo de falha \cite{ADAMS:2003}. Esta descrição pode ser feita em vários níveis de abstração. No caso de circuitos integrados, existem os níveis comportamental, funcional, lógico, elétrico e geométrico, mostrados na Figura \ref{FIG:ABSTRACTION}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = 0.7 \linewidth]{figs/abstraction_levels.png}
+\caption[Níveis de abstração de falhas]{Níveis de abstração para modelagem de falhas.} \label{FIG:ABSTRACTION}
+\end{figure}
+
+O nível mais alto de abstração é o comportamental, que visa fazer uma descrição em alto nível do sistema, geralmente auxiliada por uma \ac{HDL}.
+
+Na modelagem em nível funcional, os circuitos são vistos como caixas pretas, isto é, apenas as entradas e saídas são consideradas, não importando o trabalho interno realizado. Historicamente, esta é a modelagem mais utilizada para testes de memória \cite{ADAMS:2003}.
+
+No nível lógico mais detalhes são acrescentados, passando a serem consideradas as portas lógicas que compõem os circuitos. Abaixo, está o nível elétrico, onde as falhas são vistas nas operações dos transistores. Por fim, o modelo geométrico se refere a todos os detalhes do processo de fabricação do circuito integrado, como tamanho e localização das portas, distância entre células adjacentes, correntes de fuga entre poços de dopagem, dentre outros \cite{ADAMS:2003}.
+
+Os modelos de falhas funcionais são os mais empregados em testes e diagnósticos de memória \cite{ADAMS:2003}, porque não há interesse na natureza das falhas, mas no seu efeito na funcionalidade dos circuitos. A partir deste ponto trataremos as falhas sempre a nível funcional.
+
+%\subsection{Modelagem de Falhas em Memórias}
+
+Os modelos de falhas clássicos para circuitos digitais são \emph{Stuck-At Fault}, \emph{Bridging Fault}, \emph{Open Fault} e \emph{Delay Fault}. No entanto, eles não são suficientes para representar todas as falhas importantes em memórias, fazendo-se necessário definir erros mais específicos para este tipo de circuito \cite{NAIR:1978, PAPACHRISTOU:1985}.
+
+As falhas em memórias podem ser classificadas em três categorias: falhas nas células de memória, falhas no decodificador de endereço e falhas dinâmicas. Cada umas destas categorias serão descritas nas próximas seções.
+
+\subsection{Falhas na Matriz de Células de Memória}
+
+As falhas nas células acontecem principalmente devido a curtos de metalização e acoplamento capacitivo \cite{THATTE:1977}. Os principais tipos são \ac{SAF}, \ac{TF}, \ac{CF} e \ac{NPSF}, que são detalhados adiante.
+
+Para descrever os estados das células de memória com ou sem falhas, uma boa maneira é utilizar diagramas de Markov \cite{DAVID:1989}. Esses diagramas descrevem o comportamento de sistemas em um espaço estado-tempo. Uma célula livre de qualquer defeito pode receber uma operação de escrita para qualquer estado e, quando lida, retêm a informação na célula. A Figura \ref{FIG:MARKOV:FAUL_FREE} mostra o diagrama de Markov para uma célula de memória livre de falhas. Adota-se neste trabalho a notação utilizada em \cite{ADAMS:2003}, onde as transições de estado representam as operações e $S_0$ e $S_1$ indicam que a célula está no estado 0 ou 1, respectivamente. A transição R indica uma operação de leitura e W0 e W1 indicam operações de escrita para o estado 0 e 1, respectivamente.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = 0.7 \linewidth]{figs/markov_fault_free.png}
+\caption[Diagrama de célula sem falhas]{Diagrama de Markov para uma célula de memória sem falhas. \cite{ADAMS:2003}} \label{FIG:MARKOV:FAUL_FREE}
+\end{figure}
+
+\subsubsection{\emph{Stuck-At Fault}}
+
+Entre os modelos clássicos de falhas em memórias, o mais conhecido e também o mais simples é o modelo \ac{SAF}, que é utilizado para indicar que uma célula está presa em um determinado estado. A Figura ~\ref{FIG:MARKOV:SAFS} mostra o diagrama de Markov de uma falha do tipo \ac{SAF}. Independente do evento que ocorra, a célula se mantém no seu estado atual.
+
+\begin{figure}[!ht]
+\centering
+\subfigure[\label{FIG:MARKOV:STUCKAT_0}]{\includegraphics[width = 0.4 \linewidth]{figs/markov_stuckat_0.png}}
+\subfigure[\label{FIG:MARKOV:STUCKAT_1}]{\includegraphics[width = 0.4 \linewidth]{figs/markov_stuckat_1.png}}
+\caption[Diagramas \emph{Stuck-At}]{Diagramas de uma célula de memória com \emph{Sutck-At} 0 (a) e \emph{Stuck-At} 1 (b). \cite{ADAMS:2003}} \label{FIG:MARKOV:SAFS}
+\end{figure}
+
+\subsubsection{Transition Fault}
+
+Outro modelo simples de falha é o modelo \ac{TF}. De certa forma ele se parece com o \ac{SAF}, mas no caso de uma célula de memória, ela irá reter ambos os estados, mas uma vez escrita para um estado, ela não poderá fazer a transição de volta. Assim, quando a memória é energizada a célula pode estar no estado ``0'' ou ``1'' e só pode ser escrita em uma direção. A Figura ~\ref{FIG:MARKOV:TR} mostra o diagrama de Markov para uma falha do tipo \ac{TF}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = 0.7 \linewidth]{figs/markov_transition.png}
+\caption[Diagrama de \emph{Transition Fault}]{Diagrama de uma célula com \emph{Transition Fault}. \cite{ADAMS:2003}} \label{FIG:MARKOV:TR}
+\end{figure}
+
+\subsubsection{Coupling Fault}
+\label{SEC:R3CF}
+
+Para ilustrar uma \ac{CF} é necessário introduzir o diagrama de Markov para duas células. A Figura \ref{FIG:MARKOV:2FREE} mostra um par de células livres de falha, representadas pelos índices $i$ e $j$. Cada célula pode ser individualmente lida ou escrita para cada estado independentemente da outra, havendo um total de quatro estados possíveis para o conjunto.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = 0.8 \linewidth]{figs/markov_2_cell.png}
+\caption[Diagrama para duas células]{Diagrama para duas células sem falhas. \cite{ADAMS:2003}} \label{FIG:MARKOV:2FREE}
+\end{figure}
+
+Utiliza-se o modelo de falhas \ac{CF}, ou simplesmente acoplamento, quando há um ou mais pares de células eletricamente acoplados, isto é, quando há interferência eletromagnética entre elas. De forma simplificada, uma célula pode estar acoplada as células da sua vizinhança causando a transição para um estado errôneo ou uma falsa transição.
+
+Os principais fatores que causam a falha \ac{CF} são a capacitância mútua e a corrente de fuga de uma célula para outra \cite{SUK:1981}. Papachristou \cite{PAPACHRISTOU:1985} a definiu formalmente como:
+\begin{quote}
+Quando uma operação de escrita que afeta a transição de 0 para 1 ou de 1 para 0 na célula $j$ muda o estado de outra célula $i$ ($i \neq j$), independente do conteúdo da outra célula. Isto não implica que uma transição em $i$ mude o estado de $j$.
+\end{quote}
+
+Quando há uma falha \ac{CF} entre as células, o diagrama de Markov do par passa a ser representado pela Figura \ref{FIG:MARKOV:CF}. Como descrito na definição, é possível haver \ac{CF} em apenas um sentido, onde a célula provoca a falha na outra mas o oposto não acontece. No caso ilustrado, a falha só ocorre quando a célula $i$ está no estado 0 e a célula $j$ faz uma transição de 0 para 1. Caso a célula $i$, ao invés da $j$, faça uma transição de 0 para 1, nenhuma falha será provocada. A célula que causa a \ac{CF} é chamada de célula agressora \cite{ADAMS:2003} ou acopladora \cite{PAPACHRISTOU:1985} e a célula que sofre a falha é chamada de vítima ou acoplada.
+%??? precisa referenciar nos 2 momentos? ou só no 2o? ou como está mesmo?
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = 0.8 \linewidth]{figs/markov_coupling.png}
+\caption[Diagrama de \emph{Coupling fault}]{Diagrama para duas células com \ac{CF}. \cite{ADAMS:2003}} \label{FIG:MARKOV:CF}
+\end{figure}
+
+A falha \ac{CF} pode se apresentar nos seguinte tipos \cite{RAGHURAMAN:2005}:
+
+\begin{enumerate}
+  \item \textbf{Inversion Coupling Fault}: Uma transição na célula agressora inverte o conteúdo da célula vítima;
+  \item \textbf{Idempotent Coupling Fault}: Uma transição na célula agressora força um valor lógico fixo na célula vítima;
+  \item \textbf{State Coupling Fault}: A célula vítima é forçada para certo estado apenas se a célula agressora estiver em  determinado estado. Também conhecida como \ac{PSF}.
+\end{enumerate}
+
+Um conjunto de $k$ células é dito estar $k$-acoplado (\emph{$k$-coupled}) se uma transição em uma célula causa uma transição em outra célula do conjunto quando as outras $k-2$ células estão em certo estado. Um caso especial chamado de \emph{restricted $k$-coupling} é convenientemente definido como um \emph{$k$-coupling} onde as $k-1$ células não possuem acoplamento entre si. Devido a enorme complexidade dos modelos de falhas para $k$ maior que 3, apenas falhas \emph{2-coupling} e \emph{restricted 3-coupling} têm sido investigadas na literatura \cite{PAPACHRISTOU:1985} \cite{ADAMS:2003}.
+
+\subsubsection{Neighborhood Pattern Sensitive Fault}
+
+O modelo \ac{NPSF}, se apresenta sobre uma célula chamada de célula-base e sua vizinhança física. Na realidade, o \ac{NPSF} é um caso especial de \emph{$k$-coupling} em que as $k-1$ células agressoras estão restritas a uma vizinhança fixa em proximidade física da célula base. Este modelo é bastante estudado por ser mais comum que acoplamentos entre células distantes \cite{PETRU:2002}.
+
+\subsection{Falhas no Decodificador de Endereço}
+
+O decodificador é um circuito de lógica combinacional simples que seleciona uma única célula de memória para um dado endereço. Qualquer falha ocorrida no decodificador fará com que ele se comporte de umas das maneiras:
+
+\begin{enumerate}
+  \item O decodificador não irá acessar a célula endereçada. Além disto, ele pode acessar células não endereçadas;
+  \item O decodificador irá acessar múltiplas células, incluindo a célula endereçada.
+\end{enumerate}
+
+No caso de múltiplos acessos (ii), podemos ver a falha como uma falha na matriz de células, isto é, como uma \ac{CF} entre as células afetadas. No caso (i), a célula que deveria ter sido selecionada pode ser vista como \emph{stuck at} 0 ou \emph{stuck at} 1, dependendo da lógica utilizada.
+
+Em todos os casos, podemos visualizar as falhas no decodificador como falhas na matriz de células da memória \cite{NAIR:1978} \cite{PETRU:2002}.
+
+\subsection{Falhas Dinâmicas}
+
+As falhas dinâmicas em memórias são também chamadas de falhas na lógica de escrita e leitura (\emph{Read/Write Logic Fault}). Algumas linhas dos circuitos de escrita e leitura podem estar em \emph{stuck at} 0 ou \emph{stuck at} 1. Neste caso, podemos considerar a falha como uma \ac{SAF} nas células afetadas por essas linhas. As linhas de entrada ou saída de dados das células podem conter curtos ou acoplamentos capacitivos entre elas. Estas falhas podem ser visualizadas como \ac{CF} entre as células correspondentes.
+
+Portanto, para testes de \ac{RAM}, todas os tipos de falhas podem ser representados apenas pelos modelos de falhas na matriz de células de memória, isto é \ac{SAF}, \ac{TF}, \ac{CF} e \ac{NPSF} \cite{NAIR:1978,PETRU:2002}. 

@@ -2,8 +2,8 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="257" key="DIALOG_WIDTH"/>
-		<item value="119" key="DIALOG_Y_ORIGIN"/>
-		<item value="563" key="DIALOG_X_ORIGIN"/>
+		<item value="73" key="DIALOG_Y_ORIGIN"/>
+		<item value="851" key="DIALOG_X_ORIGIN"/>
 		<item value="380" key="DIALOG_HEIGHT"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 	</section>
@@ -13,12 +13,16 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="clone" key="selection"/>
+		<item value="min_count" key="selection"/>
 		<list key="findhistory">
-			<item value="clone"/>
-			<item value="cutoffFreq"/>
-			<item value="run"/>
-			<item value="pixel"/>
+			<item value="min_count"/>
+			<item value="put"/>
+			<item value="watershedstruc"/>
+			<item value="showmin"/>
+			<item value="showminima"/>
+			<item value="watershedpi"/>
+			<item value="setLabelToWSHED"/>
+			<item value="watershedImage"/>
 		</list>
 		<list key="replacehistory">
 		</list>

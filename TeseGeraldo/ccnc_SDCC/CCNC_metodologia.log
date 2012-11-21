@@ -1,11 +1,9 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=latex 2011.7.9)  23 JUL 2011 08:21
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.2)  10 JUL 2012 22:33
 entering extended mode
-**CCNC_metodologia.tex
-
-("C:\Users\FGMPinheiro\Documents\Disciplinas DOUTORADO\TESE_2010\ccnc_SDCC\CCNC
-_metodologia.tex"
-LaTeX2e <2009/09/24>
-Babel <v3.8l> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+**F:/Teleinfo/TCC/TeseGeraldo/ccnc_SDCC/CCNC_metodologia.tex
+(F:/Teleinfo/TCC/TeseGeraldo/ccnc_SDCC/CCNC_metodologia.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
 croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
 lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
@@ -16,16 +14,22 @@ romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
 sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
 senglishmax, welsh, loaded.
 ! Undefined control sequence.
-l.2 \doublespacing
-                  
-? x
+l.3 \chapter
+            {Novo Contador de N\'{u}cleos de Condensa\c{c}\~{a}o de Nuvens  ...
+
+? 
+! Emergency stop.
+l.3 \chapter
+            {Novo Contador de N\'{u}cleos de Condensa\c{c}\~{a}o de Nuvens  ...
+End of file on the terminal!
+
  
 Here is how much of TeX's memory you used:
- 7 strings out of 494054
- 351 string characters out of 3148609
- 48862 words of memory out of 3000000
- 3395 multiletter control sequences out of 15000+200000
+ 7 strings out of 494045
+ 246 string characters out of 3147585
+ 48890 words of memory out of 3000000
+ 3399 multiletter control sequences out of 15000+200000
  3640 words of font info for 14 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 5i,0n,1p,103b,8s stack positions out of 5000i,500n,10000p,200000b,50000s
-No pages of output.
+ 5i,0n,1p,147b,8s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

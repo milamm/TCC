@@ -1,0 +1,22 @@
+\chapter*{Abstract}
+\label{CHP:ABSTRACT}%%
+\thispagestyle{empty}
+
+%\PARstartOne{O}{s} sistemas de diagnóstico de falhas vêm adiquirindo importância na computação devido à complexidade dos dispositivos digitais. Seu uso na identificação de problemas de \emph{hardware} tem se tornado uma demanda crescente tanto para empresas especializadas em computadores, como montadoras e fabricantes, quanto para usuários domésticos que desejam verificar a integridade do seu equipamento.
+
+\PARstartOne{F}{ault} diagnosis systems has growing in importance on the computing due to the complexity of the digital devices. Its use to identiying hardware's malfunction has become an ascenceding demand for both, companies specialized in computers, such as assemblers and manufacturers, as well as for home users who want to check the integrity of your equipment.
+
+%Neste tabalho, foi desenvolvida uma ferramenta de diagnóstico de falhas em memórias, chamada MDiag. O \emph{software} foi construído como uma aplicação para sistemas operacionais Linux. Todo o projeto e implementação foi embasado por um amplo estudo sobre falhas em memórias, algitmos de detecção de falhas em memórias e o controle deste componente através do Linux.
+
+In this study, we developed a tool for fault diagnosis in memories, called MDiag. It was built as an application for Linux operating systems. All the design and implementation was based on an extensive study of memory faults, fault detection algorithms and Linux memory menagement.
+
+%Também foi desenvolvido um sistema automático de geração e inserção de falhas utilizando funcionalidades de \emph{debug} presentes na maioria dos processadores atuais. Este sistema foi usado para testar e validar o MDiag quanto a cobertura de falhas.
+
+It was also developed an automatic system for fault generation and insertion using debug features available in most of current processors. This system was used to test and validate the MDiag as its fault coverage.
+
+%Foram realizados testes reais com placas de memórias defeituosas, onde os resultados do MDiag foram comparados com os de ferramentas utilizadas no mercado.
+
+Tests were carried out with real faulty memories, where the results where the results achieved by MDiag were compared with those achieved by tools used in the market.
+\newline
+
+\noindent \textbf{Keywords:} Diagnosis, Testing, Memory, Falt, Linux.

@@ -1,0 +1,46 @@
+\thispagestyle{empty}%
+
+\begin{center}
+    %\includegraphics[width=2.5cm]{figs/ufc.jpg} \\%
+%    \textsc{
+%    Universidade Federal do Cear\'{a} \\%
+%    Departamento de Engenharia de El\'{e}trica \\%
+%    Programa de P\'{o}s Gradua\c{c}\~{a}o em Engenharia de Teleinform\'{a}tica\\
+%    }
+    \null\vfill%%
+    \vspace{.25cm}%
+    {\normalsize    \textbf{Autor:} \\%
+                    \upshape{\autor}
+                    }\\%
+
+    \null\vfill%%
+    \vspace{.25cm}%
+    {\normalsize    \textbf{Orientador:} \\%
+                    \upshape{\orientador}
+                    } \\%
+    \null\vfill%%
+    \vspace{.25cm}%
+%    {\normalsize    \textbf{Co-orientador:} \\%
+%                    \upshape{\coorientador}
+%                    } \\%
+
+%    \null\vfill%%
+    \vspace{.25cm}%
+    {\large         \titulo\\}
+
+    \null\vfill%%
+    \vspace{.25cm}%
+    \begin{tabularx}{\textwidth}{XX}
+
+    \null\vfill \\
+    &
+    Monografia de Conclus\~{a}o de Curso apresentada \`{a} Coordena\c{c}\~{a}o do Curso de Gradua\c{c}\~{a}o em Engenharia de Teleinform\'{a}tica da Universidade Federal do Cear\'{a} como parte dos requisitos para obten\c{c}\~{a}o do grau de \textbf{Engenheiro de Teleinform\'{a}tica}. \\
+
+    \end{tabularx}
+
+    \null\vfill%%
+    \vspace{.25cm}%
+
+    {\normalsize    \textsc{Fortaleza -- Cear\'{a} \\%
+                            \monthname~\the\year}
+\end{center}

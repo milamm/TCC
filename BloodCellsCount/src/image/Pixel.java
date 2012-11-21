@@ -41,7 +41,197 @@ public class Pixel {
 	public Vector getNeighbours() {
 		return neighbours;
 	}
+	
+	public Pixel getTopLeftNeighbour() {
+		Pixel neighbour = (Pixel) neighbours.get(0);
+		boolean found = false;
+		
+		if( neighbour.getX() != (x-1) || neighbour.getY() != (y-1) ) {
+			for(int i=1; i<neighbours.size(); i++) {
+				neighbour = (Pixel) neighbours.get(i);
+				if( neighbour.getX() == (x-1) && neighbour.getY() == (y-1) ) {
+					found = true;
+					break; 
+				}
+			}
+			if(!found)
+				return null;
+		}
+		
+		return neighbour;
+	}
+	
+	public Pixel getTopNeighbour() {
+		Pixel neighbour = (Pixel) neighbours.get(1);
+		boolean found = false;
+		
+		if( neighbour.getX() != x || neighbour.getY() != (y-1) ) {
+			for(int i=0; i<neighbours.size() && i!=1; i++) {
+				neighbour = (Pixel) neighbours.get(i);
+				if( neighbour.getX() == x && neighbour.getY() == (y-1) ) {
+					found = true;
+					break; 
+				}
+			}
+			if(!found)
+				return null;
+		}
+		
+		return neighbour;
+	}
+	
+	public Pixel getTopRightNeighbour() {
+		Pixel neighbour = (Pixel) neighbours.get(2);
+		boolean found = false;
+		
+		if( neighbour.getX() != (x+1) || neighbour.getY() != (y-1) ) {
+			for(int i=0; i<neighbours.size() && i!=2; i++) {
+				neighbour = (Pixel) neighbours.get(i);
+				if( neighbour.getX() == (x+1) && neighbour.getY() == (y-1) ) {
+					found = true;
+					break; 
+				}
+			}
+			if(!found)
+				return null;
+		}
+		
+		return neighbour;
+	}
+	
+	public Pixel getLeftNeighbour() {
+		Pixel neighbour;
+		boolean found = false;
+		
+		if(neighbours.size()>3)
+			neighbour = (Pixel) neighbours.get(3);
+		else
+			neighbour = (Pixel) neighbours.lastElement();
+		
+		if( neighbour.getX() != (x-1) || neighbour.getY() != y ) {
+			for(int i=0; i<neighbours.size() && i!=3; i++) {
+				neighbour = (Pixel) neighbours.get(i);
+				if( neighbour.getX() == (x-1) && neighbour.getY() == y ) {
+					found = true;
+					break; 
+				}
+			}
+			if(!found)
+				return null;
+		}
+		
+		return neighbour;
+	}
 
+	public Pixel getRightNeighbour() {
+		Pixel neighbour;
+		boolean found = false;
+		
+		if(neighbours.size()>4)
+			neighbour = (Pixel) neighbours.get(4);
+		else
+			neighbour = (Pixel) neighbours.lastElement();
+		
+		if( neighbour.getX() != (x+1) || neighbour.getY() != y ) {
+			for(int i=0; i<neighbours.size() && i!=4; i++) {
+				neighbour = (Pixel) neighbours.get(i);
+				if( neighbour.getX() == (x+1) && neighbour.getY() == y ) {
+					found = true;
+					break; 
+				}
+			}
+			if(!found)
+				return null;
+		}
+		
+		return neighbour;
+	}
+
+	public Pixel getBottomLeftNeighbour() {
+		Pixel neighbour;
+		boolean found = false;
+		
+		if(neighbours.size()>5)
+			neighbour = (Pixel) neighbours.get(5);
+		else
+			neighbour = (Pixel) neighbours.lastElement();
+		
+		if( neighbour.getX() != (x-1) || neighbour.getY() != (y+1) ) {
+			for(int i=0; i<neighbours.size() && i!=5; i++) {
+				neighbour = (Pixel) neighbours.get(i);
+				if( neighbour.getX() == (x-1) && neighbour.getY() == (y+1) ) {
+					found = true;
+					break; 
+				}
+			}
+			if(!found)
+				return null;
+		}
+		
+		return neighbour;
+	}
+
+	public Pixel getBottomNeighbour() {
+		Pixel neighbour;
+		boolean found = false;
+		
+		if(neighbours.size()>6)
+			neighbour = (Pixel) neighbours.get(6);
+		else
+			neighbour = (Pixel) neighbours.lastElement();
+		
+		if( neighbour.getX() != x || neighbour.getY() != (y+1) ) {
+			for(int i=0; i<neighbours.size() && i!=6; i++) {
+				neighbour = (Pixel) neighbours.get(i);
+				if( neighbour.getX() == x && neighbour.getY() == (y+1) ) {
+					found = true;
+					break; 
+				}
+			}
+			if(!found)
+				return null;
+		}
+		
+		return neighbour;
+	}
+
+	public Pixel getBottomRightNeighbour() {
+		Pixel neighbour;
+		boolean found = false;
+		
+		if(neighbours.size()>7)
+			neighbour = (Pixel) neighbours.get(7);
+		else
+			neighbour = (Pixel) neighbours.lastElement();
+		
+		if( neighbour.getX() != (x+1) || neighbour.getY() != (y+1) ) {
+			for(int i=0; i<neighbours.size() && i!=7; i++) {
+				neighbour = (Pixel) neighbours.get(i);
+				if( neighbour.getX() == (x+1) && neighbour.getY() == (y+1) ) {
+					found = true;
+					break; 
+				}
+			}
+			if(!found)
+				return null;
+		}
+		
+		return neighbour;
+	}
+	
+	public void removeNeighbours() {
+		neighbours.clear();
+	}
+	
+	public void resetNeighbours() {
+		Pixel n;
+		
+		for(int i=0; i < neighbours.size(); i++) { 
+			n = (Pixel) neighbours.get(i); 
+			n.setHeight((byte)0);
+		}
+	}
+	
 	public String toString() {
 		return new String("(" + x + "," + y + "), height : " + getIntHeight()
 				+ ", label : " + label);
@@ -57,6 +247,10 @@ public class Pixel {
 	
 	public final void setHeight(byte height) {
 		this.height = height;
+	}
+	
+	public final void setHeight(int height) {
+		this.height = (byte) height;
 	}
 
 	public final int getX() {

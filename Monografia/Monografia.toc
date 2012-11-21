@@ -1,0 +1,60 @@
+\select@language {brazil}
+\contentsline {chapter}{Lista de Figuras}{vii}{chapter*.4}
+\contentsline {chapter}{Lista de Tabelas}{viii}{chapter*.5}
+\contentsline {chapter}{Lista de Siglas}{viii}{chapter*.5}
+\contentsline {chapter}{\numberline {1}Introdu\c c\~ao}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motiva\c c\~ao}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Objetivos}{3}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Objetivo Geral}{3}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Objetivos Espec\IeC {\'\i }ficos}{3}{subsection.1.2.2}
+\contentsline {section}{\numberline {1.3}Organiza\c c\~ao deste Trabalho}{4}{section.1.3}
+\contentsline {chapter}{\numberline {2}Fundamenta\c c\~ao Te\'orica}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Modelos de Falhas em Mem\'orias}{5}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Falhas na Matriz de C\'elulas de Mem\'oria}{7}{subsection.2.1.1}
+\contentsline {subsubsection}{\emph {Stuck-At Fault}}{8}{subsubsection*.16}
+\contentsline {subsubsection}{Transition Fault}{9}{subsubsection*.17}
+\contentsline {subsubsection}{Coupling Fault}{9}{subsubsection*.18}
+\contentsline {subsubsection}{Neighborhood Pattern Sensitive Fault}{11}{subsubsection*.20}
+\contentsline {subsection}{\numberline {2.1.2}Falhas no Decodificador de Endere\c co}{11}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Falhas Din\^amicas}{12}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Tipos de testes de mem\'oria}{12}{section.2.2}
+\contentsline {subsubsection}{Testes Caminhantes (\emph {Walking})}{15}{subsubsection*.21}
+\contentsline {subsubsection}{Testes Marchantes (\emph {Marching})}{16}{subsubsection*.22}
+\contentsline {subsubsection}{Testes Galopantes (\emph {Galloping})}{16}{subsubsection*.23}
+\contentsline {subsection}{\numberline {2.2.1}Testes Conhecidos}{16}{subsection.2.2.1}
+\contentsline {subsubsection}{S\'erie March}{17}{subsubsection*.24}
+\contentsline {subsubsection}{Moving Invertion}{17}{subsubsection*.25}
+\contentsline {subsubsection}{Nair}{18}{subsubsection*.28}
+\contentsline {subsubsection}{Papachristou}{19}{subsubsection*.29}
+\contentsline {subsubsection}{MT}{20}{subsubsection*.31}
+\contentsline {subsubsection}{GALPAT}{21}{subsubsection*.34}
+\contentsline {section}{\numberline {2.3}Gerenciamento de mem\'oria do Linux}{22}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Mem\'oria Virtual}{23}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Escassez de Mem\'oria}{25}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Cache de Mem\'oria}{25}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Resumo do Cap\IeC {\'\i }tulo}{26}{section.2.4}
+\contentsline {chapter}{\numberline {3}Metodologia}{27}{chapter.3}
+\contentsline {section}{\numberline {3.1}Ambiente de Desenvolvimento e Teste}{27}{section.3.1}
+\contentsline {section}{\numberline {3.2}Implementa\c c\~ao do MDiag}{28}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Pol\IeC {\'\i }tica de aloca\c c\~ao de mem\'oria}{28}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Algor\IeC {\'\i }tmos Implementados}{31}{subsection.3.2.2}
+\contentsline {subsubsection}{March C-}{31}{subsubsection*.40}
+\contentsline {subsubsection}{March G}{31}{subsubsection*.41}
+\contentsline {subsubsection}{Papachristou}{32}{subsubsection*.42}
+\contentsline {subsubsection}{MT}{33}{subsubsection*.43}
+\contentsline {subsection}{\numberline {3.2.3}Desaloca\c c\~ao da Mem\'oria}{33}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Inser\c c\~ao de Falhas}{33}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Falhas simuladas}{34}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Sistema de inser\c c\~ao de falhas}{35}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Teste em Ambientes Reais}{37}{section.3.4}
+\contentsline {section}{\numberline {3.5}Resumo do Cap\IeC {\'\i }tulo}{38}{section.3.5}
+\contentsline {chapter}{\numberline {4}Resultados}{39}{chapter.4}
+\contentsline {section}{\numberline {4.1}Testes com inser\c c\~ao de falhas}{39}{section.4.1}
+\contentsline {section}{\numberline {4.2}Testes com Mem\'orias Reais}{40}{section.4.2}
+\contentsline {section}{\numberline {4.3}Tempo de Execu\c c\~ao}{41}{section.4.3}
+\contentsline {section}{\numberline {4.4}Portabilidade}{42}{section.4.4}
+\contentsline {section}{\numberline {4.5}Resumo do Cap\IeC {\'\i }tulo}{43}{section.4.5}
+\contentsline {chapter}{\numberline {5}Conclus\~oes}{44}{chapter.5}
+\contentsline {section}{\numberline {5.1}Perspectivas Futuras}{45}{section.5.1}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{48}{chapter*.50}
+\contentsfinish 

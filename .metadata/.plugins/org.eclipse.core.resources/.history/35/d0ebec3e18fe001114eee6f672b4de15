@@ -1,0 +1,726 @@
+package image;
+
+import ij.IJ;
+import ij.ImagePlus;
+import ij.WindowManager;
+import ij.process.FloodFiller;
+import ij.process.ImageProcessor;
+
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.awt.image.RenderedImage;
+import java.util.ArrayList;
+
+import javax.media.jai.JAI;
+import javax.media.jai.KernelJAI;
+import javax.media.jai.RenderedOp;
+
+public class MorphologicalOp {
+	
+	public static final int RECT = 0;
+	public static final int DISK = 1;
+	public static final int DIAMOND = 2;
+	public static final int CROSS = 3;
+	
+	public static KernelJAI createKernel(int w, int h, int type) {
+		float[] kernel_values = new float[w*h];
+		int cy = (int) Math.floor(h/2);
+		int cx = (int) Math.floor(w/2);
+		
+		switch (type) {
+		case RECT:
+			for(int i = 0; i < kernel_values.length; i++)
+				kernel_values[i] = 1;
+			break;
+
+		case DISK:
+			int es_r = (int) Math.floor( Math.sqrt(Math.pow(Math.floor(w/2), 2) + Math.pow(Math.floor(h/2), 2)) );
+			double r;
+			
+			for(int y = 0; y < h; y++) {
+				for(int x = 0; x < w; x++) {
+					r = Math.sqrt( Math.pow(Math.abs(y - cy), 2) + Math.pow(Math.abs(x - cx), 2) );
+					if(r > es_r)
+						kernel_values[y*w + x] = 0;
+					else
+						kernel_values[y*w + x] = 1;
+				}
+			}
+			break;
+			
+		case DIAMOND:
+			
+			break;
+			
+		case CROSS:
+			for(int y = 0; y < h; y++)
+				kernel_values[y*w + cx] = 1;
+			for(int x = 0; x < w; x++)
+				kernel_values[cy*w + x] = 1;
+			break;
+
+		default:
+			break;
+		}
+		
+		return new KernelJAI(w, h, kernel_values);
+	}
+
+	public static ImageProcessor erode(ImageProcessor imageproc, KernelJAI kernel) {
+		Image image =  new ImagePlus("",imageproc).getImage();
+		BufferedImage image_out = (BufferedImage) image;
+		
+		RenderedOp renderedOp = JAI.create("erode",(RenderedImage)image, kernel, null);
+		image_out.setData(renderedOp.getData());
+
+		return new ImagePlus("",image_out).getProcessor();
+		
+		/*Image image =  new ImagePlus("",ImageOperations.copyImage(imageproc)).getImage();
+		BufferedImage image_aux = (BufferedImage) image;
+		BufferedImage image_out;
+		Raster data_out;
+		int w,h;
+		
+		RenderedOp renderedOp = JAI.create("erode",(RenderedImage)image, kernel, null);
+		image_aux.setData(renderedOp.getData());
+		
+		data_out = image_aux.getData();
+		int value = data_out.getSample(0, 0, 0);
+		
+		int y, x;
+		boolean stop = false;
+		for(y = 0; y < image_aux.getHeight(); y++) {
+			for(x = 1; x < image_aux.getWidth(); x++) {
+				if(data_out.getSample(x, y, 0) != value) {
+					stop = true;
+					break; 
+				}
+			}
+			if(stop)
+				break;
+		}
+		
+		if(y == 0)
+			image_out = image_aux;
+		else {
+			w = image_aux.getWidth();
+			h = image_aux.getHeight();
+			image_out = new BufferedImage(w-2*y, h-2*y, image_aux.getType());
+			image_out.setData(data_out.createChild(y, y, w-y, h-y, 0, 0, null));
+		}
+		
+		return new ImagePlus("",image_out).getProcessor();*/
+		
+		
+		/*Image image =  new ImagePlus("",imageproc).getImage();
+		ImageProcessor image_out, imageproc_aux;
+		BufferedImage image_aux = new BufferedImage(imageproc.getWidth(), imageproc.getHeight(), BufferedImage.TYPE_BYTE_GRAY);
+		RenderedOp renderedOp = null;
+				
+		renderedOp = JAI.create("erode",(RenderedImage)image, kernel, null);
+				
+		image_aux.setData(renderedOp.getData());
+		imageproc_aux = new ImagePlus("",image_aux).getProcessor();
+		new ImagePlus("",image_aux).show();
+		
+		int value = imageproc_aux.getPixel(0, 0);
+		int y, x;
+		boolean stop = false;
+		for(y = 0; y < imageproc_aux.getHeight(); y++) {
+			for(x = 1; x < image_aux.getWidth(); x++) {
+				if(imageproc_aux.getPixel(x, y) != value) {
+					stop = true;
+					break; 
+				}
+			}
+			if(stop)
+				break;
+		}
+		
+		if(y == 0)
+			image_out = imageproc_aux;
+		else {
+			imageproc_aux.setRoi(y, y, imageproc_aux.getWidth()-2*y, imageproc_aux.getHeight()-2*y);
+			image_out = imageproc_aux.crop();
+		}
+				
+		for(y = 0; y < image_out.getHeight(); y++) {
+			for(x = 0; x < image_out.getWidth(); x++) {
+				if(image_out.getPixel(x, y) != 0 && image_out.getPixel(x, y) != 255)
+					image_out.putPixel(x, y, 255);
+			}
+		}
+	
+		return image_out;*/
+	}
+	
+	public static ImageProcessor dilate(ImageProcessor imageproc, KernelJAI kernel) {
+		Image image =  new ImagePlus("",ImageOperations.removeBorder( makebinary(imageproc) )).getImage();
+		BufferedImage image_out = (BufferedImage) image;
+		
+		RenderedOp renderedOp = JAI.create("dilate",(RenderedImage)image, kernel, null);
+		image_out.setData(renderedOp.getData());
+
+		return ImageOperations.removeBorder(
+				new ImagePlus("",image_out).getProcessor() );
+		
+		/*Image image =  new ImagePlus("",imageproc).getImage();
+		ImageProcessor image_out;
+		BufferedImage image_aux = new BufferedImage(imageproc.getWidth(), imageproc.getHeight(),BufferedImage.TYPE_BYTE_GRAY);
+		//new ImagePlus("",image_aux).show();
+		RenderedOp renderedOp = null;
+				
+		renderedOp = JAI.create("dilate",(RenderedImage)image, kernel, null);
+		new ImagePlus("",image).show();
+				
+		image_aux.setData(renderedOp.getData());
+		image_out = new ImagePlus("",image_aux).getProcessor();
+		new ImagePlus("",image_aux).show();
+		
+		return image_out;*/
+	}
+	
+	public static ImageProcessor open(ImageProcessor imageproc, KernelJAI kernel) {
+		String op_str = null, op_str1 = null; 
+		ImagePlus image_outPlus;
+		Image image =  new ImagePlus("",ImageOperations.copyImage(imageproc)).getImage();
+		BufferedImage image_out = (BufferedImage) image;
+		BufferedImage image_out_aux = new BufferedImage(image_out.getWidth(), image_out.getHeight(), image_out.getType());
+		RenderedOp renderedOp = null, renderedOp_aux = null;
+				
+		op_str = "erode"; 
+		op_str1 = "dilate"; 
+			
+		renderedOp_aux = JAI.create(op_str,(RenderedImage)image, kernel, null);
+		image_out_aux.setData(renderedOp_aux.getData());
+		//new ImagePlus("aux",image_out_aux).show();
+		renderedOp = JAI.create(op_str1, image_out_aux, kernel, null);
+				
+		image_out.setData(renderedOp.getData());
+		image_outPlus = new ImagePlus("out",image_out);
+		//image_outPlus.show();
+		
+		return image_outPlus.getProcessor();
+		
+		/*ImageProcessor image_aux, image_out;
+		
+		image_aux = erode(imageproc, kernel);
+		new ImagePlus("",image_aux).show();
+		image_out = dilate(image_aux, kernel);
+		new ImagePlus("",image_out).show();
+		
+		return image_out;*/
+	}
+	 
+	public static ImageProcessor complement(ImageProcessor image) {
+		int w = image.getWidth(), h = image.getHeight();
+		ImageProcessor imageCompl = image.createProcessor(w, h);
+		int pixelValue;
+		
+		for(int y=0; y<h; y++) 
+			for(int x=0; x<w; x++) {
+				pixelValue = image.getPixel(x, y);
+				if(pixelValue == 0)
+					imageCompl.putPixelValue(x, y, 255);
+				else if(pixelValue == 255)
+					imageCompl.putPixelValue(x, y, 0);
+				else {
+					System.out.println("Binary Image required.");
+					return null;
+				}
+			}
+
+		return imageCompl;
+	} 
+	
+	public static ImageProcessor close(ImageProcessor imageproc, KernelJAI kernel) {
+		String op_str = null, op_str1 = null; 
+		ImagePlus image_outPlus;
+		Image image =  new ImagePlus("",ImageOperations.copyImage(imageproc)).getImage();
+		BufferedImage image_out = (BufferedImage) image;
+		BufferedImage image_out_aux = new BufferedImage(image_out.getWidth(), image_out.getHeight(), image_out.getType());
+		RenderedOp renderedOp = null, renderedOp_aux = null;
+				
+		op_str = "dilate"; 
+		op_str1 = "erode"; 
+			
+		renderedOp_aux = JAI.create(op_str,(RenderedImage)image, kernel, null);
+		image_out_aux.setData(renderedOp_aux.getData());
+		//new ImagePlus("aux",image_out_aux).show();
+		renderedOp = JAI.create(op_str1, image_out_aux, kernel, null);
+				
+		image_out.setData(renderedOp.getData());
+		image_outPlus = new ImagePlus("out",image_out);
+		//image_outPlus.show();
+		
+		return image_outPlus.getProcessor();
+		
+		/*
+		ImageProcessor image_aux, image_out;
+		
+		image_aux = dilate(imageproc, kernel);
+		new ImagePlus("Aux-dilate",image_aux).show();
+		image_out = erode(image_aux, kernel);
+		new ImagePlus("Out-erode",image_out).show();
+		
+		return image_out;*/
+	}
+	
+	public static ImageProcessor fillHoles(ImageProcessor imageP) {
+		ImageProcessor imageproc = ImageOperations.removeBorder(imageP);
+		//ImageProcessor imageproc = ImageOperations.putWhiteBorder(imageNoBorder);
+		ImagePlus image_Plus = new ImagePlus("", imageproc);
+		ImageProcessor image_aux, image_out; 
+		
+		//WindowManager.setTempCurrentImage(image_Plus);
+		//IJ.run("Make Binary");
+		image_aux = makebinary(imageproc);
+		image_out = ImageOperations.switchBlackWhite(image_aux);
+		//new ImagePlus("switch",image_aux).show();
+		
+		image_Plus.setProcessor(image_out);
+		WindowManager.setTempCurrentImage(image_Plus);
+		IJ.run("Fill Holes");
+		
+		return ImageOperations.switchBlackWhite(image_out);
+	}
+	
+	//Binary Fill 2 by Gabriel Landini, G.Landini@bham.ac.uk
+	//21/May/2008
+	public static ImageProcessor fillHoles2(ImageProcessor image) {
+		ImageProcessor imageBin = makebinary(image);
+		ImageProcessor ip = ImageOperations.removeBorder(imageBin);
+		int xe = ip.getWidth();
+		int ye = ip.getHeight();
+		int x, y, X=xe-1, Y=ye-1;
+		int [][] pixel = new int [xe][ye];
+		boolean doIwhite = false;
+		
+		new ImagePlus("", ip).show();
+
+		//original converted to white particles
+		if (doIwhite==false){
+			for(y=0;y<ye;y++) {
+				for(x=0;x<xe;x++)
+					ip.putPixel(x,y,255-ip.getPixel(x,y));
+			}
+		}
+
+		//get original
+		for(y=0;y<ye;y++) {
+			for(x=0;x<xe;x++)
+				pixel[x][y]=ip.getPixel(x,y);
+		}
+
+		FloodFiller ff = new FloodFiller(ip);
+		ip.setColor(127);
+
+		for (y=0; y<ye; y++){
+			if (ip.getPixel(0,y)==0) ff.fill(0, y);
+			if (ip.getPixel(X,y)==0) ff.fill(X, y);
+		}
+		for (x=0; x<xe; x++){
+			if (ip.getPixel(x,0)==0) ff.fill(x, 0);
+			if (ip.getPixel(x,Y)==0) ff.fill(x, Y);
+		}
+
+		for(y=0;y<ye;y++) {
+			for(x=0;x<xe;x++){
+				if(ip.getPixel(x,y)==0)
+					ip.putPixel(x,y,255);
+				else
+					ip.putPixel(x,y,pixel[x][y]);
+			}
+		}
+
+		//return to original state
+		if (doIwhite==false){
+			for(y=0;y<ye;y++) {
+				for(x=0;x<xe;x++)
+					ip.putPixel(x,y,255-ip.getPixel(x,y));
+			}
+		}
+		
+		return ip;
+	}
+
+	public static ImageProcessor fillHoles3(ImageProcessor image) {
+		ImageProcessor imageBin = makebinary(image);
+		ImageProcessor ip = ImageOperations.removeBorder(imageBin);
+		int xe = ip.getWidth();
+		int ye = ip.getHeight();
+		int x, y;
+		boolean b, doIwhite= true;
+		int [][] pixel = new int [xe][ye];
+
+		new ImagePlus("",ip);
+		
+		//original converted to white particles
+		if (doIwhite==false){
+			for(y=0;y<ye;y++) {
+				for(x=0;x<xe;x++)
+					ip.putPixel(x,y,255-ip.getPixel(x,y));
+			}
+		}
+
+		//get original
+		for(y=0;y<ye;y++) {
+			for(x=0;x<xe;x++)
+				pixel[x][y]=ip.getPixel(x,y);
+		}
+
+		//label background borders
+		for (y=0; y<ye; y++){
+			if(ip.getPixel(0,y)==0)
+				ip.putPixel(0,y,127);
+			if(ip.getPixel(xe-1,y)==0)
+				ip.putPixel(xe-1,y,127);
+		}
+
+		for (x=0; x<xe; x++){
+			if(ip.getPixel(x,0)==0)
+				ip.putPixel(x,0,127);
+			if(ip.getPixel(x,ye-1)==0)
+				ip.putPixel(x,ye-1,127);
+		}
+
+		//flood background from borders
+		//the background of 8-connected particles is 4-connected
+		b=true;
+		while(b){
+			b=false;
+			for(y=1;y<ye-1;y++) {
+				for(x=1;x<xe-1;x++) {
+					if (ip.getPixel(x,y)==0){
+						if(ip.getPixel(x,y-1)==127 || ip.getPixel(x-1,y)==127) {
+							ip.putPixel(x,y,127);
+							b=true;
+						}
+					}
+				}
+			}
+			for(y=ye-2;y>=1;y--) {
+				for(x=xe-2;x>=1;x--) {
+					if (ip.getPixel(x,y)==0){
+						if(ip.getPixel(x+1,y)==127 || ip.getPixel(x,y+1)==127) {
+							ip.putPixel(x,y,127);
+							b=true;
+						}
+					}
+				}
+			}
+		}//idempotent
+
+		for(y=0;y<ye;y++) {
+			for(x=0;x<xe;x++){
+				if(ip.getPixel(x,y)==0)
+					ip.putPixel(x,y,255);
+				else
+					ip.putPixel(x,y,pixel[x][y]);
+			}
+		}
+
+		//return to original state
+		if (doIwhite==false){
+			for(y=0;y<ye;y++) {
+				for(x=0;x<xe;x++)
+					ip.putPixel(x,y,255-ip.getPixel(x,y));
+			}
+		}
+		return ip;
+	}
+
+	public static ImageProcessor fillHoles_Morpho(ImageProcessor image) {
+		ImageProcessor im = ImageOperations.removeBorder(image);
+		ImageProcessor imageBin = makebinary(im);
+		ImageProcessor markerImGeodDilated = image.createProcessor(image.getWidth(), image.getHeight());
+		ImageProcessor antIm = image.createProcessor(image.getWidth(), image.getHeight());
+		ImageProcessor diffIm = image.createProcessor(image.getWidth(), image.getHeight());
+		//KernelJAI kernel = createKernel(3, 3, RECT);
+		boolean stable = false;
+		
+		ImageProcessor imageCompl = complement(imageBin);
+		new ImagePlus("Complement Image", imageCompl).show();
+		ImageProcessor markerImage = markerImage(imageBin);
+		//ImagePlus markerGeodDilatedImPlus = 
+		//ImageProcessor markerImDilated = dilate(markerImage, kernel);
+		
+		//antIm.setPixels(markerImGeodDilated.getPixels());
+		//new ImagePlus("Marker Image", markerImage).show();
+		while(!stable) {
+			antIm.setPixels(markerImage.getPixelsCopy());
+			markerImage.erode();
+			markerImGeodDilated = ImageOperations.AND(markerImage, imageCompl);
+			//new ImagePlus("Marker Image Geodesic Dilated", markerImGeodDilated).show();
+			
+			diffIm = ImageOperations.differenceImage(markerImGeodDilated, antIm);
+			if(ImageOperations.isAllBlack(diffIm)) 
+				stable = true;
+			else
+				markerImage.setPixels(markerImGeodDilated.getPixelsCopy());
+				//antIm = markerImGeodDilated;
+		}
+		
+		return fillHolesAtBorder(complement(markerImGeodDilated));
+	}
+	
+	public static ImageProcessor fillHolesAtBorder(ImageProcessor image) {
+		int width = image.getWidth(); int height = image.getHeight();
+		ImageProcessor imageBin = makebinary(ImageOperations.removeBorder(image));
+		ImageProcessor imageCompl = complement(imageBin);
+		ImageProcessor imageHoles = image.createProcessor(width, height); 
+		ImageProcessor imageFilled = image.createProcessor(width, height); 
+		ImageProcessor antIm = image.createProcessor(image.getWidth(), image.getHeight());
+		ImageProcessor diffIm;  
+		KernelJAI kernel = createKernel(3, 3, CROSS);
+		ArrayList<Pixel> connectComp;
+		ArrayList<ArrayList<Pixel>> connectedComps = ImageOperations.findConnectedComponents(imageBin);
+		
+		Pixel conCompPixel, curPixel, firstPixel, lastPixel;
+		Boolean holeFound, stable;
+		int x,y,maxX,maxY,minX,minY;
+		new ImagePlus("Image Bin", imageBin).show();
+		new ImagePlus("Holes", imageHoles).show();
+		Matrix imageBinPixels = ImageOperations.pixelsMatrix(imageBin);
+		
+		for(int n=0; n<connectedComps.size(); n++) {
+			connectComp = connectedComps.get(n);
+		
+			maxX = ImageOperations.maxX(connectComp); maxY = ImageOperations.maxY(connectComp);
+			minX = ImageOperations.minX(connectComp); minY = ImageOperations.minY(connectComp);
+			
+			//  Search Hole
+			if(minX==0) {
+				firstPixel = firstPixelColumn(connectComp, 0);
+				lastPixel  = lastPixelColumn(connectComp, 0);
+				
+				//holeFound = false;
+				curPixel = (Pixel) imageBinPixels.get(firstPixel.getX(), firstPixel.getY());
+				while(/*!holeFound &&*/ curPixel.getY()<=lastPixel.getY()) {
+					if(curPixel.getIntHeight() == 0) {
+						//holeFound = true;
+						imageHoles.putPixelValue(curPixel.getX(), curPixel.getY(), 255);
+						break;
+					}
+					curPixel = curPixel.getBottomNeighbour();
+					if(curPixel==null)
+						break;
+				}
+			} 
+			if(maxX==width-1) {
+				firstPixel = firstPixelColumn(connectComp, maxX);
+				lastPixel  = lastPixelColumn(connectComp, maxX);
+				
+				//holeFound = false;
+				curPixel = (Pixel) imageBinPixels.get(firstPixel.getX(), firstPixel.getY());
+				while(/*!holeFound &&*/ curPixel.getY()<=lastPixel.getY()) {
+					if(curPixel.getIntHeight() == 0) {
+					//	holeFound = true;
+						imageHoles.putPixelValue(curPixel.getX(), curPixel.getY(), 255);
+						break;
+					}
+					curPixel = curPixel.getBottomNeighbour();
+					if(curPixel==null)
+						break;
+				}
+			} 
+			if(minY==0) {
+				firstPixel = firstPixelLine(connectComp, 0);
+				lastPixel  = lastPixelLine(connectComp, 0);
+				
+				//holeFound = false;
+				curPixel = (Pixel) imageBinPixels.get(firstPixel.getX(), firstPixel.getY());
+				while(/*!holeFound &&*/ curPixel.getX()<=lastPixel.getX()) {
+					if(curPixel.getIntHeight() == 0) {
+					//	holeFound = true;
+						imageHoles.putPixelValue(curPixel.getX(), curPixel.getY(), 255);
+						break;
+					}
+					curPixel = curPixel.getRightNeighbour();
+					if(curPixel==null)
+						break;
+				}
+			} 
+			if(maxY==height-1) {
+				firstPixel = firstPixelLine(connectComp, maxY);
+				lastPixel  = lastPixelLine(connectComp, maxY);
+				
+				//holeFound = false;
+				curPixel = (Pixel) imageBinPixels.get(firstPixel.getX(), firstPixel.getY());
+				while(/*!holeFound &&*/ curPixel.getX()<=lastPixel.getX()) {
+					if(curPixel.getIntHeight() == 0) {
+						//holeFound = true;
+						imageHoles.putPixelValue(curPixel.getX(), curPixel.getY(), 255);
+						break;
+					}
+					curPixel = curPixel.getRightNeighbour();
+					if(curPixel==null)
+						break;
+				}
+			}
+				
+		}
+		
+		stable = false;
+		while(!stable) {
+			//dilate(imageBin, kernel);
+			imageHoles.erode();
+			imageFilled = ImageOperations.AND(imageHoles, imageCompl);
+			new ImagePlus("Holes Filling", imageFilled).show();
+			diffIm = ImageOperations.differenceImage(antIm, imageFilled);
+			if(ImageOperations.isAllBlack(diffIm))
+				stable = true;
+			else 
+				antIm.setPixels(imageFilled.getPixels());
+		}
+		
+		return ImageOperations.OR(imageFilled,imageBin);
+	}
+	
+	private static Pixel firstPixelColumn(ArrayList<Pixel> connectComp, int c) {
+		Pixel firstPixel = null, curPixel;
+		int minY = connectComp.size()*100, y;
+		
+		for(int i=0; i<connectComp.size(); i++) {
+			curPixel = connectComp.get(i);
+			if(curPixel.getX()==c) {
+				y = curPixel.getY();
+				if(y < minY) {
+					minY = y;
+					firstPixel = curPixel;
+				}
+			}
+		}
+		
+		return firstPixel;
+	}
+	
+	private static Pixel lastPixelColumn(ArrayList<Pixel> connectComp, int c) {
+		Pixel lastPixel = null, curPixel;
+		int maxY = 0, y;
+		
+		for(int i=0; i<connectComp.size(); i++) {
+			curPixel = connectComp.get(i);
+			if(curPixel.getX()==c) {
+				y = curPixel.getY();
+				if(y > maxY) {
+					maxY = y;
+					lastPixel = curPixel;
+				}
+			}
+		}
+		
+		return lastPixel;
+	}
+
+	private static Pixel firstPixelLine(ArrayList<Pixel> connectComp, int l) {
+		Pixel firstPixel = null, curPixel;
+		int minX = connectComp.size()*100, x;
+		
+		for(int i=0; i<connectComp.size(); i++) {
+			curPixel = connectComp.get(i);
+			if(curPixel.getY()==l) {
+				x = curPixel.getX();
+				if(x < minX) {
+					minX = x;
+					firstPixel = curPixel;
+				}
+			}
+		}
+		
+		return firstPixel;
+	}
+	
+	private static Pixel lastPixelLine(ArrayList<Pixel> connectComp, int l) {
+		Pixel lastPixel = null, curPixel;
+		int maxX = 0, x;
+		
+		for(int i=0; i<connectComp.size(); i++) {
+			curPixel = connectComp.get(i);
+			if(curPixel.getY()==l) {
+				x = curPixel.getX();
+				if(x > maxX) {
+					maxX = x;
+					lastPixel = curPixel;
+				}
+			}
+		}
+		
+		return lastPixel;
+	}
+
+	public static ImageProcessor makebinary(ImageProcessor image) {
+		ImageProcessor image_out = image;
+		//new ImagePlus("",image_out).show();
+		for(int y = 0; y < image_out.getHeight(); y++) {
+			for(int x = 0; x < image_out.getWidth(); x++) {
+				if(image_out.getPixel(x, y) <= 127)
+					image_out.putPixel(x, y, 0);
+				else
+					image_out.putPixel(x, y, 255);
+			}
+		}
+		
+		return image_out;
+	}
+	
+	private static ImageProcessor markerImage(ImageProcessor image) {
+		int w = image.getWidth(), h = image.getHeight();
+		ImageProcessor markerImage = image.createProcessor(w, h);
+		int pixelValue;
+		
+		for(int y=0; y<h; y++) 
+			for(int x=0; x<w; x++) {
+				pixelValue = image.getPixel(x, y);
+				if( x == 0 || x == w-1 || y == 0 || y == h-1 )
+					markerImage.putPixel(x, y, 255 - pixelValue);
+				else
+					markerImage.putPixel(x, y, 0);
+			}
+		
+		return markerImage;
+	}
+	
+	/*public static ImageProcessor morphologicalOperator(ImageProcessor imageproc, KernelJAI kernel, int op) {
+		String op_str = null, op_str1 = null; 
+		Image image =  new ImagePlus("",ImageOperations.copyImage(imageproc)).getImage();
+		BufferedImage image_out = (BufferedImage) image;
+		BufferedImage image_out_aux = new BufferedImage(image_out.getWidth(), image_out.getHeight(), image_out.getType());
+		ImagePlus image_outPlus = new ImagePlus("",image_out);
+		RenderedOp renderedOp = null, renderedOp_aux = null;
+				
+		switch(op) { 
+			case ERODE: {
+				op_str = "erode"; break;
+			}
+			case DILATE: {
+				op_str = "dilate"; break;
+			}
+			case OPEN: {
+				op_str = "erode"; 
+				op_str1 = "dilate"; break;
+			}
+			case CLOSE: {
+				op_str = "dilate";
+				op_str1 = "erode"; break;
+			}
+			default: {
+				IJ.error("Not a valid morphological operator.");
+				return null;
+			}
+		}
+		
+		//RenderedOp renderedOp = ErodeDescriptor.create((RenderedImage)image, kernel, null);
+		if(op == ERODE || op == DILATE) 
+			renderedOp = JAI.create(op_str,(RenderedImage)image, kernel, null);
+		else {
+			renderedOp_aux = JAI.create(op_str,(RenderedImage)image, kernel, null);
+			image_out_aux.setData(renderedOp_aux.getData());
+			renderedOp = JAI.create(op_str1, image_out_aux, kernel, null);
+		}
+		
+		image_out.setData(renderedOp.getData());
+		
+		return image_outPlus.getProcessor();
+	}*/
+}

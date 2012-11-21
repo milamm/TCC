@@ -1,0 +1,150 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{1.45.2.1 }
+
+\bibitem[Adams 2003]{ADAMS:2003}
+\abntrefinfo{Adams}{ADAMS}{2003}
+{ADAMS, R.~D. \emph{High Performance Memory Testing}. London: Kluwer Academic,
+  2003.
+ISBN 1-4020-7255-4.}
+
+\bibitem[David, Fuentes e Courtois 1989]{DAVID:1989}
+\abntrefinfo{David, Fuentes e Courtois}{DAVID; FUENTES; COURTOIS}{1989}
+{DAVID, R. \emph{et al.} Random pattern testing versus deterministic testing of
+  rams.
+\emph{IEEE Trans. Comput.}, IEEE Computer Society, Washington, DC, USA, v.~38,
+  p. 637--650, Maio 1989.
+ISSN 0018-9340.}
+
+\bibitem[Dean e Zorian 1994]{DEAN:1994}
+\abntrefinfo{Dean e Zorian}{DEAN; ZORIAN}{1994}
+{DEAN, C.~A.; ZORIAN, Y. Do you practice safe tests? what we found out about
+  your habits. In:  \emph{Proceedings of the IEEE International Test Conference
+  on TEST: The Next 25 Years}. Washington, DC, USA: IEEE Computer Society,
+  1994. p. 887--892.
+ISBN 0-7803-2103-0.}
+
+\bibitem[Glaser John F.~Couleur 1965]{GLASER:1965}
+\abntrefinfo{Glaser John F.~Couleur}{GLASER JOHN F.~COULEUR}{1965}
+{GLASER JOHN F.~COULEUR, G. A.~O. E.~L. \emph{System Design of a Computer for
+  Time Sharing Applications}. 1965.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.multicians\-.org\-/fjcc2\-.html$>$}{http://www.multicians.org/fjcc2.html}.}
+
+\bibitem[Goor 1998]{VANDEGOOR:1998}
+\abntrefinfo{Goor}{GOOR}{1998}
+{GOOR, A. J. V.~D. \emph{Testing Semiconductor Memories: Theory and Practice}.
+  New York, NY, USA: John Wiley \& Sons, Inc., 1998.
+ISBN 0-471-92586-1.}
+
+\bibitem[Knuth 1997]{KNUTH:1997}
+\abntrefinfo{Knuth}{KNUTH}{1997}
+{KNUTH, D. \emph{The art of computer programming}. Reading, Mass:
+  Addison-Wesley, 1997.
+ISBN 0201896834.}
+
+\bibitem[Lenovo 2011]{LTT:2011}
+\abntrefinfo{Lenovo}{LENOVO}{2011}
+{LENOVO. \emph{Lenovo Support}.
+[S.l.], 2011. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/web\-.lenovothinkvantagetoolbox\-.com\-/index\-.html$>$}{http://web.lenovothinkvantagetoolbox.com/index.html}.}
+
+\bibitem[LinuxMM 2009]{OOMKILLER:2009}
+\abntrefinfo{LinuxMM}{LINUXMM}{2009}
+{LINUXMM. \emph{OOM Killer - linux-mm.org Wiki}.
+[S.l.], Junho 2009. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/linux-mm\-.org\-/OOM\underline{\
+  }Killer$>$}{http://linux-mm.org/OOM_Killer}.}
+
+\bibitem[LinuxMM 2010]{LINUXMM:2009}
+\abntrefinfo{LinuxMM}{LINUXMM}{2010}
+{LINUXMM. \emph{LinuxMM - linux-mm.org Wiki}.
+[S.l.], Junho 2010. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/linux-mm\-.org\-/$>$}{http://linux-mm.org/}.}
+
+\bibitem[Memtest86 2011]{MEMTEST:2011}
+\abntrefinfo{Memtest86}{MEMTEST86}{2011}
+{MEMTEST86. \emph{Memtest86+ - Advanced Memory Diagnostic Tool}.
+[S.l.], Janeiro 2011. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.memtest\-.org\-/$>$}{http://www.memtest.org/}.}
+
+\bibitem[Micron Technology, Inc. 2008]{MICRON:2008}
+\abntrefinfo{Micron Technology, Inc.}{MICRON TECHNOLOGY, INC.}{2008}
+{MICRON TECHNOLOGY, INC. \emph{MT16JSF25664H Datasheet}.
+Boise, USA, 2008. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/download\-.micron\-.com\-/pdf\-/datasheets\-/modules\-/ddr3\-/jsf16c256x64h\-.pdf$>$}{http://download.micron.com/pdf/datasheets/modules/ddr3/jsf16c256x64h.pdf}.}
+
+\bibitem[Nair, Thatte e Abraham 1978]{NAIR:1978}
+\abntrefinfo{Nair, Thatte e Abraham}{NAIR; THATTE; ABRAHAM}{1978}
+{NAIR, R. \emph{et al.} Efficient algorithms for testing semiconductor
+  random-access memories.
+\emph{Computers, IEEE Transactions on}, C-27, n.~6, p. 572 --576, june 1978.
+ISSN 0018-9340.}
+
+\bibitem[Papachristou e Sahgal 1985]{PAPACHRISTOU:1985}
+\abntrefinfo{Papachristou e Sahgal}{PAPACHRISTOU; SAHGAL}{1985}
+{PAPACHRISTOU, C.; SAHGAL, N. An improved method for detecting functional
+  faults in semiconductor random access memories.
+\emph{Computers, IEEE Transactions on}, C-34, n.~2, p. 110 --116, feb. 1985.
+ISSN 0018-9340.}
+
+\bibitem[PC-Doctor 2011]{PCDOCTOR:2011}
+\abntrefinfo{PC-Doctor}{PC-DOCTOR}{2011}
+{PC-DOCTOR. \emph{PC-Doctor}.
+[S.l.], 2011. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.pc-doctor\-.com\-/$>$}{http://www.pc-doctor.com/}.}
+
+\bibitem[PETRU 2002]{PETRU:2002}
+\abntrefinfo{PETRU}{PETRU}{2002}
+{PETRU, O.~A. C. March test algorithm for 3-coupling faults in random access
+  memories. In:  \emph{Preceedings of 2002 WSEAS International Conference
+  Information, Simulation and Manufacturing Systems}. Cancun, México: World
+  Scientific and Engineering Academy and Society, 2002. p. 188--193.
+ISBN 960-8052-59-9.}
+
+\bibitem[Phan 2002]{PHAN:2002}
+\abntrefinfo{Phan}{PHAN}{2002}
+{PHAN, S. C.~C. T. \emph{Programmable moving inversion sequencer for memory
+  bist address generation}. julho 2002.
+Patent.
+US 6425103.}
+
+\bibitem[Raghuraman 2005]{RAGHURAMAN:2005}
+\abntrefinfo{Raghuraman}{RAGHURAMAN}{2005}
+{RAGHURAMAN, A. Walking, marching and galloping patterns for memory tests.
+2005.}
+
+\bibitem[Riedel e Rajski 1995]{RIEDEL:1995}
+\abntrefinfo{Riedel e Rajski}{RIEDEL; RAJSKI}{1995}
+{RIEDEL, M.; RAJSKI, J. Fault coverage analysis of ram test algorithms. In:
+  \emph{VLSI Test Symposium, 1995. Proceedings., 13th IEEE}. [S.l.: s.n.],
+  1995. p. 227 --234.}
+
+\bibitem[Suk e Reddy 1981]{SUK:1981}
+\abntrefinfo{Suk e Reddy}{SUK; REDDY}{1981}
+{SUK, D.~S.; REDDY, S.~M. A march test for functional faults in semiconductor
+  random access memories.
+\emph{IEEE Trans. Comput.}, IEEE Computer Society, Washington, DC, USA, v.~30,
+  p. 982--985, Dezembro 1981.
+ISSN 0018-9340.}
+
+\bibitem[Tanenbaum 2001]{TANENBAUM:2001}
+\abntrefinfo{Tanenbaum}{TANENBAUM}{2001}
+{TANENBAUM, A. \emph{Modern operating systems}. Upper Saddle River, N.J:
+  Prentice Hall, 2001.
+ISBN 0130313580.}
+
+\bibitem[Thatte 1977]{THATTE:1977}
+\abntrefinfo{Thatte}{THATTE}{1977}
+{THATTE, S.~M. Fault diagnosis of semiconductors random accsess memories.
+Coord. Sci. Lab., Illinois, Maio 1977.}
+
+\bibitem[Weber 2001]{WEBER:2001}
+\abntrefinfo{Weber}{WEBER}{2001}
+{WEBER, T.~S. \emph{Tolerância a falhas: conceitos e exemplos}.
+Universidade Federal do Rio Grande do Sul, 2001.}
+
+\end{thebibliography}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;Watershed.WatershedStructure.java&apos; to &apos;WatershedStruct.java&apos;&#x0D;&#x0A;- Original project: &apos;BloodCellsCount&apos;&#x0D;&#x0A;- Original element: &apos;Watershed.WatershedStructure.java&apos;&#x0D;&#x0A;- Renamed element: &apos;Watershed.WatershedStruct.java&apos;" description="Rename compilation unit &apos;WatershedStructure.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;Watershed{WatershedStructure.java" name="WatershedStruct.java" references="false" stamp="1344703655775" version="1.0"/>
+</session>

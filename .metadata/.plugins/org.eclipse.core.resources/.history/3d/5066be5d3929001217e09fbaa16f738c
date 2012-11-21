@@ -1,0 +1,34 @@
+//import static org.junit.Assert.*;
+
+//import java.sql.Blob;
+
+import org.junit.Test;
+
+
+public class testAll {
+
+	@Test
+	public void testAnaliseImage() {
+		BloodCellsCountFrame frame = new BloodCellsCountFrame();
+		
+		//frame.testAnaliseImage("images/testes/4_a1_cauda_400x_oleo_CP.JPG", 30);
+		//frame.testAnaliseImage("images/testes/5_a1_cauda_400x_oleo_CP.JPG", 30);
+		frame.testAnaliseImage("images/testes/6_a1_cauda_400x_oleo_zout_CP",30);
+	//Funciona
+		//frame.testAnaliseImage("images/HEME71_d30.jpg", 30);
+		//frame.testAnaliseImage("images/hematology.org.normalRBC113_d25.jpg", 30);
+		//frame.testAnaliseImage("images/NB1ln1.jpg", 30);
+		//frame.testAnaliseImage("images/icb.usp.br_mol_10-2-sangue2.jpg", 30);
+		
+	//N funciona	
+		//frame.testAnaliseImage("images/hematology.org.normalBloodSmear_crop_d12.jpg", 30);
+		//frame.testAnaliseImage("images/nejm.org.Elliptocytosis_d54.jpg", 30);
+		//frame.testAnaliseImage("images/icb.usp.br_mol_10-5-sangue5.jpg", 30);
+	}
+
+	/*@Test
+	public void testActionPerformed() {
+		fail("Not yet implemented");
+	}*/
+
+}

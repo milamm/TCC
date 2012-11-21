@@ -1,0 +1,5 @@
+\section{Teste em Ambientes Reais}
+
+Além do ambiente de simulação de falhas elucidado na seção anterior, o MDiag também foi confrontado contra situações reais a fim de garantir a utilidade da ferramenta.
+
+Um acervo de dez placas de memórias foram foram utilizada memórias reais, alguma em boas condições e outras com falhas. 

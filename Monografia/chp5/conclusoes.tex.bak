@@ -1,0 +1,23 @@
+\chapter{Conclusões}
+
+Neste trabalho foi desenvolvida uma ferramenta de diagnóstico de falhas em memórias, nomeada de MDiag. Esta opera sobre o \ac{SO} Linux, ambiente até então carente de aplicações semelhantes com a qualidade proposta.
+
+Os algoritmos implementados foram selecionados após um extenso levantamento dos testes apresentados em diversas publicações e livros da área. Foram levadas em consideração a cobertura de falhas e a complexidade de cada um, resultando em cinco algoritmos de ordem $O(N)$ e um de ordem $O(N\log(N))$.
+
+Para garantir bons resultados, foi realizado um estudo aprofundado sobre as características de gerenciamento de memória do Linux. Com a familiaridade adquirida, foi possível expandir a quantidade de memória coberta pelo MDiag sem comprometer a estabilidade do sistema.
+
+Para medir a quantidade de falhas detectadas pelos algoritmos, foi projetado um sistema de inserção de falhas que utiliza instruções de \emph{debug} do processador. O sistema simulou uma grande quantidade de falhas de três modelos diferentes. Os resultados coletados confirmaram a excelência dos algoritmos implementados, todos obtendo cobertura acima de 97\% das falhas inseridas. O próprio sistema de inserção de falhas é uma contribuição de grande utilidade para análises quantitativas de cobertura de falhas de testes de memória.
+
+O MDiag também foi testado com memórias defeituosas reais, juntamente com outras ferramentas de diagnóstico utilizadas no mercado. Os resultados comparativos mostraram que o MDiag detectou todas as falhas acusadas pelos outros \emph{softwares}.
+
+Os testes de portabilidade realizados mostraram que o MDiag se adapta bem a várias plataformas de \emph{hardware} com Linux. Assim, pode ser utilizado para diagnosticar desde memórias de pequenos sistemas embarcados, com \emph{port} personalizado do \emph{kernel}, até servidores com numerosos módulos e diferentes distribuições Linux.
+
+A realização deste trabalho gerou como contribuição não apenas o diagnóstico em si, que mostrou-se eficiente e portável mas também um sistema de inserção de falhas totalmente automatizado que pode ser utilizado para avaliação quantitativa de outras implementações de testes de memória. A ferramenta é uma contribuição especialmente interessante para ser utilizada como parte de um sistema maior de diagnóstico de computadores, que pode reunir ferramentas semelhantes aplicadas aos outros componentes de \emph{hardware} da máquina, como processador, disco rígido, placa mãe, etc. O MDiag é particularmente fácil de ser integrado com outras ferramentas por ser facilmente convertido em uma biblioteca que pode ser utilizada como uma \ac{API} para testes de memória.
+
+\section{Perspectivas Futuras}
+
+Os resultados alcançados neste trabalho podem ser aproveitados de diversas maneiras. Como sugestão estão o aprimoramento do \emph{software} em si, que pode ser feito principalmente através da implementação de novos algoritmos a medida que forem encontrados testes de eficiência superior. Também é desejável o desenvolvimento de uma interface com usuário mais elaborada, que torne a experiência de utilização mais agradável.
+
+O sistema de inserção de falhas pode ser utilizado para realizar um estudo comparativo da cobertura alcançada por algoritmos de testes de memória. Para isto, basta implementar os algoritmos e os modelos de falhas desejados, aproveitando-se, por exemplo, a geração e a inserção automática das falhas.
+
+Como dito anteriormente, a ferramenta é de fácil integração com outros \emph{softwares}. Isto foi planejado para que seja utilizada como parte de um sistema de diagnóstico para todo o conjunto de \emph{hardware} do computador. Diagnósticos para outros tipos de dispositivos podem ser reunidos em uma única aplicação que testaria não apenas a memória, mas todo o sistema. 

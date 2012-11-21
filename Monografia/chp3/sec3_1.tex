@@ -1,0 +1,9 @@
+\section{Ambiente de Desenvolvimento e Teste}
+
+Para o desenvolvimento deste trabalho, foram utilizados diversos tipos de computadores a fim de garantir compatibilidade com a maior variedade possível de plataformas. Sistemas variando desde kit de desenvolvimento de sistema embarcado até servidores de grande porte com distribuições Linux variadas. Todas as máquinas utilizadas, com exceção de um computador pessoal do autor, fazem parte do acervo do \ac{LESC} da \ac{UFC}.
+
+Nenhum tipo de bibliotecas, além das padrões do Linux, foram necessárias durante o desenvolvimento, pois, para favorecer a portabilidade, a ferramenta utiliza apenas funcionalidades presentes no próprio \emph{kernel} do Linux, a partir da versão 2.6.9.
+
+Para simular as falhas em memória, foi utilizada uma abordagem baseada em \cite{PETRU:2002} (descrita com detalhes na seção \ref{SEC:SIM}). Um \emph{software} de \emph{debug} com capacidade de estabelecer \emph{breakpoints} em nível de \emph{hardware} foi utilizado para interromper a execução do teste no momento desejado e escrever um valor de erro na memória, simulando qualquer tipo de falha. O \emph{software} utilizado foi o \ac{GDB}, uma das mais consagradas ferramentas de \emph{debug} para Linux.
+
+Foram realizados testes com memórias defeituosas reais e os resultados foram comparados aqueles obtidos por outras ferramentas de diagnóstico do mercado. Os componentes e o procedimento desta avaliação são detalhados na Seção \ref{SEC:REAL} 

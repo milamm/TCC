@@ -6,4 +6,15 @@
 		<item value="194" key="HEIGHT"/>
 		<item value="614" key="WIDTH"/>
 	</section>
+	<section name="conditionHistory">
+		<item value="p.getLabel()&gt;0" key="conditionHistoryEntry_7"/>
+		<item value="h=240" key="conditionHistoryEntry_6"/>
+		<item value="8" key="conditionHistoryEntryCount"/>
+		<item value="h==200" key="conditionHistoryEntry_0"/>
+		<item value="h==100" key="conditionHistoryEntry_1"/>
+		<item value="p.getX() &gt; 50 &amp;&amp; p.getX() &lt; 70" key="conditionHistoryEntry_2"/>
+		<item value="p.getX() &gt; 55 &amp;&amp; p.getX() &lt; 65" key="conditionHistoryEntry_3"/>
+		<item value="p.getX() &gt; 20 &amp;&amp; p.getX() &lt; 30" key="conditionHistoryEntry_4"/>
+		<item value="h==240" key="conditionHistoryEntry_5"/>
+	</section>
 </section>

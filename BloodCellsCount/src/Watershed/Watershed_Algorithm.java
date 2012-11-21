@@ -24,12 +24,16 @@ import ij.plugin.filter.PlugInFilter;
 import ij.process.*;
 import ij.gui.*;
 import ij.plugin.frame.PlugInFrame;
+import image.ImageOperations;
+import image.Pixel;
 
 import java.awt.*;
 import java.awt.color.ColorSpace;
 import java.awt.image.ColorModel;
 import java.awt.image.ComponentColorModel;
 import java.util.*;
+
+import javax.swing.text.html.MinimalHTMLWriter;
 
 /**
  * This algorithm is an implementation of the watershed immersion algorithm
@@ -78,16 +82,10 @@ public class Watershed_Algorithm {// implements PlugInFilter {
 	 * DOES_8G+DOES_STACKS+SUPPORTS_MASKING+NO_CHANGES; }
 	 */
 
-	public static ImageProcessor performWatershed(ImageProcessor ip) {
+	public static WatershedStruct performWatershed(ImageProcessor ip) {
 		boolean debug = false;
 		
 		int width = ip.getWidth();
-		/*ColorModel colorModel = new ComponentColorModel(
-				ColorSpace.getInstance(ColorSpace.CS_GRAY), false, false, 1, 0);*/
-		ByteProcessor outputImage = new ByteProcessor(width, ip.getHeight());
-		//outputImage.setColorModel(colorModel);
-		byte[] newPixels = (byte[]) outputImage.getPixels();
-		ImagePlus outputImPlus = new ImagePlus("Watershed", outputImage);
 		
 		System.out.println("Sorting pixels...");
 		System.out.println("Progress: "+0.1);
@@ -96,16 +94,22 @@ public class Watershed_Algorithm {// implements PlugInFilter {
 		 * First step : the pixels are sorted according to increasing grey
 		 * values
 		 **/
-		WatershedStructure watershedStructure = new WatershedStructure(ip);
+		WatershedStruct watershedStructure = new WatershedStruct(ip);
+		Vector watershedStruct = watershedStructure.getWatershedStructureVector(); 
+		
 		if (debug)
 			System.out.println("" + watershedStructure.toString());
 
 		System.out.println("Progress: "+0.8);
 		System.out.println("Start flooding...");
 
-		if (debug)
+		if (debug) {
 			System.out.println("Starting algorithm...\n");
-
+			watershedStructure.showWatershedImage();
+			watershedStructure.showMinimaImage();
+		}
+		watershedStructure.showWatershedImage();
+			
 		/** Start flooding **/
 		WatershedFIFO queue = new WatershedFIFO();
 		int curlab = 0;
@@ -113,13 +117,14 @@ public class Watershed_Algorithm {// implements PlugInFilter {
 		int heightIndex1 = 0;
 		int heightIndex2 = 0;
 
+		WatershedPixel p_ant = null;
+		
 		for (int h = HMIN; h < HMAX; h++) /*
 										 * Geodesic SKIZ of level h-1 inside
 										 * level h
 										 */{
 
-			for (int pixelIndex = heightIndex1; pixelIndex < watershedStructure
-					.size(); pixelIndex++) /* mask all pixels at level h */{
+			for (int pixelIndex = heightIndex1; pixelIndex < watershedStruct.size(); pixelIndex++) /* mask all pixels at level h */{
 				WatershedPixel p = watershedStructure.get(pixelIndex);
 
 				if (p.getIntHeight() != h) {
@@ -191,14 +196,26 @@ public class Watershed_Algorithm {// implements PlugInFilter {
 								// Removed from original algorithm ||
 								// p.isLabelWSHED() )
 								p.setLabel(q.getLabel());
+								watershedStructure.putPixelWatershedImage(p);
+								//p.setHeight((byte)0);
 								//newPixels[p.getX() + p.getY() * width] = (byte) (p.getLabel()+3);
 							} else if (p.getLabel() != q.getLabel()) {
 								p.setLabelToWSHED();
+								//p.setHeight((byte)255);
+								watershedStructure.addWatershedPixel(p);
+								//watershedStructure.addMinimaPixelNeighbour(p, q);
+								watershedStructure.addMinimaPixelNeighbour(p, q.getLabel());
+								//p.setMinimaPixelAssociated(watershedStructure.getMinimaPixel(q.getLabel()));
 								//newPixels[p.getX() + p.getY() * width] = (byte) (p.getLabel()+3);
 							}
 						} // end if lab>0
 						else if (p.isLabelMASK()) {
 							p.setLabelToWSHED();
+							//p.setHeight((byte)255);
+							watershedStructure.addWatershedPixel(p);
+							//watershedStructure.addMinimaPixelNeighbour(p,q);
+							watershedStructure.addMinimaPixelNeighbour(p,-1);
+							//p.setMinimaPixelAssociated(watershedStructure.getMinimaPixel(p_ant.getLabel()));
 							//newPixels[p.getX() + p.getY() * width] = (byte) (p.getLabel()+3);
 						}
 					} else if (q.isLabelMASK() && (q.getDistance() == 0)) {
@@ -208,6 +225,8 @@ public class Watershed_Algorithm {// implements PlugInFilter {
 						q.setDistance(curdist + 1);
 						queue.fifo_add(q);
 					}
+					if(q.getLabel()>0)
+						p_ant = q;
 				} // end for, end processing neighbours
 
 				if (debug) {
@@ -219,8 +238,7 @@ public class Watershed_Algorithm {// implements PlugInFilter {
 			} // end while (loop)
 
 			/* Detect and process new minima at level h */
-			for (int pixelIndex = heightIndex2; pixelIndex < watershedStructure
-					.size(); pixelIndex++) {
+			for (int pixelIndex = heightIndex2; pixelIndex < watershedStruct.size(); pixelIndex++) {
 				WatershedPixel p = watershedStructure.get(pixelIndex);
 
 				if (p.getIntHeight() != h) {
@@ -236,6 +254,7 @@ public class Watershed_Algorithm {// implements PlugInFilter {
 					p.setLabel(curlab);
 					queue.fifo_add(p);
 					//newPixels[p.getX() + p.getY() * width] = (byte) (curlab+3);
+					watershedStructure.addMinimaPixel(p);
 
 					while (!queue.fifo_empty()) {
 						WatershedPixel q = queue.fifo_remove();
@@ -252,6 +271,7 @@ public class Watershed_Algorithm {// implements PlugInFilter {
 
 							if (r.isLabelMASK()) {
 								r.setLabel(curlab);
+								watershedStructure.putPixelWatershedImage(r);
 								queue.fifo_add(r);
 								//newPixels[r.getX() + r.getY() * width] = (byte) (curlab+3);
 							}
@@ -260,6 +280,7 @@ public class Watershed_Algorithm {// implements PlugInFilter {
 				} // end if
 				//outputImPlus.show();
 			} // end for
+			//watershedStructure.showWatershedImage();
 		}
 		/** End of flooding **/
 
@@ -268,20 +289,124 @@ public class Watershed_Algorithm {// implements PlugInFilter {
 
 		/** Put the result in a new image **/
 		
-		for (int pixelIndex = 0; pixelIndex < watershedStructure.size(); pixelIndex++) {
+		/*for (int pixelIndex = 0; pixelIndex < watershedStructure.size(); pixelIndex++) {
 			WatershedPixel p = watershedStructure.get(pixelIndex);
 
 			if (p.isLabelWSHED() && !p.allNeighboursAreWSHED())
-				newPixels[p.getX() + p.getY() * width] = (byte) 255;
-		}
+				//newPixels[p.getX() + p.getY() * width] = (byte) 255;
+				watershedStructure.putWatershedPixel(p);
+		}*/
 
 		System.out.println("Progress: "+1);
 		//System.out.println("Displaying result...");
 
-		//outputImPlus.show();
-		return outputImage;
+		// show minima
+		//watershedStructure.showMinimaImage();
+		
+		return watershedStructure;
 	}
 
+	public static int countRBC(WatershedStruct watershedStruct) {
+		int count=0;
+		ImageProcessor watershedImage = watershedStruct.getWatershedImage();
+		ImageProcessor auxIm = new ByteProcessor(500, 500); 
+		Vector watPixels = watershedStruct.getWatershedPixels();
+		Vector watPixelsAtBorder = new Vector();
+		int w = watershedImage.getWidth(), h = watershedImage.getHeight();
+		int x, y, min_p_x, min_p_y;
+		WatershedPixel cur_pixel, cur_min_pixel, min_pixel_ant = null;
+		ArrayList<ArrayList<WatershedPixel>> connectedComps;
+		ArrayList<WatershedPixel> connectedComp;
+		Vector minima_pixels, neigs;
+		
+		//*********************
+		//remove cells that are not completely included on the image
+		minima_pixels = watershedStruct.getMinimaPixels();
+		/*int n=0;
+		while( n < minima_pixels.size() ) {
+			cur_min_pixel = (WatershedPixel) minima_pixels.get(n);
+			if(cur_min_pixel != min_pixel_ant) {
+				neigs = cur_min_pixel.getNeighbours();
+				min_p_x = cur_min_pixel.getX();
+				min_p_y= cur_min_pixel.getY();
+				for(int k=0; k < neigs.size(); k++) {
+					cur_pixel = (WatershedPixel) neigs.get(k);
+					x = cur_pixel.getX(); y = cur_pixel.getY();
+					if( ( (x==0 || x==w-1 || y==0 || y==h-1) && cur_pixel.isLabelWSHED() )
+							|| (min_p_x==0 || min_p_x==w-1 || min_p_y==0 || min_p_y==h-1) ) {					
+						//watershedStruct.removeMinimaPixelsAtBorder(cur_min_pixel);
+						watershedStruct.removeMinimaPixel(cur_min_pixel);
+						break;
+					}
+				}
+			} else
+				n++;
+			min_pixel_ant = cur_min_pixel;
+		}*/
+		/*for(int i=0; i < watPixels.size(); i++) {
+			cur_pixel = (WatershedPixel) watPixels.get(i);
+			x = cur_pixel.getX(); y = cur_pixel.getY();
+			if( x==0 || x==w-1 || y==0 || y==h-1) 
+				watPixelsAtBorder.add(cur_pixel);
+		}
+		for(int i=0; i < watPixelsAtBorder.size(); i++) {
+			cur_pixel = (WatershedPixel) watPixelsAtBorder.get(i);
+			watershedStruct.removeWatershedNeighbours(cur_pixel);
+			//watershedStruct.removeMinimaPixel(cur_pixel.getMinimaPixelAssociated());
+		}*/
+		//*********************
+		
+		// Count RBC
+		count = watershedStruct.getMinimaPixels().size();
+		/*ImagePlus auxIPl = new ImagePlus("connectedComps", auxIm);
+		Vector minimaLabels = new Vector<Integer>();
+		int cur_label;
+		WatershedPixel min_pixel;
+		auxIPl.show();
+		
+		connectedComps = watershedStruct.findConnectedComponents();
+		for(int i=0; i < connectedComps.size(); i++) {
+			connectedComp = connectedComps.get(i);
+			for(int k=0; k < connectedComp.size(); k++) {
+				cur_pixel = (WatershedPixel) connectedComp.get(k);
+				min_pixel = cur_pixel.getMinimaPixelAssociated();
+				cur_label = min_pixel.getLabel();
+				auxIm.putPixel(cur_pixel.getX(), cur_pixel.getY(), 128);
+				auxIm.putPixel(min_pixel.getX(), min_pixel.getY(), 255);
+				if( !minimaLabels.contains(cur_label) ) {
+					minimaLabels.add(cur_label);
+				}
+				
+			}
+			
+			count += minimaLabels.size() - 1;         // -1 to remove minima pixel associated to background
+			minimaLabels.removeAllElements();
+		}*/
+		
+		// Removing smallest elements
+		double percentage = 0.8;
+		double[] RBCsDiameter = new double[minima_pixels.size()];
+		double averageDiameter=0;
+		double minDiameter, maxDiameter;
+		
+		for(int k=0; k < minima_pixels.size(); k++) {
+			RBCsDiameter[k] = watershedStruct.calculateRBCDiameter((Pixel) minima_pixels.get(k));
+			averageDiameter += RBCsDiameter[k];
+		} 
+		averageDiameter = averageDiameter/minima_pixels.size();
+		minDiameter = percentage*averageDiameter;
+		maxDiameter = 10*averageDiameter;
+		
+		for(int k=minima_pixels.size()-1; k >= 0; k--) {
+			cur_min_pixel = (WatershedPixel) minima_pixels.get(k);
+			if(RBCsDiameter[k] < minDiameter)
+				watershedStruct.removeMinimaPixel(cur_min_pixel);
+			if(RBCsDiameter[k] > maxDiameter)
+				watershedStruct.removeMinimaPixel(cur_min_pixel);
+		}
+			
+		return minima_pixels.size();
+	}
 	/*void showAbout() {
 		IJ.showMessage(
 				"About Watershed_Algorithm...",

@@ -1,0 +1,17 @@
+\chapter{Fundamentação Teórica}
+\label{CHP:FUND}
+
+Neste capítulo são descritos alguns fundamentos sobre modelos de falhas em memória e os tipos de algoritmos conhecidos. Também serão apresentadas algumas características do gerenciador de memória do Linux que são importantes para o projeto do diagnóstico.
+
+    %%% Seção 2.1 Modelagem de Falhas em Memórias:
+    \input{chp2/sec2_1}
+    %%% Seção 2.2 Tipos de testes de memória:
+    \input{chp2/sec2_2}
+    %%% Seção 2.3 Gerenciamento de memória do Linux:
+    \input{chp2/sec2_3}
+
+\section{Resumo do Capítulo}
+
+Este capítulo apresentou, de maneira resumida, alguns fundamentos da área de testes de memória que são úteis para melhor compreensão deste trabalho. Mostrou os vários tipos de falhas e testes estudados, dando ênfase nas falhas mais comuns e nos testes de complexidade realizável na tecnologia atual. Também foram apresentadas algumas características de como o Linux gerencia a memória física do sistema.
+
+No capítulo seguinte, serão apresentadas as ferramentas utilizadas para o desenvolvimento, teste e validação, além de detalhes da implementação da ferramenta concebida neste trabalho. 

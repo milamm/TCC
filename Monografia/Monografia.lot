@@ -1,0 +1,28 @@
+\select@language {brazil}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces \emph {Zero-Ones Pattern.}}}{14}{table.2.1}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Tempos de execu\c c\~ao em mem\'oria com tempo de acesso de 1,25 ns.}}{15}{table.2.2}
+\contentsline {table}{\numberline {2.3}{\ignorespaces Exemplo de \emph {walking}.}}{15}{table.2.3}
+\contentsline {table}{\numberline {2.4}{\ignorespaces Exemplo de \emph {marching}.}}{16}{table.2.4}
+\contentsline {table}{\numberline {2.5}{\ignorespaces \emph {March C- pattern.}}}{17}{table.2.5}
+\contentsline {table}{\numberline {2.6}{\ignorespaces \emph {Enhanced March C- pattern.}}}{17}{table.2.6}
+\contentsline {table}{\numberline {2.7}{\ignorespaces \emph {Endere\c camento do MOVI na segunda itera\c c\~ao (LSB = bit 1).}}}{18}{table.2.7}
+\contentsline {table}{\numberline {2.8}{\ignorespaces Algoritmo Papachristou 1.}}{19}{table.2.8}
+\contentsline {table}{\numberline {2.9}{\ignorespaces Segunda etapa do algoritmo Papachristou 2.}}{20}{table.2.9}
+\contentsline {table}{\numberline {2.10}{\ignorespaces Padr\~oes de fundo no algoritmo MT.}}{21}{table.2.10}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {}}}{21}{table.2.10}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {}}}{21}{table.2.10}
+\contentsline {subtable}{\numberline {(c)}{\ignorespaces {}}}{21}{table.2.10}
+\contentsline {subtable}{\numberline {(d)}{\ignorespaces {}}}{21}{table.2.10}
+\contentsline {subtable}{\numberline {(e)}{\ignorespaces {}}}{21}{table.2.10}
+\contentsline {subtable}{\numberline {(f)}{\ignorespaces {}}}{21}{table.2.10}
+\contentsline {table}{\numberline {2.11}{\ignorespaces \emph {MT pattern.}}}{22}{table.2.11}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces \emph {March G pattern.}}}{32}{table.3.1}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Falhas detectadas por algoritmo.}}{39}{table.4.1}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Resultados dos testes em mem\'orias reais.}}{40}{table.4.2}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Tempo de execu\c c\~ao.}}{42}{table.4.3}
+\addvspace {10\p@ }
+\contentsfinish 

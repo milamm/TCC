@@ -1,0 +1,51 @@
+\chapter{Introdução} \label{CHP:INTRO}
+
+Os sistemas computacionais estão cada vez mais presentes no cotidiano da sociedade. Uma gama crescente de tarefas são confiadas a computadores de vários tipos, desde sistemas embarcados, como equipamentos de controle e segurança, passando pelos computadores pessoais, até grandes servidores, como máquinas utilizadas em \emph{data centers}. Muitos desses sistemas trabalham em operação contínua, como, por exemplo, os chamados Sistemas de Alta Disponibilidade, que podem chegar a taxas de 99,999\% de disponibilidade anual. Este caso ilustra a importância, nos dias atuais, de ferramentas que automatizam o processo de manuntenção e ajudam a garantir o funcionamento do sistema. Um tipo de ferramenta deste tipo são os \emph{softwares} de diagnóstico. Eles são utilizados para verificar se os componentes de \emph{hardware} de um sistema estão funcionando corretamente.
+
+%Os componentes de \emph{hardware} utilizados em sistemas computacionais estão se tornando mais complexos com o avanço da tecnologia. Isto gera novas possibilidades de falhas e maior risco ao longo de todo o ciclo de vida do produto. Com isso, os sistemas de teste e diagnóstico ganham importância \textbf{tanto durante a produção quanto para uso no sistema final, isto é, nos sistemas prontos, de uso cotidiano}.
+
+%Os testes realizados durante ou ao final da produção geralmente utilizam características de testabilidade projetadas no próprio circuito, chamadas de \ac{DFT}. Isto permite identificar possíveis falhas decorridas durante o processo de manufatura.
+
+%No sistema final, o dispositivo pode ser testado novamente para diagnóstico de falha.
+Por exemplo, após a montagem de um computador em uma linha de produção, um diagnóstico de todo o \emph{hardware} deve ser realizado para garantir que nenhum componente danificado chegará ao cliente. Outro uso é na identificação de partes defeituosas, que pode ser feita por um usuário que está insatisfeito com o desempenho geral do sistema, ou por um serviço de assistência técnica que precisa substituir uma peça defeituosa. Em Sistemas de Alta Disponibilidade, os diagnósticos podem ser agendados para execuções periódicas, gerando relatórios do estado de conservação do \emph{hardware}.
+
+Para se projetar um diagnóstico, é necessário total domínio e conhecimento a respeito do elemento a ser testado, além de um extenso estudo sobre os tipo de falhas que o componente possa vir a apresentar. Mais ainda, é preciso que o \emph{software} explore o máximo possível das funcionalidades do dispositivo para que se possa assegurar o seu funcionamento.
+
+Este trabalho se concentra no projeto e desenvolvimento de um sistema de diagnóstico de falhas em memórias de computadores, que é um componente de maior importância para o funcionamento de um sistema computacional e que apresenta alta taxa de falhas.
+
+\section{Motivação}
+
+As matrizes de células de memória estão entre os circuitos \ac{VLSI} de maior densidade de transistores por área \cite{ADAMS:2003}. Por possuir uma estrutura essencialmente regular, sua produção está, geralmente, próxima do estado da arte da tecnologia de fabricação de \ac{CI}. Esses \emph{chips} apresentam uma média muito alta de defeitos físicos, comparados com outros tipos de circuitos. Isto ocorre principalmente devido as diminutas distâncias entre os transistores e a proximidade entre as trilhas condutoras. Esse fato motivou pesquisadores a desenvolverem eficientes algoritmos de testes de memória, que atualmente se encontram em um elevado grau de maturidade para a maioria das aplicações.
+
+Apesar da grande quantidade e da qualidade dos algoritmos de detecção de falhas em memória disponíveis atualmente, poucas aplicações os utilizam para diagnosticar esses componentes em sistemas finais. O uso mais comum é na detecção de falhas de manufatura, logo após a fabricação do \emph{chip}. Esses testes poderiam ser uma ferramenta importante no caso de um usuário (doméstico ou empresa) que deseja diagnosticar um componente de memória já em uso, seja por notar certa instabilidade no funcionamento do sistema ou seja para testar periodicamente um dispositivo que opera em condições de estresse. As opções existentes atualmente para estes fins são escassas e a maioria utiliza algoritmos simples e de baixa cobertura de falhas.
+
+A ferramenta mais utilizada para diagnóstico de memórias em sistemas finais, isto é, sistemas prontos para uso, é o Memtest86+ \cite{MEMTEST:2011}, \emph{software open source} que executa diretamente após o \emph{boot} do computador, sem utilizar um \ac{SO}. Sua abordagem evita todo o controle que qualquer \ac{SO} exerce sobre o \emph{hardware}, permitindo, assim, testar a maior quantidade possível da memória física. Uma desvantagem desta característica é a necessidade de interromper toda a atividade do sistema para reiniciá-lo, algo muitas vezes incômodo para máquinas de uso pessoal ou mesmo inviável em servidores. Outra desvantagem é que o Memtest86+ utiliza trechos de código em \emph{assembly}, o que só o permite executar em plataforma de arquitertura x86.
+
+Já um diagnóstico rodando sobre Linux possui as vantagens de ser executado nos mais diversos sistemas computacionais, incluindo desde pequenas plataformas embarcadas até servidores de grande porte. Conta também com a possibilidade de diagnosticar um componente de memória com o sistema em pleno funcionamento, sem necessitar da paralisação do sistema. Esta flexibilidade em relação à abordagem do Memtest86+, se dá em detrimento da quantidade de memória testada, pois uma aplicação rodando sobre um sistema operacional jamais poderá ter acesso a toda a memória física disponível.
+
+A motivação para este trabalho é incorporar a uma ferramenta de diagnóstico de \emph{hardware} para sistemas de uso cotidiano, os avançados algoritmos para detecção de falhas em memória disponíveis atualmente.
+
+\section{Objetivos}
+
+Os objetivos gerais e específicos estabelecidos para este trabalho, são apresentados a seguir.
+
+\subsection{Objetivo Geral}
+
+O objetivo principal é desenvolver uma ferramenta de \emph{software} com um conjunto de funcionalidades e algoritmos capazes de detectar com eficácia variados tipos de falhas em módulos de \ac{RAM} de sistemas computacionais utilizando Linux.
+
+\subsection{Objetivos Específicos}
+
+Para guiar o desenvolvimento do trabalho, foram elaborados alguns objetivos específicos:
+
+\begin{enumerate}
+
+    \item Selecionar os melhores algoritmos para detecção de falhas em memória disponíveis na literatura;
+    \item Implementar os algoritmos escolhidos de maneira eficiente e flexível;
+    \item Desenvolver um \emph{software} portável, capaz de testar sistemas variados, que utilizem Linux;
+    \item Avaliar a eficiência do diagnóstico implementado quanto a sua capacidade de detecção falhas.
+
+\end{enumerate}
+
+\section{Organização deste Trabalho}
+
+Este trabalho está organizado em 5 capítulos. O Capítulo \ref{CHP:FUND} apresenta uma revisão sobre os assuntos pertinentes ao entendimento do projeto. Neste capítulo são abordados os modelos de falhas de memória, um estudo sobre os testes existentes e características do sistema operacional Linux que influenciam na comunicação com o \emph{hardware} em questão. O Capítulo \ref{CHP:MET} descreve todas as ferramentas usadas no desenvolvimento do trabalho, bem como suas características fundamentais, e o processo seguido para avaliar e testar a ferramenta. No Capítulo \ref{CHP:RESULT} são descritos e discutidos os resultados obtidos a partir dos testes realizados e por fim, o último capítulo apresenta as considerações finais e as perspectivas futuras.

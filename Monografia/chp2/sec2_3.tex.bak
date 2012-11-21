@@ -1,0 +1,57 @@
+\section{Gerenciamento de memória do Linux}
+\label{SEC:LINUXMM}
+
+Para projetar um bom teste que execute sobre toda a abstração imposta por um \ac{SO}, é necessário conhecer a fundo como o \emph{hardware} em questão é tratado pelo sistema. No caso da memória, o responsável por esta manipulação é o subsistema chamado de gerenciador de memória. Ele é o mecanismo que prover meios para, dinamicamente, alocar porções de memória para os programas que solicitarem e liberá-la para reuso quando não forem mais necessárias \cite{KNUTH:1997}. No Linux, o subsistema responsável pelo gerenciamento de memória é o \ac{LinuxMM} \cite{LINUXMM:2009}.
+
+\subsection{Memória Virtual}
+
+Os gerenciadores de memória utilizam o conceito de memória virtual para melhorar a eficiencia em sistemas multitarefas. A memória virtual permite que o gerenciador organize a memória independentemente da disposição física dos circuitos. As aplicações acessam a memória apenas através de endereços virtuais. Cada vez que é feita uma tentativa de acesso, o gerenciador traduz o endereço virtual em um endereço físico, que corresponde a localização do dado como armazenado no hardware \cite{GLASER:1965}.
+
+Os \emph{chips} de memória são fabricados como uma matriz de células e são montados, tipicamente, divididos em bancos, que nada mais são que placas contendo alguns \ac{CI}s de memória e controladores, como na Figura \ref{FIG:MEM_TOPOLOGIA}. Graças a memória virtual, a aplicação acessa sua porção de memória como um simples vetor de bytes unidimensional, como mostrado na Figura \ref{FIG:MEM_VECTOR}.
+
+\begin{figure}[!ht]
+\centering
+\subfigure[\label{FIG:MEM_TOPOLOGIA}]{\includegraphics[width = 0.4 \linewidth]{figs/topologia.pdf}}
+\subfigure[\label{FIG:MEM_VECTOR}]{\includegraphics[width = 0.4 \linewidth]{figs/vector.pdf}}
+\caption[Topologias da memória]{Topologia da memória como fisicamente disposta (a) e como vista por uma aplicação (b).} \label{FIG:MEM_TOPOLOGY}
+\end{figure}
+
+Além disto, porções fragmentadas da memória física podem ser alocadas para um processo, mas o gerenciador virtualiza estes fragmentos em um espaço contínuo de endereçamento (figura \ref{FIG:MEM_VIRTUAL}).
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = 0.5 \linewidth]{figs/mem_virtual.pdf}
+\caption[Memória virtual]{Memória virtual como alocada para um processo (adaptado de \cite{TANENBAUM:2001}).} \label{FIG:MEM_VIRTUAL}
+\end{figure}
+
+A paginação é outro mecanismo presente nos gerenciadores e está geralmente associado à memória virtual. Isto faz com que o sistema guarde porções de dados (páginas) da memória principal em uma memória secundária, recuperando-as posteriormente quando seu uso for solicitado. Desta forma, o sistema expande a memória virtual disponível para as aplicações. Geralmente se utiliza como memória secundária um espaço reservado no disco (HD, SSD, etc). Estes dispositivos são mais lentos que as \ac{RAM}s mas possuem maior disponibilidade de armazenamento e são mais baratos, se levado em conta o valor por byte. \cite{TANENBAUM:2001}
+
+No Linux, o espaço reservado para paginação é chamado de \emph{swap} e pode estar presente ou não em um sistema, assim como pode ser habilitado, desabilitado ou redimensionado em tempo de execução.
+
+Como o processo de salvar e recuperar as páginas do disco é lento, o Linux evita utilizar a área de \emph{swap} até que a disponibilidade de memória livre esteja baixa.
+
+\subsection{Escassez de Memória}
+
+A \ac{OOM} é um estado de um sistema computacional, geralmente indesejado, onde nenhuma memória adicional pode ser alocada para uso pelos programas ou pelo próprio sistema operacional.
+
+No caso do Linux, para lidar com este tipo de situação é utilizada uma ferramenta, parte do subsitema \ac{LinuxMM}, chamada de OOM \emph{Killer}, que consiste em uma tarefa que sacrifica um ou mais processos para liberar memória para o sistema \cite{OOMKILLER:2009}.
+
+Programas que utilizam muita memória podem esgotar a memória do sistema, fazendo-o deixar de funcionar. Isto pode, por exemplo, levar a uma situação em que há tão pouca memória que o kernel não pode alocar memória para executar uma operção de liberação de memória. Então, neste caso, o OOM Killer é acionado e identifica os processos a serem sacrificados para beneficiar o resto do sistema.
+
+O OOM Killer usa um esquema de pontuação para decidir qual ou quais processos sacrificar. Os pontos são dados pela função \emph{badness}, que utiliza uma fórmula relativamente simples, documentada no próprio código. As regras para gerar a pontuação são:
+
+\begin{itemize}
+  \item perder o mínimo de trabalho realizado;
+  \item recuperar a maior quantidade de memória;
+  \item não matar (\emph{kill}) nada que tenha utilizado pouca memória;
+  \item matar o mínimo de processos (de preferência apenas um);
+  \item tentar matar o processo que o usuário espera que vá ser morto (menor surpresa).
+\end{itemize}
+
+\subsection{Cache de Memória}
+
+Uma característica do \ac{LinuxMM} do mecanismo de \emph{cache} de memória. Ele é manipulado pelo Linux Page Cache e funciona da seguinte forma: no Linux, quando um arquivo é acessado, seu conteúdo é copiado para a memória para ser trabalhado (lido e/ou escrito); então, quando o processo termina, o \emph{kernel} pode liberar aquela memória ou mantê-la em \emph{cache} para caso algum outro processo o acesse. O mesmo ocorre com algumas outras formas de alocação da memória.
+
+Devido ao \emph{cache} em sistemas Linux, após algum tempo de execução de processos, apenas uma pequena porção da memória pode permanecer marcada realmente como livre. A maior parte está sempre preenchida com conteúdo útil, mas nem sempre isso significa que esteja sendo utilizada. Por outro lado há um ganho de performance considerável ao acessar recursos recentemente utilizados (em \emph{cache}).
+
+Um conteúdo que esteja em \emph{cache} pode ser liberado quando há uma solicitação por alocação de memória e não há memória livre para atender. Neste caso, o conteúdo do \emph{cache} é descartado e a memória é cedida ao processo que solitou a alocação. 

@@ -57,7 +57,9 @@ public class WatershedPixel extends Pixel implements Comparable {
 	//private int label;
 	/** Distance used for working on pixels */
 	private int dist;
-
+	/** Pixel at the minimum of the region associated */
+	private WatershedPixel min_pixel_ass;
+	
 	/** Neighbours **/
 //	private Vector neighbours;
 
@@ -84,10 +86,31 @@ public class WatershedPixel extends Pixel implements Comparable {
 		neighbours.add(neighbour);
 	}
 
+	public void setMinimaPixelAssociated(WatershedPixel p) {
+		min_pixel_ass = p;
+	}
+	
+	public WatershedPixel getMinimaPixelAssociated() {
+		return min_pixel_ass;
+	}
+	
 	/*public Vector getNeighbours() {
 		return neighbours;
 	}*/
 
+	public WatershedPixel searchNearestWatershedPixel() {
+		WatershedPixel n = null;
+		
+		for(int i=0; i < neighbours.size(); i++) {
+			n = (WatershedPixel) neighbours.get(i);
+			if(n.isLabelWSHED()) {
+				return n;
+			}
+		}
+		return n.searchNearestWatershedPixel();
+
+	}
+	
 	public String toString() {
 		return new String("(" + x + "," + y + "), height : " + getIntHeight()
 				+ ", label : " + label + ", distance : " + dist);
@@ -178,4 +201,6 @@ public class WatershedPixel extends Pixel implements Comparable {
 		}
 		return true;
 	}
+
+
 }

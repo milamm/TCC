@@ -174,7 +174,7 @@ Como dito anteriormente, as opera\c{c}\~{o}es matem\'{a}ticas, ou transforma\c{c
  (x_i ,y_i ) \in borda\ do\ objeto. \\
 \end{equation}
 
-Algumas m\'{e}tricas de dist\^{a}ncia podem ser utilizadas como por exemplo a Euclidiana, City Block e Chessboard \cite{Ricardo}. A mais comum das m\'{e}tricas \'{e} a dist\^{a}ncia Euclidiana, pois, \'{e} a mais adequada quando se busca modelar dados geom\'{e}tricos do ambiente humano. Contudo, devido a simplicidade computacional, utiliza-se neste trabalho a m\'{e}trica Chessboard dada por:
+Algumas m\'{e}tricas de dist\^{a}ncia podem ser utilizadas como por exemplo a Euclidiana, City Block e Chessboard \cite{Ricardo}. A mais comum das m\'{e}tricas \'{e} a dist\^{a}ncia Euclidiana, pois, \'{e} a mais adequada quando se busca modelar dados geom\'{e}tricos do ambiente humano. Contudo, devido a simplicidade computacional, utiliza-se nesse trabalho a m\'{e}trica Chessboard dada por:
 
 
 
